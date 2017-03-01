@@ -1,0 +1,11 @@
+HTTP/1.1 200 OK
+Content-Language: en
+Content-Type: text/xml; charset=UTF-8
+Date: Thu, 23 Feb 2017 16:13:29 GMT
+Server: Oracle-HTTP-Server-11g
+X-ORACLE-DMS-ECID: 005IJJ^nu4pFw00Fzzx0g00002GN000OtO
+X-ORACLE-DMS-RID: 0:1
+Content-Length: 1971
+Connection: keep-alive
+
+<S:Envelope xmlns:env="http://schemas.xmlsoap.org/soap/envelope/" xmlns:S="http://schemas.xmlsoap.org/soap/envelope/"><env:Header/><S:Body><ns3:PutPendingEventResponse xmlns:ns4="http://services.mycccportal.com/SOA/fault/v1" xmlns:ns3="http://services.mycccportal.com/SOA/EventService" xmlns:ns2="http://services.mycccportal.com/SOA/commontypes" xmlns="http://services.mycccportal.com/SOA/normalizedmessage/v1"><NormalizedMessage><BaseDescriptor><MsgID>a6cc7162-4872-45ab-89bb-a22b0a89108e</MsgID><MsgType>Events</MsgType><MsgMode>Request</MsgMode><SourceTimeStamp>2017-02-23T10:12:20.2983097-06:00</SourceTimeStamp><SourceApplicationID>PTHWY</SourceApplicationID><SourceUserID>james1907</SourceUserID><SequenceTimeStamp>2017-02-23T16:13:33Z</SequenceTimeStamp></BaseDescriptor><RoutingDescriptor><ns2:RoutingInfo><ns2:ApplicationName>PTHWY</ns2:ApplicationName><ns2:ApplicationVersion>4.50</ns2:ApplicationVersion><ns2:PublishTimeStamp>2017-02-23T10:12:20.2983097-06:00</ns2:PublishTimeStamp></ns2:RoutingInfo><ns2:RoutingInfo><ns2:ApplicationName>SOAComms</ns2:ApplicationName><ns2:ApplicationCode>SOACM</ns2:ApplicationCode><ns2:ApplicationVersion>1.0</ns2:ApplicationVersion><ns2:PublishTimeStamp>2017-02-23T16:13:33Z</ns2:PublishTimeStamp><ns2:Status>true</ns2:Status><ns2:StatusDescription>True</ns2:StatusDescription></ns2:RoutingInfo></RoutingDescriptor><ClaimDescriptor><ClaimReferenceID>201702231007</ClaimReferenceID><ClaimTypeCode>VE</ClaimTypeCode><InsuranceCompany><VantiveCode>APM1</VantiveCode></InsuranceCompany><ClaimOffice><Code>APMC</Code></ClaimOffice><AssigneeDescriptor><Appraiser><AppraiserType>DRP</AppraiserType><AppraiserSSN>james1</AppraiserSSN><AppraiserMailboxID/></Appraiser></AssigneeDescriptor></ClaimDescriptor><Payload><Reference>http://services.mycccportal.com/Events/2b9ba859-aae4-4824-a0ce-0bf395837a81/aa3bf1ad-fbe5-4561-8eeb-e5fb9ed63406</Reference></Payload></NormalizedMessage></ns3:PutPendingEventResponse></S:Body></S:Envelope>

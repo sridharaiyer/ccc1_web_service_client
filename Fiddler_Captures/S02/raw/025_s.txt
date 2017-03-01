@@ -1,0 +1,23 @@
+HTTP/1.1 200 OK
+Content-Language: en
+Content-Type: text/xml; charset=UTF-8
+Date: Thu, 23 Feb 2017 16:29:11 GMT
+Server: Oracle-HTTP-Server-11g
+X-ORACLE-DMS-ECID: 005IJKSyiTcFw00Fzzx0g00002MJ000OAI
+X-ORACLE-DMS-RID: 0:1
+Content-Length: 3140
+Connection: keep-alive
+
+<S:Envelope xmlns:env="http://schemas.xmlsoap.org/soap/envelope/" xmlns:S="http://schemas.xmlsoap.org/soap/envelope/"><env:Header/><S:Body><ns4:PutPendingWorkfileResponse xmlns:ns4="http://services.mycccportal.com/SOA/WorkfileService" xmlns:ns3="http://services.mycccportal.com/SOA/normalizedmessage/v1" xmlns:ns2="http://services.mycccportal.com/SOA/fault/v1" xmlns="http://services.mycccportal.com/SOA/commontypes"><ns3:NormalizedMessage><ns3:BaseDescriptor><ns3:MsgID>0411ad37-1897-45eb-8961-768960df9325</ns3:MsgID><ns3:MsgType>PathwaysXML</ns3:MsgType><ns3:MsgMode>Request</ns3:MsgMode><ns3:SourceTimeStamp>2017-02-23T10:28:56.2995097-06:00</ns3:SourceTimeStamp><ns3:SourceApplicationID>PTHWY</ns3:SourceApplicationID><ns3:SourceUserID>james1907</ns3:SourceUserID><ns3:SequenceTimeStamp>2017-02-23T16:29:15Z</ns3:SequenceTimeStamp></ns3:BaseDescriptor><ns3:RoutingDescriptor><RoutingInfo><ApplicationName>PTHWY</ApplicationName><ApplicationVersion>4.50</ApplicationVersion><PublishTimeStamp>2017-02-23T10:28:56.3151097-06:00</PublishTimeStamp></RoutingInfo><RoutingInfo><ApplicationName>SOAComms</ApplicationName><ApplicationCode>SOACM</ApplicationCode><ApplicationVersion>1.0</ApplicationVersion><PublishTimeStamp>2017-02-23T16:29:15Z</PublishTimeStamp><Status>true</Status><StatusDescription>True</StatusDescription></RoutingInfo></ns3:RoutingDescriptor><ns3:ClaimDescriptor><ns3:ClaimReferenceID>201702231023</ns3:ClaimReferenceID><ns3:ClaimTypeCode>VE</ns3:ClaimTypeCode><ns3:InsuranceCompany><ns3:VantiveCode>APM1</ns3:VantiveCode></ns3:InsuranceCompany><ns3:ClaimOffice><ns3:Code>APMC</ns3:Code></ns3:ClaimOffice><ns3:AssigneeDescriptor><ns3:Appraiser><ns3:AppraiserType>DRP</ns3:AppraiserType><ns3:AppraiserLOID>62796</ns3:AppraiserLOID><ns3:AppraiserSSN>james1</ns3:AppraiserSSN><ns3:AppraiserMailboxID>62796</ns3:AppraiserMailboxID></ns3:Appraiser></ns3:AssigneeDescriptor></ns3:ClaimDescriptor><ns3:EstimateDescriptor><ns3:TransformationHeader>&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;WorkfilePutData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://services.mycccportal.com/SOA/WorkfileService/PutData"&gt;
+  &lt;RouteCode /&gt;
+  &lt;IsSnapshot&gt;true&lt;/IsSnapshot&gt;
+  &lt;IsResend&gt;false&lt;/IsResend&gt;
+  &lt;Status&gt;OPEN&lt;/Status&gt;
+  &lt;Origin&gt;EXTERNAL&lt;/Origin&gt;
+  &lt;AssignmentType&gt;E&lt;/AssignmentType&gt;
+  &lt;CatastropheCode&gt;Ca&lt;/CatastropheCode&gt;
+  &lt;ClaimOfficeMailboxID&gt;048689&lt;/ClaimOfficeMailboxID&gt;
+  &lt;IAFileId /&gt;
+  &lt;IACompanyCode /&gt;
+&lt;/WorkfilePutData&gt;</ns3:TransformationHeader></ns3:EstimateDescriptor><ns3:DocumentDescriptor><ns3:DocumentName>PathwaysXML</ns3:DocumentName><ns3:DocumentExt>E01</ns3:DocumentExt><ns3:DocumentFormat>GZIP-XML</ns3:DocumentFormat><ns3:DocumentNum>0</ns3:DocumentNum></ns3:DocumentDescriptor><ns3:Payload><ns3:Reference>http://services.mycccportal.com/Workfile/ba9eb6b8-81b1-43b1-9fbc-a3bf039a4e47/0aba73a5-ae0f-4bab-b01a-e8985928b839</ns3:Reference></ns3:Payload></ns3:NormalizedMessage></ns4:PutPendingWorkfileResponse></S:Body></S:Envelope>

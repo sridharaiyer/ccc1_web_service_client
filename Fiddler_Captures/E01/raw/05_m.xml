@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Session SID="5" BitFlags="2100">
+  <SessionTimers ClientConnected="2017-02-23T10:04:07.6518097-06:00" ClientBeginRequest="2017-02-23T10:04:07.6518097-06:00" GotRequestHeaders="2017-02-23T10:04:07.6518097-06:00" ClientDoneRequest="2017-02-23T10:04:07.6518097-06:00" GatewayTime="0" DNSTime="0" TCPConnectTime="31" HTTPSHandshakeTime="85" ServerConnected="2017-02-23T10:04:07.6830097-06:00" FiddlerBeginRequest="2017-02-23T10:04:07.6830097-06:00" ServerGotRequest="2017-02-23T10:04:07.6830097-06:00" ServerBeginResponse="0001-01-01T00:00:00" GotResponseHeaders="0001-01-01T00:00:00" ServerDoneResponse="0001-01-01T00:00:00" ClientBeginResponse="2017-02-23T10:04:07.6830097-06:00" ClientDoneResponse="2017-02-23T10:04:07.6830097-06:00" />
+  <PipeInfo />
+  <TunnelInfo BytesEgress="0" BytesIngress="0" />
+  <SessionFlags>
+    <SessionFlag N="https-server-cipher" V="Aes256 256bits" />
+    <SessionFlag N="x-responsebodytransferlength" V="0" />
+    <SessionFlag N="https-server-version" V="Tls" />
+    <SessionFlag N="https-client-snihostname" V="outlook.office365.com" />
+    <SessionFlag N="x-clientip" V="127.0.0.1" />
+    <SessionFlag N="x-clientport" V="64418" />
+    <SessionFlag N="https-client-sessionid" V="0D 17 00 00 C9 D6 FD 8B E3 05 35 BC 46 E5 62 1F 03 0E AB 69 BF AC EE 91 DD 1C 02 CA 5E A8 55 EA" />
+    <SessionFlag N="x-processinfo" V="lync:6276" />
+    <SessionFlag N="https-client-version" V="Tls" />
+    <SessionFlag N="x-egressport" V="64419" />
+    <SessionFlag N="x-hostip" V="40.97.124.226" />
+  </SessionFlags>
+</Session>

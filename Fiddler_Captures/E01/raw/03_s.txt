@@ -1,0 +1,23 @@
+HTTP/1.1 401 Unauthorized
+Server: Microsoft-IIS/8.5
+request-id: 24a8a3c1-c60f-4135-8d5c-10851a74efb6
+X-CalculatedFETarget: BN6PR11CU002.internal.outlook.com
+X-BackEndHttpStatus: 401
+Set-Cookie: MapiRouting=UlVNOjRjZDcwMDdiLTQzYTktNGFmNi1iNzdhLWIwNjExNjY3MjQ3NTrGstWSBVzUCA==; path=/mapi/; secure; HttpOnly
+WWW-Authenticate: Basic Realm="",Basic Realm=""
+X-FEProxyInfo: BN6PR11CA0039.NAMPRD11.PROD.OUTLOOK.COM
+X-CalculatedBETarget: CY4PR06MB2773.namprd06.prod.outlook.com
+X-BackEndHttpStatus: 401
+X-ServerApplication: Exchange/15.01.0919.000
+X-RequestId: {17083BF6-E5B8-4E6E-8B3A-57AD5528A85C}:2
+X-ClientInfo: {7BB879D5-9E20-453C-BCBF-BB780B7C10EE}:6
+X-RequestType: Bind
+X-DiagInfo: CY4PR06MB2773
+X-BEServer: CY4PR06MB2773
+X-FEServer: BN6PR11CA0039
+WWW-Authenticate: Basic Realm=""
+X-Powered-By: ASP.NET
+X-FEServer: BN6PR2001CA0043
+Date: Thu, 23 Feb 2017 16:04:01 GMT
+Content-Length: 0
+

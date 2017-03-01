@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Session SID="16" BitFlags="2100">
+  <SessionTimers ClientConnected="2017-02-23T10:04:19.3674097-06:00" ClientBeginRequest="2017-02-23T10:04:19.3674097-06:00" GotRequestHeaders="2017-02-23T10:04:19.3674097-06:00" ClientDoneRequest="2017-02-23T10:04:19.3674097-06:00" GatewayTime="0" DNSTime="0" TCPConnectTime="3" HTTPSHandshakeTime="38" ServerConnected="2017-02-23T10:04:19.3674097-06:00" FiddlerBeginRequest="2017-02-23T10:04:19.3674097-06:00" ServerGotRequest="2017-02-23T10:04:19.3674097-06:00" ServerBeginResponse="0001-01-01T00:00:00" GotResponseHeaders="0001-01-01T00:00:00" ServerDoneResponse="0001-01-01T00:00:00" ClientBeginResponse="2017-02-23T10:04:19.3674097-06:00" ClientDoneResponse="2017-02-23T10:04:19.3674097-06:00" />
+  <PipeInfo />
+  <TunnelInfo BytesEgress="0" BytesIngress="0" />
+  <SessionFlags>
+    <SessionFlag N="https-server-cipher" V="Aes128 128bits" />
+    <SessionFlag N="x-responsebodytransferlength" V="0" />
+    <SessionFlag N="https-server-version" V="Tls" />
+    <SessionFlag N="https-client-snihostname" V="www.google.com" />
+    <SessionFlag N="x-clientip" V="127.0.0.1" />
+    <SessionFlag N="x-clientport" V="64430" />
+    <SessionFlag N="https-client-sessionid" V="3B 2B BF 7C 29 19 77 1E 09 9E 39 AF 3D 37 A6 B3 E2 6E ED 97 58 83 D0 EF 73 D3 35 12 A5 85 50 CF" />
+    <SessionFlag N="x-processinfo" V="outlook:5736" />
+    <SessionFlag N="https-client-version" V="Tls" />
+    <SessionFlag N="x-egressport" V="64431" />
+    <SessionFlag N="x-hostip" V="172.217.6.4" />
+  </SessionFlags>
+</Session>
