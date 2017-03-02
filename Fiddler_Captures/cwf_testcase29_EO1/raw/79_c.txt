@@ -1,0 +1,300 @@
+POST https://outlook.office365.com/EWS/Exchange.asmx/WSSecurity HTTP/1.1
+Cache-Control: no-cache
+Connection: Keep-Alive
+Pragma: no-cache
+Content-Type: text/xml; charset=utf-8
+User-Agent: OC/16.0.6965.2117 (Skype for Business)
+SOAPAction: "http://schemas.microsoft.com/exchange/services/2006/messages/CreateItem"
+X-AnchorMailbox: tlai@cccis.com
+Content-Length: 25838
+Host: outlook.office365.com
+
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://schemas.xmlsoap.org/soap/envelope/"><s:Header><RequestServerVersion Version="Exchange2012" xmlns="http://schemas.microsoft.com/exchange/services/2006/types"/><a:Action s:mustUnderstand="1">http://schemas.microsoft.com/exchange/services/2006/messages/CreateItem</a:Action><a:To s:mustUnderstand="1">https://outlook.office365.com/EWS/Exchange.asmx/WSSecurity</a:To><o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"><Timestamp xmlns="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd"><Created>2017-02-07T22:07:15.246Z</Created><Expires>2017-02-07T22:12:15.246Z</Expires></Timestamp><EncryptedData Id="Assertion1" Type="http://www.w3.org/2001/04/xmlenc#Element" xmlns="http://www.w3.org/2001/04/xmlenc#"><EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#tripledes-cbc"></EncryptionMethod><ds:KeyInfo xmlns:ds="http://www.w3.org/2000/09/xmldsig#"><EncryptedKey><EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#rsa-oaep-mgf1p"></EncryptionMethod><ds:KeyInfo Id="keyinfo"><wsse:SecurityTokenReference xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"><wsse:KeyIdentifier EncodingType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0#Base64Binary" ValueType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-x509-token-profile-1.0#X509SubjectKeyIdentifier">Wm1xSeJRIJK6txKjBez4GzapzqM=</wsse:KeyIdentifier></wsse:SecurityTokenReference></ds:KeyInfo><CipherData><CipherValue>5OdxD0zw9OaDrlpFhyubtyHkgor1WGJTrjteB46Q3TKQwZ+tN8+JctYs392W6X7kfSrj8XXb5+OXHlnGcPvPBtv4FGj+Btz5E4KYBfLw5MCT3g53T2piygIJXe4wVvhCByEo71k79N0XcqoK9LdkEinfCkGmIb4KJVeoNGWH38o11jloXKGDepw4nUukBFe1QIYouYVal4IXSaUJgKcXfWoV6DuqwtBZ8QwhY8WS9BBwYWnlBCDklns4+NKb1KBCb7XgOhGHG4TbnlmmFu8H8Nu/Zqz+5cnvTXI8Fa1Ti4aQ+/5Dtmfv2hXiMMFp10DqFRfIRpG0XzcJyPklPigeww==</CipherValue></CipherData></EncryptedKey></ds:KeyInfo><CipherData><CipherValue>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</CipherValue></CipherData></EncryptedData></o:Security></s:Header><s:Body><messages:CreateItem xsi:type="messages:CreateItemType" MessageDisposition="SendOnly" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:types="http://schemas.microsoft.com/exchange/services/2006/types" xmlns:messages="http://schemas.microsoft.com/exchange/services/2006/messages">
+<messages:Items><types:Message><types:ItemClass>IPM.Note.Microsoft.Missed</types:ItemClass><types:Subject>Tuan Lai sent you a message in Skype for Business while you were offline</types:Subject><types:Body BodyType="HTML"><![CDATA[<html xmlns="http://schemas.microsoft.com/2008/10/sip/convItems"><!--
+                Document generated by Office Communicator conversation history archiver
+            -->
+<head xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:history="http://schemas.microsoft.com/2008/10/sip/convItems" xmlns:rtc="urn:microsoft-rtc-xslt-functions">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<style type="text/css"><!--
+                        @charset "utf-8";
+                        body {
+                        margin-left: 11px;
+                        margin-top: 11px;
+                        margin-right: 11px;
+                        margin-bottom: 11px;
+                        }
+
+                        p {
+                        margin:0;
+                        padding:0;
+                        }
+
+                        .header {
+                        font-size: 16px;
+                        font-style: normal;
+                        line-height: 18px;
+                        font-weight: bold;
+                        font-variant: normal;
+                        text-transform: none;
+                        color: #000000;
+                        text-decoration: none;
+                        font-family: "Segoe UI";
+                        }
+
+                        .callDuration {
+                        font-family: "Segoe UI";
+                        font-size: 11px;
+                        font-style: normal;
+                        line-height: 18px;
+                        font-weight: normal;
+                        font-variant: normal;
+                        text-transform: none;
+                        color: #000000;
+                        text-decoration: none;
+                        }
+
+                        .notes_bkg {
+                        background-color: #e4eefc;
+                        border-bottom-width: 1px;
+                        border-bottom-style: solid;
+                        border-bottom-color: #b5c4df;
+                        vertical-align: middle;
+                        padding-top: 5px;
+                        padding-right: 8px;
+                        padding-bottom: 5px;
+                        padding-left: 20px;
+                        }
+                        .notes_title {
+                        font-family: "Segoe UI";
+                        font-size: 12px;
+                        font-style: normal;
+                        line-height: 18px;
+                        font-weight: bold;
+                        font-variant: normal;
+                        text-transform: none;
+                        color: #15429d;
+                        text-decoration: none;
+                        }
+
+                        .note_message {
+                        font-family: "Segoe UI";
+                        font-size: 11px;
+                        font-style: normal;
+                        line-height: 18px;
+                        font-weight: normal;
+                        font-variant: normal;
+                        text-transform: none;
+                        color: #15429d;
+                        text-decoration: none;
+                        }
+
+                        .list_name {
+                        font-family: "Segoe UI";
+                        font-size: 12px;
+                        font-style: normal;
+                        font-weight: bold;
+                        font-variant: normal;
+                        text-transform: none;
+                        color: #000000;
+                        text-decoration: none;
+                        line-height: 18px;
+                        }
+
+                        .list_title_company {
+                        font-family: "Segoe UI";
+                        font-size: 11px;
+                        font-style: normal;
+                        line-height: 18px;
+                        font-weight: normal;
+                        font-variant: normal;
+                        text-transform: uppercase;
+                        color: #666666;
+                        text-decoration: none;
+                        }
+
+                        .list_label {
+                        font-family: "Segoe UI";
+                        font-size: 11px;
+                        font-style: normal;
+                        line-height: 25px;
+                        font-weight: normal;
+                        font-variant: normal;
+                        text-transform: none;
+                        color: #C0C0C0;
+                        text-decoration: none;
+                        }
+
+                        .links {
+                        font-family: "Segoe UI";
+                        font-size: 11px;
+                        font-style: normal;
+                        font-weight: normal;
+                        font-variant: normal;
+                        text-transform: none;
+                        color: #0000FF;
+                        text-decoration: underline;
+                        }
+
+                        .line {
+                        border-top-width: 1px;
+                        border-top-style: solid;
+                        border-top-color: #b5c4df;
+                        height: 1px;
+                        background-color: #b5c4df;
+                        }
+                        .footer_line {
+                        padding-top: 30px;
+                        padding-bottom: 0px;
+                        padding-right: 0px;
+                        padding-left: 0px;
+                        }
+                        .footer {
+                        font-family: "Segoe UI";
+                        font-size: 11px;
+                        font-style: normal;
+                        line-height: 0px;
+                        font-weight: normal;
+                        font-variant: normal;
+                        text-transform: none;
+                        color: #C0C0C0;
+                        text-decoration: none;
+                        padding-top: 11px;
+                        padding-bottom: 8px;
+                        }
+
+                        .header_box {
+                        padding-top: 11px;
+                        padding-bottom: 11px;
+                        }
+
+                        .contacts_box {
+                        padding-top: 20px;
+                        padding-bottom: 0px;
+                        padding-right: 0px;
+                        padding-left: 80px;
+                        }
+
+                        .list_value {
+                        font-family: "Segoe UI";
+                        font-size: 11px;
+                        font-style: normal;
+                        line-height: 25px;
+                        font-weight: normal;
+                        font-variant: normal;
+                        text-transform: none;
+                        color: #000000;
+                        text-decoration: none;
+                        }
+
+                        .im_sender {
+                        font-family: "Segoe UI";
+                        font-size: 11px;
+                        font-style: normal;
+                        line-height: 18px;
+                        font-weight: bold;
+                        font-variant: normal;
+                        text-transform: none;
+                        color: #666666;
+                        text-decoration: none;
+                        }
+
+                        .message_timestamp {
+                        font-family: "Segoe UI";
+                        font-size: 11px;
+                        font-style: normal;
+                        line-height: 18px;
+                        font-weight: bold;
+                        font-variant: normal;
+                        text-transform: none;
+                        color: #666666;
+                        text-decoration: none;
+                        }
+                        .messageInfo {
+                        margin-left:8px;
+                        }
+                        .notification, .install_link {
+                        font-family: "Segoe UI";
+                        font-size: 11px;
+                        font-style: normal;
+                        line-height: 18px;
+                        font-weight: normal;
+                        font-variant: normal;
+                        text-transform: none;
+                        color: #666666;
+                        text-decoration: none;
+                        }
+                    -->
+</style>
+</head>
+<body>
+<div xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:history="http://schemas.microsoft.com/2008/10/sip/convItems" xmlns:rtc="urn:microsoft-rtc-xslt-functions">
+<span class="im_sender">Tuan Lai</span> <span class="message_timestamp">4:13 PM:
+                    </span>
+<div class="messageInfo"><html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:"Segoe UI";
+	panose-1:2 11 5 2 4 2 4 2 2 3;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:8.0pt;
+	margin-left:0in;
+	line-height:107%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+.MsoChpDefault
+	{font-family:"Calibri",sans-serif;}
+.MsoPapDefault
+	{margin-bottom:8.0pt;
+	line-height:107%;}
+ /* Page Definitions */
+ @page WordSection1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;}
+div.WordSection1
+	{page:WordSection1;}
+-->
+</style>
+
+</head>
+
+<body lang=EN-US style='text-justify-trim:punctuation'>
+
+<div class=WordSection1>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:10.0pt;font-family:"Segoe UI",sans-serif;
+color:black'>thank you </span></p>
+
+</div>
+
+</body>
+
+</html></div>
+</div>
+<div class="install_link" style="padding-top:42px" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:history="http://schemas.microsoft.com/2008/10/sip/convItems" xmlns:rtc="urn:microsoft-rtc-xslt-functions">Need Skype for Business? <a href="https://aka.ms/getsfbv2">Install</a> it on all your devices.</div>
+</body>
+</html>
+]]></types:Body><types:Importance>Normal</types:Importance><types:ExtendedProperty><types:ExtendedFieldURI PropertyType="String" PropertyTag="0x0E1D"/><types:Value>Tuan Lai sent you a message in Skype for Business while you were offline</types:Value></types:ExtendedProperty><types:ExtendedProperty><types:ExtendedFieldURI PropertyName="IsCustomSubject.{703DC3CB-8F24-4e3f-932F-206233656759}" DistinguishedPropertySetId="PublicStrings" PropertyType="Integer"/><types:Value>0</types:Value></types:ExtendedProperty><types:ExtendedProperty><types:ExtendedFieldURI PropertyType="Integer" PropertyTag="0x0E07"/><types:Value>0</types:Value></types:ExtendedProperty><types:ExtendedProperty><types:ExtendedFieldURI PropertyName="Modalities.{0885EA21-B7A5-4050-BFDB-AD46DE1D6A87}" DistinguishedPropertySetId="PublicStrings" PropertyType="Integer"/><types:Value>1</types:Value></types:ExtendedProperty><types:ExtendedProperty><types:ExtendedFieldURI PropertyName="DisplayDirection.{4255C773-497E-4b5e-9205-F360CAF3316A}" DistinguishedPropertySetId="PublicStrings" PropertyType="String"/><types:Value>Outgoing</types:Value></types:ExtendedProperty><types:ExtendedProperty><types:ExtendedFieldURI PropertyName="Direction.{2DA4DF04-920D-4b0b-A1D7-5FC9D21857FE}" DistinguishedPropertySetId="PublicStrings" PropertyType="Integer"/><types:Value>2</types:Value></types:ExtendedProperty><types:ExtendedProperty><types:ExtendedFieldURI PropertyName="RemoteParty.{664AD731-19D0-4344-93FD-682FE0440D95}" DistinguishedPropertySetId="PublicStrings" PropertyType="String"/><types:Value>sip:lnunna@win.cccis.com</types:Value></types:ExtendedProperty><types:ExtendedProperty><types:ExtendedFieldURI PropertyType="String" PropertyTag="0x0070"/><types:Value>Tuan Lai sent you a message in Skype for Business while you were offline</types:Value></types:ExtendedProperty><types:ExtendedProperty><types:ExtendedFieldURI PropertyType="Binary" PropertyTag="0x0071"/><types:Value>AdJ3SVQe3J16Vp8ZRka6PqeOb8++ZAAAe+kgAAMs49AAAA5JkAAAABSg</types:Value></types:ExtendedProperty><types:ExtendedProperty><types:ExtendedFieldURI PropertyType="Boolean" PropertyTag="0x3016"/><types:Value>true</types:Value></types:ExtendedProperty><types:ExtendedProperty><types:ExtendedFieldURI PropertyType="SystemTime" PropertyTag="0x0039"/><types:Value>2017-01-25T22:14:51Z</types:Value></types:ExtendedProperty><types:ExtendedProperty><types:ExtendedFieldURI PropertyType="SystemTime" PropertyTag="0x0E06"/><types:Value>2017-01-25T22:14:51Z</types:Value></types:ExtendedProperty><types:ExtendedProperty><types:ExtendedFieldURI PropertyType="String" PropertyTag="0x0C1E"/><types:Value>SMTP</types:Value></types:ExtendedProperty><types:ExtendedProperty><types:ExtendedFieldURI PropertyType="String" PropertyTag="0x0C1F"/><types:Value>lnunna@cccis.com</types:Value></types:ExtendedProperty><types:ExtendedProperty><types:ExtendedFieldURI PropertyType="String" PropertyTag="0x0C1A"/><types:Value>Lakshmi Nunna</types:Value></types:ExtendedProperty><types:ExtendedProperty><types:ExtendedFieldURI PropertyName="ConversationXml.{CA2F170A-A22B-4f0a-B899-93439DEC3FBC}" DistinguishedPropertySetId="PublicStrings" PropertyType="String"/><types:Value><![CDATA[<conversations             xmlns="http://schemas.microsoft.com/2008/10/sip/convItems"                             minSupportedClientVersion="3.0.0.0"><conversationXml><imReceived xmlns="http://schemas.microsoft.com/2008/10/sip/convItems" ts="2017-01-25T22:13:00Z" from="sip:tlai@win.cccis.com" displayName="Tuan Lai" type="text/rtf">
+<messageInfo type="text/rtf" msgid="{7ADAE801-ED96-4967-83DE-2D2BFB1F2E8A}" sequenceid="0">{\rtf1\fbidis\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Segoe UI;}{\f1\fnil Segoe UI;}}
+{\colortbl ;\red0\green0\blue0;}
+{\*\generator Riched20 16.0.6925}\viewkind4\uc1 
+\pard\cf1\f0\fs20 thank you \f1\par
+{\*\lyncflags&lt;rtf=1&gt;}}
+</messageInfo>
+</imReceived>
+</conversationXml></conversations>]]></types:Value></types:ExtendedProperty><types:ExtendedProperty><types:ExtendedFieldURI PropertyName="HistoryInfo.{553F3F08-FC28-41db-859E-63457407F806}" DistinguishedPropertySetId="PublicStrings" PropertyType="String"/><types:Value>sip:tlai@win.cccis.com</types:Value></types:ExtendedProperty><types:ExtendedProperty><types:ExtendedFieldURI PropertyName="RemotePartyDeviceUri.{12AC5838-268F-4015-BFA9-B651F9ACECDC}" DistinguishedPropertySetId="PublicStrings" PropertyType="String"/><types:Value>sip:lnunna@win.cccis.com</types:Value></types:ExtendedProperty><types:ExtendedProperty><types:ExtendedFieldURI PropertyName="PreviewMessage.{55324EE5-74F0-4727-876D-20ED1469CA65}" DistinguishedPropertySetId="PublicStrings" PropertyType="String"/><types:Value>thank you &#xD;
+&#xD;
+</types:Value></types:ExtendedProperty><types:ExtendedProperty><types:ExtendedFieldURI PropertyType="Integer" PropertyTag="0x4076"/><types:Value>-1</types:Value></types:ExtendedProperty><types:ExtendedProperty><types:ExtendedFieldURI PropertyName="ImCount.{34081874-6021-4A91-AE84-7CD74D4B681B}" DistinguishedPropertySetId="PublicStrings" PropertyType="Integer"/><types:Value>1</types:Value></types:ExtendedProperty><types:ExtendedProperty><types:ExtendedFieldURI PropertyName="IsOfflineIm.{035D50E3-E0C8-4302-BC64-11B4917118C8}" DistinguishedPropertySetId="PublicStrings" PropertyType="Boolean"/><types:Value>1</types:Value></types:ExtendedProperty><types:ToRecipients><types:Mailbox><types:Name>Lakshmi Nunna</types:Name><types:EmailAddress>lnunna@cccis.com</types:EmailAddress><types:RoutingType>SMTP</types:RoutingType></types:Mailbox></types:ToRecipients></types:Message></messages:Items>
+</messages:CreateItem></s:Body></s:Envelope>

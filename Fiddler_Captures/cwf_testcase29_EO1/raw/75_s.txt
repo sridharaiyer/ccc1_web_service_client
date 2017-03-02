@@ -1,0 +1,23 @@
+HTTP/1.1 200 OK
+Cache-Control: private
+Transfer-Encoding: chunked
+Content-Type: application/mapi-http
+Server: Microsoft-IIS/8.5
+request-id: 61614479-b68d-4c4c-8c76-09dec9a9192a
+X-CalculatedBETarget: DM2PR06MB479.namprd06.prod.outlook.com
+X-BackEndHttpStatus: 200
+Set-Cookie: MapiContext=MAPIAAAAAOGsns6crJrXlaGWr4y+jr+IpZWnirqMrJ6tl6Wcppak/t3s1Ozf7tfh2OvYxRgAAAAAAAA=; path=/mapi/emsmdb; secure; HttpOnly
+X-ServerApplication: Exchange/15.01.0888.021
+X-RequestId: {220DC37B-53A9-44E2-8993-8D40F1900B1F}:240
+X-ClientInfo: {52340114-686E-4151-8C8C-83C66DAC4672}:18
+X-RequestType: NotificationWait
+X-PendingPeriod: 30000
+X-ExpirationInfo: 900000
+X-ResponseCode: 0
+X-AspNet-Version: 4.0.30319
+X-DiagInfo: DM2PR06MB479
+X-BEServer: DM2PR06MB479
+X-Powered-By: ASP.NET
+X-FEServer: BLUPR17CA0045
+Date: Tue, 07 Feb 2017 22:07:06 GMT
+

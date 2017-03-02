@@ -1,0 +1,9 @@
+GET https://nexusrules.officeapps.live.com/nexus/rules?Application=searchprotocolhost.exe&Version=7.0.7601.17610&ClientId=%7b11AFF666-1614-429C-8ED0-E738CACE0B6D%7d&OSEnvironment=10&MsoAppId=-2&AudienceName=Production_DC&AudienceGroup=Production&AppVersion=7.0.7601.17610& HTTP/1.1
+Connection: Keep-Alive
+Accept: application/vnd.ms-nexus-rules-v12+xml
+Accept-Encoding: gzip
+User-Agent: Microsoft Office/16.0 (Windows NT 6.1; Microsoft Outlook 16.0.6925; Pro)
+X-MS-Collection-Policy: ExternalRestrictive, Heartbeat
+X-MS-Process-Session-Id: {4934B0AE-4FA2-4335-A8C2-D9CBF6FDED77}
+Host: nexusrules.officeapps.live.com
+

@@ -1,0 +1,15 @@
+HTTP/1.1 401 Unauthorized
+Content-Length: 0
+Server: Microsoft-IIS/8.5
+request-id: 476e3e28-7b04-4030-a463-d3cf1897aa0c
+X-CalculatedBETarget: DM2PR06MB479.namprd06.prod.outlook.com
+X-BackEndHttpStatus: 401
+Set-Cookie: exchangecookie=a1711dc13d09408797ef9081dcb8cb9e; path=/
+x-ms-diagnostics: 4000000;reason="Flighting is not enabled for domain 'tlai@cccis.com'.";error_category="oauth_not_available"
+X-DiagInfo: DM2PR06MB479
+X-BEServer: DM2PR06MB479
+X-Powered-By: ASP.NET
+X-FEServer: DM3PR18CA0011
+WWW-Authenticate: Bearer client_id="00000002-0000-0ff1-ce00-000000000000", trusted_issuers="00000001-0000-0000-c000-000000000000@*", token_types="app_asserted_user_v1 service_asserted_app_v1", authorization_uri="https://login.windows.net/common/oauth2/authorize", error="invalid_token",Basic Realm="",Basic Realm=""
+Date: Tue, 07 Feb 2017 22:04:45 GMT
+

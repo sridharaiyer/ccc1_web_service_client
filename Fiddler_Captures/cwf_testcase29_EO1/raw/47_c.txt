@@ -1,0 +1,9 @@
+GET https://login.windows.net/common/UserRealm/tlai%40win.cccis.com?api-version=1.0 HTTP/1.1
+Accept: application/json
+client-request-id: 4BF8F5C5-B5D9-4C46-9752-37860FAFC7B0
+return-client-request-id: false
+x-client-OS: 6.1.7601
+x-client-SKU: Win32
+x-client-Ver: v1.0.2030.20160204
+Host: login.windows.net
+

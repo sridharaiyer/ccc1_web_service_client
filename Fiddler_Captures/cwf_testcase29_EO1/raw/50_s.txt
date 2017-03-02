@@ -1,0 +1,14 @@
+HTTP/1.1 204 No Content
+Cache-Control: max-age=6000
+Content-Length: 0
+Last-Modified: Tue, 07 Feb 2017 22:05:36 GMT
+Server: Microsoft-IIS/8.5
+X-AspNet-Version: 4.0.30319
+X-Powered-By: ASP.NET
+X-Content-Type-Options: nosniff
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Headers: Content-Type
+Access-Control-Allow-Methods: POST, OPTIONS
+Access-Control-Max-Age: 300
+Date: Tue, 07 Feb 2017 22:05:36 GMT
+

@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Session SID="71" BitFlags="19">
+  <SessionTimers ClientConnected="2017-02-07T16:04:45.0924228-06:00" ClientBeginRequest="2017-02-07T16:04:45.1124208-06:00" GotRequestHeaders="2017-02-07T16:04:45.1124208-06:00" ClientDoneRequest="2017-02-07T16:04:45.1134207-06:00" GatewayTime="0" DNSTime="0" TCPConnectTime="0" HTTPSHandshakeTime="0" ServerConnected="2017-02-07T16:04:45.0974223-06:00" FiddlerBeginRequest="2017-02-07T16:04:45.1134207-06:00" ServerGotRequest="2017-02-07T16:04:45.1134207-06:00" ServerBeginResponse="2017-02-07T16:04:45.1254195-06:00" GotResponseHeaders="2017-02-07T16:04:45.1254195-06:00" ServerDoneResponse="2017-02-07T16:04:45.130419-06:00" ClientBeginResponse="2017-02-07T16:04:45.130419-06:00" ClientDoneResponse="2017-02-07T16:04:45.1324188-06:00" />
+  <PipeInfo CltReuse="true" Reused="true" />
+  <SessionFlags>
+    <SessionFlag N="x-clientport" V="59402" />
+    <SessionFlag N="x-responsebodytransferlength" V="34113" />
+    <SessionFlag N="x-egressport" V="59403" />
+    <SessionFlag N="x-hostip" V="10.77.160.52" />
+    <SessionFlag N="x-processinfo" V="searchprotocolhost:10640" />
+    <SessionFlag N="x-clientip" V="127.0.0.1" />
+    <SessionFlag N="x-serversocket" V="REUSE ServerPipe#70" />
+  </SessionFlags>
+</Session>

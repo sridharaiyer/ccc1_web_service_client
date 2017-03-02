@@ -1,0 +1,7 @@
+GET https://adfs.cccis.com/adfs/services/trust/mex HTTP/1.1
+Content-Type: application/soap+xml
+x-client-OS: 6.1.7601
+x-client-SKU: Win32
+x-client-Ver: v1.0.2030.20160204
+Host: adfs.cccis.com
+

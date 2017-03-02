@@ -1,15 +1,16 @@
 from bs4 import BeautifulSoup
 import re
-
-# with open('Fiddler_Captures/E01/_index.htm') as fp:
-#     soup = BeautifulSoup(fp)
-
-# for row in soup.find_all('tr'):
-#     print(row)
-
 import zipfile
+import pprint
+from collections import defaultdict
+import json
+import xmltodict
+import os
+import xml.etree.ElementTree as etree
 
-with zipfile.ZipFile('Fiddler_Captures/S02.saz', 'r') as zf:
+putPendingWorkfileXML = ''
+
+with zipfile.ZipFile('Fiddler_Captures/cwf_testcase29_EO1.saz', 'r') as zf:
     # print(zf.namelist())
     index_file = '_index.htm'
     # try:
@@ -28,7 +29,23 @@ with zipfile.ZipFile('Fiddler_Captures/S02.saz', 'r') as zf:
 
         ccc1_rows = [r.parent for r in ccc1_cells]
 
-        ws_files_dict = {}
+        files = defaultdict(list)
 
         for row in ccc1_rows:
-            print('{!s:20s}:  {}'.format(row.findAll('td')[5].text.rsplit('/', 1)[1], row.a.get('href')))
+            key = row.findAll('td')[5].text.rsplit('/', 1)[1]
+            value = row.a.get('href').replace("\\", "/")
+            if key != 'Worklist':
+                files[key].append(value)
+
+        # print('Files and their locations:')
+        # print(json.dumps(files, indent=4))
+
+        print('Extracting workfile from indexfile')
+
+        with zf.open(os.path.join(files['Workfile'][0]), 'r') as wf:
+            s = str(wf.read())
+            envelope = [re.search(r'<s:Envelope.*\/s:Envelope>', s).group()][0]
+            # print(envelope)
+            root = etree.fromstring(envelope)
+            for child in root:
+                print(child)
