@@ -4,12 +4,12 @@ import zipfile
 import pprint
 from collections import defaultdict
 import json
-import xmltodict
 import os
 from lxml import etree as ET
-import base64
+import base64, zlib
 import tempfile
 import gzip
+from io import BytesIO, StringIO
 # from xml.etree import ElementTree as ET
 
 # from xml.dom.minidom import parse
@@ -32,7 +32,8 @@ with zipfile.ZipFile('Fiddler_Captures/cwf_testcase29_EO1.saz', 'r') as zf:
         soup = BeautifulSoup(indexfile, "html.parser")
         table = soup.findChildren('table')[0]
 
-        ccc1_cells = [t.parent for t in table.findAll(text='servicesqa.aws.mycccportal.com')]
+        ccc1_cells = [t.parent for t in table.findAll(
+            text='servicesqa.aws.mycccportal.com')]
 
         ccc1_rows = [r.parent for r in ccc1_cells]
 
@@ -62,19 +63,8 @@ with zipfile.ZipFile('Fiddler_Captures/cwf_testcase29_EO1.saz', 'r') as zf:
                     encoded_gzipped_payload = elem.text
 
             decoded_base64 = base64.b64decode(encoded_gzipped_payload)
-            # with tempfile.TemporaryFile(mode='w+b') as temp:
-            #     temp.write(bytes(decoded_base64))
-            #     print(temp.read())
-            #     with gzip.open(temp, 'rb') as f:
-            #         file_content = f.read()
-            #         print(file_content)
-
-            with open('decoded_base64.txt.gz', 'wb') as f:
-                f.write(decoded_base64)
-
-            with gzip.open('decoded_base64.txt.gz', 'rb') as f:
-                file_content = f.read()
-                print(file_content)
+            gzcontent = gzip.GzipFile(fileobj=BytesIO(decoded_base64))
+            print(gzcontent.read())
 
             # envelope = ET.tostring(root)
 
