@@ -11,7 +11,7 @@
                     <pct:Style>ENUMERATED</pct:Style>
                 </Address>
                 <PhoneList />
-                <Slogan/>
+                <Slogan></Slogan>
                 <RoutingCompanyCode>APM1</RoutingCompanyCode>
             </InsuranceCompany>
             <ClaimOffice>
@@ -3203,7 +3203,7 @@
                                 <FlagHeatedGlassRI>0</FlagHeatedGlassRI>
                                 <FlagRearBumperRI>0</FlagRearBumperRI>
                                 <FlagFootnoteID>0</FlagFootnoteID>
-                                <FlagMaterialID/>
+                                <FlagMaterialID></FlagMaterialID>
                                 <FlagRITime>0</FlagRITime>
                                 <FlagOrgRRTime>0</FlagOrgRRTime>
                                 <FlagSectionLbrTime>0</FlagSectionLbrTime>
@@ -4629,7 +4629,7 @@ offshore testing]]>
                                 <FlagHeatedGlassRI>0</FlagHeatedGlassRI>
                                 <FlagRearBumperRI>0</FlagRearBumperRI>
                                 <FlagFootnoteID>0</FlagFootnoteID>
-                                <FlagMaterialID/>
+                                <FlagMaterialID></FlagMaterialID>
                                 <FlagRITime>0</FlagRITime>
                                 <FlagOrgRRTime>0</FlagOrgRRTime>
                                 <FlagSectionLbrTime>0</FlagSectionLbrTime>
@@ -4958,7 +4958,7 @@ offshore testing]]>
                                 <FlagHeatedGlassRI>0</FlagHeatedGlassRI>
                                 <FlagRearBumperRI>0</FlagRearBumperRI>
                                 <FlagFootnoteID>0</FlagFootnoteID>
-                                <FlagMaterialID/>
+                                <FlagMaterialID></FlagMaterialID>
                                 <FlagRITime>0</FlagRITime>
                                 <FlagOrgRRTime>0</FlagOrgRRTime>
                                 <FlagSectionLbrTime>0</FlagSectionLbrTime>
@@ -6641,7 +6641,7 @@ offshore testing]]>
                     <est_appraisal_source_id>RF</est_appraisal_source_id>
                     <est_dl_appraisal_cust_id>0</est_dl_appraisal_cust_id>
                     <est_estimate_appraiser_id>james1907</est_estimate_appraiser_id>
-                    <est_file_appraiser_id/>
+                    <est_file_appraiser_id></est_file_appraiser_id>
                     <est_estimating_platform>CCC ONE</est_estimating_platform>
                     <est_software_version_num>5.1.0</est_software_version_num>
                     <est_estimate_format>PWAYS</est_estimate_format>
@@ -6659,7 +6659,7 @@ offshore testing]]>
                 <claim_info>
                     <clm_num>eqa02072017154227</clm_num>
                     <clm_filename>APSW23KY</clm_filename>
-                    <clm_loss_date/>
+                    <clm_loss_date></clm_loss_date>
                     <clm_loss_type>Collision</clm_loss_type>
                     <clm_deductible>-1.0</clm_deductible>
                     <clm_supplement_num>E01</clm_supplement_num>
@@ -6721,8 +6721,8 @@ offshore testing]]>
                 <rules_info>
                     <rule>
                         <description type="Unknown">CO, IA &amp; RF-DRP rule: Estimate Line exists</description>
-                        <actual/>
-                        <allowable/>
+                        <actual></actual>
+                        <allowable></allowable>
                         <variance>0.0</variance>
                         <score>11</score>
                         <est_line_num>1</est_line_num>
@@ -6733,8 +6733,8 @@ offshore testing]]>
                     </rule>
                     <rule>
                         <description type="Unknown">IA &amp; RF-DRP rule: Estimate Line exists</description>
-                        <actual/>
-                        <allowable/>
+                        <actual></actual>
+                        <allowable></allowable>
                         <variance>0.0</variance>
                         <score>11</score>
                         <est_line_num>1</est_line_num>
@@ -6745,8 +6745,8 @@ offshore testing]]>
                     </rule>
                     <rule>
                         <description type="Unknown">CO &amp; RF-DRP rule: Estimate Line exists</description>
-                        <actual/>
-                        <allowable/>
+                        <actual></actual>
+                        <allowable></allowable>
                         <variance>0.0</variance>
                         <score>11</score>
                         <est_line_num>1</est_line_num>
@@ -6757,8 +6757,8 @@ offshore testing]]>
                     </rule>
                     <rule>
                         <description type="Unknown">RF-DRP rule: Estimate Line exists</description>
-                        <actual/>
-                        <allowable/>
+                        <actual></actual>
+                        <allowable></allowable>
                         <variance>0.0</variance>
                         <score>11</score>
                         <est_line_num>1</est_line_num>
@@ -8323,7 +8323,7 @@ offshore testing]]>
                     <Type>MATERIALS</Type>
                     <Subtype>MATBODYSUPPLIES</Subtype>
                     <Label>Body Supplies</Label>
-                    <Abbreviation/>
+                    <Abbreviation></Abbreviation>
                     <IsPermanent>true</IsPermanent>
                     <RateHistory>
                         <RateCollection>
@@ -8418,7 +8418,7 @@ offshore testing]]>
                     <Type>MATERIALS</Type>
                     <Subtype>MATPAINT</Subtype>
                     <Label>Paint Supplies</Label>
-                    <Abbreviation/>
+                    <Abbreviation></Abbreviation>
                     <IsPermanent>true</IsPermanent>
                     <RateHistory>
                         <RateCollection>
@@ -8513,7 +8513,7 @@ offshore testing]]>
                     <Type>PARTS</Type>
                     <Subtype>PARTSTD</Subtype>
                     <Label>Standard</Label>
-                    <Abbreviation/>
+                    <Abbreviation></Abbreviation>
                     <IsPermanent>true</IsPermanent>
                     <RateHistory>
                         <RateCollection>
@@ -10012,8 +10012,8 @@ offshore testing]]>
         <ClaimMessageList />
     </CorrComp>
     <ImageComp>
-        <ImageNote1/>
-        <ImageNote2/>
+        <ImageNote1></ImageNote1>
+        <ImageNote2></ImageNote2>
         <ImageList>
             <Image>
                 <CaptureTime>2017-02-07T16:05:04</CaptureTime>

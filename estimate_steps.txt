@@ -1,0 +1,52 @@
+Parameterize:
+
+Workfile
+
+1. 	ClaimReferenceID
+2. Payload -> Data
+				a. decode
+				b. ungzip
+				c. ClaimNumber
+				d. ClaimReferenceID
+				e. clm_num
+				f. first name (2 occurences of the owner)
+				g. last name (2 occurences of the owner)
+				h. ImageComp -> ImageList -> Image -> ImageReference -> DigitalImage/UUID
+				i. 
+
+3. <Reference> ...workfile_ref_num </>
+
+Digital Image
+
+1. claimrefid
+2. first name
+3. last name
+4. Payload -> Reference -> UUID
+
+Print Image:
+
+1. ClaimReferenceID
+2. Payload -> Reference -> Print image ref
+
+RPD/UPD
+
+1. ClaimReferenceID
+2. Payload -> Reference -> RPD/UPD Ref
+
+Status Change All
+
+1. ClaimReferenceID (multiple)
+2. DocumentName>PathwaysXML <DocumentExt>E01</DocumentExt> Payload > Data >
+					a. Convert from base64
+					b. Reference -> Workfile Ref
+3. Reference -> Workfile Ref
+4. DocumentName>PrintImage <DocumentExt>E01</DocumentExt> Payload > Data >
+					a. Convert from base64
+					b. Reference -> Workfile Ref
+5. Reference -> Workfile Ref
+
+6. First Name
+7. Last Name
+8. Subsequent PrintImage tags are RPD and UPD (repeat step2 on them)
+
+9. Digtal image (step 2)

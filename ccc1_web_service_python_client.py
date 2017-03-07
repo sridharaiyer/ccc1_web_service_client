@@ -6,16 +6,16 @@ from collections import defaultdict
 import json
 import os
 from lxml import etree as ET
-import base64, zlib
+import base64
+import zlib
 import tempfile
 import gzip
 from io import BytesIO, StringIO
-# from xml.etree import ElementTree as ET
+import datetime
+i = datetime.datetime.now()
 
-# from xml.dom.minidom import parse
-# import xml.dom.minidom
-
-putPendingWorkfileXML = ''
+claim_Id = 'eqa' + i.strftime('%Y%m%d%H%M%S')
+os.makedirs(claim_Id)
 
 with zipfile.ZipFile('Fiddler_Captures/cwf_testcase29_EO1.saz', 'r') as zf:
     # print(zf.namelist())
@@ -58,13 +58,27 @@ with zipfile.ZipFile('Fiddler_Captures/cwf_testcase29_EO1.saz', 'r') as zf:
 
             encoded_gzipped_payload = None
 
-            for elem in root.getiterator():
-                if elem.tag == '{http://services.mycccportal.com/SOA/normalizedmessage/v1}Data':
-                    encoded_gzipped_payload = elem.text
+            print('Extracting the encoded and gzipped payload')
+
+            encoded_gzipped_payload = root.xpath('//*[local-name() = "Payload"]')[0].xpath('//*[local-name() = "Data"]')[0].text
+
+            print('Decoding and un-gzipping the payload')
 
             decoded_base64 = base64.b64decode(encoded_gzipped_payload)
-            gzcontent = gzip.GzipFile(fileobj=BytesIO(decoded_base64))
-            print(gzcontent.read())
+            gzcontent = gzip.GzipFile(fileobj=BytesIO(decoded_base64)).read().decode('UTF-8')
+
+            payload_root = ET.fromstring(gzcontent)
+
+            print('Replacing claim IDs in the payload XML')
+
+            payload_root.xpath('//*[local-name() = "ClaimNumber"]')[0].text = claim_Id
+            payload_root.xpath('//*[local-name() = "ClaimReferenceID"]')[0].text = claim_Id
+            payload_root.xpath('//*[local-name() = "clm_num"]')[0].text = claim_Id
+
+            print('Saving the modified payload XML')
+
+            with open(os.path.join(claim_Id, 'payload.xml'), 'w') as p:
+                p.write(ET.tostring(payload_root))
 
             # envelope = ET.tostring(root)
 
