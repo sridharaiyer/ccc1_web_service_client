@@ -319,7 +319,12 @@
                         </AssigneeDescriptor>
                     </ClaimDescriptor>
                     <Payload>
-                        <Data>PD94bWwgdmVyc2lvbj0iMS4wIj8+DQo8U3RhdHVzQ2hhbmdlIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEtaW5zdGFuY2UiIHhtbG5zOnhzZD0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEiIHhtbG5zPSJodHRwOi8vc2VydmljZXMubXljY2Nwb3J0YWwuY29tL1NPQS9TdGF0dXNDaGFuZ2VTZXJ2aWNlL1BheWxvYWQiPg0KICA8UmVmZXJlbmNlPmh0dHA6Ly9zZXJ2aWNlcy5teWNjY3BvcnRhbC5jb20vRXZlbnRzLzBlZTNlMzA2LTY2N2ItNDRhMS05MjQ4LWUzNWJlOGU2NGM5ZC8yYjc4ZGYwYy01ZjY2LTRmYTQtOTk5MC01YmM4NTg0YjFhYWE8L1JlZmVyZW5jZT4NCiAgPFN0YXR1c1R5cGU+UHVibGlzaGluZzwvU3RhdHVzVHlwZT4NCiAgPFN0YXR1c1N0YXRlPlB1Ymxpc2hlZDwvU3RhdHVzU3RhdGU+DQo8L1N0YXR1c0NoYW5nZT4=</Data>
+                        <Data><?xml version="1.0"?>
+<StatusChange xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://services.mycccportal.com/SOA/StatusChangeService/Payload">
+  <Reference>http://services.mycccportal.com/Events/0ee3e306-667b-44a1-9248-e35be8e64c9d/2b78df0c-5f66-4fa4-9990-5bc8584b1aaa</Reference>
+  <StatusType>Publishing</StatusType>
+  <StatusState>Published</StatusState>
+</StatusChange></Data>
                         <Reference>http://services.mycccportal.com/Events/0ee3e306-667b-44a1-9248-e35be8e64c9d/2b78df0c-5f66-4fa4-9990-5bc8584b1aaa</Reference>
                     </Payload>
                 </NormalizedMessage>

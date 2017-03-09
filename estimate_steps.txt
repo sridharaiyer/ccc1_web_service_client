@@ -42,8 +42,8 @@ Status Change All
 3. Reference -> Workfile Ref
 4. DocumentName>PrintImage <DocumentExt>E01</DocumentExt> Payload > Data >
 					a. Convert from base64
-					b. Reference -> Workfile Ref
-5. Reference -> Workfile Ref
+					b. Reference -> printimage Ref
+5. Reference -> printimage Ref
 
 6. First Name
 7. Last Name
