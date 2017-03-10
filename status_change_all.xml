@@ -319,12 +319,7 @@
                         </AssigneeDescriptor>
                     </ClaimDescriptor>
                     <Payload>
-                        <Data><?xml version="1.0"?>
-<StatusChange xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://services.mycccportal.com/SOA/StatusChangeService/Payload">
-  <Reference>http://services.mycccportal.com/Events/0ee3e306-667b-44a1-9248-e35be8e64c9d/2b78df0c-5f66-4fa4-9990-5bc8584b1aaa</Reference>
-  <StatusType>Publishing</StatusType>
-  <StatusState>Published</StatusState>
-</StatusChange></Data>
+                        <Data>PD94bWwgdmVyc2lvbj0iMS4wIj8+CjxTdGF0dXNDaGFuZ2UgeG1sbnM6eHNpPSJodHRwOi8vd3d3LnczLm9yZy8yMDAxL1hNTFNjaGVtYS1pbnN0YW5jZSIgeG1sbnM6eHNkPSJodHRwOi8vd3d3LnczLm9yZy8yMDAxL1hNTFNjaGVtYSIgeG1sbnM9Imh0dHA6Ly9zZXJ2aWNlcy5teWNjY3BvcnRhbC5jb20vU09BL1N0YXR1c0NoYW5nZVNlcnZpY2UvUGF5bG9hZCI+CiAgPFJlZmVyZW5jZT5odHRwOi8vc2VydmljZXMubXljY2Nwb3J0YWwuY29tL0V2ZW50cy8wZWUzZTMwNi02NjdiLTQ0YTEtOTI0OC1lMzViZThlNjRjOWQvMmI3OGRmMGMtNWY2Ni00ZmE0LTk5OTAtNWJjODU4NGIxYWFhPC9SZWZlcmVuY2U+CiAgPFN0YXR1c1R5cGU+UHVibGlzaGluZzwvU3RhdHVzVHlwZT4KICA8U3RhdHVzU3RhdGU+UHVibGlzaGVkPC9TdGF0dXNTdGF0ZT4KPC9TdGF0dXNDaGFuZ2U+</Data>
                         <Reference>http://services.mycccportal.com/Events/0ee3e306-667b-44a1-9248-e35be8e64c9d/2b78df0c-5f66-4fa4-9990-5bc8584b1aaa</Reference>
                     </Payload>
                 </NormalizedMessage>
