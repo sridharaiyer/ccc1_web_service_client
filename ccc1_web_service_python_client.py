@@ -36,7 +36,8 @@ claim_Id = 'eqa' + i.strftime('%Y%m%d%H%M%S')
 os.makedirs(claim_Id)
 
 print('ClaimReferenceID = {}'.format(claim_Id))
-print('Owner First Name and Last Name = [{}. {}]'.format(owner_first_name, owner_last_name))
+print('Owner First Name and Last Name = [{}. {}]'.format(
+    owner_first_name, owner_last_name))
 
 with zipfile.ZipFile('Fiddler_Captures/cwf_testcase29_EO1.saz', 'r') as zf:
     # print(zf.namelist())
@@ -91,16 +92,20 @@ with zipfile.ZipFile('Fiddler_Captures/cwf_testcase29_EO1.saz', 'r') as zf:
             with zf.open(os.path.join(files['Event'][event]), 'r') as ef:
                 s = str(ef.read())
                 # Retrieving the workfile XML block from the text file
-                envelope = [re.search(r'<s:Envelope.*\/s:Envelope>', s).group()][0]
+                envelope = [
+                    re.search(r'<s:Envelope.*\/s:Envelope>', s).group()][0]
 
                 root = ET.fromstring(envelope)
                 for elem in root.iterfind('.//{*}ClaimReferenceID'):
                     elem.text = claim_Id
                 for elem in root.iterfind('.//{*}Reference'):
-                    elem.text = re.sub('[^/]*$', events_ref_dict[event], elem.text)
+                    elem.text = re.sub(
+                        '[^/]*$', events_ref_dict[event], elem.text)
 
-                encoded_payload_data = root.xpath('//*[local-name() = "Data"]')[0].text
-                payload_root = ET.fromstring(base64.b64decode(encoded_payload_data).decode('UTF-8'))
+                encoded_payload_data = root.xpath(
+                    '//*[local-name() = "Data"]')[0].text
+                payload_root = ET.fromstring(base64.b64decode(
+                    encoded_payload_data).decode('UTF-8'))
                 for elem in payload_root.iterfind('.//{*}ClaimRefID'):
                     elem.text = claim_Id
 
@@ -114,7 +119,8 @@ with zipfile.ZipFile('Fiddler_Captures/cwf_testcase29_EO1.saz', 'r') as zf:
                     elem.text = owner_last_name
 
                 modified_payload_xml = ET.tostring(payload_root)
-                encoded_payload_data = base64.b64encode(modified_payload_xml).decode('UTF-8')
+                encoded_payload_data = base64.b64encode(
+                    modified_payload_xml).decode('UTF-8')
 
                 for elem in root.iterfind('.//{*}Payload//{*}Data'):
                     elem.text = encoded_payload_data
@@ -262,6 +268,38 @@ with zipfile.ZipFile('Fiddler_Captures/cwf_testcase29_EO1.saz', 'r') as zf:
 
         #     with open(s.path.join(claim_Id, 'DigitalImage.xml'), 'wb') as p:
         #         p.write(ET.tostring(root, pretty_print=True))
+
+        print('Extracting and modifying the StatusChange file file from the indexfile')
+
+        with zf.open(os.path.join(files['Status'][0]), 'r') as st:
+            s = str(st.read())
+            # Retrieving the RelatedPriorDamage XML block from the text file
+            envelope = [re.search(r'<s:Envelope.*\/s:Envelope>', s).group()][0]
+            root = ET.fromstring(envelope)
+
+            # All the document and events blocks will have a ClaimReferenceID
+            for elem in root.iterfind('.//{*}ClaimReferenceID'):
+                elem.text = claim_Id
+
+            # Changing the Workfile blocks
+            encoded_payload_data = root.xpath(
+                '//text()[contains(.,"PathwaysXML")]/ancestor::*[local-name()="DocumentDescriptor"]/following-sibling::*[local-name()="Payload"]/*[local-name()="Data"]')[0].text
+            
+            payload_root = ET.fromstring(base64.b64decode(
+                encoded_payload_data).decode('UTF-8'))
+
+            for elem in payload_root.iterfind('.//{*}Reference'):
+                    elem.text = re.sub(
+                        '[^/]*$', workfile_ref, elem.text)
+            
+
+
+            print('Saving the StatusChange.xml')
+
+            with open(s.path.join(claim_Id, 'DigitalImage.xml'), 'wb') as p:
+                p.write(ET.tostring(root, pretty_print=True))
+
+
 # print('Verifying changes in PutPendingWorkfile.xml')
 
 # with open(os.path.join(claim_Id, 'PutPendingWorkfile.xml')) as xmlfile:

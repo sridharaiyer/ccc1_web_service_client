@@ -16,8 +16,30 @@ import uuid
 
 tree = ET.parse('status_change_all.xml')
 
-for elem in tree.xpath('//*[local-name()="NormalizedMessage" and not(descendant::*[local-name()="DocumentDescriptor"])]'):
-    print(elem.tag)
+# print('Get all events normalized message nodes.')
+
+# for elem in tree.xpath('//*[local-name()="NormalizedMessage" and not(descendant::*[local-name()="DocumentDescriptor"])]'):
+#     print(elem.tag)
+
+# print('\nGet all workfile (E01, S01, S02 .. S099), Printimage and DigitalImage normalized message nodes.')
+
+# for elem in tree.xpath('//*[local-name()="NormalizedMessage" and descendant::*[local-name()="DocumentDescriptor"]]'):
+#     print(elem.tag)
+
+print('\nGet the payload/data of wotkfile. (DocumentName = PathwaysXML)')
+
+# for elem in tree.xpath('//text()[contains(.,"PathwaysXML")]/ancestor::*[local-name()="DocumentDescriptor"]/following-sibling::*[local-name()="Payload"]/*[local-name()="Data"]'):
+#     print(elem.tag)
+
+print(tree.xpath(
+    '//text()[contains(.,"PathwaysXML")]/ancestor::*[local-name()="DocumentDescriptor"]/following-sibling::*[local-name()="Payload"]/*[local-name()="Data"]')[0].text)
+
+print('Get the NormalizedMessage block for PathwaysXML')
+
+print(tree.xpath(
+    '//text()[contains(.,"PathwaysXML")]/ancestor::*[local-name()="NormalizedMessage"]')[0].tag)
+
+# //text()[contains(.,'abc')]
 
 # for elem in root.xpath('//*[local-name()!="NormalizedMessage"]'):
 #     print(elem.tag)
