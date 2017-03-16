@@ -14,6 +14,15 @@ from hamcrest import assert_that, equal_to
 import uuid
 
 
+def assign_uuids(ref_list):
+    uuids = {}
+    [uuids.append(str(uuid.uuid4())) for i in ref_list]
+    return(dict(zip(ref_list, uuids)))
+
+
+dict_ref = assign_uuids(['workfile_ref', 'digitalimage_ref', 'printimage_ref', 'rpd_ref', 'upd_ref'])
+dict_owner_name = {'owner_first_name':  names.get_first_name(),'owner_last_name': names.get_last_name()}
+
 workfile_ref = str(uuid.uuid4())
 digitalimage_ref = str(uuid.uuid4())
 printimage_ref = str(uuid.uuid4())
@@ -284,15 +293,13 @@ with zipfile.ZipFile('Fiddler_Captures/cwf_testcase29_EO1.saz', 'r') as zf:
             # Changing the Workfile blocks
             encoded_payload_data = root.xpath(
                 '//text()[contains(.,"PathwaysXML")]/ancestor::*[local-name()="DocumentDescriptor"]/following-sibling::*[local-name()="Payload"]/*[local-name()="Data"]')[0].text
-            
+
             payload_root = ET.fromstring(base64.b64decode(
                 encoded_payload_data).decode('UTF-8'))
 
             for elem in payload_root.iterfind('.//{*}Reference'):
-                    elem.text = re.sub(
-                        '[^/]*$', workfile_ref, elem.text)
-            
-
+                elem.text = re.sub(
+                    '[^/]*$', workfile_ref, elem.text)
 
             print('Saving the StatusChange.xml')
 
