@@ -137,70 +137,70 @@ with zipfile.ZipFile('Fiddler_Captures/cwf_testcase29_EO1.saz', 'r') as zf:
                 with open(os.path.join(claim_Id, 'event' + '_' + str(event + 1) + '_' + 'file.xml'), 'wb') as p:
                     p.write(ET.tostring(root, pretty_print=True))
 
-        # print('Extracting workfile from indexfile')
+        print('Extracting workfile from indexfile')
 
-        # with zf.open(os.path.join(files['Workfile'][0]), 'r') as wf:
-        #     s = str(wf.read())
-        #     # Retrieving the workfile XML block from the text file
-        #     envelope = [re.search(r'<s:Envelope.*\/s:Envelope>', s).group()][0]
+        with zf.open(os.path.join(files['Workfile'][0]), 'r') as wf:
+            s = str(wf.read())
+            # Retrieving the workfile XML block from the text file
+            envelope = [re.search(r'<s:Envelope.*\/s:Envelope>', s).group()][0]
 
-        #     root = ET.fromstring(envelope)
+            root = ET.fromstring(envelope)
 
-        #     encoded_gzipped_payload = None
+            encoded_gzipped_payload = None
 
-        #     print('Extracting the encoded and gzipped payload')
+            print('Extracting the encoded and gzipped payload')
 
-        #     encoded_gzipped_payload = root.xpath('//*[local-name() = "Data"]')[0].text
+            encoded_gzipped_payload = root.xpath('//*[local-name() = "Data"]')[0].text
 
-        #     print('Decoding and un-gzipping the payload')
+            print('Decoding and un-gzipping the payload')
 
-        #     decoded_base64 = base64.b64decode(encoded_gzipped_payload)
-        #     gzcontent = gzip.GzipFile(fileobj=BytesIO(
-        #         decoded_base64)).read().decode('UTF-8')
+            decoded_base64 = base64.b64decode(encoded_gzipped_payload)
+            gzcontent = gzip.GzipFile(fileobj=BytesIO(
+                decoded_base64)).read().decode('UTF-8')
 
-        #     payload_root = ET.fromstring(gzcontent)
+            payload_root = ET.fromstring(gzcontent)
 
-        #     print('Replacing claim IDs and party first name last name in the payload XML')
+            print('Replacing claim IDs and party first name last name in the payload XML')
 
-        #     for elem in payload_root.iterfind('.//{*}ClaimNumber'):
-        #         elem.text = claim_Id
+            for elem in payload_root.iterfind('.//{*}ClaimNumber'):
+                elem.text = claim_Id
 
-        #     for elem in payload_root.iterfind('.//{*}ClaimReferenceID'):
-        #         elem.text = claim_Id
+            for elem in payload_root.iterfind('.//{*}ClaimReferenceID'):
+                elem.text = claim_Id
 
-        #     for elem in payload_root.iterfind('.//{*}clm_num'):
-        #         elem.text = claim_Id
+            for elem in payload_root.iterfind('.//{*}clm_num'):
+                elem.text = claim_Id
 
-        #     for elem in payload_root.iterfind('.//{*}Party//{*}FirstName'):
-        #         elem.text = owner_first_name
+            for elem in payload_root.iterfind('.//{*}Party//{*}FirstName'):
+                elem.text = owner_first_name
 
-        #     for elem in payload_root.iterfind('.//{*}Party//{*}LastName'):
-        #         elem.text = owner_last_name
+            for elem in payload_root.iterfind('.//{*}Party//{*}LastName'):
+                elem.text = owner_last_name
 
-        #     for elem in payload_root.iterfind('.//{*}owner_info//{*}owner_first_name'):
-        #         elem.text = owner_first_name
+            for elem in payload_root.iterfind('.//{*}owner_info//{*}owner_first_name'):
+                elem.text = owner_first_name
 
-        #     for elem in payload_root.iterfind('.//{*}owner_info//{*}owner_last_name'):
-        #         elem.text = owner_last_name
+            for elem in payload_root.iterfind('.//{*}owner_info//{*}owner_last_name'):
+                elem.text = owner_last_name
 
-        #     modified_payload_xml = ET.tostring(payload_root, pretty_print=True)
+            modified_payload_xml = ET.tostring(payload_root, pretty_print=True)
 
-        #     gzip_compressed = gzip.compress(modified_payload_xml)
-        #     encoded_payload = (base64.b64encode(gzip_compressed)).decode('UTF-8')
+            gzip_compressed = gzip.compress(modified_payload_xml)
+            encoded_payload = (base64.b64encode(gzip_compressed)).decode('UTF-8')
 
-        #     for elem in root.iterfind('.//{*}ClaimReferenceID'):
-        #         elem.text = claim_Id
+            for elem in root.iterfind('.//{*}ClaimReferenceID'):
+                elem.text = claim_Id
 
-        #     for elem in root.iterfind('.//{*}Payload//{*}Data'):
-        #         elem.text = encoded_payload
+            for elem in root.iterfind('.//{*}Payload//{*}Data'):
+                elem.text = encoded_payload
 
-        #     for elem in root.iterfind('.//{*}Reference'):
-        #         elem.text = re.sub('[^/]*$', workfile_ref, elem.text)
+            for elem in root.iterfind('.//{*}Reference'):
+                elem.text = re.sub('[^/]*$', workfile_ref, elem.text)
 
-        #     print('Saving the PutPendingWorkfile.xml')
+            print('Saving the PutPendingWorkfile.xml')
 
-        #     with open(os.path.join(claim_Id, 'PutPendingWorkfile.xml'), 'wb') as p:
-        #         p.write(ET.tostring(root, pretty_print=True))
+            with open(os.path.join(claim_Id, 'PutPendingWorkfile.xml'), 'wb') as p:
+                p.write(ET.tostring(root, pretty_print=True))
 
         # print('Extracting PrintImage file from the indexfile')
 
