@@ -63,8 +63,8 @@
                 "postGetWorklist": "https://servicesqa.aws.mycccportal.com/gateway/services/Worklist"
             },
             "appraiser_search": {
-                "postPutPendingWorkfile": "https://servicesqa.aws.mycccportal.com/gateway/services/Workfile",
-                "postPutPendingWorkfile": "https://servicesqa.aws.mycccportal.com/gateway/services/Workfile",
+                "appraiser_searches_service": "http://qa00.aws.mycccportal.com/asweb/",
+                "appraiser_searches_service_12": "http://qa00.aws.mycccportal.com/asweb1.2/",
                 "postPutPendingWorkfile": "https://servicesqa.aws.mycccportal.com/gateway/services/Workfile"
             },
             "scheduling": {
