@@ -12,10 +12,11 @@ import datetime
 import names
 from hamcrest import assert_that, equal_to
 import uuid
+import pdb
 
 
 def assign_uuids(ref_list):
-    uuids = {}
+    uuids = []
     [uuids.append(str(uuid.uuid4())) for i in ref_list]
     return(dict(zip(ref_list, uuids)))
 
@@ -74,11 +75,28 @@ with zipfile.ZipFile('Fiddler_Captures/cwf_testcase29_EO1.saz', 'r') as zf:
             key = row.findAll('td')[5].text.rsplit('/', 1)[1]
             value = row.a.get('href').replace("\\", "/")
             if key != 'Worklist':
-                files[key].append(value)
+                if key == 'PrintImage':
+                     files['PrintImage_All'].append(value)
+                else:
+                    files[key].append(value)
+
+        num_of_print_image = len(files['PrintImage_All'])
+
+        for img in range(num_of_print_image):
+            img_path = files['PrintImage_All'][img]
+            with zf.open(os.path.join(img_path), 'r') as img_file:
+                s = str(img_file.read())
+                envelope = [
+                    re.search(r'<s:Envelope.*\/s:Envelope>', s).group()][0]
+                soup = BeautifulSoup(envelope, 'xml')
+                files[soup.find('MsgType').text] = img_path
+
+        del files['PrintImage_All']
 
         files_json = json.dumps(files, indent=4)
 
         print(files_json)
+        pdb.set_trace()
 
         print('Assign ref IDs to events:')
 

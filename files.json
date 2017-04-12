@@ -1,0 +1,33 @@
+{
+    "AdvisorService": [
+        "raw/18_c.txt",
+        "raw/33_c.txt"
+    ],
+    "Workfile": [
+        "raw/39_c.txt"
+    ],
+    "PrintImage": [
+        "raw/40_c.txt",
+        "raw/42_c.txt",
+        "raw/43_c.txt"
+    ],
+    "DigitalImage": [
+        "raw/41_c.txt"
+    ],
+    "Event": [
+        "raw/44_c.txt",
+        "raw/59_c.txt",
+        "raw/60_c.txt",
+        "raw/63_c.txt",
+        "raw/64_c.txt",
+        "raw/65_c.txt",
+        "raw/66_c.txt",
+        "raw/67_c.txt",
+        "raw/68_c.txt",
+        "raw/69_c.txt"
+    ],
+    "StatusChange": [
+        "raw/73_c.txt",
+        "raw/76_c.txt"
+    ]
+}

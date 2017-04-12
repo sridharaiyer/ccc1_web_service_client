@@ -19,10 +19,10 @@ from box import Box
 
 # Reading data back
 
-data = None
+properties = None
 with open('properties.json', 'r') as f:
-    data = json.load(f)
+    properties = Box(json.load(f))
 
-config_data = Box(data)
-
-print(eval('{}.{}.{}.{}.{}'.format(config_data, 'awsqa', 'db', 'claimfolder', 'host')))
+# eval_statement = '{}.{}.{}.{}.{}'.format('properties', 'awsqa', 'db', 'claimfolder', 'host')
+print(eval('{}.{}.{}.{}.{}'.format('properties', 'awsqa', 'db', 'claimfolder', 'host')))
+	
