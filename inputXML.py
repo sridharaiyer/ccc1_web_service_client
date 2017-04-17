@@ -12,3 +12,6 @@ class Workfile(CreateXML):
     @property
     def uuid(self):
         return self._uuid
+
+    def modifyXML(self):
+    	self.replace_tag(root=self.payload_root, tag='', value='')

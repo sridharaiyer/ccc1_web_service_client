@@ -10,6 +10,7 @@ import base64
 import gzip
 from io import BytesIO
 import datetime
+import pytz
 import names
 from hamcrest import assert_that, equal_to
 import uuid
@@ -21,33 +22,50 @@ class CreateXML(abc.ABC):
 
     def __init__(self, envelope, claim_id):
         self.envelope = envelope
-        self.claim_id = claim_id
+        self._claim_id = claim_id
+        self._name = {'owner_first_name': names.get_first_name(), 'owner_last_name': names.get_last_name()}
+        self._time_iso = datetime.datetime.now(pytz.timezone('US/Central')).isoformat()
+        self._time = datetime.datetime.now(pytz.timezone('US/Central')).strftime('%Y-%m-%dT%H:%M:%S')
         super(AbstractOperation, self).__init__()
 
-    def assign_uuids(ref_list):
-        uuids = {}
-        [uuids.append(str(uuid.uuid4())) for i in ref_list]
-        return(dict(zip(ref_list, uuids)))
-
     @property
-    def ref(self):
-        ref_list = []
-        ref_list.append(u'Workfile')
-        ref_list.append(u'Digitalimage')
-        ref_list.append(u'Printimage')
-        ref_list.append(u'RPD')
-        ref_list.append(u'UPD')
-        _ref = assign_uuids(ref_list)
-        return self._ref
+    def claim_id(self):
+        return self._claim_id
 
     @property
     def name(self):
-        _owner_name = {}
-        _owner_name['owner_first_name'] = names.get_first_name()
-        _owner_name['owner_last_name'] = names.get_last_name()
-        return self._owner_name
+        return self._name
 
-    dict_owner_name = {'owner_first_name': names.get_first_name(), 'owner_last_name': names.get_last_name()}
+    @property
+    def root(self):
+        return get_root(self.envelope)
+
+    @property
+    def get_root(self, data):
+        return ET.fromstring(data)
+
+    @property
+    def payload_root(self):
+        payload = self.root.xpath('//*[local-name() = "Data"]')[0].text
+        return self.get_root(self.decode_ungzip(payload))
+
+    @abc.abstractmethod
+    def modifyXML(self, root=self.root):
+        tag_dict = {}
+        tag_dict['.//{*}SourceTimeStamp'] = self._time_iso
+        tag_dict['.//{*}PublishTimeStamp'] = self._time_iso
+        tag_dict['.//{*}ClaimNumber'] = claim_id
+        tag_dict['.//{*}ClaimReferenceID'] = claim_id
+        tag_dict['.//{*}clm_num'] = claim_id
+        tag_dict['.//{*}Party//{*}FirstName'] = name['owner_first_name']
+        tag_dict['.//{*}Party//{*}LastName'] = name['owner_last_name']
+        tag_dict['.//{*}owner_info//{*}owner_first_name'] = name['owner_first_name']
+        tag_dict['.//{*}owner_info//{*}owner_last_name'] = name['owner_last_name']
+
+        replace_tag(root=root, tag_dict)
+
+        # for elem in root.iterfind('.//{*}Payload//{*}Data'):
+        #     elem.text = encoded_payload
 
     def decode_ungzip(self, data):
         decoded_base64 = base64.b64decode(data)
@@ -55,15 +73,15 @@ class CreateXML(abc.ABC):
             decoded_base64)).read().decode('UTF-8')
         return gzcontent
 
-    def gzip_encode(self, xml):
-        gzip_compressed = gzip.compress(xml)
+    def gzip_encode(self, data):
+        gzip_compressed = gzip.compress(data)
         encoded_payload = (base64.b64encode(gzip_compressed)).decode('UTF-8')
         return encoded_payload
 
     @property
     def uuid(self):
         return str(uuid.uuid4())
-    
+
     def gzip_data():
         pass
 
@@ -97,17 +115,19 @@ class CreateXML(abc.ABC):
         pass
 
     @property
-    def modifiedXML(self):
+    def root_data(self):
         return ET.tostring(root, pretty_print=True)
 
-    def change_single_tag_value(self, root=self.root, **xpath_value):
-        for xpath, value in xpath_value.iteritems():
-            root.xpath(xpath)[0].text = value
+    def replace(self, root=None, tag=None, value=None):
+        for elem in root.iterfind(tag):
+            elem.text = value
 
-    def change_tag_value_all_occurrences(self, root=self.root, **xpath_value):
-        for xpath, value in xpath_value.iteritems():
-            for elem in root.iterfind(xpath):
-                elem.text = value
+    def replace_tag(self, root=self.root, tag=None, value=None, **tag_dict):
+        if not tag_dict:
+            replace(root=root, tag=tag, value=value)
+        else:
+            for tag, value in tag_dict.iteritems():
+                replace(root=root, tag=tag, value=value)
 
     def change_reference(self, root=self.root, ref_tag_xpath, value):
         ref_text = root.xpath(ref_tag_xpath)[0].text
