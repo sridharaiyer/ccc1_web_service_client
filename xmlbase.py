@@ -21,7 +21,7 @@ class CreateXML(abc.ABC):
     """docstring for CreateXML"""
 
     def __init__(self, envelope, claim_id):
-        self.envelope = envelope
+        self._envelope = envelope
         self._claim_id = claim_id
         self._name = {'owner_first_name': names.get_first_name(), 'owner_last_name': names.get_last_name()}
         self._time_iso = datetime.datetime.now(pytz.timezone('US/Central')).isoformat()
@@ -64,9 +64,6 @@ class CreateXML(abc.ABC):
 
         replace_tag(root=root, tag_dict)
 
-        # for elem in root.iterfind('.//{*}Payload//{*}Data'):
-        #     elem.text = encoded_payload
-
     def decode_ungzip(self, data):
         decoded_base64 = base64.b64decode(data)
         gzcontent = gzip.GzipFile(fileobj=BytesIO(
@@ -79,14 +76,13 @@ class CreateXML(abc.ABC):
         return encoded_payload
 
     @property
-    def uuid(self):
-        return str(uuid.uuid4())
+    def root_to_string(self, root=self.root):
+        return ET.tostring(root, pretty_print=True)
 
-    def gzip_data():
-        pass
-
-    def ungzip_data():
-        pass
+    @abc.abstractmethod
+    def change_reference(self, root=self.root, ref):
+        for elem in root.iterfind('.//{*}Reference'):
+            elem.text = re.sub('[^/]*$', ref, elem.text)
 
     def base64_decode():
         pass
@@ -94,29 +90,10 @@ class CreateXML(abc.ABC):
     def base64_encode():
         pass
 
-    @abc.abstractmethod
-    def prepareXML():
-        pass
-
-    @abc.abstractmethod
-    def verifyXML():
-        pass
-
     # @classmethod
     # @abc.abstractmethod
     # def factory(cls, *args):
     #     return cls()
-
-    @abc.abstractmethod
-    def modifyXML(self):
-        # edit all timestamps
-        # edit ClaimReferenceID
-        # edit Reference last segment UUID
-        pass
-
-    @property
-    def root_data(self):
-        return ET.tostring(root, pretty_print=True)
 
     def replace(self, root=None, tag=None, value=None):
         for elem in root.iterfind(tag):
@@ -132,3 +109,6 @@ class CreateXML(abc.ABC):
     def change_reference(self, root=self.root, ref_tag_xpath, value):
         ref_text = root.xpath(ref_tag_xpath)[0].text
         root.xpath(ref_tag_xpath)[0].text = re.sub('[^/]*$', value, ref_text)
+
+    def save_xml(self):
+        pass
