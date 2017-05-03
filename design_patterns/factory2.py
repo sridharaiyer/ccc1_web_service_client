@@ -35,7 +35,7 @@ class ChickenPizza(NonVegPizza):
 
 class MexicanVeggiePizza(VegPizza):
     def prepare(self):
-        print('Prepare - {}'.format(type(self).__name__))`/
+        print('Prepare - {}'.format(type(self).__name__))
 
 
 class HamPizza(NonVegPizza):
