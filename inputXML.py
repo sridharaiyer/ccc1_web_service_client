@@ -2,28 +2,32 @@ from xmlbase import CreateXML
 import uuid
 
 
-class Workfile(CreateXML):
-    """docstring for Workfile"""
+class PutPendingXML(CreateXML):
+    """docstring for PutPendingXML"""
 
-    def __init__(self, input_filename):
-        self._input_filename = input_filename
-        self._uuid = str(uuid.uuid4())
-        super(Workfile, self).__init__()
-
-    @property
-    def uuid(self):
-        return self._uuid
+    def __init__(self):
+        super(PutPendingXML, self).__init__()
 
     def modifyXML(self):
         # Modify body
-        super(Workfile, self).modifyXML()
+        super(PutPendingXML, self).modifyXML()
         # Modifying the Payload
-        super(Workfile, self).modifyXML(self.payload_root)
+        super(PutPendingXML, self).modifyXML(self.payload_root)
 
         payload = self.root_to_string(self.payload_root)
         modified_gzipped_payload = self.gzip_encode(payload)
 
-        self.replace_tag(tag='.//{*}Data', data=modified_gzipped_payload)
+        self.replace_tag(tag='.//{*}Data', value=modified_gzipped_payload)
 
         # Change reference UUID
-        super(Workfile, self).change_reference(ref=self.uuid)
+        super(PutPendingXML, self).change_reference(ref=self.uuid)
+
+
+class Workfile(PutPendingXML):
+    """docstring for Workfile"""
+
+    def __init__(self):
+        super(Workfile, self).__init__()
+
+    def modifyXML(self):
+        super(Workfile, self).modifyXML()
