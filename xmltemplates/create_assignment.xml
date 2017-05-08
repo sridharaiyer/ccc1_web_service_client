@@ -1,0 +1,693 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soapenv:Envelope xmlns:com="http://services.mycccportal.com/CCC/Commontypes" xmlns:ext="http://services.mycccportal.com/SOA/ExternalAssignmentService" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tran="http://services.mycccportal.com/CCC/TransactionHeader" xmlns:v1="http://services.mycccportal.com/CCC/assignment/v1">
+<soapenv:Header>
+  <wsse:Security xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd">
+	 <wsse:UsernameToken wsu:Id="UsernameToken-1" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+		<wsse:Username>$Username</wsse:Username>
+		<wsse:Password Type="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordText">password</wsse:Password>
+		<wsse:Nonce EncodingType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0#Base64Binary">ntSajEosx6D3v0/WX19HLg==</wsse:Nonce>
+		<wsu:Created>2010-01-28T22:10:02.535Z</wsu:Created>
+	 </wsse:UsernameToken>
+  </wsse:Security>
+</soapenv:Header>
+<soapenv:Body>
+<ext:CreateAssignment>   
+<v1:CCCAppraisalAssignment Version="1" xmlns:com="http://services.mycccportal.com/CCC/Commontypes" xmlns:ext="http://services.mycccportal.com/SOA/ExternalAssignmentService" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tran="http://services.mycccportal.com/CCC/TransactionHeader" xmlns:v1="http://services.mycccportal.com/CCC/assignment/v1">
+            <tran:TransactionControlHeader FileType="ASGN" FileVersion="1.0" HeaderVersion="1.0">
+               <tran:UniqueTransactionID>$UniqueTransID</tran:UniqueTransactionID>
+               <tran:PrimaryInsuranceCompanyID>$CompanyCode</tran:PrimaryInsuranceCompanyID>
+               <tran:CCCId code="039002951"/>
+               <tran:LossReferenceID>$UniqueTransID</tran:LossReferenceID>
+               <tran:EstimatingSystem code="C"/>
+               <tran:EchoField>testEchoField</tran:EchoField>
+               <tran:CCCActionCode>N</tran:CCCActionCode>
+               <tran:TransactionDateTime>$CurrentTime</tran:TransactionDateTime>
+            </tran:TransactionControlHeader>
+            <v1:CCCAssignment>         
+               <v1:AssignmentAdministration>
+                  <v1:AssignmentActionCode code="$AssignmentActionCode"/>
+                  <v1:ActiveScheduleIndicator code="N"/>
+               </v1:AssignmentAdministration>
+               <v1:AssignmentRecipient>
+                  <v1:AssignmentRecipientID>$MailBoxID</v1:AssignmentRecipientID>      
+                  <v1:AssignmentRecipientType code="$AppraiserCode"/>
+                  <v1:DateAssigned>$CurrentTime</v1:DateAssigned>
+                  <v1:InspectionMethod code="$InspectionMethod"/>
+                  <v1:InstructionsToEstimator>InstructionsToEstimator</v1:InstructionsToEstimator>
+                  <v1:InspectionRequirements>InspectionRequirements13</v1:InspectionRequirements>
+                  <v1:AssignedBy>Adjuster</v1:AssignedBy>
+               </v1:AssignmentRecipient>
+               <v1:Claim>
+                  <v1:LossReferenceId>$UniqueTransID</v1:LossReferenceId>
+                  <v1:PrimaryInsuranceCompanyID>$CompanyCode</v1:PrimaryInsuranceCompanyID>
+                  <v1:ClaimOffice>$ClaimOffice</v1:ClaimOffice>
+                  <v1:ClaimTypeCode code="VE"/>
+                  <v1:ClaimTypeDetail code="VN"/>
+                  <v1:CCCLossCategory code="O"/>
+                  <v1:CustomerLossTypeCode>IC</v1:CustomerLossTypeCode>
+                  <v1:ReportedDateTime>2010-01-18T10:51:49.082</v1:ReportedDateTime>
+                  <v1:RentalCarInUse code="Y"/>
+                  <v1:DailyCost>210.73</v1:DailyCost>
+                  <v1:OkToPayFlag code="Y"/>
+                  <v1:Adjuster>
+                     <v1:AdjusterCode>$AdjusterCode</v1:AdjusterCode>
+                     <v1:ClaimUnit>ClaimUnit23</v1:ClaimUnit>
+                     <v1:AdjusterContact>
+                        <com:PersonCompanyIndicator code="P"/>
+                        <com:CompanyName>$CompanyName</com:CompanyName>
+                        <com:CompanyOfficeID>$CompanyCode</com:CompanyOfficeID>
+                        <com:CompanyOfficeType>$CompanyOfficeType</com:CompanyOfficeType>
+                        <com:CompanyGovtId>CompanyGovtID</com:CompanyGovtId>
+                        <com:CompanyFedTaxInfo>CompanyFed</com:CompanyFedTaxInfo>
+                        <com:Title>Mr</com:Title>
+                        <com:FirstName>Noah</com:FirstName>
+                        <com:MiddleName>Middle</com:MiddleName>
+                        <com:LastName>$LastName</com:LastName>
+                        <com:Suffix>Jr</com:Suffix>
+                        <com:NickName>Noah</com:NickName>
+                        <com:Salutation>Mr</com:Salutation>
+                        <com:VerbalGreeting>vGreeting</com:VerbalGreeting>
+                        <com:WrittenGreeting>wGreeting</com:WrittenGreeting>
+                        <com:DriversLicenseNumber>12345</com:DriversLicenseNumber>
+                        <com:DriverLicenseState code="IL"/>
+                        <com:DriversLicenseExpirationDate>2010-01-18</com:DriversLicenseExpirationDate>
+                        <com:Contact>
+                           <com:BusinessPhone>
+                              <com:CountryCode>001</com:CountryCode>
+                              <com:CityCode>312</com:CityCode>
+                              <com:AreaCode>312</com:AreaCode>
+                              <com:LocalNum>229-2307</com:LocalNum>
+                              <com:Extn>2307</com:Extn>
+                           </com:BusinessPhone>
+                           <com:HomePhone1>
+                              <com:CountryCode>001</com:CountryCode>
+                              <com:CityCode>312</com:CityCode>
+                              <com:AreaCode>312</com:AreaCode>
+                              <com:LocalNum>229-2307</com:LocalNum>
+                              <com:Extn>2307</com:Extn>
+                           </com:HomePhone1>
+                           <com:HomePhone2>
+                              <com:CountryCode>001</com:CountryCode>
+                              <com:CityCode>312</com:CityCode>
+                              <com:AreaCode>312</com:AreaCode>
+                              <com:LocalNum>229-2307</com:LocalNum>
+                              <com:Extn>2307</com:Extn>
+                           </com:HomePhone2>
+                           <com:CellPhone>
+                              <com:CountryCode>001</com:CountryCode>
+                              <com:CityCode>312</com:CityCode>
+                              <com:AreaCode>312</com:AreaCode>
+                              <com:LocalNum>229-2307</com:LocalNum>
+                              <com:Extn>2307</com:Extn>
+                           </com:CellPhone>
+                           <com:DayPhone>
+                              <com:CountryCode>001</com:CountryCode>
+                              <com:CityCode>312</com:CityCode>
+                              <com:AreaCode>312</com:AreaCode>
+                              <com:LocalNum>229-2307</com:LocalNum>
+                              <com:Extn>2307</com:Extn>
+                           </com:DayPhone>
+                           <com:EveningPhone>
+                              <com:CountryCode>001</com:CountryCode>
+                              <com:CityCode>312</com:CityCode>
+                              <com:AreaCode>312</com:AreaCode>
+                              <com:LocalNum>229-2307</com:LocalNum>
+                              <com:Extn>2307</com:Extn>
+                           </com:EveningPhone>
+                           <com:HomeFax>
+                              <com:CountryCode>001</com:CountryCode>
+                              <com:CityCode>312</com:CityCode>
+                              <com:AreaCode>312</com:AreaCode>
+                              <com:LocalNum>229-2307</com:LocalNum>
+                              <com:Extn>2307</com:Extn>
+                           </com:HomeFax>
+                           <com:BusinessFax>
+                              <com:CountryCode>001</com:CountryCode>
+                              <com:CityCode>312</com:CityCode>
+                              <com:AreaCode>312</com:AreaCode>
+                              <com:LocalNum>229-2307</com:LocalNum>
+                              <com:Extn>2307</com:Extn>
+                           </com:BusinessFax>
+                           <com:OtherPhoneNumber>
+                              <com:CountryCode>001</com:CountryCode>
+                              <com:CityCode>312</com:CityCode>
+                              <com:AreaCode>312</com:AreaCode>
+                              <com:LocalNum>229-2307</com:LocalNum>
+                              <com:Extn>2307</com:Extn>
+                           </com:OtherPhoneNumber>
+                           <com:Email>tgreene@cccis.com</com:Email>
+                           <com:Url>tgreene@cccis.com</com:Url>
+                        </com:Contact>
+                        <com:Address>
+                           <com:Address1>222 merchanidise mart</com:Address1>
+                           <com:Address2>suite 900</com:Address2>
+                           <com:AddressName>CCC Information services</com:AddressName>
+                           <com:City>Chicago</com:City>
+                           <com:County>Cook</com:County>
+                           <com:StateCode code="IL"/>
+                           <com:Zip>
+                              <com:ZipCode>60654</com:ZipCode>
+                              <com:ZipExt>1234</com:ZipExt>
+                           </com:Zip>
+                           <com:Country>USA</com:Country>
+                        </com:Address>
+                     </v1:AdjusterContact>
+                  </v1:Adjuster>
+                  <v1:ClaimNotes>ClaimNotes24</v1:ClaimNotes>
+                  <v1:CesLossTypeCode>CesLoss</v1:CesLossTypeCode>
+                  <v1:CesLossTypeDescription>CesLossTypeDescription26</v1:CesLossTypeDescription>
+               </v1:Claim>
+               <v1:Vehicle>
+                  <v1:IdentificationNumber>3VWBK21C83M400894</v1:IdentificationNumber>
+                  <v1:LicensePlateNumber>License</v1:LicensePlateNumber>
+                  <v1:StateofRegistration code="IL"/>
+                  <v1:LicensePlateExpirationDate>2010-01-18</v1:LicensePlateExpirationDate>
+                  <v1:ModelYear>2003</v1:ModelYear>
+                  <v1:MakeCode>HOND</v1:MakeCode>
+                  <v1:MakeDescription>ACCORD</v1:MakeDescription>
+                  <v1:Model>Model33</v1:Model>
+                  <v1:VehicleUsage>
+                     <v1:UsageCode code="M"/>
+                     <v1:Usage>34</v1:Usage>
+                  </v1:VehicleUsage>
+                  <v1:BodyStyle>BodyStyle35</v1:BodyStyle>
+                  <v1:ExternalColor>ExternalColor36</v1:ExternalColor>
+                  <v1:InternalColor>InternalColor37</v1:InternalColor>
+                  <v1:ConditionCode code="GO"/>
+                  <v1:EngineSize>EngineSize38</v1:EngineSize>
+                  <v1:ProductionDate>2010-01-18</v1:ProductionDate>
+                  <v1:PriorDamageText>PriorDamageText40</v1:PriorDamageText>
+                  <v1:DamageMemoText>DamageMemoText41</v1:DamageMemoText>
+                  <v1:ImpactNotes>ImpactNotes42</v1:ImpactNotes>
+                  <v1:VehicleMemoText>VehicleMemoText43</v1:VehicleMemoText>
+                  <v1:DrivableFlag code="N"/>
+                  <v1:TotalLossFlag code="U"/>
+                  <v1:GaragedZip>
+                     <com:ZipCode>60654</com:ZipCode>
+                     <com:ZipExt>1234</com:ZipExt>
+                  </v1:GaragedZip>
+                  <v1:VehicleLocation>
+                     <v1:VehicleLocationIndicator code="OW"/>
+                     <v1:Address>
+                        <com:Address1>222 merchanidise mart</com:Address1>
+                        <com:Address2>suite 900</com:Address2>
+                        <com:AddressName>CCC Information services</com:AddressName>
+                        <com:City>Chicago</com:City>
+                        <com:County>Cook</com:County>
+                        <com:StateCode code="IL"/>
+                        <com:Zip>
+                           <com:ZipCode>60654</com:ZipCode>
+                           <com:ZipExt>1234</com:ZipExt>
+                        </com:Zip>
+                        <com:Country>USA</com:Country>
+                     </v1:Address>
+                     <v1:VehicleLocationContact>
+                        <com:BusinessPhone>
+                           <com:CountryCode>001</com:CountryCode>
+                           <com:CityCode>312</com:CityCode>
+                           <com:AreaCode>312</com:AreaCode>
+                           <com:LocalNum>229-2307</com:LocalNum>
+                           <com:Extn>2307</com:Extn>
+                        </com:BusinessPhone>
+                        <com:HomePhone1>
+                           <com:CountryCode>001</com:CountryCode>
+                           <com:CityCode>312</com:CityCode>
+                           <com:AreaCode>312</com:AreaCode>
+                           <com:LocalNum>229-2307</com:LocalNum>
+                           <com:Extn>2307</com:Extn>
+                        </com:HomePhone1>
+                        <com:HomePhone2>
+                           <com:CountryCode>001</com:CountryCode>
+                           <com:CityCode>312</com:CityCode>
+                           <com:AreaCode>312</com:AreaCode>
+                           <com:LocalNum>229-2307</com:LocalNum>
+                           <com:Extn>2307</com:Extn>
+                        </com:HomePhone2>
+                        <com:CellPhone>
+                           <com:CountryCode>001</com:CountryCode>
+                           <com:CityCode>312</com:CityCode>
+                           <com:AreaCode>312</com:AreaCode>
+                           <com:LocalNum>229-2307</com:LocalNum>
+                           <com:Extn>2307</com:Extn>
+                        </com:CellPhone>
+                        <com:DayPhone>
+                           <com:CountryCode>001</com:CountryCode>
+                           <com:CityCode>312</com:CityCode>
+                           <com:AreaCode>312</com:AreaCode>
+                           <com:LocalNum>229-2307</com:LocalNum>
+                           <com:Extn>2307</com:Extn>
+                        </com:DayPhone>
+                        <com:EveningPhone>
+                           <com:CountryCode>001</com:CountryCode>
+                           <com:CityCode>312</com:CityCode>
+                           <com:AreaCode>312</com:AreaCode>
+                           <com:LocalNum>229-2307</com:LocalNum>
+                           <com:Extn>2307</com:Extn>
+                        </com:EveningPhone>
+                        <com:HomeFax>
+                           <com:CountryCode>001</com:CountryCode>
+                           <com:CityCode>312</com:CityCode>
+                           <com:AreaCode>312</com:AreaCode>
+                           <com:LocalNum>229-2307</com:LocalNum>
+                           <com:Extn>2307</com:Extn>
+                        </com:HomeFax>
+                        <com:BusinessFax>
+                           <com:CountryCode>001</com:CountryCode>
+                           <com:CityCode>312</com:CityCode>
+                           <com:AreaCode>312</com:AreaCode>
+                           <com:LocalNum>229-2307</com:LocalNum>
+                           <com:Extn>2307</com:Extn>
+                        </com:BusinessFax>
+                        <com:OtherPhoneNumber>
+                           <com:CountryCode>001</com:CountryCode>
+                           <com:CityCode>312</com:CityCode>
+                           <com:AreaCode>312</com:AreaCode>
+                           <com:LocalNum>229-2307</com:LocalNum>
+                           <com:Extn>2307</com:Extn>
+                        </com:OtherPhoneNumber>
+                        <com:Email>tgreene@cccis.com</com:Email>
+                        <com:Url>tgreene@cccis.com</com:Url>
+                     </v1:VehicleLocationContact>
+                  </v1:VehicleLocation>
+                  <!--Zero or more repetitions:-->
+                  <v1:ImpactPoint>
+                     <v1:ImpactPointNumber code="1"/>
+                     <v1:ImpactAreaCode code="2"/>
+                  </v1:ImpactPoint>
+                  <v1:InteriorCode>InteriorCod</v1:InteriorCode>
+                  <v1:MoldingCode>MoldingCode49</v1:MoldingCode>
+                  <v1:StripeCode>StripeCode50</v1:StripeCode>
+                  <v1:ToneIndicator>5</v1:ToneIndicator>
+                  <v1:TrimCode>TrimCode52</v1:TrimCode>
+                  <v1:TrimColor>TrimColor53</v1:TrimColor>
+                  <v1:PaintStageIndicator>4</v1:PaintStageIndicator>
+                  <v1:PaintDetail>
+                     <v1:SequenceNumber>5</v1:SequenceNumber>
+                     <v1:PaintCode>PaintCode56</v1:PaintCode>
+                  </v1:PaintDetail>
+                  <v1:PaintDetail>
+                     <v1:SequenceNumber>7</v1:SequenceNumber>
+                     <v1:PaintCode>PaintCode58</v1:PaintCode>
+                  </v1:PaintDetail>
+                  <v1:PaintDetail>
+                     <v1:SequenceNumber>9</v1:SequenceNumber>
+                     <v1:PaintCode>PaintCode60</v1:PaintCode>
+                  </v1:PaintDetail>
+                  <v1:Options>
+                     <v1:VehicleOption>
+                        <v1:OptionCode>7</v1:OptionCode>
+                        <v1:OptionDescription>OptionDescription62</v1:OptionDescription>
+                     </v1:VehicleOption>
+                     <v1:VehicleOption>
+                        <v1:OptionCode>3</v1:OptionCode>
+                        <v1:OptionDescription>OptionDescription64</v1:OptionDescription>
+                     </v1:VehicleOption>
+                     <v1:VehicleOption>
+                        <v1:OptionCode>12</v1:OptionCode>
+                        <v1:OptionDescription>OptionDescription66</v1:OptionDescription>
+                     </v1:VehicleOption>
+                  </v1:Options>
+               </v1:Vehicle>
+               <v1:Appointment>
+                  <v1:AppointmentDate>2010-01-18T10:51:49.082</v1:AppointmentDate>
+                  <v1:RequestDate>2010-01-18T10:51:49.082</v1:RequestDate>
+                  <v1:EstimatedDuration>69</v1:EstimatedDuration>
+                  <v1:ConfirmationId>Confirma</v1:ConfirmationId>
+               </v1:Appointment>
+               <!--Zero or more repetitions:-->
+               <v1:ClaimParty>
+                  <v1:ClaimPartyRoleType code="VI"/>
+                  <v1:ClaimPartyAddressType code="HM"/>
+                  <v1:ClaimPartyInjured code="U"/>
+                  <v1:ClaimPartyContact>
+                     <com:PersonCompanyIndicator code="P"/>
+                     <com:CompanyName>$CompanyName</com:CompanyName>
+                     <com:CompanyOfficeID>$CompanyCode</com:CompanyOfficeID>
+                     <com:CompanyOfficeType>$CompanyOfficeType</com:CompanyOfficeType>
+                     <com:CompanyGovtId>CompanyGovtID</com:CompanyGovtId>
+                     <com:CompanyFedTaxInfo>Com</com:CompanyFedTaxInfo>
+                     <com:Title>Mr</com:Title>
+                     <com:FirstName>Noah</com:FirstName>
+                     <com:MiddleName>Middle</com:MiddleName>
+                     <com:LastName>$LastName</com:LastName>
+                     <com:Suffix>Jr</com:Suffix>
+                     <com:NickName>Noah</com:NickName>
+                     <com:Salutation>Mr</com:Salutation>
+                     <com:VerbalGreeting>vGreeting</com:VerbalGreeting>
+                     <com:WrittenGreeting>wGreeting</com:WrittenGreeting>
+                     <com:DriversLicenseNumber>12345</com:DriversLicenseNumber>
+                     <com:DriverLicenseState code="IL"/>
+                     <com:DriversLicenseExpirationDate>2010-01-18</com:DriversLicenseExpirationDate>
+                     <com:Contact>
+                        <com:BusinessPhone>
+                           <com:CountryCode>001</com:CountryCode>
+                           <com:CityCode>312</com:CityCode>
+                           <com:AreaCode>312</com:AreaCode>
+                           <com:LocalNum>229-2307</com:LocalNum>
+                           <com:Extn>2307</com:Extn>
+                        </com:BusinessPhone>
+                        <com:HomePhone1>
+                           <com:CountryCode>001</com:CountryCode>
+                           <com:CityCode>312</com:CityCode>
+                           <com:AreaCode>312</com:AreaCode>
+                           <com:LocalNum>229-2307</com:LocalNum>
+                           <com:Extn>2307</com:Extn>
+                        </com:HomePhone1>
+                        <com:HomePhone2>
+                           <com:CountryCode>001</com:CountryCode>
+                           <com:CityCode>312</com:CityCode>
+                           <com:AreaCode>312</com:AreaCode>
+                           <com:LocalNum>229-2307</com:LocalNum>
+                           <com:Extn>2307</com:Extn>
+                        </com:HomePhone2>
+                        <com:CellPhone>
+                           <com:CountryCode>001</com:CountryCode>
+                           <com:CityCode>312</com:CityCode>
+                           <com:AreaCode>312</com:AreaCode>
+                           <com:LocalNum>229-2307</com:LocalNum>
+                           <com:Extn>2307</com:Extn>
+                        </com:CellPhone>
+                        <com:DayPhone>
+                           <com:CountryCode>001</com:CountryCode>
+                           <com:CityCode>312</com:CityCode>
+                           <com:AreaCode>312</com:AreaCode>
+                           <com:LocalNum>229-2307</com:LocalNum>
+                           <com:Extn>2307</com:Extn>
+                        </com:DayPhone>
+                        <com:EveningPhone>
+                           <com:CountryCode>001</com:CountryCode>
+                           <com:CityCode>312</com:CityCode>
+                           <com:AreaCode>312</com:AreaCode>
+                           <com:LocalNum>229-2307</com:LocalNum>
+                           <com:Extn>2307</com:Extn>
+                        </com:EveningPhone>
+                        <com:HomeFax>
+                           <com:CountryCode>001</com:CountryCode>
+                           <com:CityCode>312</com:CityCode>
+                           <com:AreaCode>312</com:AreaCode>
+                           <com:LocalNum>229-2307</com:LocalNum>
+                           <com:Extn>2307</com:Extn>
+                        </com:HomeFax>
+                        <com:BusinessFax>
+                           <com:CountryCode>001</com:CountryCode>
+                           <com:CityCode>312</com:CityCode>
+                           <com:AreaCode>312</com:AreaCode>
+                           <com:LocalNum>229-2307</com:LocalNum>
+                           <com:Extn>2307</com:Extn>
+                        </com:BusinessFax>
+                        <com:OtherPhoneNumber>
+                           <com:CountryCode>001</com:CountryCode>
+                           <com:CityCode>312</com:CityCode>
+                           <com:AreaCode>312</com:AreaCode>
+                           <com:LocalNum>229-2307</com:LocalNum>
+                           <com:Extn>2307</com:Extn>
+                        </com:OtherPhoneNumber>
+                        <com:Email>tgreene@cccis.com</com:Email>
+                        <com:Url>tgreene@cccis.com</com:Url>
+                     </com:Contact>
+                     <com:Address>
+                        <com:Address1>222 merchanidise mart</com:Address1>
+                        <com:Address2>suite 900</com:Address2>
+                        <com:AddressName>CCC Information services</com:AddressName>
+                        <com:City>Chicago</com:City>
+                        <com:County>Cook</com:County>
+                        <com:StateCode code="IL"/>
+                        <com:Zip>
+                           <com:ZipCode>60654</com:ZipCode>
+                           <com:ZipExt>1234</com:ZipExt>
+                        </com:Zip>
+                        <com:Country>USA</com:Country>
+                     </com:Address>
+                  </v1:ClaimPartyContact>
+                  <v1:AccidentStatement>AccidentStatement89</v1:AccidentStatement>
+               </v1:ClaimParty>
+               <v1:Loss>
+                  <v1:CatastropheCode>CatastropheCode128</v1:CatastropheCode>
+                  <v1:InjuryFlag code="U"/>
+                  <v1:TheftFlag code="Y"/>
+                  <v1:LossMemoText>LossMemoText129</v1:LossMemoText>
+                  <v1:LossDateTime>2010-01-18T10:51:49.082</v1:LossDateTime>
+                  <v1:LossReportedDateTime>2010-01-18T10:51:49.082</v1:LossReportedDateTime>
+                  <v1:LossLocation>
+                     <com:Address1>222 merchanidise mart</com:Address1>
+                     <com:Address2>suite 900</com:Address2>
+                     <com:AddressName>CCC Information services</com:AddressName>
+                     <com:City>Chicago</com:City>
+                     <com:County>Cook</com:County>
+                     <com:StateCode code="IL"/>
+                     <com:Zip>
+                        <com:ZipCode>60654</com:ZipCode>
+                        <com:ZipExt>1234</com:ZipExt>
+                     </com:Zip>
+                     <com:Country>USA</com:Country>
+                  </v1:LossLocation>
+               </v1:Loss>
+               <com:Policy>
+                  <com:PolicyNumber>PolicyNumber139</com:PolicyNumber>
+                  <com:PolicyNumberExt>Pol</com:PolicyNumberExt>
+                  <com:PolicyType code="P"/>
+                  <com:NAICLineofBusiness code="2"/>
+                  <com:BookofBusiness code="S"/>
+                  <com:DeductibleType code="A"/>
+                  <com:Deductible>1000.25</com:Deductible>
+                  <com:PolicyCoverageIndicator>Polic</com:PolicyCoverageIndicator>
+                  <com:PolicyStartDate>2010-01-18</com:PolicyStartDate>
+                  <com:PolicyExpirationDate>2010-01-18</com:PolicyExpirationDate>
+                  <com:Agent>
+                     <com:AgentIdentifier>AgentI</com:AgentIdentifier>
+                     <com:AgentType code="C"/>
+                     <com:AgentLicenseNumber>AgentLicenseNumber146</com:AgentLicenseNumber>
+                     <com:AgentContact>
+                        <com:PersonCompanyIndicator code="P"/>
+                        <com:CompanyName>$CompanyName</com:CompanyName>
+                        <com:CompanyOfficeID>$ClaimOffice</com:CompanyOfficeID>
+                        <com:CompanyOfficeType>$CompanyOfficeType</com:CompanyOfficeType>
+                        <com:CompanyGovtId>CompanyGovtID</com:CompanyGovtId>
+                        <com:CompanyFedTaxInfo>Comp</com:CompanyFedTaxInfo>
+                        <com:Title>Mr</com:Title>
+                        <com:FirstName>Noah</com:FirstName>
+                        <com:MiddleName>Middle</com:MiddleName>
+                        <com:LastName>$LastName</com:LastName>
+                        <com:Suffix>Jr</com:Suffix>
+                        <com:NickName>Noah</com:NickName>
+                        <com:Salutation>Mr</com:Salutation>
+                        <com:VerbalGreeting>vGreeting</com:VerbalGreeting>
+                        <com:WrittenGreeting>wGreeting</com:WrittenGreeting>
+                        <com:DriversLicenseNumber>12345</com:DriversLicenseNumber>
+                        <com:DriverLicenseState code="IL"/>
+                        <com:DriversLicenseExpirationDate>2010-01-18</com:DriversLicenseExpirationDate>
+                        <com:Contact>
+                           <com:BusinessPhone>
+                              <com:CountryCode>001</com:CountryCode>
+                              <com:CityCode>312</com:CityCode>
+                              <com:AreaCode>312</com:AreaCode>
+                              <com:LocalNum>229-2307</com:LocalNum>
+                              <com:Extn>2307</com:Extn>
+                           </com:BusinessPhone>
+                           <com:HomePhone1>
+                              <com:CountryCode>001</com:CountryCode>
+                              <com:CityCode>312</com:CityCode>
+                              <com:AreaCode>312</com:AreaCode>
+                              <com:LocalNum>229-2307</com:LocalNum>
+                              <com:Extn>2307</com:Extn>
+                           </com:HomePhone1>
+                           <com:HomePhone2>
+                              <com:CountryCode>001</com:CountryCode>
+                              <com:CityCode>312</com:CityCode>
+                              <com:AreaCode>312</com:AreaCode>
+                              <com:LocalNum>229-2307</com:LocalNum>
+                              <com:Extn>2307</com:Extn>
+                           </com:HomePhone2>
+                           <com:CellPhone>
+                              <com:CountryCode>001</com:CountryCode>
+                              <com:CityCode>312</com:CityCode>
+                              <com:AreaCode>312</com:AreaCode>
+                              <com:LocalNum>229-2307</com:LocalNum>
+                              <com:Extn>2307</com:Extn>
+                           </com:CellPhone>
+                           <com:DayPhone>
+                              <com:CountryCode>001</com:CountryCode>
+                              <com:CityCode>312</com:CityCode>
+                              <com:AreaCode>312</com:AreaCode>
+                              <com:LocalNum>229-2307</com:LocalNum>
+                              <com:Extn>2307</com:Extn>
+                           </com:DayPhone>
+                           <com:EveningPhone>
+                              <com:CountryCode>001</com:CountryCode>
+                              <com:CityCode>312</com:CityCode>
+                              <com:AreaCode>312</com:AreaCode>
+                              <com:LocalNum>229-2307</com:LocalNum>
+                              <com:Extn>2307</com:Extn>
+                           </com:EveningPhone>
+                           <com:HomeFax>
+                              <com:CountryCode>001</com:CountryCode>
+                              <com:CityCode>312</com:CityCode>
+                              <com:AreaCode>312</com:AreaCode>
+                              <com:LocalNum>229-2307</com:LocalNum>
+                              <com:Extn>2307</com:Extn>
+                           </com:HomeFax>
+                           <com:BusinessFax>
+                              <com:CountryCode>001</com:CountryCode>
+                              <com:CityCode>312</com:CityCode>
+                              <com:AreaCode>312</com:AreaCode>
+                              <com:LocalNum>229-2307</com:LocalNum>
+                              <com:Extn>2307</com:Extn>
+                           </com:BusinessFax>
+                           <com:OtherPhoneNumber>
+                              <com:CountryCode>001</com:CountryCode>
+                              <com:CityCode>312</com:CityCode>
+                              <com:AreaCode>312</com:AreaCode>
+                              <com:LocalNum>229-2307</com:LocalNum>
+                              <com:Extn>2307</com:Extn>
+                           </com:OtherPhoneNumber>
+                           <com:Email>tgreene@cccis.com</com:Email>
+                           <com:Url>tgreene@cccis.com</com:Url>
+                        </com:Contact>
+                        <com:Address>
+                           <com:Address1>222 merchanidise mart</com:Address1>
+                           <com:Address2>suite 900</com:Address2>
+                           <com:AddressName>CCC Information services</com:AddressName>
+                           <com:City>Chicago</com:City>
+                           <com:County>Cook</com:County>
+                           <com:StateCode code="IL"/>
+                           <com:Zip>
+                              <com:ZipCode>60654</com:ZipCode>
+                              <com:ZipExt>1234</com:ZipExt>
+                           </com:Zip>
+                           <com:Country>USA</com:Country>
+                        </com:Address>
+                     </com:AgentContact>
+                  </com:Agent>
+                  <com:UnderwritingCompany>Underwriting</com:UnderwritingCompany>
+                  <com:PolicyNote>PolicyNote</com:PolicyNote>
+                  <com:EndorsementNote>EndorsementNote</com:EndorsementNote>
+               </com:Policy>
+               <v1:ThirdParty>
+                  <v1:ThirdPartyInsuranceCarrierName>ThirdPartyInsuranceCarrierName</v1:ThirdPartyInsuranceCarrierName>
+                  <v1:ThirdPartyClaimNumber>ThirdPartyClaimNumber</v1:ThirdPartyClaimNumber>
+                  <com:Policy>
+                     <com:PolicyNumber>PolicyNumber139</com:PolicyNumber>
+                     <com:PolicyNumberExt>Pol</com:PolicyNumberExt>
+                     <com:PolicyType code="P"/>
+                     <com:NAICLineofBusiness code="2"/>
+                     <com:BookofBusiness code="S"/>
+                     <com:DeductibleType code="A"/>
+                     <com:Deductible>500.25</com:Deductible>
+                     <com:PolicyCoverageIndicator>Poli</com:PolicyCoverageIndicator>
+                     <com:PolicyStartDate>2010-01-18</com:PolicyStartDate>
+                     <com:PolicyExpirationDate>2010-01-18</com:PolicyExpirationDate>
+                     <com:Agent>
+                        <com:AgentIdentifier>AgentIden</com:AgentIdentifier>
+                        <com:AgentType code="C"/>
+                        <com:AgentLicenseNumber>AgentLicenseNumber146</com:AgentLicenseNumber>
+                        <com:AgentContact>
+                           <com:PersonCompanyIndicator code="P"/>
+                           <com:CompanyName>$CompanyName</com:CompanyName>
+                           <com:CompanyOfficeID>$ClaimOffice</com:CompanyOfficeID>
+                           <com:CompanyOfficeType>$CompanyOfficeType</com:CompanyOfficeType>
+                           <com:CompanyGovtId>CompanyGovtID</com:CompanyGovtId>
+                           <com:CompanyFedTaxInfo>Comp</com:CompanyFedTaxInfo>
+                           <com:Title>Mr</com:Title>
+                           <com:FirstName>Noah</com:FirstName>
+                           <com:MiddleName>Middle</com:MiddleName>
+                           <com:LastName>$LastName</com:LastName>
+                           <com:Suffix>Jr</com:Suffix>
+                           <com:NickName>Noah</com:NickName>
+                           <com:Salutation>Mr</com:Salutation>
+                           <com:VerbalGreeting>vGreeting</com:VerbalGreeting>
+                           <com:WrittenGreeting>wGreeting</com:WrittenGreeting>
+                           <com:DriversLicenseNumber>12345</com:DriversLicenseNumber>
+                           <com:DriverLicenseState code="IL"/>
+                           <com:DriversLicenseExpirationDate>2010-01-18</com:DriversLicenseExpirationDate>
+                           <com:Contact>
+                              <com:BusinessPhone>
+                                 <com:CountryCode>001</com:CountryCode>
+                                 <com:CityCode>312</com:CityCode>
+                                 <com:AreaCode>312</com:AreaCode>
+                                 <com:LocalNum>229-2307</com:LocalNum>
+                                 <com:Extn>2307</com:Extn>
+                              </com:BusinessPhone>
+                              <com:HomePhone1>
+                                 <com:CountryCode>001</com:CountryCode>
+                                 <com:CityCode>312</com:CityCode>
+                                 <com:AreaCode>312</com:AreaCode>
+                                 <com:LocalNum>229-2307</com:LocalNum>
+                                 <com:Extn>2307</com:Extn>
+                              </com:HomePhone1>
+                              <com:HomePhone2>
+                                 <com:CountryCode>001</com:CountryCode>
+                                 <com:CityCode>312</com:CityCode>
+                                 <com:AreaCode>312</com:AreaCode>
+                                 <com:LocalNum>229-2307</com:LocalNum>
+                                 <com:Extn>2307</com:Extn>
+                              </com:HomePhone2>
+                              <com:CellPhone>
+                                 <com:CountryCode>001</com:CountryCode>
+                                 <com:CityCode>312</com:CityCode>
+                                 <com:AreaCode>312</com:AreaCode>
+                                 <com:LocalNum>229-2307</com:LocalNum>
+                                 <com:Extn>2307</com:Extn>
+                              </com:CellPhone>
+                              <com:DayPhone>
+                                 <com:CountryCode>001</com:CountryCode>
+                                 <com:CityCode>312</com:CityCode>
+                                 <com:AreaCode>312</com:AreaCode>
+                                 <com:LocalNum>229-2307</com:LocalNum>
+                                 <com:Extn>2307</com:Extn>
+                              </com:DayPhone>
+                              <com:EveningPhone>
+                                 <com:CountryCode>001</com:CountryCode>
+                                 <com:CityCode>312</com:CityCode>
+                                 <com:AreaCode>312</com:AreaCode>
+                                 <com:LocalNum>229-2307</com:LocalNum>
+                                 <com:Extn>2307</com:Extn>
+                              </com:EveningPhone>
+                              <com:HomeFax>
+                                 <com:CountryCode>001</com:CountryCode>
+                                 <com:CityCode>312</com:CityCode>
+                                 <com:AreaCode>312</com:AreaCode>
+                                 <com:LocalNum>229-2307</com:LocalNum>
+                                 <com:Extn>2307</com:Extn>
+                              </com:HomeFax>
+                              <com:BusinessFax>
+                                 <com:CountryCode>001</com:CountryCode>
+                                 <com:CityCode>312</com:CityCode>
+                                 <com:AreaCode>312</com:AreaCode>
+                                 <com:LocalNum>229-2307</com:LocalNum>
+                                 <com:Extn>2307</com:Extn>
+                              </com:BusinessFax>
+                              <com:OtherPhoneNumber>
+                                 <com:CountryCode>001</com:CountryCode>
+                                 <com:CityCode>312</com:CityCode>
+                                 <com:AreaCode>312</com:AreaCode>
+                                 <com:LocalNum>229-2307</com:LocalNum>
+                                 <com:Extn>2307</com:Extn>
+                              </com:OtherPhoneNumber>
+                              <com:Email>tgreene@cccis.com</com:Email>
+                              <com:Url>tgreene@cccis.com</com:Url>
+                           </com:Contact>
+                           <com:Address>
+                              <com:Address1>222 merchanidise mart</com:Address1>
+                              <com:Address2>suite 900</com:Address2>
+                              <com:AddressName>CCC Information services</com:AddressName>
+                              <com:City>Chicago</com:City>
+                              <com:County>Cook</com:County>
+                              <com:StateCode code="IL"/>
+                              <com:Zip>
+                                 <com:ZipCode>60654</com:ZipCode>
+                                 <com:ZipExt>1234</com:ZipExt>
+                              </com:Zip>
+                              <com:Country>USA</com:Country>
+                           </com:Address>
+                        </com:AgentContact>
+                     </com:Agent>
+                     <com:UnderwritingCompany>111</com:UnderwritingCompany>
+                     <com:PolicyNote>222</com:PolicyNote>
+                     <com:EndorsementNote>222</com:EndorsementNote>
+                  </com:Policy>
+               </v1:ThirdParty>
+            </v1:CCCAssignment>
+         </v1:CCCAppraisalAssignment>
+</ext:CreateAssignment>
+			</soapenv:Body>
+</soapenv:Envelope>

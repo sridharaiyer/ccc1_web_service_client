@@ -31,45 +31,44 @@ class CreateXML(abc.ABC):
     _claim_id = None
     _envelope = None
 
-    @property
     @classmethod
     def envelope(cls):
         return cls._envelope
 
-    @property
     @classmethod
     def claim_id(cls):
         return cls._claim_id
 
-    @property
     @classmethod
     def name(cls):
         return cls._name
 
-    @property
     @staticmethod
     def get_root(data):
+        '''Converts the data XML block into an etree root'''
         return ET.fromstring(data)
 
-    @property
-    def root(self):
+    @staticmethod
+    def root():
         return CreateXML.get_root(CreateXML.envelope)
 
-    @property
-    def payload_root(self):
-        payload = self.root.xpath('//*[local-name() = "Data"]')[0].text
-        return self.get_root(self.decode_ungzip(payload))
+    @staticmethod
+    def payload_root():
+        payload = CreateXML.root.xpath('//*[local-name() = "Data"]')[0].text
+        return CreateXML.get_root(CreateXML.decode_ungzip(payload))
 
-    def replace(self, root=None, tag=None, value=None):
+    @staticmethod
+    def replace(root=None, tag=None, value=None):
         for elem in root.iterfind(tag):
             elem.text = value
 
-    def replace_tag(self, root=root, tag=None, value=None, **tag_dict):
+    @staticmethod
+    def replace_tag(root=root, tag=None, value=None, **tag_dict):
         if not tag_dict:
-            self.replace(root=root, tag=tag, value=value)
+            CreateXML.replace(root=root, tag=tag, value=value)
         else:
             for tag, value in tag_dict.iteritems():
-                self.replace(root=root, tag=tag, value=value)
+                CreateXML.replace(root=root, tag=tag, value=value)
 
     @abc.abstractmethod
     def modifyXML(self, root=root):
@@ -86,19 +85,22 @@ class CreateXML(abc.ABC):
 
         self.replace_tag(root=root, **tag_dict)
 
-    def decode_ungzip(self, data):
+    @staticmethod
+    def decode_ungzip(data):
         decoded_base64 = base64.b64decode(data)
         gzcontent = gzip.GzipFile(fileobj=BytesIO(
             decoded_base64)).read().decode('UTF-8')
         return gzcontent
 
-    def gzip_encode(self, data):
+    @property
+    @staticmethod
+    def gzip_encode(data):
         gzip_compressed = gzip.compress(data)
         encoded_payload = (base64.b64encode(gzip_compressed)).decode('UTF-8')
         return encoded_payload
 
-    @property
-    def root_to_string(self, root=root):
+    @staticmethod
+    def root_to_string(root=root):
         return ET.tostring(root, pretty_print=True)
 
     @abc.abstractmethod
@@ -106,9 +108,11 @@ class CreateXML(abc.ABC):
         for elem in root.iterfind('.//{*}Reference'):
             elem.text = re.sub('[^/]*$', ref, elem.text)
 
+    @staticmethod
     def base64_decode():
         pass
 
+    @staticmethod
     def base64_encode():
         pass
 
