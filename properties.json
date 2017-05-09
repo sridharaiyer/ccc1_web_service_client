@@ -62,6 +62,9 @@
                 "postDeliverAssingment": "http://eznet-qa0.aws.cccis.com:9821/soa-infra/services/apm/DeliverAssignment/client",
                 "postGetWorklist": "https://servicesqa.aws.mycccportal.com/gateway/services/Worklist"
             },
+            "assignment": {
+                "postDeliverAssingment": "http://eznet-qa0.aws.cccis.com:9821/soa-infra/services/apm/DeliverAssignment/client"
+            },
             "appraiser_search": {
                 "appraiser_searches_service": "http://qa00.aws.mycccportal.com/asweb/",
                 "appraiser_searches_service_12": "http://qa00.aws.mycccportal.com/asweb1.2/",
