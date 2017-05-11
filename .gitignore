@@ -1,5 +1,6 @@
 # eqa folders
 eqa*/
+input/
 
 #Allure Reports
 allure-report/
