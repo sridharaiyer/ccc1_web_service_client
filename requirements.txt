@@ -5,5 +5,6 @@ names==0.3.0
 PyHamcrest==1.9.0
 python-box==2.1.0
 pytz==2017.2
+requests==2.14.2
 six==1.10.0
 xmltodict==0.10.2
