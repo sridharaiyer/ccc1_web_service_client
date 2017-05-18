@@ -1,0 +1,21 @@
+<soapenv:Envelope xmlns:env="http://schemas.xmlsoap.org/soap/envelope/" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+    <soapenv:Header/>
+    <S:Body xmlns:S="http://schemas.xmlsoap.org/soap/envelope/">
+        <ns1:CreateAssignmentResponse xmlns:ns1="http://services.mycccportal.com/SOA/ExternalAssignmentService">
+            <ns3:CreateAssignmentResponse xmlns:ns3="http://services.mycccportal.com/CCC/assignment/v1" Version="1.0">
+                <TransactionControlHeader xmlns="http://services.mycccportal.com/CCC/TransactionHeader" xmlns:ns2="http://services.mycccportal.com/SOA/normalizedmessage/v1" xmlns:ns3="http://services.mycccportal.com/SOA/commontypes" xmlns:ns4="http://services.mycccportal.com/SOA/fault/v1" xmlns:ns5="http://services.mycccportal.com/SOA/AssignmentValidationService" xmlns:ns6="http://services.mycccportal.com/CCC/assignment/v1" FileType="ASGN" FileVersion="1.0" HeaderVersion="1.0">
+                    <UniqueTransactionID>eqa20170511150536</UniqueTransactionID>
+                    <PrimaryInsuranceCompanyID>APM1</PrimaryInsuranceCompanyID>
+                    <CCCId code="039002951" />
+                    <LossReferenceID>eqa20170511150536</LossReferenceID>
+                    <EstimatingSystem code="C" />
+                    <EchoField>testEchoField</EchoField>
+                    <CCCActionCode>N</CCCActionCode>
+                    <TransactionDateTime xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:dateTime">2012-08-28T10:51:49.082-05:00</TransactionDateTime>
+                </TransactionControlHeader>
+                <ns6:Code xmlns="http://services.mycccportal.com/CCC/TransactionHeader" xmlns:ns2="http://services.mycccportal.com/SOA/normalizedmessage/v1" xmlns:ns3="http://services.mycccportal.com/SOA/commontypes" xmlns:ns4="http://services.mycccportal.com/SOA/fault/v1" xmlns:ns5="http://services.mycccportal.com/SOA/AssignmentValidationService" xmlns:ns6="http://services.mycccportal.com/CCC/assignment/v1">000</ns6:Code>
+                <ns6:Description xmlns="http://services.mycccportal.com/CCC/TransactionHeader" xmlns:ns2="http://services.mycccportal.com/SOA/normalizedmessage/v1" xmlns:ns3="http://services.mycccportal.com/SOA/commontypes" xmlns:ns4="http://services.mycccportal.com/SOA/fault/v1" xmlns:ns5="http://services.mycccportal.com/SOA/AssignmentValidationService" xmlns:ns6="http://services.mycccportal.com/CCC/assignment/v1">Assignment Accepted</ns6:Description>
+            </ns3:CreateAssignmentResponse>
+        </ns1:CreateAssignmentResponse>
+    </S:Body>
+</soapenv:Envelope>
