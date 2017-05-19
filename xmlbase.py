@@ -31,6 +31,13 @@ class SaveXML(object):
 
 class XMLBase(ABC):
 
+    now = datetime.datetime.now(pytz.timezone('US/Central'))
+    time_iso = now.isoformat()
+    time_ymdhms = now.strftime('%Y-%m-%dT%H:%M:%S')
+    time_ymd = now.strftime('%Y-%m-%d')
+    time_utc = datetime.datetime.utcnow().isoformat()
+    time_zulu = time_utc + 'Z'
+
     @abstractmethod
     def create_xml(self):
         pass
@@ -45,10 +52,11 @@ class XMLBase(ABC):
 
     def save_xml(self):
         filename = self.__class__.__name__
-        if not os.path.exists('target'):
-            os.makedirs('target', self.claimid, filename)
-            with open(filename, 'w') as f:
-                f.writable(str(self))
+        print('Saving file - {}'.format(filename))
+        path = 'target/{}/{}'.format(self.claimid, filename)
+        os.makedirs(path, exist_ok=True)
+        with open(filename, 'w') as f:
+            f.write(str(self))
 
     # _time_iso = datetime.datetime.now(pytz.timezone('US/Central')).isoformat()
     # _time = datetime.datetime.now(pytz.timezone('US/Central')).strftime('%Y-%m-%dT%H:%M:%S')

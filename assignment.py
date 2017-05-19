@@ -1,42 +1,76 @@
-from lxml import etree
-from lxml.etree import tostring
 import argparse
 import os
 import pdb
-import requests
 from xmlutils import XMLUtils
 from uniqueid import UniqueID
 import names
-from httpclient import HttpClient
 from xmlbase import XMLBase
-import pytz
+from dateutil.relativedelta import relativedelta
 
 
 class Assignment(XMLBase):
 
-    def __init__(self, xml, **params):
-        self.xml = XMLUtils(self.xml)
+    def __init__(self, **params):
+        xmlpath = {
+            'assignment_dir'		: 'xmltemplates/xmlrequests/Assingnment',
+            'assignment_template'	: 'AssignmentRequest.xml'
+        }
+        xml = os.path.join(xmlpath['assignment_dir'], xmlpath['assignment_template'])
+
+        self.xml = XMLUtils(xml)
+        self._claimid = params.pop('claimid')
+        self._lname = params.pop('lname')
+        self._fname = params.pop('fname')
         self.params = params
+        print('The assignment params: \n{}'.format(params))
 
     def create_xml(self):
         self.xml.edit_tag(**self.params)
         self.xml.edit_tag(Password='Password1')
-        self.xml.edit_tag(UniqueTransactionID=self.params['claimid'])
-        self.xml.edit_tag(LossReferenceID=self.params['claimid'])
-        self.xml.edit_tag(LossReferenceId=self.params['claimid'])
+        self.xml.edit_tag(UniqueTransactionID=self.claimid)
+        self.xml.edit_tag(LossReferenceID=self.claimid)
+        self.xml.edit_tag(LossReferenceId=self.claimid)
+
+        name_dict = {
+            '//*[local-name() = \"ClaimPartyContact\"]/*[local-name() = \"LastName\"]': self.lname,
+            '//*[local-name() = \"ClaimPartyContact\"]/*[local-name() = \"FirstName\"]': self.fname,
+        }
+
+        self.xml.edit_tag(**name_dict)
+
+        time_dict = {
+            'Created'						: super().time_zulu,
+            'TransactionDateTime'			: super().time_iso,
+            'DateAssigned'					: super().time_utc,
+            'ReportedDateTime'				: super().time_utc,
+            'DriversLicenseExpirationDate'	: (super().now + relativedelta(								years=3)).strftime('%Y-%m-%d'),
+            'AppointmentDate'				: super().time_utc,
+            'RequestDate'					: super().time_utc,
+            'LossReportedDateTime'			: super().time_utc,
+            'PolicyStartDate'				: (super().now + relativedelta(								months=-6)).strftime('%Y-%m-%d'),
+            'PolicyExpirationDate'			: (super().now + relativedelta(								months=6)).strftime('%Y-%m-%d'),
+        }
+
+        self.xml.edit_tag(**time_dict)
 
     def send_xml(self):
-        print('Assignment XML posted to web service')
+        url = 'https://interfacesqa.aws.mycccportal.com/gateway/services/ExternalAssignmentWS'
+        print('Assignment XML posted to web service: \n {}'.format(url))
 
     def verify_db(self):
         print('Assignment creation verified in DB')
 
-    def save_xml(self):
-        print('Assignment input and output XML saved')
-
     @property
     def claimid(self):
-        return self.params['claimid']
+        return self._claimid
+
+    @property
+    def lname(self):
+        return self._lname
+
+    @property
+    def fname(self):
+        return self._fname
 
     @property
     def lastname(self):
@@ -49,36 +83,6 @@ class Assignment(XMLBase):
     def __str__(self):
         return(str(self.xml))
 
-
-if not os.path.exists('input'):
-    os.makedirs('input')
-
-url = 'https://interfacesqa.aws.mycccportal.com/gateway/services/ExternalAssignmentWS'
-
-
-assignment_xml = XMLUtils(assignment_xml_path)
-assignment_xml
-
-
-# def send_assignment(claimid=None, output=False, company_id=None, claimoffice_id=None, adjuster_id=None, recepient_id=None, lname=None, fname=None):
-def send_assignment(args):
-
-    tag_dict = {
-        'Password': 'Password1',
-        'UniqueTransactionID'	: ''
-    }
-
-
-# Parameterizing xml data to every request
-root.xpath('//*[local-name() = "Password"]')[0].text = 'Password1'
-root.xpath('//*[local-name() = "UniqueTransactionID"]')[0].text = claimid
-root.xpath('//*[local-name() = "LossReferenceID"]')[0].text = claimid
-root.xpath('//*[local-name() = "LossReferenceId"]')[0].text = claimid
-
-xml_data = tostring(root, pretty_print=True)
-
-
-input_xml_path = os.path.join('input', claim_id + '.xml')
 
 # with open(input_xml_path, 'wb') as p:
 #     p.write(xml_data)
@@ -96,22 +100,16 @@ input_xml_path = os.path.join('input', claim_id + '.xml')
 
 if __name__ == '__main__':
 
-    time_iso = datetime.datetime.now(pytz.timezone('US/Central')).isoformat()
-    time = datetime.datetime.now(pytz.timezone('US/Central')).strftime('%Y-%m-%dT%H:%M:%S')
-
     xmlpath = {
         'assignment_dir'		: 'xmltemplates/xmlrequests/Assingnment',
         'assignment_template'	: 'AssignmentRequest.xml'
     }
 
     default_params = {
-        'SourceTimeStamp'		: time_iso,
-        'PublishTimeStamp'		: time_iso,
-        'company_id'			: 'APM1',
-        'claimoffice_id'		: 'APMC',
-        'adjuster_id'			: 'CDAN',
-        'recepient_id'			: '62668',
-        'recepient_type'		: 'DRP'
+        'PrimaryInsuranceCompanyID'		: 'APM1',
+        'ClaimOffice'					: 'APMC',
+        'AdjusterCode'					: 'CDAN',
+        'AssignmentRecipientID'			: '62668'
     }
 
     parser = argparse.ArgumentParser(
@@ -123,34 +121,34 @@ if __name__ == '__main__':
                         default=UniqueID.random_id(),
                         help='Unique claim ID')
 
-    parser.add_argument('-o',
-                        '--output',
-                        dest='output',
-                        action='store_true',
-                        help='print web service response XML')
+    # parser.add_argument('-o',
+    #                     '--output',
+    #                     dest='output',
+    #                     action='store_true',
+    #                     help='print web service response XML')
 
-    parser.add_argument('--company_id',
-                        dest='company_id',
+    parser.add_argument('--PrimaryInsuranceCompanyID',
+                        dest='PrimaryInsuranceCompanyID',
                         action='store',
-                        default=default_params['company_id'],
+                        default=default_params['PrimaryInsuranceCompanyID'],
                         help='Insurance company ID')
 
-    parser.add_argument('--claimoffice_id',
-                        dest='claimoffice_id',
+    parser.add_argument('--ClaimOffice',
+                        dest='ClaimOffice',
                         action='store',
-                        default=default_params['claimoffice_id'],
+                        default=default_params['ClaimOffice'],
                         help='Insurance company claim office ID')
 
-    parser.add_argument('--adjuster_id',
-                        dest='adjuster_id',
+    parser.add_argument('--AdjusterCode',
+                        dest='AdjusterCode',
                         action='store',
-                        default=default_params['adjuster_id'],
+                        default=default_params['AdjusterCode'],
                         help='Adjuster code')
 
-    parser.add_argument('--recepient_id',
-                        dest='recepient_id',
+    parser.add_argument('--AssignmentRecipientID',
+                        dest='AssignmentRecipientID',
                         action='store',
-                        default=default_params['recepient_id'],
+                        default=default_params['AssignmentRecipientID'],
                         help='Assignment recepient mail box ID')
 
     parser.add_argument('--lname',
@@ -167,9 +165,7 @@ if __name__ == '__main__':
 
     args = parser.parse_args()
 
-    assignment_xml_path = os.path.join(xmlpath['assignment_dir'], xmlpath['assignment_template'])
-
-    assignment = Assignment(assignment_xml_path, vars(args))
+    assignment = Assignment(**vars(args))
     assignment.create_xml()
     assignment.send_xml()
     assignment.verify_db()

@@ -13,6 +13,16 @@ class IncorrectXMLError(Exception):
         return ('Incorrect XML file or invalid XML data')
 
 
+class NoTagError(Exception):
+    """docstring for NoTagError"""
+
+    def __init__(self, tag):
+        self.tag = tag
+
+    def __str__(self):
+        return ('No such tag - {} - in the XML'.format(self.tag))
+
+
 class XMLUtils(object):
     def __init__(self, xml):
         utf8_parser = XMLParser(encoding='utf-8')
@@ -25,20 +35,26 @@ class XMLUtils(object):
                 self.root = parse(xml)
 
     def _edit_tag_multiple_occurences(self, **tag_dict):
-        for tag, value in tag_dict.items():
-            if tag.startswith('/'):
-                for node in self.root.xpath(tag):
-                    node.text = value
-            else:
-                for elem in self.root.iterfind(tag):
-                    elem.text = value
+        try:
+            for tag, value in tag_dict.items():
+                if tag.startswith('/'):
+                    for node in self.root.xpath(tag):
+                        node.text = value
+                else:
+                    for elem in self.root.iterfind(tag):
+                        elem.text = value
+        except IndexError as e:
+            raise NoTagError(tag)
 
     def _edit_tag_single_occurence(self, **tag_dict):
-        for tag, value in tag_dict.items():
-            if tag.startswith('/'):
-                self.root.xpath(tag)[0].text = value
-            else:
-                self.root.xpath('//*[local-name() = \"{}\"]'.format(tag))[0].text = value
+        try:
+            for tag, value in tag_dict.items():
+                if tag.startswith('/'):
+                    self.root.xpath(tag)[0].text = value
+                else:
+                    self.root.xpath('//*[local-name() = \"{}\"]'.format(tag))[0].text = value
+        except IndexError as e:
+            raise NoTagError(tag)
 
     def edit_tag(self, multiple=False, **tag_dict):
         if multiple:
