@@ -5,7 +5,6 @@ from lxml.etree import XMLParser
 from lxml.etree import XMLSyntaxError
 import pdb
 import os.path
-import pytest
 
 
 class IncorrectXMLError(Exception):
@@ -68,5 +67,5 @@ class XMLUtils(object):
         else:
             return self.root.xpath('//*[local-name() = \"{}\"]'.format(tag))[0].text
 
-    def __str__(self):
-        return tostring(self.root, pretty_print=True, encoding='unicode')
+    def __bytes__(self):
+        return tostring(self.root, pretty_print=True)

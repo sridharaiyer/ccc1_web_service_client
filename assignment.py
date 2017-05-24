@@ -6,22 +6,28 @@ from uniqueid import UniqueID
 import names
 from xmlbase import XMLBase
 from dateutil.relativedelta import relativedelta
+import json
 
 
 class Assignment(XMLBase):
 
     def __init__(self, **params):
         xmlpath = {
-            'assignment_dir'		: 'xmltemplates/xmlrequests/Assingnment',
-            'assignment_template'	: 'AssignmentRequest.xml'
+            'assignment_dir': 'xmltemplates/xmlrequests/Assingnment',
+            'assignment_template': 'AssignmentRequest.xml'
         }
         xml = os.path.join(xmlpath['assignment_dir'], xmlpath['assignment_template'])
 
         self.xml = XMLUtils(xml)
+        print(json.dumps(params, indent=4))
+
+        self._env = params.pop('env')
         self._claimid = params.pop('claimid')
         self._lname = params.pop('lname')
         self._fname = params.pop('fname')
+        # pdb.set_trace()
         self.params = params
+        self.web_service_url = 'https://interfacesqa.aws.mycccportal.com/gateway/services/ExternalAssignmentWS'
         print('The assignment params: \n{}'.format(params))
 
     def create_xml(self):
@@ -39,23 +45,19 @@ class Assignment(XMLBase):
         self.xml.edit_tag(**name_dict)
 
         time_dict = {
-            'Created'						: super().time_zulu,
-            'TransactionDateTime'			: super().time_iso,
-            'DateAssigned'					: super().time_utc,
-            'ReportedDateTime'				: super().time_utc,
-            'DriversLicenseExpirationDate'	: (super().now + relativedelta(								years=3)).strftime('%Y-%m-%d'),
-            'AppointmentDate'				: super().time_utc,
-            'RequestDate'					: super().time_utc,
-            'LossReportedDateTime'			: super().time_utc,
-            'PolicyStartDate'				: (super().now + relativedelta(								months=-6)).strftime('%Y-%m-%d'),
-            'PolicyExpirationDate'			: (super().now + relativedelta(								months=6)).strftime('%Y-%m-%d'),
+            'Created': super().time_zulu,
+            'TransactionDateTime': super().time_iso,
+            'DateAssigned': super().time_utc,
+            'ReportedDateTime': super().time_utc,
+            'DriversLicenseExpirationDate': (super().now + relativedelta(years=3)).strftime('%Y-%m-%d'),
+            'AppointmentDate': super().time_utc,
+            'RequestDate': super().time_utc,
+            'LossReportedDateTime': super().time_utc,
+            'PolicyStartDate': (super().now + relativedelta(months=-6)).strftime('%Y-%m-%d'),
+            'PolicyExpirationDate': (super().now + relativedelta(months=6)).strftime('%Y-%m-%d'),
         }
 
         self.xml.edit_tag(**time_dict)
-
-    def send_xml(self):
-        url = 'https://interfacesqa.aws.mycccportal.com/gateway/services/ExternalAssignmentWS'
-        print('Assignment XML posted to web service: \n {}'.format(url))
 
     def verify_db(self):
         print('Assignment creation verified in DB')
@@ -63,6 +65,10 @@ class Assignment(XMLBase):
     @property
     def claimid(self):
         return self._claimid
+
+    @property
+    def env(self):
+        return self._env
 
     @property
     def lname(self):
@@ -80,8 +86,8 @@ class Assignment(XMLBase):
     def firstname(self):
         return self.params['fname']
 
-    def __str__(self):
-        return(str(self.xml))
+    def __bytes__(self):
+        return(bytes(self.xml))
 
 
 # with open(input_xml_path, 'wb') as p:
@@ -101,19 +107,26 @@ class Assignment(XMLBase):
 if __name__ == '__main__':
 
     xmlpath = {
-        'assignment_dir'		: 'xmltemplates/xmlrequests/Assingnment',
-        'assignment_template'	: 'AssignmentRequest.xml'
+        'assignment_dir': 'xmltemplates/xmlrequests/Assingnment',
+        'assignment_template': 'AssignmentRequest.xml'
     }
 
     default_params = {
-        'PrimaryInsuranceCompanyID'		: 'APM1',
-        'ClaimOffice'					: 'APMC',
-        'AdjusterCode'					: 'CDAN',
-        'AssignmentRecipientID'			: '62668'
+        'PrimaryInsuranceCompanyID': 'APM1',
+        'ClaimOffice': 'APMC',
+        'AdjusterCode': 'CDAN',
+        'AssignmentRecipientID': '62668'
     }
 
     parser = argparse.ArgumentParser(
         description='Create Interface Assignment')
+
+    parser.add_argument('--env',
+                        dest='env',
+                        action='store',
+                        default='awsqa',
+                        choices=['awsqa', 'ct', 'prod'],
+                        help='Environment choices')
 
     parser.add_argument('--claimid',
                         dest='claimid',
@@ -169,4 +182,3 @@ if __name__ == '__main__':
     assignment.create_xml()
     assignment.send_xml()
     assignment.verify_db()
-    assignment.save_xml()

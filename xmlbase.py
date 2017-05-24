@@ -16,17 +16,29 @@ import names
 from hamcrest import assert_that, equal_to
 import uuid
 from collections.abc import Mapping
+import enum
+import pdb
+from httpclient import HttpClient
 
 
-class SaveXML(object):
-    """docstring for SaveXML"""
+class FileType(enum.Enum):
+    inputXML = 'input'
+    outputXML = 'output'
 
-    def __init__(self, *dirs):
-        if not os.path.exists('target'):
-            os.makedirs('target', dirs)
 
-    def save(self):
-        pass
+class IncorrectXMLFiletype(Exception):
+    def __str__(self):
+        return ('Incorrect XML file type. Specify either FileType.inputXML or FileType.outputXML')
+
+
+# class SaveXML(object):
+#     """docstring for SaveXML"""
+
+#     def __init__(self, filetype, path):
+#         path =
+
+#     def save(self):
+#         pass
 
 
 class XMLBase(ABC):
@@ -35,28 +47,64 @@ class XMLBase(ABC):
     time_iso = now.isoformat()
     time_ymdhms = now.strftime('%Y-%m-%dT%H:%M:%S')
     time_ymd = now.strftime('%Y-%m-%d')
-    time_utc = datetime.datetime.utcnow().isoformat()
+
+    time_utc = datetime.datetime.utcnow()
+    time_utc = time_utc.replace(tzinfo=pytz.timezone('US/Central')).isoformat()
     time_zulu = time_utc + 'Z'
 
     @abstractmethod
     def create_xml(self):
         pass
 
-    @abstractmethod
     def send_xml(self):
-        pass
+        url = self.web_service_url
+
+        print('Saving input file')
+        self._save_xml(FileType.inputXML)
+        print('Posting XML to web service: {}'.format(url))
+        self.response = HttpClient().post(url, bytes(self))
+        print('Assignment XML successfully posted to web service')
+        print('Saving output file')
+        self._save_xml(FileType.outputXML)
 
     @abstractmethod
     def verify_db(self):
         pass
 
-    def save_xml(self):
-        filename = self.__class__.__name__
-        print('Saving file - {}'.format(filename))
-        path = 'target/{}/{}'.format(self.claimid, filename)
-        os.makedirs(path, exist_ok=True)
-        with open(filename, 'w') as f:
-            f.write(str(self))
+    # def _save_file(self, path):
+    #     with open(path, 'wb') as f:
+    #         f.write(bytes(self))
+
+    def _save_xml(self, filetype):
+        xml_type = self.__class__.__name__.lower()
+        filename = None
+        base_path = 'target/{}/{}/{}'.format(self.claimid, filetype.value, self.env)
+        if xml_type == 'assignment':
+            base_path = os.path.join(base_path, xml_type)
+        else:
+            base_path = os.path.join(base_path, self.estimate_type, xml_type)
+
+        if xml_type == 'assignment':
+            filename = xml_type + '.xml'
+        elif xml_type == 'event':
+            num_of_files = len(os.listdir(base_path))
+            if num_of_files == 0:
+                filename = xml_type + '_1' + '.xml'
+            else:
+                filename = xml_type + '_' + str(num_of_files + 1) + '.xml'
+            if os.path.exists():
+                pass
+
+        os.makedirs(base_path, exist_ok=True)
+        path = os.path.join(base_path, filename)
+        print('Saving file - {}'.format(path))
+        if filetype.value == 'input':
+            with open(path, 'wb') as f:
+                f.write(bytes(self))
+        else:
+            with open(path, 'w') as f:
+                f.write(self.response.text)
+        # self._save_file(path)
 
     # _time_iso = datetime.datetime.now(pytz.timezone('US/Central')).isoformat()
     # _time = datetime.datetime.now(pytz.timezone('US/Central')).strftime('%Y-%m-%dT%H:%M:%S')

@@ -22,7 +22,7 @@ def assign_uuids(ref_list):
 
 
 dict_ref = assign_uuids(['workfile_ref', 'digitalimage_ref', 'printimage_ref', 'rpd_ref', 'upd_ref'])
-dict_owner_name = {'owner_first_name':  names.get_first_name(),'owner_last_name': names.get_last_name()}
+dict_owner_name = {'owner_first_name': names.get_first_name(), 'owner_last_name': names.get_last_name()}
 
 workfile_ref = str(uuid.uuid4())
 digitalimage_ref = str(uuid.uuid4())
@@ -76,7 +76,7 @@ with zipfile.ZipFile('Fiddler_Captures/cwf_testcase29_EO1.saz', 'r') as zf:
             value = row.a.get('href').replace("\\", "/")
             if key != 'Worklist':
                 if key == 'PrintImage':
-                     files['PrintImage_All'].append(value)
+                    files['PrintImage_All'].append(value)
                 else:
                     files[key].append(value)
 

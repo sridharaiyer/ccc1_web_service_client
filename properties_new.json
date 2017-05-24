@@ -1,0 +1,52 @@
+{
+    "awsqa": {
+        "db": {
+            "claimfolder": {
+                "user": "EQAUSER",
+                "password": "CQ*82012",
+                "host": "CFBLQA.cbqbxxqqjewq.us-east-1.rds.amazonaws.com",
+                "port": "1521",
+                "service_name": "CFBLQA"
+            },
+            "claimtracking": {
+                "user": "EQAUSER",
+                "password": "CQ*82012",
+                "host": "CMPCLQA.cbqbxxqqjewq.us-east-1.rds.amazonaws.com",
+                "port": "1521",
+                "service_name": "CMPCLQA"
+            },
+            "valuation": {
+                "user": "EQAUSER",
+                "password": "CQ*82012",
+                "host": "Mpalqa.cbqbxxqqjewq.us-east-1.rds.amazonaws.com",
+                "port": "1521",
+                "service_name": "Mpalqa"
+            },
+            "rps": {
+                "user": "rpsadmin",
+                "password": "Aws_RP$ADMIN6102",
+                "host": "paalqa.cbqbxxqqjewq.us-east-1.rds.amazonaws.com",
+                "port": "1521",
+                "service_name": "paalqa"
+            },
+            "scheduling": {
+                "user": "schappuser",
+                "password": "Aws_$CHAPPU$3R6102",
+                "host": "CFBLQA.cbqbxxqqjewq.us-east-1.rds.amazonaws.com",
+                "port": "1521",
+                "service_name": "CFBLQA"
+            },
+            "workview": {
+                "user": "PRTLSHUSER",
+                "password": "Aws_PRTL$HU$3R6102",
+                "host": "CFBLQA.cbqbxxqqjewq.us-east-1.rds.amazonaws.com",
+                "port": "1521",
+                "service_name": "CFBLQA"
+            }
+        },
+        "app": {
+            "portal": "http://qa00.aws.mycccportal.com",
+            "portal_password": "Password1"
+        },
+    }
+}

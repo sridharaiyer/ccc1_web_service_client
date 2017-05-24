@@ -1,0 +1,100 @@
+{
+    "Workfile": {
+        "soap_action": {
+            "post": "https://servicesqa.aws.mycccportal.com/gateway/services/Workfile"
+        }
+    },
+    "AdvisorService": {
+        "soap_action": {
+            "post": "https://servicesqa.aws.mycccportal.com/gateway/services/AdvisorService"
+        }
+    },
+    "PrintImage": {
+        "soap_action": {
+            "post": "https://servicesqa.aws.mycccportal.com/gateway/services/PrintImage"
+        }
+    },
+    "DigitalImage": {
+        "soap_action": {
+            "post": "https://servicesqa.aws.mycccportal.com/gateway/services/DigitalImage"
+        }
+    },
+    "Event": {
+        "soap_action": {
+            "post": "https://servicesqa.aws.mycccportal.com/gateway/services/Event"
+        }
+    },
+    "StatusChange": {
+        "soap_action": {
+            "post": "https://servicesqa.aws.mycccportal.com/gateway/services/StatusChange"
+        }
+    },
+    "Worklist": {
+        "soap_action": {
+            "post": "https://servicesqa.aws.mycccportal.com/gateway/services/Worklist"
+        }
+    },
+    "VehicleOptionsReportService": {
+        "soap_action": {
+            "post": "http://webapps-qa0.aws.cccis.com:9861/VehicleOptionsReport/VehicleOptionsReportService"
+        }
+    },
+    "Worklist": {
+        "soap_action": {
+            "post": "https://servicesqa.aws.mycccportal.com/gateway/services/Worklist"
+        }
+    },
+    "Worklist": {
+        "soap_action": {
+            "post": "https://servicesqa.aws.mycccportal.com/gateway/services/Worklist"
+        }
+    },
+    "Worklist": {
+        "soap_action": {
+            "post": "https://servicesqa.aws.mycccportal.com/gateway/services/Worklist"
+        }
+    },
+    "Worklist": {
+        "soap_action": {
+            "post": "https://servicesqa.aws.mycccportal.com/gateway/services/Worklist"
+        }
+    },
+    "Worklist": {
+        "soap_action": {
+            "post": "https://servicesqa.aws.mycccportal.com/gateway/services/Worklist"
+        }
+    },
+
+    // "postPutUploadPackageURL": "https://servicesqa.aws.mycccportal.com/gateway/services/AVAM",
+    // "postNICBRequest": "http://eznet-qa0.aws.cccis.com:9821/ws_nicb/NICBWebService",
+    // "postDeliverAssingment": "http://eznet-qa0.aws.cccis.com:9821/soa-infra/services/apm/DeliverAssignment/client",
+    "assignment": {
+        "postInterfaceAssignment": "https://interfacesqa.aws.mycccportal.com/gateway/services/ExternalAssignmentWS"
+    },
+    "appraiser_search": {
+        "appraiser_searches_service": "http://qa00.aws.mycccportal.com/asweb/",
+        "appraiser_searches_service_12": "http://qa00.aws.mycccportal.com/asweb1.2/",
+        "postPutPendingWorkfile": "https://servicesqa.aws.mycccportal.com/gateway/services/Workfile"
+    },
+    "scheduling": {
+        "postPutPendingWorkfile": "https://servicesqa.aws.mycccportal.com/gateway/services/Workfile",
+        "postPutPendingWorkfile": "https://servicesqa.aws.mycccportal.com/gateway/services/Workfile",
+        "postPutPendingWorkfile": "https://servicesqa.aws.mycccportal.com/gateway/services/Workfile"
+    },
+    "fnol": {
+        "postPutPendingWorkfile": "https://servicesqa.aws.mycccportal.com/gateway/services/Workfile",
+        "postPutPendingWorkfile": "https://servicesqa.aws.mycccportal.com/gateway/services/Workfile",
+        "postPutPendingWorkfile": "https://servicesqa.aws.mycccportal.com/gateway/services/Workfile"
+    },
+    "reinspection": {
+        "postPutPendingWorkfile": "https://servicesqa.aws.mycccportal.com/gateway/services/Workfile",
+        "postPutPendingWorkfile": "https://servicesqa.aws.mycccportal.com/gateway/services/Workfile",
+        "postPutPendingWorkfile": "https://servicesqa.aws.mycccportal.com/gateway/services/Workfile"
+    },
+    "valuation": {
+        "postPutPendingWorkfile": "https://servicesqa.aws.mycccportal.com/gateway/services/Workfile",
+        "postPutPendingWorkfile": "https://servicesqa.aws.mycccportal.com/gateway/services/Workfile",
+        "postPutPendingWorkfile": "https://servicesqa.aws.mycccportal.com/gateway/services/Workfile"
+    }
+
+}
