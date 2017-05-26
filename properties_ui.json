@@ -1,0 +1,22 @@
+{
+    "awsqa": {
+        "portal": "http://qa00.aws.mycccportal.com",
+        "portal_password": "Password1"
+    },
+    "qa": {
+        "portal": "http://qa_portal",
+        "portal_password": "Password1"
+    },
+    "int": {
+        "portal": "http://int_portal",
+        "portal_password": "Password1"
+    },
+    "ct": {
+        "portal": "http://ct_portal",
+        "portal_password": "Password1"
+    },
+    "prod": {
+        "portal": "http://prod_portal",
+        "portal_password": "Password1"
+    }
+}

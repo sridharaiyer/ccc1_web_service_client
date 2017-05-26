@@ -90,20 +90,6 @@ class Assignment(XMLBase):
         return(bytes(self.xml))
 
 
-# with open(input_xml_path, 'wb') as p:
-#     p.write(xml_data)
-
-# xml_data = BytesIO(xml_data).read()
-
-# headers = {
-#     "Content-Type": "text/xml; charset=UTF-8"
-# }
-
-# response = requests.post(url=url, headers=headers, data=xml_data, verify=False)
-
-# print(response)
-# print(XMLUtils.prettyfy_xml(response.text))
-
 if __name__ == '__main__':
 
     xmlpath = {
@@ -133,12 +119,6 @@ if __name__ == '__main__':
                         action='store',
                         default=UniqueID.random_id(),
                         help='Unique claim ID')
-
-    # parser.add_argument('-o',
-    #                     '--output',
-    #                     dest='output',
-    #                     action='store_true',
-    #                     help='print web service response XML')
 
     parser.add_argument('--PrimaryInsuranceCompanyID',
                         dest='PrimaryInsuranceCompanyID',
