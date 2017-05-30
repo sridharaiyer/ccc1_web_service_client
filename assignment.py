@@ -12,6 +12,11 @@ import json
 class Assignment(XMLBase):
 
     def __init__(self, **params):
+        super(Assignment, self).__init__(self,
+                                         env=params.pop('env'),
+                                         claimid=params.pop('claimid'),
+                                         lname=params.pop('lname'),
+                                         fname=params.pop('fname'))
         xmlpath = {
             'assignment_dir': 'xmltemplates/xmlrequests/Assingnment',
             'assignment_template': 'AssignmentRequest.xml'
@@ -20,14 +25,9 @@ class Assignment(XMLBase):
 
         self.xml = XMLUtils(xml)
         print(json.dumps(params, indent=4))
-
-        self._env = params.pop('env')
-        self._claimid = params.pop('claimid')
-        self._lname = params.pop('lname')
-        self._fname = params.pop('fname')
         # pdb.set_trace()
         self.params = params
-        self.web_service_url = 'https://interfacesqa.aws.mycccportal.com/gateway/services/ExternalAssignmentWS'
+        self.web_service_url = self.properties.ws.ExternalAssignmentWS
         print('The assignment params: \n{}'.format(params))
 
     def create_xml(self):
@@ -62,40 +62,11 @@ class Assignment(XMLBase):
     def verify_db(self):
         print('Assignment creation verified in DB')
 
-    @property
-    def claimid(self):
-        return self._claimid
-
-    @property
-    def env(self):
-        return self._env
-
-    @property
-    def lname(self):
-        return self._lname
-
-    @property
-    def fname(self):
-        return self._fname
-
-    @property
-    def lastname(self):
-        return self.params['lname']
-
-    @property
-    def firstname(self):
-        return self.params['fname']
-
     def __bytes__(self):
         return(bytes(self.xml))
 
 
 if __name__ == '__main__':
-
-    xmlpath = {
-        'assignment_dir': 'xmltemplates/xmlrequests/Assingnment',
-        'assignment_template': 'AssignmentRequest.xml'
-    }
 
     default_params = {
         'PrimaryInsuranceCompanyID': 'APM1',

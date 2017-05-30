@@ -19,6 +19,7 @@ from collections.abc import Mapping
 import enum
 import pdb
 from httpclient import HttpClient
+from properties import Properties
 
 
 class FileType(enum.Enum):
@@ -43,6 +44,13 @@ class IncorrectXMLFiletype(Exception):
 
 class XMLBase(ABC):
 
+    def __init__(self, **params):
+        self.claimid = params['claimid']
+        self.env = params['env']
+        self.lname = params['lname']
+        self.fname = params['fname']
+        self.properties = Properties(params['env'])
+
     now = datetime.datetime.now(pytz.timezone('US/Central'))
     time_iso = now.isoformat()
     time_ymdhms = now.strftime('%Y-%m-%dT%H:%M:%S')
@@ -51,6 +59,22 @@ class XMLBase(ABC):
     time_utc = datetime.datetime.utcnow()
     time_utc = time_utc.replace(tzinfo=pytz.timezone('US/Central')).isoformat()
     time_zulu = time_utc + 'Z'
+
+    @property
+    def claimid(self):
+        return self.claimid
+
+    @property
+    def env(self):
+        return self.env
+
+    @property
+    def lname(self):
+        return self.lname
+
+    @property
+    def fname(self):
+        return self.fname
 
     @abstractmethod
     def create_xml(self):
@@ -104,58 +128,6 @@ class XMLBase(ABC):
         else:
             with open(path, 'w') as f:
                 f.write(self.response.text)
-        # self._save_file(path)
-
-    # _time_iso = datetime.datetime.now(pytz.timezone('US/Central')).isoformat()
-    # _time = datetime.datetime.now(pytz.timezone('US/Central')).strftime('%Y-%m-%dT%H:%M:%S')
-
-    # _name = {
-    #     'owner_first_name': names.get_first_name(),
-    #     'owner_last_name': names.get_last_name()
-    # }
-    # _file_loc = None
-    # _uuid = None
-    # _claim_id = None
-    # _envelope = None
-
-    # @classmethod
-    # def envelope(cls):
-    #     return cls._envelope
-
-    # @classmethod
-    # def claim_id(cls):
-    #     return cls._claim_id
-
-    # @classmethod
-    # def name(cls):
-    #     return cls._name
-
-    # @staticmethod
-    # def get_root(data):
-    #     '''Converts the data XML block into an etree root'''
-    #     return ET.fromstring(data)
-
-    # @staticmethod
-    # def root():
-    #     return CreateXML.get_root(CreateXML.envelope)
-
-    # @staticmethod
-    # def payload_root():
-    #     payload = CreateXML.root.xpath('//*[local-name() = "Data"]')[0].text
-    #     return CreateXML.get_root(CreateXML.decode_ungzip(payload))
-
-    # @staticmethod
-    # def replace(root=None, tag=None, value=None):
-    #     for elem in root.iterfind(tag):
-    #         elem.text = value
-
-    # @staticmethod
-    # def replace_tag(root=root, tag=None, value=None, **tag_dict):
-    #     if not tag_dict:
-    #         CreateXML.replace(root=root, tag=tag, value=value)
-    #     else:
-    #         for tag, value in tag_dict.iteritems():
-    #             CreateXML.replace(root=root, tag=tag, value=value)
 
     # @abc.abstractmethod
     # def modifyXML(self, root=root):
