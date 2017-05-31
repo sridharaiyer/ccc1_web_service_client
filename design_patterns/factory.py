@@ -1,4 +1,5 @@
 from abc import ABCMeta, abstractmethod
+import random
 
 
 class Section(metaclass=ABCMeta):
@@ -9,22 +10,26 @@ class Section(metaclass=ABCMeta):
 
 
 class PersonalSection(Section):
-    def describe():
+
+    def describe(self):
         print('Personal Section')
 
 
 class AlbumSection(Section):
-    def describe():
-        print('Personal Section')
+
+    def describe(self):
+        print('Album Section')
 
 
 class PatentSection(Section):
-    def describe():
+
+    def describe(self):
         print('Patent Section')
 
 
 class PublicationSection(Section):
-    def describe():
+
+    def describe(self):
         print('Publication Section')
 
 
@@ -36,7 +41,7 @@ class Profile(metaclass=ABCMeta):
         self.create_profile()
 
     @abstractmethod
-    def create_profile():
+    def create_profile(self):
         pass
 
     def getSections(self):
@@ -46,21 +51,22 @@ class Profile(metaclass=ABCMeta):
         self.sections.append(section)
 
 
-class linkedin(Profile):
+class Linkedin(Profile):
+
     def create_profile(self):
         self.addSection(PersonalSection())
         self.addSection(PatentSection())
         self.addSection(PublicationSection())
 
 
-class facebook(Profile):
+class Facebook(Profile):
+
     def create_profile(self):
         self.addSection(PersonalSection())
         self.addSection(AlbumSection())
 
 
 if __name__ == '__main__':
-    profile_type = input('Which profile you\'d like to create? [facebook,linkedin]: ')
-    profile = eval(profile_type.lower())()
+    profile = random.choice([Linkedin, Facebook])()
     print('Creating profile: {}'.format(type(profile).__name__))
-    print('Profile has sections - ', [section.describe() for section in profile.getSections()])
+    [section.describe() for section in profile.getSections()]

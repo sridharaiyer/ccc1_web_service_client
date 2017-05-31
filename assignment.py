@@ -12,8 +12,7 @@ import json
 class Assignment(XMLBase):
 
     def __init__(self, **params):
-        super(Assignment, self).__init__(self,
-                                         env=params.pop('env'),
+        super(Assignment, self).__init__(env=params.pop('env'),
                                          claimid=params.pop('claimid'),
                                          lname=params.pop('lname'),
                                          fname=params.pop('fname'))
@@ -21,11 +20,12 @@ class Assignment(XMLBase):
             'assignment_dir': 'xmltemplates/xmlrequests/Assingnment',
             'assignment_template': 'AssignmentRequest.xml'
         }
-        xml = os.path.join(xmlpath['assignment_dir'], xmlpath['assignment_template'])
+        xml = os.path.join(xmlpath['assignment_dir'],
+                           xmlpath['assignment_template'])
 
         self.xml = XMLUtils(xml)
         print(json.dumps(params, indent=4))
-        # pdb.set_trace()
+        pdb.set_trace()
         self.params = params
         self.web_service_url = self.properties.ws.ExternalAssignmentWS
         print('The assignment params: \n{}'.format(params))

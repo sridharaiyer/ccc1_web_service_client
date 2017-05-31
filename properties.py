@@ -26,6 +26,7 @@ class Singleton(type):
 
 
 class Properties(metaclass=Singleton):
+
     def __init__(self, env):
         self.env = env
         self.ui = BoxLoad(prop_dict['ui'], env).properties

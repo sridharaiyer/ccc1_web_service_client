@@ -28,6 +28,7 @@ class FileType(enum.Enum):
 
 
 class IncorrectXMLFiletype(Exception):
+
     def __str__(self):
         return ('Incorrect XML file type. Specify either FileType.inputXML or FileType.outputXML')
 
@@ -45,11 +46,11 @@ class IncorrectXMLFiletype(Exception):
 class XMLBase(ABC):
 
     def __init__(self, **params):
-        self.claimid = params['claimid']
-        self.env = params['env']
-        self.lname = params['lname']
-        self.fname = params['fname']
-        self.properties = Properties(params['env'])
+        self._claimid = params['claimid']
+        self._env = params['env']
+        self._lname = params['lname']
+        self._fname = params['fname']
+        self.properties = Properties(self.env)
 
     now = datetime.datetime.now(pytz.timezone('US/Central'))
     time_iso = now.isoformat()
@@ -62,19 +63,19 @@ class XMLBase(ABC):
 
     @property
     def claimid(self):
-        return self.claimid
+        return self._claimid
 
     @property
     def env(self):
-        return self.env
+        return self._env
 
     @property
     def lname(self):
-        return self.lname
+        return self._lname
 
     @property
     def fname(self):
-        return self.fname
+        return self._fname
 
     @abstractmethod
     def create_xml(self):
@@ -102,7 +103,8 @@ class XMLBase(ABC):
     def _save_xml(self, filetype):
         xml_type = self.__class__.__name__.lower()
         filename = None
-        base_path = 'target/{}/{}/{}'.format(self.claimid, filetype.value, self.env)
+        base_path = 'target/{}/{}/{}'.format(self.claimid,
+                                             filetype.value, self.env)
         if xml_type == 'assignment':
             base_path = os.path.join(base_path, xml_type)
         else:
