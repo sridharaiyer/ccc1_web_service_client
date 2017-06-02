@@ -1,12 +1,15 @@
 import argparse
 from ws_driver import RunService
+from fiddler import Files as files
 
 
 parser = argparse.ArgumentParser(
     description='Process APM web service calls from saved fiddler request file(s)')
 
-parser.add_argument(dest='filenames', metavar='filename', nargs='+',
-                    help='List of .saz fiddler request files to re-execute the SOAP requests')
+# parser.add_argument(dest='filenames', metavar='filename', nargs='+',
+#                     help='List of .saz fiddler request files to re-execute the SOAP requests')
+parser.add_argument(dest='filename', dest='filenam',
+                    help='.saz fiddler request file to re-execute the SOAP requests')
 
 parser.add_argument('-c', '--check', dest='check', action='store_true',
                     help='check if the .saz files have all the XML files necessary to run the request')
@@ -50,6 +53,7 @@ if args.view:
     view_info(True)
 
 if args.execute:
-    check_integrity(True)
-    view_info(True)
-    [RunService(filename).execute for filename in args.filenames]
+    # check_integrity(True)
+    # view_info(True)
+    # [RunService(filename).execute for filename in args.filenames]
+    xml_files_dict = files.get_files_dict(args.filename)
