@@ -1,6 +1,6 @@
 import argparse
 from ws_driver import RunService
-from fiddler import Files as files
+from fiddler import FiddlerSession
 
 
 parser = argparse.ArgumentParser(
@@ -8,7 +8,7 @@ parser = argparse.ArgumentParser(
 
 # parser.add_argument(dest='filenames', metavar='filename', nargs='+',
 #                     help='List of .saz fiddler request files to re-execute the SOAP requests')
-parser.add_argument(dest='filename', dest='filenam',
+parser.add_argument('-i', '--input', dest='filename',
                     help='.saz fiddler request file to re-execute the SOAP requests')
 
 parser.add_argument('-c', '--check', dest='check', action='store_true',
@@ -17,8 +17,6 @@ parser.add_argument('-c', '--check', dest='check', action='store_true',
 parser.add_argument('-v', '--view', dest='view', action='store_true',
                     help='view and print the details of the .saz file')
 
-parser.add_argument('-e', '--execute', dest='execute', action='store_true',
-                    help='run the web service calls on the .saz file(s)')
 
 # parser.add_argument('-o', dest='outfile', action='store',
 #                     help='output file')
@@ -28,10 +26,6 @@ parser.add_argument('-e', '--execute', dest='execute', action='store_true',
 #                     help='search speed')
 
 args = parser.parse_args()
-
-if True not in [args.check, args.view, args.execute]:
-    parser.print_help()
-    parser.exit()
 
 
 def check_integrity(flag):
@@ -52,8 +46,6 @@ if args.check:
 if args.view:
     view_info(True)
 
-if args.execute:
-    # check_integrity(True)
-    # view_info(True)
-    # [RunService(filename).execute for filename in args.filenames]
-    xml_files_dict = files.get_files_dict(args.filename)
+files = FiddlerSession(args.filename)
+xml_files_dict = files.get_files_dict()
+print(xml_files_dict)

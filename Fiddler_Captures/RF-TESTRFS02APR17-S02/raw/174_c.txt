@@ -1,0 +1,8 @@
+GET https://clients4.google.com/chrome-variations/seed?osname=win HTTP/1.1
+Host: clients4.google.com
+Connection: keep-alive
+If-None-Match: a4b4295b9cf69aa8556144779b4826aaa5a99da4
+A-IM: x-bm,gzip
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.133 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+

@@ -1,0 +1,4 @@
+GET https://servicesqa.mycccportal.com/CCCOne/RF/ONEService/TokenService.aspx?sv=69 HTTP/1.1
+Host: servicesqa.mycccportal.com
+Connection: Keep-Alive
+

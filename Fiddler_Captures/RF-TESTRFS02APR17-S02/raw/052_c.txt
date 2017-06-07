@@ -1,0 +1,4 @@
+GET https://servicesqa.mycccportal.com/basic/services/NtmgtSvc/v1/getdocuments?licensenumber=302800 HTTP/1.1
+Authorization: Basic Q05HOlBhc3N3b3JkMQ==
+Host: servicesqa.mycccportal.com
+

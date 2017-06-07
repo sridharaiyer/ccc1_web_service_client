@@ -1,0 +1,11 @@
+HTTP/1.1 200 OK
+Content-Language: en
+Content-Type: text/xml; charset=UTF-8
+Date: Mon, 17 Apr 2017 10:48:30 GMT
+Server: Oracle-HTTP-Server-11g
+X-ORACLE-DMS-ECID: 005JLe8BAp1Fw00Fzzx0g00001Q20004wp
+X-ORACLE-DMS-RID: 0:1
+Content-Length: 1478
+Connection: keep-alive
+
+<S:Envelope xmlns:env="http://schemas.xmlsoap.org/soap/envelope/" xmlns:S="http://schemas.xmlsoap.org/soap/envelope/"><env:Header/><S:Body><ns3:PutRPSQueryResponseNew xmlns:ns4="http://services.mycccportal.com/SOA/fault/v1" xmlns:ns3="http://services.mycccportal.com/SOA/RPSService" xmlns:ns2="http://services.mycccportal.com/SOA/commontypes" xmlns="http://services.mycccportal.com/SOA/normalizedmessage/v1"><NormalizedMessage><BaseDescriptor><MsgID>6e73dcfc-8dbd-4241-92e3-5a8ee7018c01</MsgID><MsgType>RPS</MsgType><MsgMode>Request</MsgMode><SourceTimeStamp>2017-04-17T05:48:21.535829-05:00</SourceTimeStamp><SourceApplicationID>PTHWY</SourceApplicationID><SourceUserID>NA</SourceUserID></BaseDescriptor><RoutingDescriptor><ns2:RoutingInfo><ns2:ApplicationName>PTHWY</ns2:ApplicationName><ns2:ApplicationVersion>4.50</ns2:ApplicationVersion><ns2:PublishTimeStamp>2017-04-17T05:48:21.535829-05:00</ns2:PublishTimeStamp></ns2:RoutingInfo></RoutingDescriptor><ClaimDescriptor><ClaimReferenceID>TESTRFS02APR17</ClaimReferenceID><InsuranceCompany><VantiveCode>APM1</VantiveCode></InsuranceCompany><AssigneeDescriptor><Appraiser><AppraiserType>DRP</AppraiserType><AppraiserSSN>302800</AppraiserSSN><AppraiserMailboxID>P62668</AppraiserMailboxID></Appraiser></AssigneeDescriptor></ClaimDescriptor><Payload><Reference>http://services.mycccportal.com/RPS/cac45752-0a4c-4291-822b-e3b22d3a5745/R</Reference></Payload></NormalizedMessage></ns3:PutRPSQueryResponseNew></S:Body></S:Envelope>
