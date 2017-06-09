@@ -1,50 +1,120 @@
 {
-    "E01": {
-        "AdvisorService": [                 // To be decided if list is needed
-            "raw/18_c.txt",
-            "raw/33_c.txt"
-        ],
-        "Workfile": "raw/39_c.txt",
-        "DigitalImage": ["raw/41_c.txt"],   // List of images in different XMLs
-        "Event": [                          // List of events in different XMLs
-            "raw/44_c.txt",
-            "raw/59_c.txt",
-            "raw/60_c.txt",
-            "raw/63_c.txt",
-            "raw/64_c.txt",
-            "raw/65_c.txt",
-            "raw/66_c.txt",
-            "raw/67_c.txt",
-            "raw/68_c.txt",
-            "raw/69_c.txt"
-        ],
-        "StatusChange": "raw/73_c.txt",
-        "EstimatePrintImage": "raw/40_c.txt",
-        "UnrelatedPriorDamage": "raw/42_c.txt",
-        "RelatedPriorDamageReport": "raw/43_c.txt"
-    },
-    "S01": {
-        "AdvisorService": [
-            "raw/18_c.txt",
-            "raw/33_c.txt"
-        ],
-        "Workfile": "raw/39_c.txt",
-        "DigitalImage": ["raw/41_c.txt"],
-        "Event": [
-            "raw/44_c.txt",
-            "raw/59_c.txt",
-            "raw/60_c.txt",
-            "raw/63_c.txt",
-            "raw/64_c.txt",
-            "raw/65_c.txt",
-            "raw/66_c.txt",
-            "raw/67_c.txt",
-            "raw/68_c.txt",
-            "raw/69_c.txt"
-        ],
-        "StatusChange": "raw/73_c.txt",
-        "EstimatePrintImage": "raw/40_c.txt",
-        "UnrelatedPriorDamage": "raw/42_c.txt",
-        "RelatedPriorDamageReport": "raw/43_c.txt"
-    }
+    "HitTest.aspx": [
+        "raw/003_c.txt"
+    ],
+    "TokenService.aspx?sv=69": [
+        "raw/004_c.txt"
+    ],
+    "Login": [
+        "raw/006_c.txt",
+        "raw/008_c.txt"
+    ],
+    "ProfileService": [
+        "raw/017_c.txt",
+        "raw/046_c.txt",
+        "raw/048_c.txt"
+    ],
+    "Worklist": [
+        "raw/042_c.txt",
+        "raw/043_c.txt",
+        "raw/054_c.txt",
+        "raw/056_c.txt",
+        "raw/060_c.txt",
+        "raw/090_c.txt",
+        "raw/108_c.txt",
+        "raw/121_c.txt",
+        "raw/126_c.txt",
+        "raw/130_c.txt",
+        "raw/157_c.txt",
+        "raw/170_c.txt",
+        "raw/178_c.txt",
+        "raw/183_c.txt",
+        "raw/210_c.txt",
+        "raw/223_c.txt"
+    ],
+    "ValuescopeProfileService": [
+        "raw/044_c.txt"
+    ],
+    "getdocuments?licensenumber=302800": [
+        "raw/052_c.txt"
+    ],
+    "RPS": [
+        "raw/057_c.txt",
+        "raw/058_c.txt",
+        "raw/061_c.txt",
+        "raw/062_c.txt",
+        "raw/122_c.txt",
+        "raw/123_c.txt",
+        "raw/124_c.txt",
+        "raw/128_c.txt",
+        "raw/179_c.txt",
+        "raw/180_c.txt",
+        "raw/181_c.txt",
+        "raw/184_c.txt"
+    ],
+    "AdvisorService": [
+        "raw/063_c.txt",
+        "raw/085_c.txt",
+        "raw/133_c.txt",
+        "raw/151_c.txt",
+        "raw/185_c.txt",
+        "raw/205_c.txt"
+    ],
+    "Workfile": [
+        "raw/091_c.txt",
+        "raw/158_c.txt",
+        "raw/211_c.txt"
+    ],
+    "PrintImage": [
+        "raw/092_c.txt",
+        "raw/094_c.txt",
+        "raw/095_c.txt",
+        "raw/159_c.txt",
+        "raw/161_c.txt",
+        "raw/162_c.txt",
+        "raw/212_c.txt",
+        "raw/214_c.txt",
+        "raw/215_c.txt"
+    ],
+    "DigitalImage": [
+        "raw/093_c.txt",
+        "raw/160_c.txt",
+        "raw/213_c.txt"
+    ],
+    "Event": [
+        "raw/096_c.txt",
+        "raw/097_c.txt",
+        "raw/098_c.txt",
+        "raw/099_c.txt",
+        "raw/100_c.txt",
+        "raw/101_c.txt",
+        "raw/102_c.txt",
+        "raw/103_c.txt",
+        "raw/104_c.txt",
+        "raw/105_c.txt",
+        "raw/106_c.txt",
+        "raw/127_c.txt",
+        "raw/163_c.txt",
+        "raw/164_c.txt",
+        "raw/165_c.txt",
+        "raw/166_c.txt",
+        "raw/167_c.txt",
+        "raw/168_c.txt",
+        "raw/216_c.txt",
+        "raw/217_c.txt",
+        "raw/218_c.txt",
+        "raw/219_c.txt",
+        "raw/220_c.txt",
+        "raw/221_c.txt"
+    ],
+    "StatusChange": [
+        "raw/109_c.txt",
+        "raw/117_c.txt",
+        "raw/131_c.txt",
+        "raw/154_c.txt",
+        "raw/171_c.txt",
+        "raw/172_c.txt",
+        "raw/224_c.txt",
+        "raw/225_c.txt"
+    ]
 }

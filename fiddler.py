@@ -47,8 +47,8 @@ class FiddlerSession(object):
     def estimate_dict(self):
         last_supplement_file = self.files['Workfile'][-1]
         last_supplement_xml = XMLUtils(self.get_xml(last_supplement_file))
-        largest_supplement = last_supplement_xml.gettext('DocumentExt')
-        print(largest_supplement)
+        highest_supplement = last_supplement_xml.gettext('DocumentExt')
+        print(highest_supplement)
 
     def get_xml(self, path):
         with zipfile.ZipFile(self.session_path, 'r') as zf:
@@ -60,5 +60,5 @@ class FiddlerSession(object):
 
 if __name__ == '__main__':
     f = FiddlerSession('Fiddler_Captures/RF-TESTRFS02APR17-S02.saz')
-    # print(f.raw_files)
-    f.estimate_dict
+    print(f.raw_files)
+    # f.estimate_dict
