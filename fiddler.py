@@ -49,9 +49,10 @@ class FiddlerSession(object):
         return self._files
 
     def fix_status_change(self):
-        ''' Sometimes the status change xmls get duplicated in the fiddler capture'''
-
-        pass
+        for i in range(0, len(my_file_list) - 2):
+            for j in range(i, len(my_file_list) - 1):
+                if filecmp.cmp(my_file_list[i], my_file_list[j], shallow=True):
+                    my_file_list.pop(j)
 
     @property
     def raw_files(self):
@@ -64,12 +65,14 @@ class FiddlerSession(object):
         highest_supplement = last_supplement_xml.gettext('DocumentExt')
         print(highest_supplement)
 
-    def get_xml(self, path):
+    def get_file(self, path):
         with zipfile.ZipFile(self.session_path, 'r') as zf:
             with zf.open(os.path.join(path), 'r') as wf:
-                s = str(wf.read())
-                # Retrieving the XML block from the text file
-                return [re.search(r'<s:Envelope.*\/s:Envelope>', s).group()][0]
+                return str(wf.read())
+
+    def get_xml(self, path):
+        s = self.get_file(path)
+        return [re.search(r'<s:Envelope.*\/s:Envelope>', s).group()][0]
 
 
 if __name__ == '__main__':
