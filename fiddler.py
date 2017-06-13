@@ -36,8 +36,22 @@ class FiddlerSession(object):
                     self._files[key].append(value)
 
                 del self._files['GatewayService.asmx']
+                del self._files['AdvisorService']
+                del self._files['HitTest.aspx']
+                del self._files['TokenService.aspx?sv=69']
+                del self._files['Login']
+                del self._files['ProfileService']
+                del self._files['ValuescopeProfileService']
+                del self._files['getdocuments?licensenumber=302800']
+                del self._files['RPS']
+                del self._files['Event']
 
         return self._files
+
+    def fix_status_change(self):
+        ''' Sometimes the status change xmls get duplicated in the fiddler capture'''
+
+        pass
 
     @property
     def raw_files(self):
