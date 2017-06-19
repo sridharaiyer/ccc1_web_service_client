@@ -69,3 +69,14 @@ class XMLUtils(object):
 
     def __bytes__(self):
         return tostring(self.root, pretty_print=True)
+
+
+if __name__ == '__main__':
+    xml = XMLUtils('117_c.xml')
+
+    print(len(xml.root.xpath('//*[local-name()="Reference"][contains(text(),"Events")]/ancestor::*[local-name()="NormalizedMessage"]')))
+
+    for element in xml.root.xpath('//*[local-name()="Reference"][contains(text(),"Events")]/ancestor::*[local-name()="NormalizedMessage"]'):
+        element.getparent().remove(element)
+
+    print(len(xml.root.xpath('//*[local-name()="Reference"][contains(text(),"Events")]/ancestor::*[local-name()="NormalizedMessage"]')))

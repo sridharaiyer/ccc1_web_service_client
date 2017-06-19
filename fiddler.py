@@ -45,18 +45,27 @@ class FiddlerSession(object):
                 del self._files['getdocuments?licensenumber=302800']
                 del self._files['RPS']
                 del self._files['Event']
+                del self._files['Worklist']
+                self._del_statuschange_dups()
 
         return self._files
 
-    def fix_status_change(self):
-        for i in range(0, len(my_file_list) - 2):
-            for j in range(i, len(my_file_list) - 1):
-                if filecmp.cmp(my_file_list[i], my_file_list[j], shallow=True):
-                    my_file_list.pop(j)
+    def _del_statuschange_dups(self):
+        status_change_list = self._files['StatusChange']
+        for i in range(0, len(status_change_list) - 2):
+            for j in range(i, len(status_change_list) - 1):
+                if self.get_file(status_change_list[i]) == self.get_file(status_change_list[j]):
+                    status_change_list.pop(j)
+
+        for i in range(0, len(status_change_list) - 1):
+            xml = XMLUtils(self.get_xml(status_change_list[i]))
+            xpath_expression = '//*[local-name()="Reference"][contains(text(),"Workfile")]'
+            if len(xml.root.xpath(xpath_expression)) == 0:
+                status_change_list.pop(i)
 
     @property
-    def raw_files(self):
-        return(json.dumps(self.files, indent=4))
+    def print_files(self):
+        print(json.dumps(self.files, indent=4))
 
     @property
     def estimate_dict(self):
@@ -77,5 +86,5 @@ class FiddlerSession(object):
 
 if __name__ == '__main__':
     f = FiddlerSession('Fiddler_Captures/RF-TESTRFS02APR17-S02.saz')
-    print(f.raw_files)
+    f.print_files
     # f.estimate_dict
