@@ -51,6 +51,7 @@ class FiddlerSession(object):
         return self._files
 
     def _del_statuschange_dups(self):
+        ''' Removes duplicate files and the xml which does not contain a worfile'''
         status_change_list = self._files['StatusChange']
         for i in range(0, len(status_change_list) - 2):
             for j in range(i, len(status_change_list) - 1):
@@ -59,8 +60,8 @@ class FiddlerSession(object):
 
         for i in range(0, len(status_change_list) - 1):
             xml = XMLUtils(self.get_xml(status_change_list[i]))
-            xpath_expression = '//*[local-name()="Reference"][contains(text(),"Workfile")]'
-            if len(xml.root.xpath(xpath_expression)) == 0:
+            expression = '//*[local-name()="Reference"][contains(text(),"Workfile")]'
+            if len(xml.root.xpath(expression)) == 0:
                 status_change_list.pop(i)
 
     @property
