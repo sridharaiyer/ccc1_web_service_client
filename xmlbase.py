@@ -46,10 +46,6 @@ class IncorrectXMLFiletype(Exception):
 class XMLBase(ABC):
 
     def __init__(self, **params):
-        self._claimid = params['claimid']
-        self._env = params['env']
-        self._lname = params['lname']
-        self._fname = params['fname']
         self.properties = Properties(self.env)
 
     now = datetime.datetime.now(pytz.timezone('US/Central'))
@@ -61,21 +57,21 @@ class XMLBase(ABC):
     time_utc = time_utc.replace(tzinfo=pytz.timezone('US/Central')).isoformat()
     time_zulu = time_utc + 'Z'
 
-    @property
-    def claimid(self):
-        return self._claimid
+    # @property
+    # def claimid(self):
+    #     return self._claimid
 
-    @property
-    def env(self):
-        return self._env
+    # @property
+    # def env(self):
+    #     return self._env
 
-    @property
-    def lname(self):
-        return self._lname
+    # @property
+    # def lname(self):
+    #     return self._lname
 
-    @property
-    def fname(self):
-        return self._fname
+    # @property
+    # def fname(self):
+    #     return self._fname
 
     @abstractmethod
     def create_xml(self):

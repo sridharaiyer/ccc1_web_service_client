@@ -1,28 +1,26 @@
 {
-    "Workfile": [
-        "raw/091_c.txt",
-        "raw/158_c.txt",
-        "raw/211_c.txt"
-    ],
-    "PrintImage": [
-        "raw/092_c.txt",
-        "raw/094_c.txt",
-        "raw/095_c.txt",
-        "raw/159_c.txt",
-        "raw/161_c.txt",
-        "raw/162_c.txt",
-        "raw/212_c.txt",
-        "raw/214_c.txt",
-        "raw/215_c.txt"
-    ],
-    "DigitalImage": [
-        "raw/093_c.txt",
-        "raw/160_c.txt",
-        "raw/213_c.txt"
-    ],
-    "StatusChange": [
-        "raw/117_c.txt",
-        "raw/172_c.txt",
-        "raw/225_c.txt"
-    ]
+    "E01": {
+        "Workfile": "raw/091_c.txt",
+        "EstimatePrintImage": "raw/092_c.txt",
+        "UnrelatedPriorDamage": "raw/094_c.txt",
+        "RelatedPriorDamagereport": "raw/095_c.txt",
+        "DigitalImage": "raw/093_c.txt",
+        "StatusChange": "raw/117_c.txt"
+    },
+    "S01": {
+        "Workfile": "raw/158_c.txt",
+        "EstimatePrintImage": "raw/159_c.txt",
+        "UnrelatedPriorDamage": "raw/161_c.txt",
+        "RelatedPriorDamagereport": "raw/162_c.txt",
+        "DigitalImage": "raw/160_c.txt",
+        "StatusChange": "raw/172_c.txt"
+    },
+    "S02": {
+        "Workfile": "raw/211_c.txt",
+        "EstimatePrintImage": "raw/212_c.txt",
+        "UnrelatedPriorDamage": "raw/214_c.txt",
+        "RelatedPriorDamagereport": "raw/215_c.txt",
+        "DigitalImage": "raw/213_c.txt",
+        "StatusChange": "raw/225_c.txt"
+    }
 }

@@ -1,0 +1,1 @@
+1. httpclient needs Bytes. XMLUtils converts __bytes__ to string internally

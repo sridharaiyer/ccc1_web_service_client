@@ -68,7 +68,15 @@ class XMLUtils(object):
             return self.root.xpath('//*[local-name() = \"{}\"]'.format(tag))[0].text
 
     def __bytes__(self):
+        """Return a byte object
+
+        Returns:
+            bytes: tostring method from etree returns a byte object
+        """
         return tostring(self.root, pretty_print=True)
+
+    def __str__(self):
+        return bytes(self).decode('utf-8')
 
 
 if __name__ == '__main__':

@@ -25,7 +25,6 @@ class Assignment(XMLBase):
 
         self.xml = XMLUtils(xml)
         print(json.dumps(params, indent=4))
-        pdb.set_trace()
         self.params = params
         self.web_service_url = self.properties.ws.ExternalAssignmentWS
         print('The assignment params: \n{}'.format(params))
