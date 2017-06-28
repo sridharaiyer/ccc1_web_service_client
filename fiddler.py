@@ -82,7 +82,7 @@ class FiddlerSession(object):
 
     @property
     def estdict(self):
-        """Identifying the different files belonging todifferent estimates such as E01, S01 etc
+        """Identifying the different files belonging to different estimates such as E01, S01 etc
 
         Returns:
             dict: The estimate dict.
@@ -116,7 +116,7 @@ class FiddlerSession(object):
                     est_type = xml.gettext('DocumentExt')
                     self._estdict[est_type][file_type] = path
 
-        return json.dumps(self._estdict, indent=4)
+        return self._estdict
 
 
 if __name__ == '__main__':

@@ -73,6 +73,9 @@ class XMLBase(ABC):
     # def fname(self):
     #     return self._fname
 
+    def __repr__(self):
+        return('Webservice: {}, Env: {}, Est_Type: {}, Path: {}'.format(self.clsname, self.env, self.est, self.path))
+
     @abstractmethod
     def create_xml(self):
         pass

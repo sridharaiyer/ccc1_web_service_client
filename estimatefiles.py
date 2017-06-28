@@ -12,11 +12,8 @@ class Workfile(XMLBase):
             setattr(cls, field, value)
         return obj
 
-    def __repr__(self):
-        return('Classname: {}, Env: {}, Est_Type: {}, Path: {}'.format(self.clsname, self.env, self.est, self.path))
-
     def create_xml(self):
-        print('Preparing the {} XML file'.format(self.clsname))
+        print('Preparing the {} XML file located in {} in the fiddler session'.format(self.clsname, self.path))
 
     def send_xml(self):
         print('Sending the {} XML file to endpoint'.format(self.clsname))
@@ -37,11 +34,8 @@ class EstimatePrintImage(XMLBase):
             setattr(cls, field, value)
         return obj
 
-    def __repr__(self):
-        return('Classname: {}, Env: {}, Est_Type: {}, Path: {}'.format(self.clsname, self.env, self.est, self.path))
-
     def create_xml(self):
-        print('Preparing the {} XML file'.format(self.clsname))
+        print('Preparing the {} XML file located in {} in the fiddler session'.format(self.clsname, self.path))
 
     def send_xml(self):
         print('Sending the {} XML file to endpoint'.format(self.clsname))
@@ -62,11 +56,8 @@ class UnrelatedPriorDamage(XMLBase):
             setattr(cls, field, value)
         return obj
 
-    def __repr__(self):
-        return('Classname: {}, Env: {}, Est_Type: {}, Path: {}'.format(self.clsname, self.env, self.est, self.path))
-
     def create_xml(self):
-        print('Preparing the {} XML file'.format(self.clsname))
+        print('Preparing the {} XML file located in {} in the fiddler session'.format(self.clsname, self.path))
 
     def send_xml(self):
         print('Sending the {} XML file to endpoint'.format(self.clsname))
@@ -87,11 +78,8 @@ class RelatedPriorDamagereport(XMLBase):
             setattr(cls, field, value)
         return obj
 
-    def __repr__(self):
-        return('Classname: {}, Env: {}, Est_Type: {}, Path: {}'.format(self.clsname, self.env, self.est, self.path))
-
     def create_xml(self):
-        print('Preparing the {} XML file'.format(self.clsname))
+        print('Preparing the {} XML file located in {} in the fiddler session'.format(self.clsname, self.path))
 
     def send_xml(self):
         print('Sending the {} XML file to endpoint'.format(self.clsname))
@@ -112,11 +100,8 @@ class DigitalImage(XMLBase):
             setattr(cls, field, value)
         return obj
 
-    def __repr__(self):
-        return('Classname: {}, Env: {}, Est_Type: {}, Path: {}'.format(self.clsname, self.env, self.est, self.path))
-
     def create_xml(self):
-        print('Preparing the {} XML file'.format(self.clsname))
+        print('Preparing the {} XML file located in {} in the fiddler session'.format(self.clsname, self.path))
 
     def send_xml(self):
         print('Sending the {} XML file to endpoint'.format(self.clsname))
@@ -137,11 +122,8 @@ class StatusChange(XMLBase):
             setattr(cls, field, value)
         return obj
 
-    def __repr__(self):
-        return('Classname: {}, Env: {}, Est_Type: {}, Path: {}'.format(self.clsname, self.env, self.est, self.path))
-
     def create_xml(self):
-        print('Preparing the {} XML file'.format(self.clsname))
+        print('Preparing the {} XML file located in {} in the fiddler session'.format(self.clsname, self.path))
 
     def send_xml(self):
         print('Sending the {} XML file to endpoint'.format(self.clsname))
