@@ -5,6 +5,9 @@ from lxml.etree import XMLParser
 from lxml.etree import XMLSyntaxError
 import pdb
 import os.path
+import base64
+import gzip
+from io import BytesIO
 
 
 class IncorrectXMLError(Exception):
@@ -66,6 +69,26 @@ class XMLUtils(object):
             return self.root.xpath(tag)[0].text
         else:
             return self.root.xpath('//*[local-name() = \"{}\"]'.format(tag))[0].text
+
+    @staticmethod
+    def decodebase64(data):
+        return base64.b64decode(data)
+
+    @staticmethod
+    def encodebase64(data):
+        return base64.b64encode(data).decode('UTF-8')
+
+    @staticmethod
+    def decodebase64_ungzip(data):
+        decoded_base64 = XMLUtils.decodebase64(data)
+        gzcontent = gzip.GzipFile(fileobj=BytesIO(
+            decoded_base64)).read().decode('UTF-8')
+        return gzcontent
+
+    @staticmethod
+    def gzip_encodebase64(data):
+        gzip_compressed = gzip.compress(data)
+        return XMLUtils.encodebase64(gzip_compressed)
 
     def __bytes__(self):
         """Return a byte object

@@ -1,5 +1,6 @@
 import importlib
 import pdb
+from references import References
 
 
 class NoEstimateDictError(Exception):
@@ -15,6 +16,10 @@ class WebServiceEngine(object):
         self._estimate_dict = None
 
     @property
+    def ref_dict(self):
+        return References(self.estimate_dict).ref_dict
+
+    @property
     def estimate_dict(self):
         return self._estimate_dict
 
@@ -28,8 +33,8 @@ class WebServiceEngine(object):
             raise NoEstimateDictError
         for est, files in self.estimate_dict.items():
             for classname, path in files.items():
-                my_module = importlib.import_module('estimatefiles')
-                yield getattr(my_module, classname).from_kwargs(est=est, path=path, **self.params)
+                my_module = importlib.import_module('webservices.' + classname.lower())
+                yield getattr(my_module, classname).from_kwargs(est=est, path=path, ref_dict=self.ref_dict, **self.params)
 
     def run(self):
         for ws in self.generate:

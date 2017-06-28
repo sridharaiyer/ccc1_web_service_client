@@ -1,25 +1,14 @@
 from abc import ABC
 from abc import abstractmethod
-from bs4 import BeautifulSoup
-import re
-import zipfile
-from collections import defaultdict
-import json
 import os.path
-from lxml import etree as ET
-import base64
-import gzip
-from io import BytesIO
 import datetime
 import pytz
-import names
-from hamcrest import assert_that, equal_to
 import uuid
-from collections.abc import Mapping
 import enum
 import pdb
 from httpclient import HttpClient
 from properties import Properties
+from xmlutils import XMLUtils
 
 
 class FileType(enum.Enum):
@@ -47,6 +36,7 @@ class XMLBase(ABC):
 
     def __init__(self, **params):
         self.properties = Properties(self.env)
+        self._xml = XMLUtils(self.path)
 
     now = datetime.datetime.now(pytz.timezone('US/Central'))
     time_iso = now.isoformat()
@@ -79,6 +69,10 @@ class XMLBase(ABC):
     @abstractmethod
     def create_xml(self):
         pass
+
+    @property
+    def xml(self):
+        return self._xml
 
     def send_xml(self):
         url = self.web_service_url
