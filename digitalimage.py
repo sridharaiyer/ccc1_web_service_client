@@ -4,6 +4,7 @@ from xmlbase import XMLBase
 class DigitalImage(XMLBase):
 
     def __init__(self):
+        super().__init__(self, **params)
         self.clsname = self.__class__.__name__
 
     @classmethod

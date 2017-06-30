@@ -1,9 +1,10 @@
 from xmlbase import XMLBase
 
 
-class UnrelatedPriorDamage(XMLBase):
+class StatusChange(XMLBase):
 
-    def __init__(self):
+    def __init__(self, **params):
+        super().__init__(self, **params)
         self.clsname = self.__class__.__name__
 
     @classmethod

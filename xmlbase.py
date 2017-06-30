@@ -9,6 +9,12 @@ import pdb
 from httpclient import HttpClient
 from properties import Properties
 from xmlutils import XMLUtils
+from workfile import Workfile
+from estimateprintimage import EstimatePrintImage
+from digitalimage import DigitalImage
+from unrelatedpriordamage import UnrelatedPriorDamage
+from relatedpriordamagereport import RelatedPriorDamagereport
+from statuschange import StatusChange
 
 
 class FileType(enum.Enum):
@@ -21,20 +27,26 @@ class IncorrectXMLFiletype(Exception):
     def __str__(self):
         return ('Incorrect XML file type. Specify either FileType.inputXML or FileType.outputXML')
 
+XML_TYPE = {
+    'Workfile': Workfile,
+    'EstimatePrintImage': EstimatePrintImage,
+    'DigitalImage': DigitalImage,
+    'UnrelatedPriorDamage': UnrelatedPriorDamage,
+    'RelatedPriorDamagereport': RelatedPriorDamagereport,
+    'StatusChange': StatusChange,
+}
 
-# class SaveXML(object):
-#     """docstring for SaveXML"""
 
-#     def __init__(self, filetype, path):
-#         path =
-
-#     def save(self):
-#         pass
+class XMLFactory(object):
+    @staticmethod
+    def factory(cls, **params):
+        return XML_TYPE[cls](**params)
 
 
 class XMLBase(ABC):
 
     def __init__(self, **params):
+        print('In the XMLBase __init__')
         self.properties = Properties(self.env)
         self._xml = XMLUtils(self.path)
 
@@ -64,7 +76,9 @@ class XMLBase(ABC):
     #     return self._fname
 
     def __repr__(self):
-        return('Webservice: {}, Env: {}, Est_Type: {}, Path: {}'.format(self.clsname, self.env, self.est, self.path))
+        return str(self.xml)
+        pdb.set_trace()
+        # return('Webservice: {}, Env: {}, Est_Type: {}, Path: {}'.format(self.clsname, self.env, self.est, self.path))
 
     @abstractmethod
     def create_xml(self):
