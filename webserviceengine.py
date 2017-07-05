@@ -11,21 +11,18 @@ class NoEstimateDictError(Exception):
 class WebServiceEngine(object):
     """docstring for WebServiceFiles"""
 
-    def __init__(self, **params):
+    def __init__(self, estimate_dict, **params):
         self.params = params
-        self._estimate_dict = None
+        self._estimate_dict = estimate_dict
+        self._ref_dict = References(estimate_dict).ref_dict
 
     @property
     def ref_dict(self):
-        return References(self.estimate_dict).ref_dict
+        return self._ref_dict
 
     @property
     def estimate_dict(self):
         return self._estimate_dict
-
-    @estimate_dict.setter
-    def estimate_dict(self, est_dict):
-        self._estimate_dict = est_dict
 
     @property
     def generate(self):
@@ -37,7 +34,6 @@ class WebServiceEngine(object):
 
     def run(self):
         for ws in self.generate:
-            # ws.create_xml()
-            # ws.send_xml()
-            # ws.verify_db()
-            print(str(ws))
+            ws.create_xml()
+            ws.send_xml()
+            ws.verify_db()

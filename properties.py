@@ -1,4 +1,3 @@
-from box import Box
 import json
 
 prop_dict = {
@@ -8,12 +7,12 @@ prop_dict = {
 }
 
 
-class BoxLoad(object):
-    """docstring for BoxLoad"""
+class PropertiesLoad(object):
+    """docstring for PropertiesLoad"""
 
     def __init__(self, file, env):
         with open(file, 'r') as f:
-            self.properties = Box(json.load(f)[env])
+            self.properties = json.load(f)[env]
 
 
 class Singleton(type):
@@ -29,11 +28,11 @@ class Properties(metaclass=Singleton):
 
     def __init__(self, env):
         self.env = env
-        self.ui = BoxLoad(prop_dict['ui'], env).properties
-        self.db = BoxLoad(prop_dict['db'], env).properties
-        self.ws = BoxLoad(prop_dict['ws'], env).properties
+        self.ui = PropertiesLoad(prop_dict['ui'], env).properties
+        self.db = PropertiesLoad(prop_dict['db'], env).properties
+        self.ws = PropertiesLoad(prop_dict['ws'], env).properties
 
 
 if __name__ == '__main__':
     p = Properties('awsqa')
-    print(p.ws.StatusChange)
+    print(p.ws['StatusChange'])

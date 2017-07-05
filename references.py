@@ -1,6 +1,7 @@
 import uuid
 import pdb
 from collections import defaultdict
+import json
 
 
 class References(object):
@@ -15,4 +16,5 @@ class References(object):
         for est, files in self.est_dict.items():
             for classname, path in files.items():
                 self._ref_dict[est][classname] = str(uuid.uuid4())
+        print(json.dumps(self._ref_dict, indent=4))
         return self._ref_dict

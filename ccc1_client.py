@@ -4,6 +4,7 @@ from webserviceengine import WebServiceEngine
 from uniqueid import UniqueID
 import names
 import pdb
+import json
 
 
 parser = argparse.ArgumentParser(
@@ -62,11 +63,11 @@ files = FiddlerSession(args.filename)
 estimate_dict = files.estdict
 
 if args.show:
-    print(estimate_dict)
+    print(json.dumps(estimate_dict, indent=4))
+    exit(1)
 
 # Removing the 'show' keyword from the dict as this is not required for further webservice processing.
 vars(args).pop('show')
 
-wsengine = WebServiceEngine(**vars(args))
-wsengine.estimate_dict = estimate_dict
+wsengine = WebServiceEngine(estimate_dict, **vars(args))
 wsengine.run()

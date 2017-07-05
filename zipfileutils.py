@@ -1,4 +1,3 @@
-from bs4 import BeautifulSoup
 import re
 import zipfile
 import os

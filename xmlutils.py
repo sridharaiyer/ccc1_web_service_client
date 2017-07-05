@@ -8,6 +8,7 @@ import os.path
 import base64
 import gzip
 from io import BytesIO
+from zipfileutils import ZipFileUtils
 
 
 class IncorrectXMLError(Exception):
@@ -35,6 +36,11 @@ class XMLUtils(object):
                 raise IncorrectXMLError
             else:
                 self.root = parse(xml)
+
+    @classmethod
+    def fromZipFile(cls, zipfilename=None, xmlpath=None):
+        zipfile = ZipFileUtils(zipfilename)
+        return cls(zipfile.filexml(xmlpath))
 
     def _edit_tag_multiple_occurences(self, **tag_dict):
         try:
