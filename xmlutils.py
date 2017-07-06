@@ -109,11 +109,16 @@ class XMLUtils(object):
 
 
 if __name__ == '__main__':
-    xml = XMLUtils('117_c.xml')
+    # xml = XMLUtils('117_c.xml')
 
-    print(len(xml.root.xpath('//*[local-name()="Reference"][contains(text(),"Events")]/ancestor::*[local-name()="NormalizedMessage"]')))
+    # print(len(xml.root.xpath('//*[local-name()="Reference"][contains(text(),"Events")]/ancestor::*[local-name()="NormalizedMessage"]')))
 
-    for element in xml.root.xpath('//*[local-name()="Reference"][contains(text(),"Events")]/ancestor::*[local-name()="NormalizedMessage"]'):
-        element.getparent().remove(element)
+    # for element in xml.root.xpath('//*[local-name()="Reference"][contains(text(),"Events")]/ancestor::*[local-name()="NormalizedMessage"]'):
+    #     element.getparent().remove(element)
 
-    print(len(xml.root.xpath('//*[local-name()="Reference"][contains(text(),"Events")]/ancestor::*[local-name()="NormalizedMessage"]')))
+    # print(len(xml.root.xpath('//*[local-name()="Reference"][contains(text(),"Events")]/ancestor::*[local-name()="NormalizedMessage"]')))
+
+    xml = XMLUtils('temp_status_change_01.xml')
+    xpath = '//text()[contains(.,"f3df160d-61c6-4f13-9d6b-5e3515c3ab97")]/ancestor::*[local-name()="Payload"]/*[local-name()="Data"]'
+
+    print(xml.root.xpath(xpath)[0].text)

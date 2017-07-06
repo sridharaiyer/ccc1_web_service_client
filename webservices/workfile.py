@@ -3,27 +3,17 @@ from xmlutils import XMLUtils
 import json
 import pdb
 import re
+from savefile import Save
 
 
 class Workfile(XMLBase):
     def __init__(self, **params):
-        super().__init__(self, **params)
-        self.clsname = self.__class__.__name__
+        super().__init__(**params)
 
-    @classmethod
-    def from_kwargs(cls, **kwargs):
-        obj = cls()
-        for (field, value) in kwargs.items():
-            setattr(cls, field, value)
-        return obj
-
-    def create_xml(self):
-        print('Preparing the {} XML file located in {} in the fiddler session'.format(self.clsname, self.path))
-
-        self.xml.edit_tag(Password='Password1')
-        self.xml.edit_tag(SourceTimeStamp=super().time_iso)
-        self.xml.edit_tag(PublishTimeStamp=super().time_iso)
-        self.xml.edit_tag(ClaimReferenceID=self.claimid)
+    def edit_xml(self):
+        super().edit_xml()
+        super().edit_descriptor()
+        super().edit_reference()
 
         payload = self.xml.gettext(tag='Data')
         payload_xml = XMLUtils(XMLUtils.decodebase64_ungzip(payload))
@@ -47,8 +37,12 @@ class Workfile(XMLBase):
             elem.text = re.sub(
                 '[^/]*$', self.ref_dict[self.est]['DigitalImage'], elem.text)
 
-    def send_xml(self):
-        print('Sending the {} XML file to endpoint'.format(self.clsname))
+        tempsavefile = Save(claimid=self.claimid, est=self.est, filetype='WorkfilePayload', env=self.env)
+        tempsavefile.save_input(bytes(payload_xml))
+
+        encoded_gzipped_data = XMLUtils.gzip_encodebase64(bytes(payload_xml))
+
+        self.xml.edit_tag(Data=encoded_gzipped_data)
 
     def verify_db(self):
-        print('Verifying the DB after posting the {} XML file'.format(self.clsname))
+        print('Verifying the DB after posting the {} {} XML file'.format(self.est, self._type))

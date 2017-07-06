@@ -1,6 +1,5 @@
 from abc import ABC
 from abc import abstractmethod
-import os.path
 import datetime
 import pytz
 import enum
@@ -9,8 +8,8 @@ import json
 from httpclient import HttpClient
 from properties import Properties
 from xmlutils import XMLUtils
-import re
 from savefile import Save
+import re
 
 
 class FileType(enum.Enum):
@@ -45,13 +44,34 @@ class XMLBase(ABC):
     def __repr__(self):
         return('Webservice: {}, Env: {}, Est_Type: {}, Path: {}'.format(self.clsname, self.env, self.est, self.path))
 
+    def _init_message(self):
+        print('Preparing the {} {} XML file located in {} in the fiddler session'.format(self.est, self._type, self.path))
+
+    def edit_descriptor(self):
+        self.xml.edit_tag(Password='Password1')
+
+        for elem in self.xml.root.iterfind('.//{*}SourceTimeStamp'):
+            elem.text = self.time_iso
+        for elem in self.xml.root.iterfind('.//{*}PublishTimeStamp'):
+            elem.text = self.time_iso
+        for elem in self.xml.root.iterfind('.//{*}ClaimReferenceID'):
+            elem.text = self.time_iso
+
+    def edit_reference(self):
+        for elem in self.xml.root.iterfind('.//{*}Reference'):
+            elem.text = re.sub(
+                '[^/]*$', self.ref_dict[self.est][self._type], elem.text)
+
     @abstractmethod
-    def create_xml(self):
-        pass
+    def edit_xml(self):
+        self._init_message()
 
     @property
     def xml(self):
         return self._xml
+
+    def __bytes__(self):
+        return bytes(self.xml)
 
     def send_xml(self):
         print('Saving input:')
@@ -66,161 +86,3 @@ class XMLBase(ABC):
     @abstractmethod
     def verify_db(self):
         pass
-
-
-class Workfile(XMLBase):
-    def __init__(self, **params):
-        super().__init__(**params)
-
-    def create_xml(self):
-        print('Preparing the {} XML file located in {} in the fiddler session'.format(self._type, self.path))
-
-        self.xml.edit_tag(Password='Password1')
-        self.xml.edit_tag(SourceTimeStamp=super().time_iso)
-        self.xml.edit_tag(PublishTimeStamp=super().time_iso)
-        self.xml.edit_tag(ClaimReferenceID=self.claimid)
-
-        payload = self.xml.gettext(tag='Data')
-        payload_xml = XMLUtils(XMLUtils.decodebase64_ungzip(payload))
-        payload_xml.edit_tag(ClaimNumber=self.claimid)
-        payload_xml.edit_tag(ClaimReferenceID=self.claimid)
-        payload_xml.edit_tag(clm_num=self.claimid)
-
-        for elem in payload_xml.root.iterfind('.//{*}Party//{*}FirstName'):
-            elem.text = self.fname
-
-        for elem in payload_xml.root.iterfind('.//{*}Party//{*}LastName'):
-            elem.text = self.lname
-
-        for elem in payload_xml.root.iterfind('.//{*}owner_info//{*}owner_first_name'):
-            elem.text = self.fname
-
-        for elem in payload_xml.root.iterfind('.//{*}owner_info//{*}owner_last_name'):
-            elem.text = self.lname
-
-        for elem in payload_xml.root.iterfind('.//{*}ImageReference'):
-            elem.text = re.sub(
-                '[^/]*$', self.ref_dict[self.est]['DigitalImage'], elem.text)
-
-        tempsavefile = Save(claimid=self.claimid, est=self.est, filetype='WorkfilePayload', env=self.env)
-        tempsavefile.save_input(bytes(payload_xml))
-
-        encoded_gzipped_data = XMLUtils.gzip_encodebase64(bytes(payload_xml))
-
-        self.xml.edit_tag(Data=encoded_gzipped_data)
-
-        for elem in self.xml.root.iterfind('.//{*}Reference'):
-            elem.text = re.sub(
-                '[^/]*$', self.ref_dict[self.est][self._type], elem.text)
-
-    def __bytes__(self):
-        return bytes(self.xml)
-
-    def verify_db(self):
-        print('Verifying the DB after posting the {} {} XML file'.format(self.est, self._type))
-
-
-class UnrelatedPriorDamage(XMLBase):
-
-    def __init__(self, **params):
-        super().__init__(**params)
-
-    def create_xml(self):
-        print('Preparing the {} {} XML file located in {} in the fiddler session'.format(self.est, self._type, self.path))
-
-    def __bytes__(self):
-        return bytes(self.xml)
-
-    def send_xml(self):
-        print('Sending the {} {} XML file to endpoint'.format(self.est, self._type))
-
-    def verify_db(self):
-        print('Verifying the DB after posting the {} {} XML file'.format(self.est, self._type))
-
-
-class StatusChange(XMLBase):
-
-    def __init__(self, **params):
-        super().__init__(**params)
-
-    def create_xml(self):
-        print('Preparing the {} {} XML file located in {} in the fiddler session'.format(self.est, self._type, self.path))
-
-    def __bytes__(self):
-        return bytes(self.xml)
-
-    def send_xml(self):
-        print('Sending the {} {} XML file to endpoint'.format(self.est, self._type))
-
-    def verify_db(self):
-        print('Verifying the DB after posting the {} {} XML file'.format(self.est, self._type))
-
-
-class RelatedPriorDamagereport(XMLBase):
-
-    def __init__(self, **params):
-        super().__init__(**params)
-
-    def create_xml(self):
-        print('Preparing the {} {} XML file located in {} in the fiddler session'.format(self.est, self._type, self.path))
-
-    def __bytes__(self):
-        return bytes(self.xml)
-
-    def send_xml(self):
-        print('Sending the {} {} XML file to endpoint'.format(self.est, self._type))
-
-    def verify_db(self):
-        print('Verifying the DB after posting the {} {} XML file'.format(self.est, self._type))
-
-
-class EstimatePrintImage(XMLBase):
-
-    def __init__(self, **params):
-        super().__init__(**params)
-
-    def create_xml(self):
-        print('Preparing the {} {} XML file located in {} in the fiddler session'.format(self.est, self._type, self.path))
-
-    def __bytes__(self):
-        return bytes(self.xml)
-
-    def send_xml(self):
-        print('Sending the {} {} XML file to endpoint'.format(self.est, self._type))
-
-    def verify_db(self):
-        print('Verifying the DB after posting the {} {} XML file'.format(self.est, self._type))
-
-
-class DigitalImage(XMLBase):
-
-    def __init__(self, **params):
-        super().__init__(**params)
-
-    def create_xml(self):
-        print('Preparing the {} {} XML file located in {} in the fiddler session'.format(self.est, self._type, self.path))
-
-    def __bytes__(self):
-        return bytes(self.xml)
-
-    def send_xml(self):
-        print('Sending the {} {} XML file to endpoint'.format(self.est, self._type))
-
-    def verify_db(self):
-        print('Verifying the DB after posting the {} {} XML file'.format(self.est, self._type))
-
-
-XML_TYPE = {
-    'Workfile': Workfile,
-    'EstimatePrintImage': EstimatePrintImage,
-    'DigitalImage': DigitalImage,
-    'UnrelatedPriorDamage': UnrelatedPriorDamage,
-    'RelatedPriorDamagereport': RelatedPriorDamagereport,
-    'StatusChange': StatusChange,
-}
-
-
-class XMLFactory(object):
-    @staticmethod
-    def factory(cls, **params):
-        return XML_TYPE[cls](**params)

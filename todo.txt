@@ -1,1 +1,2 @@
 1. Change password to Password1 for which regions or all?
+2. Save PDFs and images for each estimate.
