@@ -5,6 +5,7 @@ import json
 import pdb
 from xmlutils import XMLUtils
 from zipfileutils import ZipFileUtils
+import copy
 
 
 class FiddlerSession(object):
@@ -15,6 +16,7 @@ class FiddlerSession(object):
         self._files = None
         self._zipfile = ZipFileUtils(session_path)
         self._estdict = {'E01': {}}
+        self._oldrefdict = {'E01': {}}
 
     @property
     def files(self):
@@ -80,6 +82,8 @@ class FiddlerSession(object):
                     e = 'S' + str(i + 1)
                 self._estdict[e] = {}
 
+        self._oldrefdict = copy.deepcopy(self._estdict)
+
     @property
     def estdict(self):
         """Identifying the different files belonging to different estimates such as E01, S01 etc
@@ -94,12 +98,14 @@ class FiddlerSession(object):
                     xml = XMLUtils(self._zipfile.filexml(path))
                     est_type = xml.gettext('DocumentExt')
                     self._estdict[est_type][file_type] = path
+                    self._oldrefdict[est_type][file_type] = xml.gettext('Reference').split("/")[-1]
             elif file_type == 'PrintImage':
                 for path in files:
                     xml = XMLUtils(self._zipfile.filexml(path))
                     est_type = xml.gettext('DocumentExt')
                     ftype = xml.gettext('MsgType').replace(" ", "")
                     self._estdict[est_type][ftype] = path
+                    self._oldrefdict[est_type][ftype] = xml.gettext('Reference').split("/")[-1]
             elif file_type == 'DigitalImage':
                 for path in files:
                     xml = XMLUtils(self._zipfile.filexml(path))
@@ -110,6 +116,7 @@ class FiddlerSession(object):
                         est_type = 'S' + str(est_id)[-2:]
                     ftype = xml.gettext('MsgType').replace(" ", "")
                     self._estdict[est_type][file_type] = path
+                    self._oldrefdict[est_type][file_type] = xml.gettext('Reference').split("/")[-1]
             elif file_type == 'StatusChange':
                 for path in files:
                     xml = XMLUtils(self._zipfile.filexml(path))
@@ -117,6 +124,10 @@ class FiddlerSession(object):
                     self._estdict[est_type][file_type] = path
 
         return self._estdict
+
+    @property
+    def oldrefdict(self):
+        return self._oldrefdict
 
 
 if __name__ == '__main__':

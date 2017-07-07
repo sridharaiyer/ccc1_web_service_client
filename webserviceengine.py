@@ -1,6 +1,7 @@
 import pdb
-from references import References
 from xmlfactory import XMLFactory
+from collections import defaultdict
+import uuid
 
 
 class NoEstimateDictError(Exception):
@@ -11,10 +12,18 @@ class NoEstimateDictError(Exception):
 class WebServiceEngine(object):
     """docstring for WebServiceFiles"""
 
-    def __init__(self, estimate_dict, **params):
+    def __init__(self, estimate_dict, old_ref_dict, **params):
         self.params = params
         self._estimate_dict = estimate_dict
-        self._ref_dict = References(estimate_dict).ref_dict
+        self._old_ref_dict = old_ref_dict
+        self._create_ref_dict()
+
+    def _create_ref_dict(self):
+        self._ref_dict = defaultdict(dict)
+        for est, files in self._estimate_dict.items():
+            for file, path in files.items():
+                if file != 'StatusChange':
+                    self._ref_dict[est][file] = str(uuid.uuid4())
 
     @property
     def ref_dict(self):
@@ -30,10 +39,17 @@ class WebServiceEngine(object):
             raise NoEstimateDictError
         for est, files in self.estimate_dict.items():
             for classname, path in files.items():
-                yield XMLFactory.factory(classname, est=est, path=path, ref_dict=self.ref_dict, **self.params)
+                new_params = {
+                    'est': est,
+                    'path': path,
+                    'ref_dict': self.ref_dict,
+                    'old_ref_dict': self._old_ref_dict
+                }
+                param_dict = dict(new_params, **self.params)
+                yield XMLFactory.factory(classname, **param_dict)
 
     def run(self):
         for ws in self.generate:
-            ws.create_xml()
+            ws.edit_xml()
             ws.send_xml()
             ws.verify_db()

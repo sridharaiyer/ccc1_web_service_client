@@ -77,9 +77,13 @@ class XMLBase(ABC):
         print('Saving input:')
         self.savefile.save_input(bytes(self))
         # url = self.web_service_url
-        print('Posting XML to web service: {}'.format(self.properties.ws[self._type]))
+        if self._type in ['EstimatePrintImage', 'UnrelatedPriorDamage', 'RelatedPriorDamagereport']:
+            filetype = 'PrintImage'
+        else:
+            filetype = self._type
+        print('Posting XML to web service: {}'.format(self.properties.ws[filetype]))
         # self.response = HttpClient().post(url, bytes(self))
-        print('Assignment XML successfully posted to web service')
+        print('XML successfully posted to web service')
         print('Saving output file')
         # self._save_xml(FileType.outputXML)
 

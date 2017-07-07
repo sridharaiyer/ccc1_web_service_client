@@ -61,6 +61,7 @@ args = parser.parse_args()
 
 files = FiddlerSession(args.filename)
 estimate_dict = files.estdict
+old_ref_dict = files.oldrefdict
 
 if args.show:
     print(json.dumps(estimate_dict, indent=4))
@@ -69,5 +70,5 @@ if args.show:
 # Removing the 'show' keyword from the dict as this is not required for further webservice processing.
 vars(args).pop('show')
 
-wsengine = WebServiceEngine(estimate_dict, **vars(args))
+wsengine = WebServiceEngine(estimate_dict, old_ref_dict, **vars(args))
 wsengine.run()

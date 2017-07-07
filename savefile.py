@@ -27,7 +27,7 @@ class Save(object):
         if self.filetype != 'assignment':
             base_path = os.path.join(base_path, self.est)
 
-        filename = self.filetype + '_' + locationtype + '.xml'
+        filename = self.est + '_' + self.filetype + '_' + locationtype + '.xml'
 
         os.makedirs(base_path, exist_ok=True)
         return os.path.join(base_path, filename)
