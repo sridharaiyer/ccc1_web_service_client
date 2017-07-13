@@ -10,6 +10,7 @@ from properties import Properties
 from xmlutils import XMLUtils
 from savefile import Save
 import re
+from db import DB
 
 
 class FileType(enum.Enum):
@@ -28,9 +29,14 @@ class XMLBase(ABC):
     def __init__(self, **params):
         self.__dict__.update(params)
         self.properties = Properties(self.env)
-        self._xml = XMLUtils.fromZipFile(zipfilename=self.filename, xmlpath=self.path)
+        self._xml = XMLUtils.fromZipFile(zipfilename=self.filename,
+                                         xmlpath=self.path)
         self._type = self.__class__.__name__
-        self.savefile = Save(claimid=self.claimid, est=self.est, filetype=self._type, env=self.env)
+        self.savefile = Save(claimid=self.claimid,
+                             est=self.est,
+                             filetype=self._type,
+                             env=self.env)
+        self.claimfolderdb = DB(dbname='claimfolder', env=self.env)
 
     now = datetime.datetime.now(pytz.timezone('US/Central'))
     time_iso = now.isoformat()

@@ -10,9 +10,9 @@
         "claimtracking": {
             "user": "EQAUSER",
             "password": "CQ*82012",
-            "host": "CMPCLQA.cbqbxxqqjewq.us-east-1.rds.amazonaws.com",
+            "host": "MPCLQA.cbqbxxqqjewq.us-east-1.rds.amazonaws.com",
             "port": "1521",
-            "service_name": "CMPCLQA"
+            "service_name": "MPCLQA"
         },
         "valuation": {
             "user": "EQAUSER",

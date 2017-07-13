@@ -11,4 +11,4 @@ with cx_Oracle.connect(user="EQAUSER", password="CQ*82012", dsn='CFBLQA.cbqbxxqq
         cols[desc[0]] = col
 
     for result in cursor:
-        print (result[cols['CLM_FOLDER_STATUS']])
+        print(result[cols['CLM_FOLDER_STATUS']])
