@@ -28,19 +28,24 @@ class _DB(metaclass=Singleton):
     def execute(self, query):
         self.cols.clear()
         self.cursor.execute(query)
+        self.result = self.cursor.fetchall()
+        self._rowcount = self.cursor.rowcount
         for col, desc in enumerate(self.cursor.description):
             self.cols[desc[0]] = col
 
+    @property
+    def rowcount(self):
+        return self._rowcount
+
     def get(self, col):
-        for result in self.cursor:
-            return result[self.cols[col]]
+        return(self.result[0][self.cols[col]])
 
     def __exit__(self, exc_type, exc_val, exc_tb):
         if self.conn:
             self.conn.close()
 
 
-class DB(object):
+class DB(metaclass=Singleton):
 
     def __init__(self, env):
         self._map = {}
@@ -57,7 +62,6 @@ class DB(object):
             dbexisting = db.get('existing')
 
             if dbexisting:
-                print('Returning {} object - {}'.format(dbname, dbexisting))
                 return dbexisting
 
             if dbparams is None:
@@ -68,22 +72,13 @@ class DB(object):
                     'Establishing DB connection to ({}) - {} DB'.format(self._env, dbname))
                 dbobject = _DB(**dbparams)
                 self._map[dbname]['existing'] = dbobject
-                print('Connection to ({}) - {} DB successful'.format(self._env, db))
+                print('Connection to ({}) - {} DB successful'.format(self._env, dbname))
                 return dbobject
 
 
 if __name__ == '__main__':
-    print('DB object 1')
-    db1 = DB('awsqa')
-    # print(db1.test)
-    db1.claimfolder.execute(
-        "select * from CLAIM_FOLDER where CUST_CLM_REF_ID = 'eqa03312017164119'")
-    print()
-    assert db1.claimfolder.get('CLM_FOLDER_STATUS') == 'OPEN'
-
-    print('\nDB object 2')
-    db2 = DB('awsqa')
-    db2.claimfolder.execute(
-        "select * from CLAIM_FOLDER where CUST_CLM_REF_ID = 'eqa03312017164119'")
-    print()
-    assert db2.claimfolder.get('CLM_FOLDER_STATUS') == 'OPEN'
+    db = DB('awsqa')
+    sql = "select * from CLAIM_FOLDER where COMPRSD_CUST_CLM_REF_ID = 'eqa0702201722475537'"
+    db.claimfolder.execute(sql)
+    assert db.claimfolder.rowcount == 1
+    assert db.claimfolder.get('CLM_FOLDER_STATUS') == 'OPEN'
