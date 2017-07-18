@@ -12,7 +12,8 @@ class Singleton(type):
         return cls._instance
 
 
-class _DB(object):
+class _DB(metaclass=Singleton):
+
     def __init__(self, **params):
         self.dsn = '{}:{}/{}'.format(params['host'],
                                      params['port'],
@@ -40,16 +41,49 @@ class _DB(object):
 
 
 class DB(object):
+
     def __init__(self, env):
+        self._map = {}
+        self._env = env
+
         for db, dbparams in Properties(env).db.items():
-            # if k == 'claimfolder':
-            print('Establishing DB connection to ({}) - {} DB'.format(env, db))
-            dbobject = _DB(**dbparams)
-            print('Connection to ({}) - {} DB successful'.format(env, db))
-            setattr(self, db, dbobject)
+            print('Registering {} DB'.format(db))
+            self._map[db] = {'params': dbparams, 'existing': None}
+
+    def __getattr__(self, dbname):
+        if dbname in self._map:
+            db = self._map[dbname]
+            dbparams = db.get('params')
+            dbexisting = db.get('existing')
+
+            if dbexisting:
+                print('Returning {} object - {}'.format(dbname, dbexisting))
+                return dbexisting
+
+            if dbparams is None:
+                raise AttributeError(
+                    'Database {} is not registered in the property file'.format(dbname))
+            elif dbexisting is None:
+                print(
+                    'Establishing DB connection to ({}) - {} DB'.format(self._env, dbname))
+                dbobject = _DB(**dbparams)
+                self._map[dbname]['existing'] = dbobject
+                print('Connection to ({}) - {} DB successful'.format(self._env, db))
+                return dbobject
 
 
 if __name__ == '__main__':
-    db = DB('awsqa')
-    db.claimfolder.execute("select * from CLAIM_FOLDER where CUST_CLM_REF_ID = 'eqa03312017164119'")
-    assert db.claimfolder.get('CLM_FOLDER_STATUS') == 'OPEN'
+    print('DB object 1')
+    db1 = DB('awsqa')
+    # print(db1.test)
+    db1.claimfolder.execute(
+        "select * from CLAIM_FOLDER where CUST_CLM_REF_ID = 'eqa03312017164119'")
+    print()
+    assert db1.claimfolder.get('CLM_FOLDER_STATUS') == 'OPEN'
+
+    print('\nDB object 2')
+    db2 = DB('awsqa')
+    db2.claimfolder.execute(
+        "select * from CLAIM_FOLDER where CUST_CLM_REF_ID = 'eqa03312017164119'")
+    print()
+    assert db2.claimfolder.get('CLM_FOLDER_STATUS') == 'OPEN'
