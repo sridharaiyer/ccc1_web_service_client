@@ -32,6 +32,7 @@ class _DB(metaclass=Singleton):
         self._rowcount = self.cursor.rowcount
         for col, desc in enumerate(self.cursor.description):
             self.cols[desc[0]] = col
+        return self.result
 
     @property
     def rowcount(self):
@@ -52,7 +53,6 @@ class DB(metaclass=Singleton):
         self._env = env
 
         for db, dbparams in Properties(env).db.items():
-            print('Registering {} DB'.format(db))
             self._map[db] = {'params': dbparams, 'existing': None}
 
     def __getattr__(self, dbname):
@@ -79,6 +79,7 @@ class DB(metaclass=Singleton):
 if __name__ == '__main__':
     db = DB('awsqa')
     sql = "select * from CLAIM_FOLDER where COMPRSD_CUST_CLM_REF_ID = 'eqa0702201722475537'"
-    db.claimfolder.execute(sql)
+    print(db.claimfolder.execute(sql)[0][0])
     assert db.claimfolder.rowcount == 1
     assert db.claimfolder.get('CLM_FOLDER_STATUS') == 'OPEN'
+    print(db.claimfolder.result[0][0])

@@ -29,14 +29,19 @@ class XMLBase(ABC):
     def __init__(self, **params):
         self.__dict__.update(params)
         self.properties = Properties(self.env)
-        self._xml = XMLUtils.fromZipFile(zipfilename=self.filename,
-                                         xmlpath=self.path)
         self._type = self.__class__.__name__
+        if (self._type == 'ExternalAssignmentWS'):
+            self.est = None
+            self.path = 'xmltemplates/create_assignment.xml'
+            self._xml = XMLUtils(self.path)
+        else:
+            self._xml = XMLUtils.fromZipFile(zipfilename=self.filename,
+                                             xmlpath=self.path)
         self.savefile = Save(claimid=self.claimid,
                              est=self.est,
                              filetype=self._type,
                              env=self.env)
-        self.claimfolderdb = DB(dbname='claimfolder', env=self.env)
+        self._db = DB(self.env)
 
     now = datetime.datetime.now(pytz.timezone('US/Central'))
     time_iso = now.isoformat()
@@ -75,6 +80,10 @@ class XMLBase(ABC):
     @property
     def xml(self):
         return self._xml
+
+    @property
+    def db(self):
+        return self._db
 
     def __bytes__(self):
         return bytes(self.xml)
