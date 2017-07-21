@@ -5,6 +5,7 @@ from uniqueid import UniqueID
 import names
 import pdb
 import json
+from xmlutils import XMLUtils
 
 
 parser = argparse.ArgumentParser(
@@ -22,7 +23,7 @@ parser.add_argument('-s',
                     action='store_true',
                     help='Show the different estimate files in the .saz file')
 
-parser.add_argument('--environment',
+parser.add_argument('--env',
                     dest='env',
                     action='store',
                     type=str,
@@ -63,12 +64,29 @@ files = FiddlerSession(args.filename)
 estimate_dict = files.estdict
 old_ref_dict = files.oldrefdict
 
+e01_file = estimate_dict['E01']['Workfile']
+
 if args.show:
     print(json.dumps(estimate_dict, indent=4))
     exit(1)
 
-# Removing the 'show' keyword from the dict as this is not required for further webservice processing.
+# Removing the 'show' keyword from the dict as this is not required for
+# further webservice processing.
 vars(args).pop('show')
+
+e01_xml = XMLUtils.fromZipFile(zipfilename=args.filename, xmlpath=e01_file)
+
+assignment_params = {
+    'claimid': args.claimid,
+    'lname': args.lname,
+    'fname': args.fname,
+    'PrimaryInsuranceCompanyID': e01_xml.gettext('VantiveCode'),
+    'ClaimOffice': e01_xml.gettext('Code'),
+    'AdjusterCode': 'CDAN',
+    'AssignmentRecipientID': e01_xml.gettext('AppraiserMailboxID')
+}
+
+assignment = AssignmentFactory()
 
 wsengine = WebServiceEngine(estimate_dict, old_ref_dict, **vars(args))
 wsengine.run()

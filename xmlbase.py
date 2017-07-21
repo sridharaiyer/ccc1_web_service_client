@@ -11,6 +11,7 @@ from xmlutils import XMLUtils
 from savefile import Save
 import re
 from db import DB
+from timeutils import Time
 
 
 class FileType(enum.Enum):
@@ -42,31 +43,24 @@ class XMLBase(ABC):
                              filetype=self._type,
                              env=self.env)
         self._db = DB(self.env)
-
-    now = datetime.datetime.now(pytz.timezone('US/Central'))
-    time_iso = now.isoformat()
-    time_ymdhms = now.strftime('%Y-%m-%dT%H:%M:%S')
-    time_ymd = now.strftime('%Y-%m-%d')
-
-    time_utc = datetime.datetime.utcnow()
-    time_utc = time_utc.replace(tzinfo=pytz.timezone('US/Central')).isoformat()
-    time_zulu = time_utc + 'Z'
+        self.time = Time()
 
     def __repr__(self):
         return('Webservice: {}, Env: {}, Est_Type: {}, Path: {}'.format(self.clsname, self.env, self.est, self.path))
 
     def _init_message(self):
-        print('Preparing the {} {} XML file located in {} in the fiddler session'.format(self.est, self._type, self.path))
+        print('Preparing the {} {} XML file located in {} in the fiddler session'.format(
+            self.est, self._type, self.path))
 
     def edit_descriptor(self):
         self.xml.edit_tag(Password='Password1')
 
         for elem in self.xml.root.iterfind('.//{*}SourceTimeStamp'):
-            elem.text = self.time_iso
+            elem.text = self.time.iso
         for elem in self.xml.root.iterfind('.//{*}PublishTimeStamp'):
-            elem.text = self.time_iso
+            elem.text = self.time.iso
         for elem in self.xml.root.iterfind('.//{*}ClaimReferenceID'):
-            elem.text = self.time_iso
+            elem.text = self.time.iso
 
     def edit_reference(self):
         for elem in self.xml.root.iterfind('.//{*}Reference'):
@@ -96,7 +90,8 @@ class XMLBase(ABC):
             filetype = 'PrintImage'
         else:
             filetype = self._type
-        print('Posting XML to web service: {}'.format(self.properties.ws[filetype]))
+        print('Posting XML to web service: {}'.format(
+            self.properties.ws[filetype]))
         # self.response = HttpClient().post(url, bytes(self))
         print('XML successfully posted to web service')
         print('Saving output file')

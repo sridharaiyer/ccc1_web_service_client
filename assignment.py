@@ -3,11 +3,11 @@ import pdb
 from xmlutils import XMLUtils
 from uniqueid import UniqueID
 import names
-from xmlbase import XMLBase
 from dateutil.relativedelta import relativedelta
 import json
 from db import DB
 from savefile import Save
+from timeutils import Time
 
 # SQL to get a random ADJ code from a list of
 # valid ADJ codes for a Company - Claim Office combination
@@ -29,25 +29,37 @@ WHERE ROWNUM = 1
 """
 
 
-class ExternalAssignmentWS(XMLBase):
+class ExternalAssignmentWS(object):
 
     def __init__(self, **params):
-        super().__init__(env=params.pop('env'),
-                         claimid=params.pop('claimid'),
-                         lname=params.pop('lname'),
-                         fname=params.pop('fname'))
-
+        self.env = params.pop('env')
+        self.claimid = params.pop('claimid')
+        self.lname = params.pop('lname')
+        self.fname = params.pop('fname')
         self.params = params
-        print('The assignment params: \n{}'.format(json.dumps(params, indent=4)))
+        self.path = 'xmltemplates/create_assignment.xml'
+        self.xml = XMLUtils(self.path)
+        self.time = Time()
+        self.db = DB(self.env)
+        self.savefile = Save(claimid=self.claimid,
+                             est=None,
+                             filetype='Assignment',
+                             env=self.env)
+        print('The assignment params: \n{}'.format(
+            json.dumps(self.params, indent=4)))
+
+    def __bytes__(self):
+        return bytes(self.xml)
 
     def edit_xml(self):
-        super().edit_xml()
-        super().edit_descriptor()
+        print('Preparing the {} {} XML file'.format(
+            self.env, 'Assignment'))
         self.xml.edit_tag(multiple=True, **self.params)
         self.xml.edit_tag(Password='Password1')
         self.xml.edit_tag(UniqueTransactionID=self.claimid)
         self.xml.edit_tag(LossReferenceID=self.claimid)
-        self.xml.edit_tag(LossReferenceId=self.claimid)  # Note the difference in Id and ID
+        # Note the difference in Id and ID
+        self.xml.edit_tag(LossReferenceId=self.claimid)
 
         for elem in self.xml.root.iterfind('.//{*}ClaimPartyContact//{*}FirstName'):
             elem.text = self.fname
@@ -57,20 +69,26 @@ class ExternalAssignmentWS(XMLBase):
 
         claimoffice = self.params['ClaimOffice']
         insID = self.params['PrimaryInsuranceCompanyID']
+        # Replacing the claimoffice and insurance co ID in sql
         newsql = sql.format(claimoffice, insID)
         adjustercode = self.db.claimfolder.execute(newsql)[0][0]
         self.xml.edit_tag(multiple=True, AdjusterCode=adjustercode)
 
-        self.xml.edit_tag(Created=super().time_zulu)
-        self.xml.edit_tag(TransactionDateTime=super().time_iso)
-        self.xml.edit_tag(DateAssigned=super().time_utc)
-        self.xml.edit_tag(ReportedDateTime=super().time_utc)
-        self.xml.edit_tag(DriversLicenseExpirationDate=(super().now + relativedelta(years=3)).strftime('%Y-%m-%d'))
-        self.xml.edit_tag(AppointmentDate=super().time_utc)
-        self.xml.edit_tag(RequestDate=super().time_utc)
-        self.xml.edit_tag(LossReportedDateTime=super().time_utc)
-        self.xml.edit_tag(PolicyStartDate=(super().now + relativedelta(months=-6)).strftime('%Y-%m-%d'))
-        self.xml.edit_tag(PolicyExpirationDate=(super().now + relativedelta(months=6)).strftime('%Y-%m-%d'))
+        self.xml.edit_tag(Created=self.time.zulu)
+        self.xml.edit_tag(TransactionDateTime=self.time.iso)
+        self.xml.edit_tag(DateAssigned=self.time.utc)
+        self.xml.edit_tag(ReportedDateTime=self.time.utc)
+        self.xml.edit_tag(DriversLicenseExpirationDate=(
+            self.time.now + relativedelta(years=3)).strftime('%Y-%m-%d'))
+        self.xml.edit_tag(AppointmentDate=self.time.utc)
+        self.xml.edit_tag(RequestDate=self.time.utc)
+        self.xml.edit_tag(LossReportedDateTime=self.time.utc)
+        self.xml.edit_tag(PolicyStartDate=(
+            self.time.now + relativedelta(months=-6)).strftime('%Y-%m-%d'))
+        self.xml.edit_tag(PolicyExpirationDate=(
+            self.time.now + relativedelta(months=6)).strftime('%Y-%m-%d'))
+
+        self.savefile.save_input(bytes(self))
 
     def verify_db(self):
         print('Assignment creation verified in DB')
@@ -81,7 +99,6 @@ if __name__ == '__main__':
     default_params = {
         'PrimaryInsuranceCompanyID': 'APM1',
         'ClaimOffice': 'APMC',
-        'AdjusterCode': 'CDAN',
         'AssignmentRecipientID': '62668'
     }
 
@@ -113,12 +130,6 @@ if __name__ == '__main__':
                         default=default_params['ClaimOffice'],
                         help='Insurance company claim office ID')
 
-    parser.add_argument('--AdjusterCode',
-                        dest='AdjusterCode',
-                        action='store',
-                        default=default_params['AdjusterCode'],
-                        help='Adjuster code')
-
     parser.add_argument('--AssignmentRecipientID',
                         dest='AssignmentRecipientID',
                         action='store',
@@ -141,5 +152,4 @@ if __name__ == '__main__':
 
     assignment = ExternalAssignmentWS(**vars(args))
     assignment.edit_xml()
-    assignment.send_xml()
     assignment.verify_db()

@@ -6,10 +6,7 @@ class Save(object):
 
     def __init__(self, claimid=None, est=None, filetype=None, env=None):
         self.claimid = claimid
-        if est is None:
-            self.est = 'Assignment'
-        else:
-            self.est = est
+        self.est = est
         self.filetype = filetype
         self.env = env
 
@@ -26,9 +23,13 @@ class Save(object):
             f.write(data)
 
     def _create_path(self, locationtype):
-        base_path = 'target/{}/{}/{}'.format(self.claimid, self.env, locationtype)
-        base_path = os.path.join(base_path, self.est)
-        filename = self.est + '_' + self.filetype + '_' + locationtype + '.xml'
+        base_path = 'target/{}/{}/{}'.format(self.claimid,
+                                             self.env, locationtype)
+        if self.est:
+            base_path = os.path.join(base_path, self.est)
+            filename = self.est + '_' + self.filetype + '_' + locationtype + '.xml'
+        else:
+            filename = self.filetype + '_' + locationtype + '.xml'
 
         os.makedirs(base_path, exist_ok=True)
         return os.path.join(base_path, filename)
