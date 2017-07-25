@@ -6,6 +6,8 @@ import names
 import pdb
 import json
 from xmlutils import XMLUtils
+from externalassignmentws import ExternalAssignmentWS
+from zipfileutils import ZipFileUtils
 
 
 parser = argparse.ArgumentParser(
@@ -62,6 +64,7 @@ args = parser.parse_args()
 
 files = FiddlerSession(args.filename)
 estimate_dict = files.estdict
+print(json.dumps(estimate_dict, indent=4))
 old_ref_dict = files.oldrefdict
 
 e01_file = estimate_dict['E01']['Workfile']
@@ -74,19 +77,22 @@ if args.show:
 # further webservice processing.
 vars(args).pop('show')
 
-e01_xml = XMLUtils.fromZipFile(zipfilename=args.filename, xmlpath=e01_file)
+e01_xml = XMLUtils(ZipFileUtils(args.filename).filexml(e01_file))
 
 assignment_params = {
+    'env': args.env,
     'claimid': args.claimid,
     'lname': args.lname,
     'fname': args.fname,
     'PrimaryInsuranceCompanyID': e01_xml.gettext('VantiveCode'),
     'ClaimOffice': e01_xml.gettext('Code'),
-    'AdjusterCode': 'CDAN',
     'AssignmentRecipientID': e01_xml.gettext('AppraiserMailboxID')
 }
 
-assignment = AssignmentFactory()
+assignment = ExternalAssignmentWS(**assignment_params)
+assignment.edit_xml()
+assignment.send_xml()
+assignment.verify_db()
 
 wsengine = WebServiceEngine(estimate_dict, old_ref_dict, **vars(args))
 wsengine.run()

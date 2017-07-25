@@ -1,12 +1,23 @@
 import cx_Oracle
 from properties import Properties
 import pdb
+import time
 
 
 rec_exists = """SELECT CASE WHEN EXISTS ({})
                 THEN 'TRUE' ELSE 'FALSE'
                 END AS REC_EXISTS
                 FROM DUAL"""
+
+
+class NoRecordException(Exception):
+
+    def __init__(self, query, timeoutmins):
+        self.query = query
+        self.timeoutmins = timeoutmins
+
+    def __str__(self):
+        return ('No result found for {} even after {} mins'.format(self.query, self.timeoutmins))
 
 
 class Singleton(type):
@@ -30,7 +41,7 @@ class _DB(metaclass=Singleton):
                                       dsn=self.dsn)
         self.cursor = self.conn.cursor()
         self.cols = {}
-        self.timeout = 1200
+        self.timeoutmins = 20
 
     def execute(self, query):
         self.cols.clear()
@@ -47,6 +58,18 @@ class _DB(metaclass=Singleton):
             return True
         else:
             return False
+
+    def wait_until_exists(self, query):
+        timeout = time.time() + self.timeoutmins * 60
+        a = 0
+        while True:
+            if self._check_exists(query):
+                break
+            elif time.time() > timeout:
+                raise NoRecordException(query, self.timeoutmins)
+            a += 1
+            print('Query attempt {}'.format(a))
+            time.sleep(5)
 
     @property
     def rowcount(self):

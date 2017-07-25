@@ -48,8 +48,6 @@ class ExternalAssignmentWS(object):
                              filetype='Assignment',
                              env=self.env)
         self.properties = Properties(self.env)
-        print('The assignment params: \n{}'.format(
-            json.dumps(self.params, indent=4)))
 
     def __bytes__(self):
         return bytes(self.xml)
@@ -57,6 +55,18 @@ class ExternalAssignmentWS(object):
     def edit_xml(self):
         print('Preparing the {} {} XML file'.format(
             self.env, 'Assignment'))
+
+        # Getting Adjustercode from database from office and company
+
+        claimoffice = self.params['ClaimOffice']
+        insID = self.params['PrimaryInsuranceCompanyID']
+        newsql = sql.format(claimoffice, insID)
+        adjustercode = self.db.claimfolder.execute(newsql)[0][0]
+        self.params['AdjusterCode'] = adjustercode
+
+        print('The assignment params: \n{}'.format(
+            json.dumps(self.params, indent=4)))
+
         self.xml.edit_tag(multiple=True, **self.params)
         self.xml.edit_tag(Password='Password1')
         self.xml.edit_tag(UniqueTransactionID=self.claimid)
@@ -70,11 +80,6 @@ class ExternalAssignmentWS(object):
         for elem in self.xml.root.iterfind('.//{*}ClaimPartyContact//{*}LastName'):
             elem.text = self.lname
 
-        claimoffice = self.params['ClaimOffice']
-        insID = self.params['PrimaryInsuranceCompanyID']
-        # Replacing the claimoffice and insurance co ID in sql
-        newsql = sql.format(claimoffice, insID)
-        adjustercode = self.db.claimfolder.execute(newsql)[0][0]
         self.xml.edit_tag(multiple=True, AdjusterCode=adjustercode)
 
         self.xml.edit_tag(Created=self.time.zulu)
@@ -101,7 +106,7 @@ class ExternalAssignmentWS(object):
         self.savefile.save_response(str(response_xml))
 
     def verify_db(self):
-        print('Assignment creation verified in DB')
+        print('Start assignment creation DB verification:')
         sql = """SELECT * FROM SERVICE_ORDER WHERE
                 CUST_CLM_REF_ID = '{}' AND
                 ASGN_MAINT_TYP_CD = 'A'""".format(self.claimid)
@@ -129,16 +134,19 @@ if __name__ == '__main__':
     parser.add_argument('--PrimaryInsuranceCompanyID',
                         dest='PrimaryInsuranceCompanyID',
                         action='store',
+                        required=True,
                         help='Insurance company ID')
 
     parser.add_argument('--ClaimOffice',
                         dest='ClaimOffice',
                         action='store',
+                        required=True,
                         help='Insurance company claim office ID')
 
     parser.add_argument('--AssignmentRecipientID',
                         dest='AssignmentRecipientID',
                         action='store',
+                        required=True,
                         help='Assignment recepient mail box ID')
 
     parser.add_argument('--lname',
@@ -155,9 +163,9 @@ if __name__ == '__main__':
 
     args = parser.parse_args()
 
-    vars(args)['PrimaryInsuranceCompanyID'] = 'APM1'
-    vars(args)['ClaimOffice'] = 'APMC'
-    vars(args)['AssignmentRecipientID'] = '62668'
+    # vars(args)['PrimaryInsuranceCompanyID'] = 'APM1'
+    # vars(args)['ClaimOffice'] = 'APMC'
+    # vars(args)['AssignmentRecipientID'] = '62668'
 
     assignment = ExternalAssignmentWS(**vars(args))
     assignment.edit_xml()

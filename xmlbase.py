@@ -12,6 +12,7 @@ from savefile import Save
 import re
 from db import DB
 from timeutils import Time
+from zipfileutils import ZipFileUtils
 
 
 class FileType(enum.Enum):
@@ -31,13 +32,12 @@ class XMLBase(ABC):
         self.__dict__.update(params)
         self.properties = Properties(self.env)
         self._type = self.__class__.__name__
-        if (self._type == 'ExternalAssignmentWS'):
-            self.est = None
-            self.path = 'xmltemplates/create_assignment.xml'
-            self._xml = XMLUtils(self.path)
-        else:
-            self._xml = XMLUtils.fromZipFile(zipfilename=self.filename,
-                                             xmlpath=self.path)
+        z = ZipFileUtils(self.filename)
+        self._xml = XMLUtils(z.filexml(self.path))
+        filestr = z.filestr(self.path)
+        self.soapaction = re.compile('SOAPAction: (.*)$').search(filestr).group(1)
+        print(self.soapaction)
+        pdb.set_trace()
         self.savefile = Save(claimid=self.claimid,
                              est=self.est,
                              filetype=self._type,
@@ -85,17 +85,22 @@ class XMLBase(ABC):
     def send_xml(self):
         print('Saving input:')
         self.savefile.save_input(bytes(self))
-        # url = self.web_service_url
+
         if self._type in ['EstimatePrintImage', 'UnrelatedPriorDamage', 'RelatedPriorDamagereport']:
             filetype = 'PrintImage'
         else:
             filetype = self._type
-        print('Posting XML to web service: {}'.format(
-            self.properties.ws[filetype]))
-        # self.response = HttpClient().post(url, bytes(self))
+
+        url = self.properties.ws[filetype]
+        print('Posting XML to web service: {}'.format(url))
+        self.response = HttpClient().post(url, bytes(self))
+        print('Response for {} {} - {}'.format(self.env, self.est, self.response))
+        pdb.set_trace()
+        response_xml = XMLUtils(self.response.text)
+
         print('XML successfully posted to web service')
         print('Saving output file')
-        # self._save_xml(FileType.outputXML)
+        self.savefile.save_response(str(response_xml))
 
     @abstractmethod
     def verify_db(self):

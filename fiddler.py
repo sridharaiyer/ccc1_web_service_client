@@ -50,6 +50,8 @@ class FiddlerSession(object):
         del self._files['Worklist']
         self._del_statuschange_dups()
 
+        print(json.dumps(self._files, indent=4))
+
         return json.dumps(self._files, indent=4)
 
     def _del_statuschange_dups(self):

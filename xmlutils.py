@@ -40,10 +40,10 @@ class XMLUtils(object):
             else:
                 self.root = parse(xml)
 
-    @classmethod
-    def fromZipFile(cls, zipfilename=None, xmlpath=None):
-        zipfile = ZipFileUtils(zipfilename)
-        return cls(zipfile.filexml(xmlpath))
+    # @classmethod
+    # def fromZipFile(cls, zipfilename=None, xmlpath=None):
+    #     zipfile = ZipFileUtils(zipfilename)
+    #     return cls(zipfile.filexml(xmlpath))
 
     def _edit_tag_multiple_occurences(self, **tag_dict):
         try:
@@ -70,7 +70,6 @@ class XMLUtils(object):
 
     def edit_tag(self, multiple=False, **tag_dict):
         if multiple:
-            print(multiple)
             self._edit_tag_multiple_occurences(**tag_dict)
         else:
             self._edit_tag_single_occurence(**tag_dict)
