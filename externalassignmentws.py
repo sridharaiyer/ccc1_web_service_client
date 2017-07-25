@@ -8,6 +8,8 @@ import json
 from db import DB
 from savefile import Save
 from timeutils import Time
+from httpclient import HttpClient
+from properties import Properties
 
 # SQL to get a random ADJ code from a list of
 # valid ADJ codes for a Company - Claim Office combination
@@ -37,7 +39,7 @@ class ExternalAssignmentWS(object):
         self.lname = params.pop('lname')
         self.fname = params.pop('fname')
         self.params = params
-        self.path = 'xmltemplates/create_assignment.xml'
+        self.path = 'xmltemplates/sample_create_assignment.xml'
         self.xml = XMLUtils(self.path)
         self.time = Time()
         self.db = DB(self.env)
@@ -45,6 +47,7 @@ class ExternalAssignmentWS(object):
                              est=None,
                              filetype='Assignment',
                              env=self.env)
+        self.properties = Properties(self.env)
         print('The assignment params: \n{}'.format(
             json.dumps(self.params, indent=4)))
 
@@ -78,8 +81,9 @@ class ExternalAssignmentWS(object):
         self.xml.edit_tag(TransactionDateTime=self.time.iso)
         self.xml.edit_tag(DateAssigned=self.time.utc)
         self.xml.edit_tag(ReportedDateTime=self.time.utc)
-        self.xml.edit_tag(DriversLicenseExpirationDate=(
-            self.time.now + relativedelta(years=3)).strftime('%Y-%m-%d'))
+        self.xml.edit_tag(multiple=True,
+                          DriversLicenseExpirationDate=(
+                              self.time.now + relativedelta(years=3)).strftime('%Y-%m-%d'))
         self.xml.edit_tag(AppointmentDate=self.time.utc)
         self.xml.edit_tag(RequestDate=self.time.utc)
         self.xml.edit_tag(LossReportedDateTime=self.time.utc)
@@ -90,17 +94,21 @@ class ExternalAssignmentWS(object):
 
         self.savefile.save_input(bytes(self))
 
+    def send_xml(self):
+        url = self.properties.ws[self.__class__.__name__]
+        self.response = HttpClient().post(url, bytes(self))
+        response_xml = XMLUtils(self.response.text)
+        self.savefile.save_response(str(response_xml))
+
     def verify_db(self):
         print('Assignment creation verified in DB')
+        sql = """SELECT * FROM SERVICE_ORDER WHERE
+                CUST_CLM_REF_ID = '{}' AND
+                ASGN_MAINT_TYP_CD = 'A'""".format(self.claimid)
+        self.db.claimfolder.wait_until_exists(sql)
 
 
 if __name__ == '__main__':
-
-    default_params = {
-        'PrimaryInsuranceCompanyID': 'APM1',
-        'ClaimOffice': 'APMC',
-        'AssignmentRecipientID': '62668'
-    }
 
     parser = argparse.ArgumentParser(
         description='Create Interface Assignment')
@@ -121,19 +129,16 @@ if __name__ == '__main__':
     parser.add_argument('--PrimaryInsuranceCompanyID',
                         dest='PrimaryInsuranceCompanyID',
                         action='store',
-                        default=default_params['PrimaryInsuranceCompanyID'],
                         help='Insurance company ID')
 
     parser.add_argument('--ClaimOffice',
                         dest='ClaimOffice',
                         action='store',
-                        default=default_params['ClaimOffice'],
                         help='Insurance company claim office ID')
 
     parser.add_argument('--AssignmentRecipientID',
                         dest='AssignmentRecipientID',
                         action='store',
-                        default=default_params['AssignmentRecipientID'],
                         help='Assignment recepient mail box ID')
 
     parser.add_argument('--lname',
@@ -150,6 +155,11 @@ if __name__ == '__main__':
 
     args = parser.parse_args()
 
+    vars(args)['PrimaryInsuranceCompanyID'] = 'APM1'
+    vars(args)['ClaimOffice'] = 'APMC'
+    vars(args)['AssignmentRecipientID'] = '62668'
+
     assignment = ExternalAssignmentWS(**vars(args))
     assignment.edit_xml()
+    assignment.send_xml()
     assignment.verify_db()

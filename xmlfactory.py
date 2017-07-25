@@ -1,9 +1,9 @@
-from webservices.workfile import Workfile
-from webservices.estimateprintimage import EstimatePrintImage
-from webservices.digitalimage import DigitalImage
-from webservices.unrelatedpriordamage import UnrelatedPriorDamage
-from webservices.relatedpriordamagereport import RelatedPriorDamagereport
-from webservices.statuschange import StatusChange
+from webservices.apm.workfile import Workfile
+from webservices.apm.estimateprintimage import EstimatePrintImage
+from webservices.apm.digitalimage import DigitalImage
+from webservices.apm.unrelatedpriordamage import UnrelatedPriorDamage
+from webservices.apm.relatedpriordamagereport import RelatedPriorDamagereport
+from webservices.apm.statuschange import StatusChange
 
 XML_TYPE = {
     'Workfile': Workfile,
@@ -16,6 +16,7 @@ XML_TYPE = {
 
 
 class XMLFactory(object):
+
     @staticmethod
     def factory(cls, **params):
         return XML_TYPE[cls](**params)

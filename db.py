@@ -3,6 +3,12 @@ from properties import Properties
 import pdb
 
 
+rec_exists = """SELECT CASE WHEN EXISTS ({})
+                THEN 'TRUE' ELSE 'FALSE'
+                END AS REC_EXISTS
+                FROM DUAL"""
+
+
 class Singleton(type):
     _instance = None
 
@@ -24,6 +30,7 @@ class _DB(metaclass=Singleton):
                                       dsn=self.dsn)
         self.cursor = self.conn.cursor()
         self.cols = {}
+        self.timeout = 1200
 
     def execute(self, query):
         self.cols.clear()
@@ -33,6 +40,13 @@ class _DB(metaclass=Singleton):
         for col, desc in enumerate(self.cursor.description):
             self.cols[desc[0]] = col
         return self.result
+
+    def _check_exists(self, query):
+        exists = self.execute(rec_exists.format(query))[0][0]
+        if exists.upper() == 'TRUE':
+            return True
+        else:
+            return False
 
     @property
     def rowcount(self):
@@ -79,7 +93,7 @@ class DB(metaclass=Singleton):
 if __name__ == '__main__':
     db = DB('awsqa')
     sql = "select * from CLAIM_FOLDER where COMPRSD_CUST_CLM_REF_ID = 'eqa0702201722475537'"
-    print(db.claimfolder.execute(sql)[0][0])
-    assert db.claimfolder.rowcount == 1
-    assert db.claimfolder.get('CLM_FOLDER_STATUS') == 'OPEN'
-    print(db.claimfolder.result[0][0])
+    # print(db.claimfolder.execute(sql)[0][0])
+    # assert db.claimfolder.rowcount == 1
+    # assert db.claimfolder.get('CLM_FOLDER_STATUS') == 'OPEN'
+    # print(db.claimfolder.result[0][0])

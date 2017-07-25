@@ -1,5 +1,6 @@
 import datetime
 import pytz
+from dateutil.relativedelta import relativedelta
 
 
 class Time(object):
@@ -9,10 +10,11 @@ class Time(object):
     ymd = now.strftime('%Y-%m-%d')
 
     utc = datetime.datetime.utcnow()
-    utc = utc.replace(tzinfo=pytz.timezone('US/Central')).isoformat()
+    utc = utc.replace(tzinfo=pytz.timezone('GMT')).isoformat()
     zulu = utc + 'Z'
 
 
 if __name__ == '__main__':
     time = Time()
-    print(time.now)
+    print('Now: ' + str(time.now))
+    print(time.utc)

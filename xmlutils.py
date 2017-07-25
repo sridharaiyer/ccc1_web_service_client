@@ -9,9 +9,11 @@ import base64
 import gzip
 from io import BytesIO
 from zipfileutils import ZipFileUtils
+from timeutils import Time as time
 
 
 class IncorrectXMLError(Exception):
+
     def __str__(self):
         return ('Incorrect XML file or invalid XML data')
 
@@ -27,6 +29,7 @@ class NoTagError(Exception):
 
 
 class XMLUtils(object):
+
     def __init__(self, xml):
         utf8_parser = XMLParser(encoding='utf-8')
         try:
@@ -49,7 +52,7 @@ class XMLUtils(object):
                     for node in self.root.xpath(tag):
                         node.text = value
                 else:
-                    for elem in self.root.iterfind(tag):
+                    for elem in self.root.iterfind('.//{*}' + tag):
                         elem.text = value
         except IndexError as e:
             raise NoTagError(tag)
@@ -60,12 +63,14 @@ class XMLUtils(object):
                 if tag.startswith('/'):
                     self.root.xpath(tag)[0].text = value
                 else:
-                    self.root.xpath('//*[local-name() = \"{}\"]'.format(tag))[0].text = value
+                    self.root.xpath(
+                        '//*[local-name() = \"{}\"]'.format(tag))[0].text = value
         except IndexError as e:
             raise NoTagError(tag)
 
     def edit_tag(self, multiple=False, **tag_dict):
         if multiple:
+            print(multiple)
             self._edit_tag_multiple_occurences(**tag_dict)
         else:
             self._edit_tag_single_occurence(**tag_dict)
@@ -118,7 +123,13 @@ if __name__ == '__main__':
 
     # print(len(xml.root.xpath('//*[local-name()="Reference"][contains(text(),"Events")]/ancestor::*[local-name()="NormalizedMessage"]')))
 
-    xml = XMLUtils('temp_status_change_01.xml')
-    xpath = '//text()[contains(.,"f3df160d-61c6-4f13-9d6b-5e3515c3ab97")]/ancestor::*[local-name()="Payload"]/*[local-name()="Data"]'
+    # xml = XMLUtils('temp_status_change_01.xml')
+    # xpath = '//text()[contains(.,"f3df160d-61c6-4f13-9d6b-5e3515c3ab97")]/ancestor::*[local-name()="Payload"]/*[local-name()="Data"]'
 
-    print(xml.root.xpath(xpath)[0].text)
+    # print(xml.root.xpath(xpath)[0].text)
+
+    xml = XMLUtils('xmltemplates/sample_create_assignment.xml')
+    xml.edit_tag(multiple=True, PrimaryInsuranceCompanyID='SriSriSri')
+    xml_filename = 'test_assignment' + str(time.now) + '.xml'
+    with open(xml_filename, 'wb') as f:
+        f.write(bytes(xml))
