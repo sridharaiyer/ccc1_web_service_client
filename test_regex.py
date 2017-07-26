@@ -10,4 +10,8 @@ Expect: 100-continue
 <s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/" xmlns:u="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd"><s:Header><o:Security s:mustUnderstand="1"
 """
 
-print(re.compile('SOAPAction: (.*)$').search(text).group(1))
+# m = re.compile('SOAPAction(\w+)', text)
+# print(m.groups(0))
+
+# pattern = r'(?:SOAPAction\: ).+\b'
+print(re.findall(r'(?:SOAPAction\: ).+\b', text)[0].split('\"')[1].strip())

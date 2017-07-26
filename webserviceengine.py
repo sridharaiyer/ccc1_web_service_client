@@ -52,4 +52,3 @@ class WebServiceEngine(object):
         for ws in self.generate:
             ws.edit_xml()
             ws.send_xml()
-            ws.verify_db()

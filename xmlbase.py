@@ -34,10 +34,8 @@ class XMLBase(ABC):
         self._type = self.__class__.__name__
         z = ZipFileUtils(self.filename)
         self._xml = XMLUtils(z.filexml(self.path))
-        filestr = z.filestr(self.path)
-        self.soapaction = re.compile('SOAPAction: (.*)$').search(filestr).group(1)
-        print(self.soapaction)
-        pdb.set_trace()
+        self.soapaction = re.findall(
+            r'(?:SOAPAction\: ).+\b', z.filestring)[0].split('\"')[1].strip()
         self.savefile = Save(claimid=self.claimid,
                              est=self.est,
                              filetype=self._type,
@@ -86,13 +84,16 @@ class XMLBase(ABC):
         print('Saving input:')
         self.savefile.save_input(bytes(self))
 
-        if self._type in ['EstimatePrintImage', 'UnrelatedPriorDamage', 'RelatedPriorDamagereport']:
+        if self._type in ['EstimatePrintImage',
+                          'UnrelatedPriorDamage',
+                          'RelatedPriorDamagereport']:
             filetype = 'PrintImage'
         else:
             filetype = self._type
 
         url = self.properties.ws[filetype]
         print('Posting XML to web service: {}'.format(url))
+        HttpClient.set_default_header(SOAPAction=self.soapaction)
         self.response = HttpClient().post(url, bytes(self))
         print('Response for {} {} - {}'.format(self.env, self.est, self.response))
         pdb.set_trace()
@@ -102,6 +103,24 @@ class XMLBase(ABC):
         print('Saving output file')
         self.savefile.save_response(str(response_xml))
 
-    @abstractmethod
+        if self._type == 'StatusChange':
+            self.verify_db()
+
     def verify_db(self):
-        pass
+        print('Start DB verification after posting StatusChange successfully')
+        match_file_type = {
+            'Workfile': '2',
+            'DigitalImage': '3',
+            'EstimatePrintImage': '4',
+            'RelatedPriorDamagereport': '52',
+            'UnrelatedPriorDamage': '6',
+        }
+        sqls = (
+            """SELECT * FROM CLAIM_FOLDER_DETAIL WHERE DL_CLM_FOLDER_ID IN (SELECT DL_CLM_FOLDER_ID FROM CLAIM_FOLDER WHERE CUST_CLM_REF_ID='{}') AND CLM_FOLDER_MATCH_FILE_TYP = '{}' AND EST_LINE_IND = '{}'""",
+            """SELECT * FROM BILLING_MESSAGE WHERE CLAIM_REF_ID='{}' AND MATCH_FILE_TYP = '{}' AND EST_IND = '{}'"""
+        )
+
+        for ftype, value in match_file_type.items():
+            for sql in sqls:
+                self.db.claimfolder.wait_until_exists(
+                    sql.format(self.claimid, value, self.est))

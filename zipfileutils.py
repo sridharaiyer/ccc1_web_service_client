@@ -8,6 +8,7 @@ class ZipFileUtils(object):
 
     def __init__(self, filepath):
         self.filepath = filepath
+        self.filestring = None
 
     def filestr(self, path):
         """Get the string data from a file inside the zip file
@@ -20,7 +21,9 @@ class ZipFileUtils(object):
         """
         with zipfile.ZipFile(self.filepath, 'r') as zf:
             with zf.open(os.path.join(path), 'r') as wf:
-                return str(wf.read())
+                self.filestring = str(wf.read())
+
+        return self.filestring
 
     def filexml(self, path):
         """Get the first xml block from a file inside the zip file

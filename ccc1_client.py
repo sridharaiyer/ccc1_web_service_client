@@ -64,7 +64,6 @@ args = parser.parse_args()
 
 files = FiddlerSession(args.filename)
 estimate_dict = files.estdict
-print(json.dumps(estimate_dict, indent=4))
 old_ref_dict = files.oldrefdict
 
 e01_file = estimate_dict['E01']['Workfile']
