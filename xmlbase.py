@@ -58,7 +58,7 @@ class XMLBase(ABC):
         for elem in self.xml.root.iterfind('.//{*}PublishTimeStamp'):
             elem.text = self.time.iso
         for elem in self.xml.root.iterfind('.//{*}ClaimReferenceID'):
-            elem.text = self.time.iso
+            elem.text = self.claimid
 
     def edit_reference(self):
         for elem in self.xml.root.iterfind('.//{*}Reference'):
@@ -93,15 +93,25 @@ class XMLBase(ABC):
 
         url = self.properties.ws[filetype]
         print('Posting XML to web service: {}'.format(url))
-        HttpClient.set_default_header(SOAPAction=self.soapaction)
+        header_dict = {
+            'SOAPAction': self.soapaction,
+            'Host': 'servicesqa.aws.mycccportal.com',
+            'Content-Length': '47811',
+            'Expect': '100-continue'
+        }
+        HttpClient.set_default_header(**header_dict)
+        print('Http header - \n{}'.format(HttpClient.default_header))
         self.response = HttpClient().post(url, bytes(self))
         print('Response for {} {} - {}'.format(self.env, self.est, self.response))
+        print(self.response.text)
         pdb.set_trace()
+
         response_xml = XMLUtils(self.response.text)
 
-        print('XML successfully posted to web service')
+        # print('XML successfully posted to web service')
         print('Saving output file')
         self.savefile.save_response(str(response_xml))
+        pdb.set_trace()
 
         if self._type == 'StatusChange':
             self.verify_db()
