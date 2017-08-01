@@ -33,6 +33,3 @@ class StatusChange(XMLBase):
             new_reference = re.sub(
                 '[^/]*$', self.ref_dict[self.est][file], old_reference)
             self.xml.root.xpath(xpath)[0].text = new_reference
-
-    def verify_db(self):
-        print('Verifying the DB after posting the {} {} XML file'.format(self.est, self._type))

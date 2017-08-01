@@ -13,6 +13,7 @@ import re
 from db import DB
 from timeutils import Time
 from zipfileutils import ZipFileUtils
+from header import Header
 
 
 class FileType(enum.Enum):
@@ -34,8 +35,7 @@ class XMLBase(ABC):
         self._type = self.__class__.__name__
         z = ZipFileUtils(self.filename)
         self._xml = XMLUtils(z.filexml(self.path))
-        self.soapaction = re.findall(
-            r'(?:SOAPAction\: ).+\b', z.filestring)[0].split('\"')[1].strip()
+        self.header = Header(z.filestr_decoded(self.path))
         self.savefile = Save(claimid=self.claimid,
                              est=self.est,
                              filetype=self._type,
@@ -81,37 +81,15 @@ class XMLBase(ABC):
         return bytes(self.xml)
 
     def send_xml(self):
-        print('Saving input:')
         self.savefile.save_input(bytes(self))
 
-        if self._type in ['EstimatePrintImage',
-                          'UnrelatedPriorDamage',
-                          'RelatedPriorDamagereport']:
-            filetype = 'PrintImage'
-        else:
-            filetype = self._type
-
-        url = self.properties.ws[filetype]
-        print('Posting XML to web service: {}'.format(url))
-        header_dict = {
-            'SOAPAction': self.soapaction,
-            'Host': 'servicesqa.aws.mycccportal.com',
-            'Content-Length': '47811',
-            'Expect': '100-continue'
-        }
-        HttpClient.set_default_header(**header_dict)
-        print('Http header - \n{}'.format(HttpClient.default_header))
-        self.response = HttpClient().post(url, bytes(self))
+        print('Posting XML to web service: {}'.format(self.header.get_url))
+        HttpClient.set_default_header(**self.header.header_dict)
+        self.response = HttpClient().post(self.header.get_url, bytes(self))
         print('Response for {} {} - {}'.format(self.env, self.est, self.response))
-        print(self.response.text)
-        pdb.set_trace()
-
         response_xml = XMLUtils(self.response.text)
 
-        # print('XML successfully posted to web service')
-        print('Saving output file')
         self.savefile.save_response(str(response_xml))
-        pdb.set_trace()
 
         if self._type == 'StatusChange':
             self.verify_db()
