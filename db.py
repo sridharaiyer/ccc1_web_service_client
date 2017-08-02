@@ -61,14 +61,15 @@ class _DB(metaclass=Singleton):
 
     def wait_until_exists(self, query):
         timeout = time.time() + self.timeoutmins * 60
-        a = 0
+        a = 1
         while True:
+            print('Query attempt {}'.format(a))
             if self._check_exists(query):
                 break
             elif time.time() > timeout:
                 raise NoRecordException(query, self.timeoutmins)
             a += 1
-            print('Query attempt {}'.format(a))
+
             time.sleep(5)
 
     @property
@@ -115,8 +116,8 @@ class DB(metaclass=Singleton):
 
 if __name__ == '__main__':
     db = DB('awsqa')
-    sql = "select * from CLAIM_FOLDER where COMPRSD_CUST_CLM_REF_ID = 'eqa0702201722475537'"
-    # print(db.claimfolder.execute(sql)[0][0])
+    sql = """SELECT * FROM CLAIM_FOLDER_DETAIL WHERE DL_CLM_FOLDER_ID IN (SELECT DL_CLM_FOLDER_ID FROM CLAIM_FOLDER WHERE CUST_CLM_REF_ID='eqa20170802113813') AND CLM_FOLDER_MATCH_FILE_TYP = '2' AND EST_LINE_IND = 'E01'"""
+    db.claimfolder.wait_until_exists(sql)
     # assert db.claimfolder.rowcount == 1
     # assert db.claimfolder.get('CLM_FOLDER_STATUS') == 'OPEN'
     # print(db.claimfolder.result[0][0])

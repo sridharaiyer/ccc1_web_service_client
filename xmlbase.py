@@ -1,10 +1,5 @@
 from abc import ABC
 from abc import abstractmethod
-import datetime
-import pytz
-import enum
-import pdb
-import json
 from httpclient import HttpClient
 from properties import Properties
 from xmlutils import XMLUtils
@@ -14,17 +9,7 @@ from db import DB
 from timeutils import Time
 from zipfileutils import ZipFileUtils
 from header import Header
-
-
-class FileType(enum.Enum):
-    inputXML = 'input'
-    outputXML = 'output'
-
-
-class IncorrectXMLFiletype(Exception):
-
-    def __str__(self):
-        return ('Incorrect XML file type. Specify either FileType.inputXML or FileType.outputXML')
+import pdb
 
 
 class XMLBase(ABC):
@@ -46,10 +31,6 @@ class XMLBase(ABC):
     def __repr__(self):
         return('Webservice: {}, Env: {}, Est_Type: {}, Path: {}'.format(self.clsname, self.env, self.est, self.path))
 
-    def _init_message(self):
-        print('Preparing the {} {} XML file located in {} in the fiddler session'.format(
-            self.est, self._type, self.path))
-
     def edit_descriptor(self):
         self.xml.edit_tag(Password='Password1')
 
@@ -67,7 +48,11 @@ class XMLBase(ABC):
 
     @abstractmethod
     def edit_xml(self):
-        self._init_message()
+        print('Preparing the {} {} XML file located in {} in the fiddler session'.format(
+            self.est, self._type, self.path))
+
+        for elem in self.xml.root.iterfind('.//{*}TransformationHeader'):
+            elem.text = elem.text.replace("\\n", "")
 
     @property
     def xml(self):
@@ -82,7 +67,6 @@ class XMLBase(ABC):
 
     def send_xml(self):
         self.savefile.save_input(bytes(self))
-
         print('Posting XML to web service: {}'.format(self.header.get_url))
         HttpClient.set_default_header(**self.header.header_dict)
         self.response = HttpClient().post(self.header.get_url, bytes(self))
@@ -110,5 +94,8 @@ class XMLBase(ABC):
 
         for ftype, value in match_file_type.items():
             for sql in sqls:
+                print('Executing query:')
+                print(sql.format(self.claimid, value, self.est))
+                pdb.set_trace()
                 self.db.claimfolder.wait_until_exists(
                     sql.format(self.claimid, value, self.est))
