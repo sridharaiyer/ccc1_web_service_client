@@ -1,0 +1,699 @@
+POST https://outlook.office365.com/EWS/Exchange.asmx/WSSecurity HTTP/1.1
+Cache-Control: no-cache
+Connection: Keep-Alive
+Pragma: no-cache
+Content-Type: text/xml; charset=utf-8
+User-Agent: OC/15.0.4933.1000 (Skype for Business)
+SOAPAction: "http://schemas.microsoft.com/exchange/services/2006/messages/CreateItem"
+X-AnchorMailbox: jmcguire@cccis.com
+x-ms-client-request-id: EB270459-8BC3-4FF1-BB2B-5FF52F6A85EE
+Content-Length: 40308
+Host: outlook.office365.com
+
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://schemas.xmlsoap.org/soap/envelope/"><s:Header><RequestServerVersion Version="Exchange2012" xmlns="http://schemas.microsoft.com/exchange/services/2006/types"/><a:Action s:mustUnderstand="1">http://schemas.microsoft.com/exchange/services/2006/messages/CreateItem</a:Action><a:To s:mustUnderstand="1">https://outlook.office365.com/EWS/Exchange.asmx/WSSecurity</a:To><o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"><Timestamp xmlns="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd"><Created>2017-08-07T18:43:55.131Z</Created><Expires>2017-08-07T18:48:55.131Z</Expires></Timestamp><EncryptedData Id="Assertion1" Type="http://www.w3.org/2001/04/xmlenc#Element" xmlns="http://www.w3.org/2001/04/xmlenc#"><EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#tripledes-cbc"></EncryptionMethod><ds:KeyInfo xmlns:ds="http://www.w3.org/2000/09/xmldsig#"><EncryptedKey><EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#rsa-oaep-mgf1p"></EncryptionMethod><ds:KeyInfo Id="keyinfo"><wsse:SecurityTokenReference xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"><wsse:KeyIdentifier EncodingType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0#Base64Binary" ValueType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-x509-token-profile-1.0#X509SubjectKeyIdentifier">Wm1xSeJRIJK6txKjBez4GzapzqM=</wsse:KeyIdentifier></wsse:SecurityTokenReference></ds:KeyInfo><CipherData><CipherValue>VAs/Qw/grdVcr0hQ4NzA4hqoEnAQ1Vy/D6oopU/Twnzvk5RCaf3lUpSIt5CWqI4NqzhMa+rUsd7HvQgTI6LTGlxPhBIIP0wASKawtKAc1wtOuB8ffHj63RFHfn99oL2mNyfT4YXG1+kKhmXyJfEx0eC6220OM7BhAvczS3s03r/t7o/jzk34oHyVgAWsS8nkAa68iiYlaJH1hyNhRyPcCoVR2l10AfufbvTQANH/Fn53Kmxhy6ks1K1HkhoNLRjNM3bOAhsv1UEkh6XW43eUdYBlR7uycSF7Om+cdtBJ8CHYsBN85nSOREi2tLSTKzw5SwKTG2dddkwfCQ1ANbGegw==</CipherValue></CipherData></EncryptedKey></ds:KeyInfo><CipherData><CipherValue>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</CipherValue></CipherData></EncryptedData></o:Security></s:Header><s:Body><messages:CreateItem xsi:type="messages:CreateItemType" MessageDisposition="SaveOnly" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:types="http://schemas.microsoft.com/exchange/services/2006/types" xmlns:messages="http://schemas.microsoft.com/exchange/services/2006/messages">  <messages:SavedItemFolderId><types:FolderId Id="AAMkAGQxZTZjZTUzLTI2ODMtNDI0YS1hNjI2LWZhMzU5YTUyMjc2ZAAuAAAAAABOJDN/cz4SQqhssTUvENQGAQDZ8ePuCZF6SrbhDV6loiF/AAAA5vWdAAA="/></messages:SavedItemFolderId>  <messages:Items><types:Message><types:ItemClass>IPM.Note.Microsoft.Conversation</types:ItemClass><types:Subject>Conversation with Sridhar Iyer</types:Subject><types:Body BodyType="HTML"><![CDATA[<html xmlns="http://schemas.microsoft.com/2008/10/sip/convItems"><!--
+                Document generated by Office Communicator conversation history archiver
+            -->
+<head xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:history="http://schemas.microsoft.com/2008/10/sip/convItems" xmlns:rtc="urn:microsoft-rtc-xslt-functions">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<style type="text/css"><!--
+                        @charset "utf-8";
+                        body {
+                        margin-left: 11px;
+                        margin-top: 11px;
+                        margin-right: 11px;
+                        margin-bottom: 11px;
+                        }
+
+                        p {
+                        margin:0;
+                        padding:0;
+                        }
+
+                        .header {
+                        font-size: 16px;
+                        font-style: normal;
+                        line-height: 18px;
+                        font-weight: bold;
+                        font-variant: normal;
+                        text-transform: none;
+                        color: #000000;
+                        text-decoration: none;
+                        font-family: "Segoe UI";
+                        }
+
+                        .callDuration {
+                        font-family: "Segoe UI";
+                        font-size: 11px;
+                        font-style: normal;
+                        line-height: 18px;
+                        font-weight: normal;
+                        font-variant: normal;
+                        text-transform: none;
+                        color: #000000;
+                        text-decoration: none;
+                        }
+
+                        .notes_bkg {
+                        background-color: #e4eefc;
+                        border-bottom-width: 1px;
+                        border-bottom-style: solid;
+                        border-bottom-color: #b5c4df;
+                        vertical-align: middle;
+                        padding-top: 5px;
+                        padding-right: 8px;
+                        padding-bottom: 5px;
+                        padding-left: 20px;
+                        }
+                        .notes_title {
+                        font-family: "Segoe UI";
+                        font-size: 12px;
+                        font-style: normal;
+                        line-height: 18px;
+                        font-weight: bold;
+                        font-variant: normal;
+                        text-transform: none;
+                        color: #15429d;
+                        text-decoration: none;
+                        }
+
+                        .note_message {
+                        font-family: "Segoe UI";
+                        font-size: 11px;
+                        font-style: normal;
+                        line-height: 18px;
+                        font-weight: normal;
+                        font-variant: normal;
+                        text-transform: none;
+                        color: #15429d;
+                        text-decoration: none;
+                        }
+
+                        .list_name {
+                        font-family: "Segoe UI";
+                        font-size: 12px;
+                        font-style: normal;
+                        font-weight: bold;
+                        font-variant: normal;
+                        text-transform: none;
+                        color: #000000;
+                        text-decoration: none;
+                        line-height: 18px;
+                        }
+
+                        .list_title_company {
+                        font-family: "Segoe UI";
+                        font-size: 11px;
+                        font-style: normal;
+                        line-height: 18px;
+                        font-weight: normal;
+                        font-variant: normal;
+                        text-transform: uppercase;
+                        color: #666666;
+                        text-decoration: none;
+                        }
+
+                        .list_label {
+                        font-family: "Segoe UI";
+                        font-size: 11px;
+                        font-style: normal;
+                        line-height: 25px;
+                        font-weight: normal;
+                        font-variant: normal;
+                        text-transform: none;
+                        color: #C0C0C0;
+                        text-decoration: none;
+                        }
+
+                        .links {
+                        font-family: "Segoe UI";
+                        font-size: 11px;
+                        font-style: normal;
+                        font-weight: normal;
+                        font-variant: normal;
+                        text-transform: none;
+                        color: #0000FF;
+                        text-decoration: underline;
+                        }
+
+                        .line {
+                        border-top-width: 1px;
+                        border-top-style: solid;
+                        border-top-color: #b5c4df;
+                        height: 1px;
+                        background-color: #b5c4df;
+                        }
+                        .footer_line {
+                        padding-top: 30px;
+                        padding-bottom: 0px;
+                        padding-right: 0px;
+                        padding-left: 0px;
+                        }
+                        .footer {
+                        font-family: "Segoe UI";
+                        font-size: 11px;
+                        font-style: normal;
+                        line-height: 0px;
+                        font-weight: normal;
+                        font-variant: normal;
+                        text-transform: none;
+                        color: #C0C0C0;
+                        text-decoration: none;
+                        padding-top: 11px;
+                        padding-bottom: 8px;
+                        }
+
+                        .header_box {
+                        padding-top: 11px;
+                        padding-bottom: 11px;
+                        }
+
+                        .contacts_box {
+                        padding-top: 20px;
+                        padding-bottom: 0px;
+                        padding-right: 0px;
+                        padding-left: 80px;
+                        }
+
+                        .list_value {
+                        font-family: "Segoe UI";
+                        font-size: 11px;
+                        font-style: normal;
+                        line-height: 25px;
+                        font-weight: normal;
+                        font-variant: normal;
+                        text-transform: none;
+                        color: #000000;
+                        text-decoration: none;
+                        }
+
+                        .im_sender {
+                        font-family: "Segoe UI";
+                        font-size: 11px;
+                        font-style: normal;
+                        line-height: 18px;
+                        font-weight: bold;
+                        font-variant: normal;
+                        text-transform: none;
+                        color: #666666;
+                        text-decoration: none;
+                        }
+
+                        .message_timestamp {
+                        font-family: "Segoe UI";
+                        font-size: 11px;
+                        font-style: normal;
+                        line-height: 18px;
+                        font-weight: bold;
+                        font-variant: normal;
+                        text-transform: none;
+                        color: #666666;
+                        text-decoration: none;
+                        }
+                        .messageInfo {
+                        margin-left:8px;
+                        }
+                        .notification {
+                        font-family: "Segoe UI";
+                        font-size: 11px;
+                        font-style: normal;
+                        line-height: 18px;
+                        font-weight: normal;
+                        font-variant: normal;
+                        text-transform: none;
+                        color: #666666;
+                        text-decoration: none;
+                        }
+                    -->
+</style>
+</head>
+<body>
+<div xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:history="http://schemas.microsoft.com/2008/10/sip/convItems" xmlns:rtc="urn:microsoft-rtc-xslt-functions">
+<span class="im_sender">Sridhar Iyer</span> <span class="message_timestamp">12:56 PM:
+                    </span>
+<div class="messageInfo"><p style="margin: 0.0px 0.0px 0.0px 0.0px; line-height: 15.0px"><font face="Lucida Grande" size="3" color="#000000" style="font: 12.0px 'Lucida Grande'; font-kerning: none; color: #000000; -webkit-text-stroke: 0px #000000">Sir James!</font></p>
+</div>
+</div>
+<div xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:history="http://schemas.microsoft.com/2008/10/sip/convItems" xmlns:rtc="urn:microsoft-rtc-xslt-functions">
+<div class="messageInfo"><p style="margin: 0.0px 0.0px 0.0px 0.0px; line-height: 15.0px"><font face="Lucida Grande" size="3" color="#000000" style="font: 12.0px 'Lucida Grande'; font-kerning: none; color: #000000; -webkit-text-stroke: 0px #000000">Quick check on my S02 :-)</font></p>
+</div>
+</div>
+<div xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:history="http://schemas.microsoft.com/2008/10/sip/convItems" xmlns:rtc="urn:microsoft-rtc-xslt-functions">
+<span class="im_sender">James McGuire</span> <span class="message_timestamp">1:31 PM:
+                    </span>
+<div class="messageInfo"><html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:"Segoe UI";
+	panose-1:2 11 5 2 4 2 4 2 2 3;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:8.0pt;
+	margin-left:0in;
+	line-height:107%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+.MsoChpDefault
+	{font-family:"Calibri",sans-serif;}
+.MsoPapDefault
+	{margin-bottom:8.0pt;
+	line-height:107%;}
+ /* Page Definitions */
+ @page WordSection1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;}
+div.WordSection1
+	{page:WordSection1;}
+-->
+</style>
+
+</head>
+
+<body lang=EN-US style='text-justify-trim:punctuation'>
+
+<div class=WordSection1>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:10.0pt;font-family:"Segoe UI",sans-serif;
+color:black'>Hello Sri.</span></p>
+
+</div>
+
+</body>
+
+</html></div>
+</div>
+<div xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:history="http://schemas.microsoft.com/2008/10/sip/convItems" xmlns:rtc="urn:microsoft-rtc-xslt-functions">
+<div class="messageInfo"><html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:"Segoe UI";
+	panose-1:2 11 5 2 4 2 4 2 2 3;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:8.0pt;
+	margin-left:0in;
+	line-height:107%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+.MsoChpDefault
+	{font-family:"Calibri",sans-serif;}
+.MsoPapDefault
+	{margin-bottom:8.0pt;
+	line-height:107%;}
+ /* Page Definitions */
+ @page WordSection1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;}
+div.WordSection1
+	{page:WordSection1;}
+-->
+</style>
+
+</head>
+
+<body lang=EN-US style='text-justify-trim:punctuation'>
+
+<div class=WordSection1>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:10.0pt;font-family:"Segoe UI",sans-serif;
+color:black'>Sorry I have a lot going on.</span></p>
+
+</div>
+
+</body>
+
+</html></div>
+</div>
+<div xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:history="http://schemas.microsoft.com/2008/10/sip/convItems" xmlns:rtc="urn:microsoft-rtc-xslt-functions">
+<div class="messageInfo"><html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:"Segoe UI";
+	panose-1:2 11 5 2 4 2 4 2 2 3;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:8.0pt;
+	margin-left:0in;
+	line-height:107%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+.MsoChpDefault
+	{font-family:"Calibri",sans-serif;}
+.MsoPapDefault
+	{margin-bottom:8.0pt;
+	line-height:107%;}
+ /* Page Definitions */
+ @page WordSection1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;}
+div.WordSection1
+	{page:WordSection1;}
+-->
+</style>
+
+</head>
+
+<body lang=EN-US style='text-justify-trim:punctuation'>
+
+<div class=WordSection1>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:10.0pt;font-family:"Segoe UI",sans-serif;
+color:black'>I created claim ID.</span></p>
+
+</div>
+
+</body>
+
+</html></div>
+</div>
+<div xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:history="http://schemas.microsoft.com/2008/10/sip/convItems" xmlns:rtc="urn:microsoft-rtc-xslt-functions">
+<div class="messageInfo"><html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:"Segoe UI";
+	panose-1:2 11 5 2 4 2 4 2 2 3;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:8.0pt;
+	margin-left:0in;
+	line-height:107%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+.MsoChpDefault
+	{font-family:"Calibri",sans-serif;}
+.MsoPapDefault
+	{margin-bottom:8.0pt;
+	line-height:107%;}
+ /* Page Definitions */
+ @page WordSection1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;}
+div.WordSection1
+	{page:WordSection1;}
+-->
+</style>
+
+</head>
+
+<body lang=EN-US style='text-justify-trim:punctuation'>
+
+<div class=WordSection1>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:10.0pt;font-family:"Segoe UI",sans-serif;
+color:black'>JamesTest08-07-17A</span><span style='font-size:10.0pt;font-family:
+"Segoe UI",sans-serif;color:black'> </span></p>
+
+</div>
+
+</body>
+
+</html></div>
+</div>
+<div xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:history="http://schemas.microsoft.com/2008/10/sip/convItems" xmlns:rtc="urn:microsoft-rtc-xslt-functions">
+<div class="messageInfo"><html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:"Segoe UI";
+	panose-1:2 11 5 2 4 2 4 2 2 3;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:8.0pt;
+	margin-left:0in;
+	line-height:107%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+.MsoChpDefault
+	{font-family:"Calibri",sans-serif;}
+.MsoPapDefault
+	{margin-bottom:8.0pt;
+	line-height:107%;}
+ /* Page Definitions */
+ @page WordSection1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;}
+div.WordSection1
+	{page:WordSection1;}
+-->
+</style>
+
+</head>
+
+<body lang=EN-US style='text-justify-trim:punctuation'>
+
+<div class=WordSection1>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:10.0pt;font-family:"Segoe UI",sans-serif;
+color:black'>For APM1</span></p>
+
+</div>
+
+</body>
+
+</html></div>
+</div>
+<div xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:history="http://schemas.microsoft.com/2008/10/sip/convItems" xmlns:rtc="urn:microsoft-rtc-xslt-functions">
+<div class="messageInfo"><html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:"Segoe UI";
+	panose-1:2 11 5 2 4 2 4 2 2 3;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:8.0pt;
+	margin-left:0in;
+	line-height:107%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+.MsoChpDefault
+	{font-family:"Calibri",sans-serif;}
+.MsoPapDefault
+	{margin-bottom:8.0pt;
+	line-height:107%;}
+ /* Page Definitions */
+ @page WordSection1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;}
+div.WordSection1
+	{page:WordSection1;}
+-->
+</style>
+
+</head>
+
+<body lang=EN-US style='text-justify-trim:punctuation'>
+
+<div class=WordSection1>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:10.0pt;font-family:"Segoe UI",sans-serif;
+color:black'>I just uploaded an E01.</span></p>
+
+</div>
+
+</body>
+
+</html></div>
+</div>
+<div xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:history="http://schemas.microsoft.com/2008/10/sip/convItems" xmlns:rtc="urn:microsoft-rtc-xslt-functions">
+<div class="messageInfo"><html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:"Segoe UI";
+	panose-1:2 11 5 2 4 2 4 2 2 3;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:8.0pt;
+	margin-left:0in;
+	line-height:107%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+.MsoChpDefault
+	{font-family:"Calibri",sans-serif;}
+.MsoPapDefault
+	{margin-bottom:8.0pt;
+	line-height:107%;}
+ /* Page Definitions */
+ @page WordSection1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;}
+div.WordSection1
+	{page:WordSection1;}
+-->
+</style>
+
+</head>
+
+<body lang=EN-US style='text-justify-trim:punctuation'>
+
+<div class=WordSection1>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:10.0pt;font-family:"Segoe UI",sans-serif;
+color:black'>About to do the S01</span></p>
+
+</div>
+
+</body>
+
+</html></div>
+</div>
+</body>
+</html>
+]]></types:Body><types:Importance>Normal</types:Importance><types:ExtendedProperty><types:ExtendedFieldURI PropertyType="String" PropertyTag="0x0E1D"/><types:Value>Conversation with Sridhar Iyer</types:Value></types:ExtendedProperty><types:ExtendedProperty><types:ExtendedFieldURI PropertyName="IsCustomSubject.{703DC3CB-8F24-4e3f-932F-206233656759}" DistinguishedPropertySetId="PublicStrings" PropertyType="Integer"/><types:Value>0</types:Value></types:ExtendedProperty><types:ExtendedProperty><types:ExtendedFieldURI PropertyType="Integer" PropertyTag="0x0E07"/><types:Value>1</types:Value></types:ExtendedProperty><types:ExtendedProperty><types:ExtendedFieldURI PropertyName="Modalities.{0885EA21-B7A5-4050-BFDB-AD46DE1D6A87}" DistinguishedPropertySetId="PublicStrings" PropertyType="Integer"/><types:Value>1</types:Value></types:ExtendedProperty><types:ExtendedProperty><types:ExtendedFieldURI PropertyName="DisplayDirection.{4255C773-497E-4b5e-9205-F360CAF3316A}" DistinguishedPropertySetId="PublicStrings" PropertyType="String"/><types:Value>Outgoing</types:Value></types:ExtendedProperty><types:ExtendedProperty><types:ExtendedFieldURI PropertyName="Direction.{2DA4DF04-920D-4b0b-A1D7-5FC9D21857FE}" DistinguishedPropertySetId="PublicStrings" PropertyType="Integer"/><types:Value>2</types:Value></types:ExtendedProperty><types:ExtendedProperty><types:ExtendedFieldURI PropertyName="RemoteParty.{664AD731-19D0-4344-93FD-682FE0440D95}" DistinguishedPropertySetId="PublicStrings" PropertyType="String"/><types:Value>sip:siyer@win.cccis.com</types:Value></types:ExtendedProperty><types:ExtendedProperty><types:ExtendedFieldURI PropertyType="String" PropertyTag="0x0070"/><types:Value>Conversation with Sridhar Iyer</types:Value></types:ExtendedProperty><types:ExtendedProperty><types:ExtendedFieldURI PropertyType="Binary" PropertyTag="0x0071"/><types:Value>AdMPpn92JwihYC9r6E+d7WZzKgDm0wABNprw</types:Value></types:ExtendedProperty><types:ExtendedProperty><types:ExtendedFieldURI PropertyType="Boolean" PropertyTag="0x3016"/><types:Value>true</types:Value></types:ExtendedProperty><types:ExtendedProperty><types:ExtendedFieldURI PropertyType="SystemTime" PropertyTag="0x0039"/><types:Value>2017-08-07T18:43:55Z</types:Value></types:ExtendedProperty><types:ExtendedProperty><types:ExtendedFieldURI PropertyType="SystemTime" PropertyTag="0x0E06"/><types:Value>2017-08-07T18:43:55Z</types:Value></types:ExtendedProperty><types:ExtendedProperty><types:ExtendedFieldURI PropertyType="String" PropertyTag="0x0C1E"/><types:Value>SMTP</types:Value></types:ExtendedProperty><types:ExtendedProperty><types:ExtendedFieldURI PropertyType="String" PropertyTag="0x0C1F"/><types:Value>siyer@cccis.com</types:Value></types:ExtendedProperty><types:ExtendedProperty><types:ExtendedFieldURI PropertyType="String" PropertyTag="0x0064"/><types:Value>SMTP</types:Value></types:ExtendedProperty><types:ExtendedProperty><types:ExtendedFieldURI PropertyType="String" PropertyTag="0x0065"/><types:Value>siyer@cccis.com</types:Value></types:ExtendedProperty><types:ExtendedProperty><types:ExtendedFieldURI PropertyType="String" PropertyTag="0x0C1A"/><types:Value>Sridhar Iyer</types:Value></types:ExtendedProperty><types:ExtendedProperty><types:ExtendedFieldURI PropertyType="String" PropertyTag="0x0042"/><types:Value>Sridhar Iyer</types:Value></types:ExtendedProperty><types:ExtendedProperty><types:ExtendedFieldURI PropertyName="ConversationXml.{CA2F170A-A22B-4f0a-B899-93439DEC3FBC}" DistinguishedPropertySetId="PublicStrings" PropertyType="String"/><types:Value><![CDATA[<conversations                 xmlns="http://schemas.microsoft.com/2008/10/sip/convItems"                                 minSupportedClientVersion="3.0.0.0"><conversationXml><imReceived xmlns="http://schemas.microsoft.com/2008/10/sip/convItems" ts="2017-08-07T17:56:26Z" from="sip:siyer@win.cccis.com" displayName="Sridhar Iyer" firstMessage="true" type="text/html">
+<messageInfo type="text/html" msgid="" sequenceid="1">&lt;p style=&quot;margin: 0.0px 0.0px 0.0px 0.0px; line-height: 15.0px&quot;&gt;&lt;font face=&quot;Lucida Grande&quot; size=&quot;3&quot; color=&quot;#000000&quot; style=&quot;font: 12.0px &apos;Lucida Grande&apos;; font-kerning: none; color: #000000; -webkit-text-stroke: 0px #000000&quot;&gt;Sir James!&lt;/font&gt;&lt;/p&gt;
+</messageInfo>
+</imReceived>
+<imReceived xmlns="http://schemas.microsoft.com/2008/10/sip/convItems" ts="2017-08-07T17:56:37Z" from="sip:siyer@win.cccis.com" displayName="Sridhar Iyer" type="text/html">
+<messageInfo type="text/html" msgid="" sequenceid="2">&lt;p style=&quot;margin: 0.0px 0.0px 0.0px 0.0px; line-height: 15.0px&quot;&gt;&lt;font face=&quot;Lucida Grande&quot; size=&quot;3&quot; color=&quot;#000000&quot; style=&quot;font: 12.0px &apos;Lucida Grande&apos;; font-kerning: none; color: #000000; -webkit-text-stroke: 0px #000000&quot;&gt;Quick check on my S02 :-)&lt;/font&gt;&lt;/p&gt;
+</messageInfo>
+</imReceived>
+<imReceived xmlns="http://schemas.microsoft.com/2008/10/sip/convItems" ts="2017-08-07T18:31:14Z" from="sip:jmcguire@win.cccis.com" displayName="James McGuire" firstMessage="true" type="text/rtf">
+<messageInfo type="text/rtf" msgid="{F2BBE9AF-2F50-4D8E-A4AA-DF886082EF16}" sequenceid="0">{\rtf1\fbidis\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Segoe UI;}{\f1\fnil Segoe UI;}}
+{\colortbl ;\red0\green0\blue0;}
+{\*\generator Riched20 15.0.4811}{\*\mmathPr\mwrapIndent1440 }\viewkind4\uc1 
+\pard\cf1\f0\fs20 Hello Sri.\f1\par
+{\*\lyncflags&lt;rtf=1&gt;}}
+</messageInfo>
+</imReceived>
+<imReceived xmlns="http://schemas.microsoft.com/2008/10/sip/convItems" ts="2017-08-07T18:31:22Z" from="sip:jmcguire@win.cccis.com" displayName="James McGuire" type="text/rtf">
+<messageInfo type="text/rtf" msgid="{583BF654-DDEF-4500-889C-F2A6CE67B08A}" sequenceid="0">{\rtf1\fbidis\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Segoe UI;}{\f1\fnil Segoe UI;}}
+{\colortbl ;\red0\green0\blue0;}
+{\*\generator Riched20 15.0.4811}{\*\mmathPr\mwrapIndent1440 }\viewkind4\uc1 
+\pard\cf1\f0\fs20 Sorry I have a lot going on.\f1\par
+{\*\lyncflags&lt;rtf=1&gt;}}
+</messageInfo>
+</imReceived>
+<imReceived xmlns="http://schemas.microsoft.com/2008/10/sip/convItems" ts="2017-08-07T18:31:29Z" from="sip:jmcguire@win.cccis.com" displayName="James McGuire" type="text/rtf">
+<messageInfo type="text/rtf" msgid="{19B7BA34-9155-46E3-87E8-350CF4EF8CA5}" sequenceid="0">{\rtf1\fbidis\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Segoe UI;}{\f1\fnil Segoe UI;}}
+{\colortbl ;\red0\green0\blue0;}
+{\*\generator Riched20 15.0.4811}{\*\mmathPr\mwrapIndent1440 }\viewkind4\uc1 
+\pard\cf1\f0\fs20 I created claim ID.\f1\par
+{\*\lyncflags&lt;rtf=1&gt;}}
+</messageInfo>
+</imReceived>
+<imReceived xmlns="http://schemas.microsoft.com/2008/10/sip/convItems" ts="2017-08-07T18:31:30Z" from="sip:jmcguire@win.cccis.com" displayName="James McGuire" type="text/rtf">
+<messageInfo type="text/rtf" msgid="{962DBF56-B8C9-4E57-A97A-F1FD4CFD3F53}" sequenceid="0">{\rtf1\fbidis\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil Segoe UI;}{\f1\fnil\fcharset0 Segoe UI;}}
+{\colortbl ;\red0\green0\blue0;}
+{\*\generator Riched20 15.0.4811}{\*\mmathPr\mwrapIndent1440 }\viewkind4\uc1 
+\pard\cf1\outl\f0\fs20 JamesTest08-07-17A\outl0\f1  \f0\par
+{\*\lyncflags&lt;rtf=1&gt;}}
+</messageInfo>
+</imReceived>
+<imReceived xmlns="http://schemas.microsoft.com/2008/10/sip/convItems" ts="2017-08-07T18:31:39Z" from="sip:jmcguire@win.cccis.com" displayName="James McGuire" type="text/rtf">
+<messageInfo type="text/rtf" msgid="{12E23BEE-5228-4929-A1EC-B57795D1F1D0}" sequenceid="0">{\rtf1\fbidis\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Segoe UI;}{\f1\fnil Segoe UI;}}
+{\colortbl ;\red0\green0\blue0;}
+{\*\generator Riched20 15.0.4811}{\*\mmathPr\mwrapIndent1440 }\viewkind4\uc1 
+\pard\cf1\f0\fs20 For APM1\f1\par
+{\*\lyncflags&lt;rtf=1&gt;}}
+</messageInfo>
+</imReceived>
+<imReceived xmlns="http://schemas.microsoft.com/2008/10/sip/convItems" ts="2017-08-07T18:31:49Z" from="sip:jmcguire@win.cccis.com" displayName="James McGuire" type="text/rtf">
+<messageInfo type="text/rtf" msgid="{B70D1C70-C43B-4B37-9479-005813D79F1F}" sequenceid="0">{\rtf1\fbidis\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Segoe UI;}{\f1\fnil Segoe UI;}}
+{\colortbl ;\red0\green0\blue0;}
+{\*\generator Riched20 15.0.4811}{\*\mmathPr\mwrapIndent1440 }\viewkind4\uc1 
+\pard\cf1\f0\fs20 I just uploaded an E01.\f1\par
+{\*\lyncflags&lt;rtf=1&gt;}}
+</messageInfo>
+</imReceived>
+<imReceived xmlns="http://schemas.microsoft.com/2008/10/sip/convItems" ts="2017-08-07T18:31:54Z" from="sip:jmcguire@win.cccis.com" displayName="James McGuire" type="text/rtf">
+<messageInfo type="text/rtf" msgid="{178EA1CB-2B29-4405-9A1F-42E59B7C2B0B}" sequenceid="0">{\rtf1\fbidis\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Segoe UI;}{\f1\fnil Segoe UI;}}
+{\colortbl ;\red0\green0\blue0;}
+{\*\generator Riched20 15.0.4811}{\*\mmathPr\mwrapIndent1440 }\viewkind4\uc1 
+\pard\cf1\f0\fs20 About to do the S01\f1\par
+{\*\lyncflags&lt;rtf=1&gt;}}
+</messageInfo>
+</imReceived>
+</conversationXml></conversations>]]></types:Value></types:ExtendedProperty><types:ExtendedProperty><types:ExtendedFieldURI PropertyName="HistoryInfo.{553F3F08-FC28-41db-859E-63457407F806}" DistinguishedPropertySetId="PublicStrings" PropertyType="String"/><types:Value>sip:siyer@win.cccis.com</types:Value></types:ExtendedProperty><types:ExtendedProperty><types:ExtendedFieldURI PropertyName="RemotePartyDeviceUri.{12AC5838-268F-4015-BFA9-B651F9ACECDC}" DistinguishedPropertySetId="PublicStrings" PropertyType="String"/><types:Value>sip:siyer@win.cccis.com</types:Value></types:ExtendedProperty><types:ExtendedProperty><types:ExtendedFieldURI PropertyName="PreviewMessage.{55324EE5-74F0-4727-876D-20ED1469CA65}" DistinguishedPropertySetId="PublicStrings" PropertyType="String"/><types:Value>Sir James!&#xD;
+&#xD;
+ Quick check on my S02 :-)&#xD;
+&#xD;
+ / Hello Sri.&#xD;
+&#xD;
+ Sorry I have a lot going on.&#xD;
+&#xD;
+ I created claim ID.&#xD;
+&#xD;
+ JamesTest08-07-17A &#xD;
+&#xD;
+</types:Value></types:ExtendedProperty><types:ExtendedProperty><types:ExtendedFieldURI PropertyType="Integer" PropertyTag="0x4076"/><types:Value>-1</types:Value></types:ExtendedProperty><types:ToRecipients><types:Mailbox><types:Name>Sridhar Iyer</types:Name><types:EmailAddress>siyer@cccis.com</types:EmailAddress><types:RoutingType>SMTP</types:RoutingType></types:Mailbox><types:Mailbox><types:Name>James McGuire</types:Name><types:EmailAddress>jmcguire@cccis.com</types:EmailAddress><types:RoutingType>SMTP</types:RoutingType></types:Mailbox></types:ToRecipients></types:Message></messages:Items></messages:CreateItem></s:Body></s:Envelope>

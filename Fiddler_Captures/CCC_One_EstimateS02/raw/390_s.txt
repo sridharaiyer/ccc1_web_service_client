@@ -1,0 +1,19 @@
+HTTP/1.1 200 OK
+Cache-Control: private, max-age=0
+Content-Type: text/html; charset=utf-8
+Server: Microsoft-IIS/7.5
+X-AspNet-Version: 4.0.30319
+X-Powered-By: ASP.NET
+Date: Mon, 07 Aug 2017 18:44:27 GMT
+Content-Length: 268
+Set-Cookie: BIGipServerpool-http-servicesqa.mycccportal.com-cccone=432819466.20480.0000; path=/
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    ASMX Service hosted by CCC ONE
+</body>
+</html>

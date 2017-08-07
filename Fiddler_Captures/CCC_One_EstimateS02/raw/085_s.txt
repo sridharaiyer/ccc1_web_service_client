@@ -1,0 +1,31 @@
+HTTP/1.1 200 Connection Established
+FiddlerGateway: Direct
+StartTime: 13:37:45.922
+Connection: close
+
+Encrypted HTTPS traffic flows through this CONNECT tunnel. HTTPS Decryption is enabled in Fiddler, so decrypted sessions running in this tunnel will be shown in the Web Sessions list.
+
+Secure Protocol: Tls
+Cipher: Aes256 256bits
+Hash Algorithm: Sha1 160bits
+Key Exchange: ECDHE_RSA (0xae06) 256bits
+
+== Server Certificate ==========
+[Subject]
+  CN=odc.officeapps.live.com
+
+[Issuer]
+  CN=Microsoft IT SSL SHA2, OU=Microsoft IT, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
+
+[Serial Number]
+  5A0005471729BDF691511D79DA000100054717
+
+[Not Before]
+  11/09/2016 4:11:43 PM
+
+[Not After]
+  04/09/2018 5:11:43 PM
+
+[Thumbprint]
+  6A34E679A5006D7EA547EA4236A4874B1CCD72B0
+

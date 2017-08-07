@@ -1,0 +1,15 @@
+POST https://play.google.com/log?format=json HTTP/1.1
+Host: play.google.com
+Connection: keep-alive
+Content-Length: 569
+Origin: https://notifications.google.com
+User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36
+Content-Type: application/x-www-form-urlencoded;charset=UTF-8
+X-Client-Data: CIm2yQEIpLbJAQjBtskBCO2XygEI+pzKAQipncoB
+Accept: */*
+DNT: 1
+Referer: https://notifications.google.com/
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.8
+
+[[1,null,null,null,null,null,null,null,["en","chrome","59.0.3071.115"],null,[null,"6.1",3,null,"en",2,"boq_notificationsuiserver_20170803.06_p0"]],241,[["1502131158325",null,[],null,null,null,null,"[1502131158324,[[\"4950535922500196698\",null,[[2089,1]]],[\"1757184925777806825\",null,[[87,1]]],[\"3079121564595244695\",null,[[82,1]]],[\"14113926844082461540\",null,[[22,1]]]],null,null,\"[2,\\\"o4RR2c_MS\\\"]\"]",null,null,null,2100990449,null,null,null,[null,[],null,"[[],[],[],[]]"],null,null,null,[]]],"1502131158325",[],null,null,null,null,null,null,null,null,0]

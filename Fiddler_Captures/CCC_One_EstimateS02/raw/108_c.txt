@@ -1,0 +1,33 @@
+CONNECT ssl.google-analytics.com:443 HTTP/1.1
+Host: ssl.google-analytics.com
+
+A SSLv3-compatible ClientHello handshake was found. Fiddler extracted the parameters below.
+
+Version: 3.1 (TLS/1.0)
+Random: 59 88 B3 9D 66 5C A8 CA AB F5 89 41 94 B0 32 E1 C4 73 5B AC E2 D5 53 3E A2 9F DC 3A 90 92 5B BD
+"Time": 11/03/2053 7:19:21 AM
+SessionID: empty
+Extensions: 
+	server_name	ssl.google-analytics.com
+	elliptic_curves	secp521r1 [0x19], secp256r1 [0x17], secp384r1 [0x18]
+	ec_point_formats	uncompressed [0x0]
+	extended_master_secret	empty
+	renegotiation_info	00
+Ciphers: 
+	[C014]	TLS1_CK_ECDHE_RSA_WITH_AES_256_CBC_SHA
+	[C013]	TLS1_CK_ECDHE_RSA_WITH_AES_128_CBC_SHA
+	[C00A]	TLS1_CK_ECDHE_ECDSA_WITH_AES_256_CBC_SHA
+	[C009]	TLS1_CK_ECDHE_ECDSA_WITH_AES_128_CBC_SHA
+	[0035]	TLS_RSA_AES_256_SHA
+	[002F]	TLS_RSA_AES_128_SHA
+	[0038]	TLS_DHE_DSS_WITH_AES_256_SHA
+	[0032]	TLS_DHE_DSS_WITH_AES_128_SHA
+	[000A]	SSL_RSA_WITH_3DES_EDE_SHA
+	[0013]	SSL_DHE_DSS_WITH_3DES_EDE_SHA
+	[0005]	SSL_RSA_WITH_RC4_128_SHA
+	[0004]	SSL_RSA_WITH_RC4_128_MD5
+
+Compression: 
+	[00]	NO_COMPRESSION
+
+

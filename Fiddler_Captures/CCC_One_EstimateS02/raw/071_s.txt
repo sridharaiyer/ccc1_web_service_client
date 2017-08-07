@@ -1,0 +1,23 @@
+HTTP/1.1 200 OK
+Cache-Control: private
+Transfer-Encoding: chunked
+Content-Type: text/xml; charset=utf-8
+Server: Microsoft-IIS/8.5
+request-id: 10b794aa-cec6-4ad4-be87-2a4c7b2c8cef
+X-CalculatedBETarget: cy1pr0601mb1504.namprd06.prod.outlook.com
+X-DiagInfo: CY1PR0601MB1504
+X-BEServer: CY1PR0601MB1504
+X-AspNet-Version: 4.0.30319
+Set-Cookie: exchangecookie=7e0750a4ee18489e8c5c619b7262b112; expires=Tue, 07-Aug-2018 18:37:34 GMT; path=/; HttpOnly
+Set-Cookie: X-BackEndCookie2=jmcguire@cccis.com=u56Lnp2ejJqBmsebyc/LxprSyZuantLLnZ2e0sfOz8bSzcrHzcbKnMmdzp7HgZycnJaM0ZyQkoHNz87I0s/G0s/Jq87HxczIxczLgZGeko+Nm8/J0Y+NkJvRkIqLk5CQlNGckJKBzw==; expires=Wed, 06-Sep-2017 18:37:34 GMT; path=/EWS; secure; HttpOnly
+Set-Cookie: X-BackEndCookie=jmcguire@cccis.com=u56Lnp2ejJqBmsebyc/LxprSyZuantLLnZ2e0sfOz8bSzcrHzcbKnMmdzp7HgZycnJaM0ZyQkoHNz87I0s/G0s/Jq87HxczIxczLgZGeko+Nm8/J0Y+NkJvRkIqLk5CQlNGckJKBzw==; expires=Wed, 06-Sep-2017 18:37:34 GMT; path=/EWS; secure; HttpOnly
+X-Powered-By: ASP.NET
+X-FEServer: MWHPR20CA0031
+Date: Mon, 07 Aug 2017 18:37:33 GMT
+
+4b0
+<?xml version="1.0" encoding="utf-8"?><s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/"><s:Header><h:ServerVersionInfo MajorVersion="15" MinorVersion="1" MajorBuildNumber="1320" MinorBuildNumber="18" Version="V2017_07_11" xmlns:h="http://schemas.microsoft.com/exchange/services/2006/types" xmlns="http://schemas.microsoft.com/exchange/services/2006/types" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/></s:Header><s:Body xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><m:CreateItemResponse xmlns:m="http://schemas.microsoft.com/exchange/services/2006/messages" xmlns:t="http://schemas.microsoft.com/exchange/services/2006/types"><m:ResponseMessages><m:CreateItemResponseMessage ResponseClass="Success"><m:ResponseCode>NoError</m:ResponseCode><m:Items><t:Message><t:ItemId Id="AAMkAGQxZTZjZTUzLTI2ODMtNDI0YS1hNjI2LWZhMzU5YTUyMjc2ZABGAAAAAABOJDN/cz4SQqhssTUvENQGBwDZ8ePuCZF6SrbhDV6loiF/AAAA5vWdAABGht1qNNX7RaZ6BD+xeKD2AAPq3ZnBAAA=" ChangeKey="CQAAABYAAABGht1qNNX7RaZ6BD+xeKD2AAPrr5al"/></t:Message></m:Items></m:CreateItemResponseMessage></m:ResponseMessages></m:CreateItemResponse>
+16
+</s:Body></s:Envelope>
+0
+

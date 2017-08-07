@@ -6,6 +6,9 @@ import pdb
 from xmlutils import XMLUtils
 from zipfileutils import ZipFileUtils
 import copy
+import logging
+
+logger = logging.getLogger()
 
 
 class FiddlerSession(object):
@@ -37,17 +40,25 @@ class FiddlerSession(object):
             value = row.a.get('href').replace("\\\\", "/")
             self._files[key].append(value)
 
-        del self._files['GatewayService.asmx']
-        del self._files['AdvisorService']
-        del self._files['HitTest.aspx']
-        del self._files['TokenService.aspx?sv=69']
-        del self._files['Login']
-        del self._files['ProfileService']
-        del self._files['ValuescopeProfileService']
-        del self._files['getdocuments?licensenumber=302800']
-        del self._files['RPS']
-        del self._files['Event']
-        del self._files['Worklist']
+        logger.debug('Files before removing ignore list: \n{}'.format(json.dumps(self._files, indent=4)))
+
+        ignore_list = [
+            'GatewayService.asmx',
+            'AdvisorService',
+            'HitTest.aspx',
+            'TokenService.aspx?sv=69',
+            'Login',
+            'ProfileService',
+            'ValuescopeProfileService',
+            'getdocuments?licensenumber=302800',
+            'RPS',
+            'Event',
+            'Worklist',
+        ]
+        for s in ignore_list:
+            if s in self._files:
+                del self._files[s]
+
         self._del_statuschange_dups()
 
         return json.dumps(self._files, indent=4)

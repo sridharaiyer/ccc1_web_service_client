@@ -1,0 +1,45 @@
+CONNECT cello.client-channel.google.com:443 HTTP/1.1
+Host: cello.client-channel.google.com:443
+Connection: keep-alive
+User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36
+
+A SSLv3-compatible ClientHello handshake was found. Fiddler extracted the parameters below.
+
+Version: 3.3 (TLS/1.2)
+Random: 13 27 1E 28 3B 88 3D E4 05 55 0F 02 99 58 AB 7C 22 13 8F 5D B1 5B CF 7D 6A 96 56 0E A3 7A C9 18
+"Time": 04/30/1991 9:25:23 PM
+SessionID: 18 04 00 00 9B F7 36 89 37 AD 6C 90 66 10 C8 5B 3C E1 E3 8C E3 BB 4B CC E5 7A 98 5D 63 77 E5 7C
+Extensions: 
+	0x1a1a		empty
+	renegotiation_info	00
+	server_name	cello.client-channel.google.com
+	extended_master_secret	empty
+	SessionTicket	empty
+	signature_algs	sha256_ecdsa, Unknown[0x8]_Unknown[0x4], sha256_rsa, sha384_ecdsa, Unknown[0x8]_Unknown[0x5], sha384_rsa, Unknown[0x8]_Unknown[0x6], sha512_rsa, sha1_rsa
+	status_request	OCSP - Implicit Responder
+	SignedCertTimestamp (RFC6962)	empty
+	ALPN		h2, http/1.1
+	channel_id(GoogleDraft)	empty
+	ec_point_formats	uncompressed [0x0]
+	elliptic_curves	unknown [0x2A2A), unknown [0x1D), secp256r1 [0x17], secp384r1 [0x18]
+	0x2a2a		00
+Ciphers: 
+	[1A1A]	Unrecognized cipher - See http://www.iana.org/assignments/tls-parameters/
+	[C02B]	TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256
+	[C02F]	TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
+	[C02C]	TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384
+	[C030]	TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384
+	[CCA9]	Unrecognized cipher - See http://www.iana.org/assignments/tls-parameters/
+	[CCA8]	Unrecognized cipher - See http://www.iana.org/assignments/tls-parameters/
+	[C013]	TLS1_CK_ECDHE_RSA_WITH_AES_128_CBC_SHA
+	[C014]	TLS1_CK_ECDHE_RSA_WITH_AES_256_CBC_SHA
+	[009C]	TLS_RSA_WITH_AES_128_GCM_SHA256
+	[009D]	TLS_RSA_WITH_AES_256_GCM_SHA384
+	[002F]	TLS_RSA_AES_128_SHA
+	[0035]	TLS_RSA_AES_256_SHA
+	[000A]	SSL_RSA_WITH_3DES_EDE_SHA
+
+Compression: 
+	[00]	NO_COMPRESSION
+
+

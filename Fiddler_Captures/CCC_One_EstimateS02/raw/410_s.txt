@@ -1,0 +1,90 @@
+HTTP/1.1 200 OK
+Cache-Control: private
+Content-Type: text/xml; charset=utf-8
+Server: Microsoft-IIS/8.5
+request-id: 2fa1202e-d44b-48b0-95a3-c9666bec7a7e
+X-CalculatedBETarget: cy1pr0601mb1504.namprd06.prod.outlook.com
+X-DiagInfo: CY1PR0601MB1504
+X-BEServer: CY1PR0601MB1504
+X-AspNet-Version: 4.0.30319
+Set-Cookie: X-BackEndCookie2=jmcguire@cccis.com=u56Lnp2ejJqBmsebyc/LxprSyZuantLLnZ2e0sfOz8bSzcrHzcbKnMmdzp7HgZycnJaM0ZyQkoHNz87I0s/G0s/Jq87HxcvKxc/IgZGeko+Nm8/J0Y+NkJvRkIqLk5CQlNGckJKBzw==; expires=Wed, 06-Sep-2017 18:45:07 GMT; path=/autodiscover; secure; HttpOnly
+Set-Cookie: X-BackEndCookie=jmcguire@cccis.com=u56Lnp2ejJqBmsebyc/LxprSyZuantLLnZ2e0sfOz8bSzcrHzcbKnMmdzp7HgZycnJaM0ZyQkoHNz87I0s/G0s/Jq87HxcvKxc/IgZGeko+Nm8/J0Y+NkJvRkIqLk5CQlNGckJKBzw==; expires=Wed, 06-Sep-2017 18:45:07 GMT; path=/autodiscover; secure; HttpOnly
+X-Powered-By: ASP.NET
+X-FEServer: CY4PR02CA0020
+Date: Mon, 07 Aug 2017 18:45:07 GMT
+Content-Length: 4309
+
+<?xml version="1.0" encoding="utf-8"?>
+<Autodiscover xmlns="http://schemas.microsoft.com/exchange/autodiscover/responseschema/2006">
+  <Response xmlns="http://schemas.microsoft.com/exchange/autodiscover/outlook/responseschema/2006a">
+    <User>
+      <DisplayName>James McGuire</DisplayName>
+      <LegacyDN>/o=ExchangeLabs/ou=Exchange Administrative Group (FYDIBOHF23SPDLT)/cn=Recipients/cn=972e3e1edbe24190935a015485c49f69-JMcguire</LegacyDN>
+      <AutoDiscoverSMTPAddress>jmcguire@cccis.com</AutoDiscoverSMTPAddress>
+      <DeploymentId>7988a230-720a-480b-8901-aadba829912f</DeploymentId>
+    </User>
+    <Account>
+      <AccountType>email</AccountType>
+      <Action>settings</Action>
+      <MicrosoftOnline>True</MicrosoftOnline>
+      <ConsumerMailbox>False</ConsumerMailbox>
+      <Protocol Type="mapiHttp" Version="1">
+        <MailStore>
+          <ExternalUrl>https://outlook.office365.com/mapi/emsmdb/?MailboxId=d1e6ce53-2683-424a-a626-fa359a52276d@cccis.com</ExternalUrl>
+        </MailStore>
+        <AddressBook>
+          <ExternalUrl>https://outlook.office365.com/mapi/nspi/?MailboxId=d1e6ce53-2683-424a-a626-fa359a52276d@cccis.com</ExternalUrl>
+        </AddressBook>
+      </Protocol>
+      <Protocol>
+        <Type>WEB</Type>
+        <Internal>
+          <OWAUrl AuthenticationMethod="LiveIdFba, OAuth">https://outlook.office365.com/owa/</OWAUrl>
+          <Protocol>
+            <Type>EXCH</Type>
+            <ASUrl>https://outlook.office365.com/EWS/Exchange.asmx</ASUrl>
+          </Protocol>
+        </Internal>
+        <External>
+          <OWAUrl AuthenticationMethod="Fba">https://outlook.office365.com/owa/win.cccis.com/</OWAUrl>
+          <Protocol>
+            <Type>EXPR</Type>
+            <ASUrl>https://outlook.office365.com/EWS/Exchange.asmx</ASUrl>
+          </Protocol>
+        </External>
+      </Protocol>
+      <Protocol>
+        <Type>EXHTTP</Type>
+        <Server>outlook.office365.com</Server>
+        <SSL>On</SSL>
+        <AuthPackage>Basic</AuthPackage>
+        <ASUrl>https://outlook.office365.com/EWS/Exchange.asmx</ASUrl>
+        <EwsUrl>https://outlook.office365.com/EWS/Exchange.asmx</EwsUrl>
+        <EmwsUrl>https://outlook.office365.com/EWS/Exchange.asmx</EmwsUrl>
+        <SharingUrl>https://outlook.office365.com/EWS/Exchange.asmx</SharingUrl>
+        <EcpUrl>https://outlook.office365.com/owa/</EcpUrl>
+        <EcpUrl-um>?path=/options/callanswering</EcpUrl-um>
+        <EcpUrl-aggr>?path=/options/connectedaccounts</EcpUrl-aggr>
+        <EcpUrl-mt>options/ecp/PersonalSettings/DeliveryReport.aspx?rfr=olk&amp;exsvurl=1&amp;IsOWA=&lt;IsOWA&gt;&amp;MsgID=&lt;MsgID&gt;&amp;Mbx=&lt;Mbx&gt;&amp;realm=win.cccis.com</EcpUrl-mt>
+        <EcpUrl-ret>?path=/options/retentionpolicies</EcpUrl-ret>
+        <EcpUrl-sms>?path=/options/textmessaging</EcpUrl-sms>
+        <EcpUrl-photo>?path=/options/myaccount/action/photo</EcpUrl-photo>
+        <EcpUrl-connect>?path=/options/socialnetworks&amp;ignore1=&lt;Action&gt;&amp;ignore2=&lt;Provider&gt;</EcpUrl-connect>
+        <EcpUrl-tm>options/ecp/?rfr=olk&amp;ftr=TeamMailbox&amp;exsvurl=1&amp;realm=win.cccis.com</EcpUrl-tm>
+        <EcpUrl-tmCreating>options/ecp/?rfr=olk&amp;ftr=TeamMailboxCreating&amp;SPUrl=&lt;SPUrl&gt;&amp;Title=&lt;Title&gt;&amp;SPTMAppUrl=&lt;SPTMAppUrl&gt;&amp;exsvurl=1&amp;realm=win.cccis.com</EcpUrl-tmCreating>
+        <EcpUrl-tmEditing>options/ecp/?rfr=olk&amp;ftr=TeamMailboxEditing&amp;Id=&lt;Id&gt;&amp;exsvurl=1&amp;realm=win.cccis.com</EcpUrl-tmEditing>
+        <EcpUrl-extinstall>?path=/options/manageapps</EcpUrl-extinstall>
+        <OOFUrl>https://outlook.office365.com/EWS/Exchange.asmx</OOFUrl>
+        <UMUrl>https://outlook.office365.com/EWS/UM2007Legacy.asmx</UMUrl>
+        <OABUrl>https://outlook.office365.com/OAB/63660953-8a66-46a0-9551-60f69121604b/</OABUrl>
+        <ServerExclusiveConnect>On</ServerExclusiveConnect>
+      </Protocol>
+      <AlternativeMailbox>
+        <Type>Archive</Type>
+        <DisplayName>In-Place Archive - James McGuire</DisplayName>
+        <SmtpAddress>ExchangeGuid+418a499e-6a22-4d57-a5a2-7c79820c7ca7@cccis.com</SmtpAddress>
+        <OwnerSmtpAddress>jmcguire@cccis.com</OwnerSmtpAddress>
+      </AlternativeMailbox>
+    </Account>
+  </Response>
+</Autodiscover>

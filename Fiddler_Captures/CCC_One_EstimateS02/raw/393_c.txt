@@ -1,0 +1,45 @@
+CONNECT clientservices.googleapis.com:443 HTTP/1.1
+Host: clientservices.googleapis.com:443
+Connection: keep-alive
+User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36
+
+A SSLv3-compatible ClientHello handshake was found. Fiddler extracted the parameters below.
+
+Version: 3.3 (TLS/1.2)
+Random: 0A DF 09 C3 EA F2 07 94 BD 26 FC 66 7F C6 E6 FA 38 5E F1 09 32 F7 61 FD E9 44 8D 54 38 32 40 86
+"Time": 09/09/2073 12:34:02 PM
+SessionID: 25 D1 B6 AC 04 6C A6 E3 54 D6 F9 73 BA 55 AB DE D5 2A 64 BD EA 00 8F 75 0C 53 4C 2A 5A 20 33 DE
+Extensions: 
+	0x0a0a		empty
+	renegotiation_info	00
+	server_name	clientservices.googleapis.com
+	extended_master_secret	empty
+	SessionTicket	00 FE 3C D2 F0 68 AD 76 83 A2 CB B7 6F 22 1E 88 CE C9 AF 7D C5 45 02 CB 91 15 BF 77 28 92 BE 3E 44 33 6F 33 A7 53 3E AB D5 A0 D8 0D B6 C2 6A 2A F0 47 3C E3 51 23 44 C4 7C 44 CD 54 E8 7B EC 9E 86 59 11 08 60 B8 39 CD 79 BC 5D BE D9 F7 81 F1 56 EF 18 5D 52 D1 C1 42 06 8B 7D 54 FD 85 0F 65 A1 D4 BB 20 6A D9 D7 82 C4 32 D7 A7 08 27 A4 DC 64 6B 67 1F CD 28 0B 3A 13 D7 C0 DB 19 35 99 44 F6 0A 07 7D 59 54 3F 28 CF E1 12 A3 3D DE BD E4 95 1A 22 50 FF C4 52 45 FF F8 75 EB 1F 0C CB 6D 54 FE BF 27 00 37 33 7A C7 8F AF CA 30 63 CD EE 13 8C 71 50 22 BF 69 58 7F AD 2E A4 C5 FF 28 FB 76 08 7D A2 F8 5C D4 5B 6C 7E BB 0A 68 A4 F9 39 F7 D0 43 9C CE CE D9 27 D1 38 64 4B D8 6A F0 99 D1 7A 7C F9 C4 95 BF FE 84 1B BC 37 53 0B 34 8B B5 DE BC F1 10 86 CA CB 57 96 38 B7
+	signature_algs	sha256_ecdsa, Unknown[0x8]_Unknown[0x4], sha256_rsa, sha384_ecdsa, Unknown[0x8]_Unknown[0x5], sha384_rsa, Unknown[0x8]_Unknown[0x6], sha512_rsa, sha1_rsa
+	status_request	OCSP - Implicit Responder
+	SignedCertTimestamp (RFC6962)	empty
+	ALPN		h2, http/1.1
+	ec_point_formats	uncompressed [0x0]
+	elliptic_curves	unknown [0xDADA), unknown [0x1D), secp256r1 [0x17], secp384r1 [0x18]
+	0xcaca		00
+	padding	00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+Ciphers: 
+	[0A0A]	Unrecognized cipher - See http://www.iana.org/assignments/tls-parameters/
+	[C02B]	TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256
+	[C02F]	TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
+	[C02C]	TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384
+	[C030]	TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384
+	[CCA9]	Unrecognized cipher - See http://www.iana.org/assignments/tls-parameters/
+	[CCA8]	Unrecognized cipher - See http://www.iana.org/assignments/tls-parameters/
+	[C013]	TLS1_CK_ECDHE_RSA_WITH_AES_128_CBC_SHA
+	[C014]	TLS1_CK_ECDHE_RSA_WITH_AES_256_CBC_SHA
+	[009C]	TLS_RSA_WITH_AES_128_GCM_SHA256
+	[009D]	TLS_RSA_WITH_AES_256_GCM_SHA384
+	[002F]	TLS_RSA_AES_128_SHA
+	[0035]	TLS_RSA_AES_256_SHA
+	[000A]	SSL_RSA_WITH_3DES_EDE_SHA
+
+Compression: 
+	[00]	NO_COMPRESSION
+
+

@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Session SID="85" BitFlags="2100">
+  <SessionTimers ClientConnected="2017-08-07T13:37:45.8795792-05:00" ClientBeginRequest="2017-08-07T13:37:45.88758-05:00" GotRequestHeaders="2017-08-07T13:37:45.88758-05:00" ClientDoneRequest="2017-08-07T13:37:45.88758-05:00" GatewayTime="0" DNSTime="2" TCPConnectTime="33" HTTPSHandshakeTime="92" ServerConnected="2017-08-07T13:37:45.9225835-05:00" FiddlerBeginRequest="2017-08-07T13:37:45.9225835-05:00" ServerGotRequest="2017-08-07T13:37:45.9225835-05:00" ServerBeginResponse="0001-01-01T00:00:00" GotResponseHeaders="0001-01-01T00:00:00" ServerDoneResponse="0001-01-01T00:00:00" ClientBeginResponse="2017-08-07T13:37:45.9225835-05:00" ClientDoneResponse="2017-08-07T13:37:45.9225835-05:00" />
+  <PipeInfo />
+  <TunnelInfo BytesEgress="0" BytesIngress="0" />
+  <SessionFlags>
+    <SessionFlag N="https-server-cipher" V="Aes256 256bits" />
+    <SessionFlag N="x-responsebodytransferlength" V="0" />
+    <SessionFlag N="https-server-version" V="Tls" />
+    <SessionFlag N="https-client-snihostname" V="odc.officeapps.live.com" />
+    <SessionFlag N="x-clientip" V="::ffff:127.0.0.1" />
+    <SessionFlag N="x-clientport" V="55030" />
+    <SessionFlag N="https-client-sessionid" V="empty" />
+    <SessionFlag N="x-processinfo" V="searchprotocolhost:8164" />
+    <SessionFlag N="https-client-version" V="Tls" />
+    <SessionFlag N="x-egressport" V="55031" />
+    <SessionFlag N="x-hostip" V="40.76.62.115" />
+  </SessionFlags>
+</Session>

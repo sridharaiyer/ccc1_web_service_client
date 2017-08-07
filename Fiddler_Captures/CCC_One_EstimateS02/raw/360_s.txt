@@ -1,0 +1,31 @@
+HTTP/1.1 200 Connection Established
+FiddlerGateway: Direct
+StartTime: 13:43:58.863
+Connection: close
+
+Encrypted HTTPS traffic flows through this CONNECT tunnel. HTTPS Decryption is enabled in Fiddler, so decrypted sessions running in this tunnel will be shown in the Web Sessions list.
+
+Secure Protocol: Tls
+Cipher: Aes256 256bits
+Hash Algorithm: Sha1 160bits
+Key Exchange: ECDHE_RSA (0xae06) 256bits
+
+== Server Certificate ==========
+[Subject]
+  CN=outlook.com, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
+
+[Issuer]
+  CN=DigiCert Cloud Services CA-1, O=DigiCert Inc, C=US
+
+[Serial Number]
+  084935410975E413EBF074BB740CE942
+
+[Not Before]
+  04/02/2017 7:00:00 PM
+
+[Not After]
+  04/03/2018 7:00:00 AM
+
+[Thumbprint]
+  691AC34496252F00DD4BE72F97AE4A8E48DF6BF5
+

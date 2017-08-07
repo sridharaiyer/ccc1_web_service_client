@@ -1,0 +1,20 @@
+HTTP/1.1 200 OK
+Content-Type: text/plain; charset=utf-8
+Server: Microsoft-IIS/10.0
+X-CorrelationId: 35577385-202d-4af7-8f97-351b4a2f9205
+X-UserSessionId: 35577385-202d-4af7-8f97-351b4a2f9205
+X-OfficeFE: OdcFrontEnd_IN_55
+X-OfficeVersion: 16.0.8501.6608
+X-OfficeCluster: eus-odc.officeapps.live.com
+P3P: CP="CAO DSP COR ADMa DEV CONi TELi CUR PSA PSD TAI IVDi OUR SAMi BUS DEM NAV STA UNI COM INT PHY ONL FIN PUR"
+ClientConfig: https://clientconfig.microsoftonline-p.net
+AuthorizationService: https://login.windows.net/common/oauth2/authorize
+TokenService: https://login.windows.net/common/oauth2/token
+Access-Control-Allow-Origin: *
+Access-Control-Expose-Headers: Content-Length,Content-Type,X-OfficeCluster,X-OfficeFE,X-OfficeVersion,X-CorrelationId
+X-Powered-By: ASP.NET
+X-Content-Type-Options: nosniff
+Date: Mon, 07 Aug 2017 18:37:50 GMT
+Content-Length: 6
+
+Global

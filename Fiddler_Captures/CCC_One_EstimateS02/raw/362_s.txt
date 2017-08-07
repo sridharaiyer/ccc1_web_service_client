@@ -1,0 +1,99 @@
+HTTP/1.1 200 OK
+Cache-Control: private
+Transfer-Encoding: chunked
+Content-Type: text/xml; charset=utf-8
+Server: Microsoft-IIS/8.5
+request-id: be160267-746e-4118-8bbe-b1c8fee26387
+X-CalculatedBETarget: cy1pr0601mb1504.namprd06.prod.outlook.com
+X-DiagInfo: CY1PR0601MB1504
+X-BEServer: CY1PR0601MB1504
+X-AspNet-Version: 4.0.30319
+Set-Cookie: exchangecookie=a6ca551076b6450590e93e71f6489652; expires=Tue, 07-Aug-2018 18:44:03 GMT; path=/; HttpOnly
+Set-Cookie: X-BackEndCookie2=jmcguire@cccis.com=u56Lnp2ejJqBmsebyc/LxprSyZuantLLnZ2e0sfOz8bSzcrHzcbKnMmdzp7HgZycnJaM0ZyQkoHNz87I0s/G0s/Jq87HxcvLxc/MgZGeko+Nm8/J0Y+NkJvRkIqLk5CQlNGckJKBzw==; expires=Wed, 06-Sep-2017 18:44:03 GMT; path=/EWS; secure; HttpOnly
+Set-Cookie: X-BackEndCookie=jmcguire@cccis.com=u56Lnp2ejJqBmsebyc/LxprSyZuantLLnZ2e0sfOz8bSzcrHzcbKnMmdzp7HgZycnJaM0ZyQkoHNz87I0s/G0s/Jq87HxcvLxc/MgZGeko+Nm8/J0Y+NkJvRkIqLk5CQlNGckJKBzw==; expires=Wed, 06-Sep-2017 18:44:03 GMT; path=/EWS; secure; HttpOnly
+X-Powered-By: ASP.NET
+X-FEServer: DM5PR1101CA0011
+Date: Mon, 07 Aug 2017 18:44:03 GMT
+
+2d3c
+<?xml version="1.0" encoding="utf-8"?><s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/"><s:Header><h:ServerVersionInfo MajorVersion="15" MinorVersion="1" MajorBuildNumber="1320" MinorBuildNumber="18" Version="V2017_07_11" xmlns:h="http://schemas.microsoft.com/exchange/services/2006/types" xmlns="http://schemas.microsoft.com/exchange/services/2006/types" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/></s:Header><s:Body xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><m:GetItemResponse xmlns:m="http://schemas.microsoft.com/exchange/services/2006/messages" xmlns:t="http://schemas.microsoft.com/exchange/services/2006/types"><m:ResponseMessages><m:GetItemResponseMessage ResponseClass="Success"><m:ResponseCode>NoError</m:ResponseCode><m:Items><t:Message><t:ItemId Id="AAMkAGQxZTZjZTUzLTI2ODMtNDI0YS1hNjI2LWZhMzU5YTUyMjc2ZABGAAAAAABOJDN/cz4SQqhssTUvENQGBwDZ8ePuCZF6SrbhDV6loiF/AAAA5vWdAABGht1qNNX7RaZ6BD+xeKD2AAPq3ZnDAAA=" ChangeKey="CQAAABYAAABGht1qNNX7RaZ6BD+xeKD2AAPrr5an"/><t:ItemClass>IPM.Note.Microsoft.Conversation</t:ItemClass><t:Subject>Conversation with Sridhar Iyer</t:Subject><t:DateTimeReceived>2017-08-07T18:43:55Z</t:DateTimeReceived><t:Importance>Normal</t:Importance><t:DateTimeSent>2017-08-07T18:43:55Z</t:DateTimeSent><t:ExtendedProperty><t:ExtendedFieldURI PropertyTag="0xe1d" PropertyType="String"/><t:Value>Conversation with Sridhar Iyer</t:Value></t:ExtendedProperty><t:ExtendedProperty><t:ExtendedFieldURI DistinguishedPropertySetId="PublicStrings" PropertyName="IsCustomSubject.{703DC3CB-8F24-4e3f-932F-206233656759}" PropertyType="Integer"/><t:Value>0</t:Value></t:ExtendedProperty><t:ExtendedProperty><t:ExtendedFieldURI DistinguishedPropertySetId="PublicStrings" PropertyName="Modalities.{0885EA21-B7A5-4050-BFDB-AD46DE1D6A87}" PropertyType="Integer"/><t:Value>1</t:Value></t:ExtendedProperty><t:ExtendedProperty><t:ExtendedFieldURI DistinguishedPropertySetId="PublicStrings" PropertyName="Direction.{2DA4DF04-920D-4b0b-A1D7-5FC9D21857FE}" PropertyType="Integer"/><t:Value>2</t:Value></t:ExtendedProperty><t:ExtendedProperty><t:ExtendedFieldURI DistinguishedPropertySetId="PublicStrings" PropertyName="RemoteParty.{664AD731-19D0-4344-93FD-682FE0440D95}" PropertyType="String"/><t:Value>sip:siyer@win.cccis.com</t:Value></t:ExtendedProperty><t:ExtendedProperty><t:ExtendedFieldURI PropertyTag="0x3fde" PropertyType="Integer"/><t:Value>20127</t:Value></t:ExtendedProperty><t:ExtendedProperty><t:ExtendedFieldURI PropertyTag="0xc1e" PropertyType="String"/><t:Value>SMTP</t:Value></t:ExtendedProperty><t:ExtendedProperty><t:ExtendedFieldURI PropertyTag="0xc1f" PropertyType="String"/><t:Value>siyer@cccis.com</t:Value></t:ExtendedProperty><t:ExtendedProperty><t:ExtendedFieldURI PropertyTag="0x64" PropertyType="String"/><t:Value>SMTP</t:Value></t:ExtendedProperty><t:ExtendedProperty><t:ExtendedFieldURI PropertyTag="0x65" PropertyType="String"/><t:Value>siyer@cccis.com</t:Value></t:ExtendedProperty><t:ExtendedProperty><t:ExtendedFieldURI PropertyTag="0xc1a" PropertyType="String"/><t:Value>Sridhar Iyer</t:Value></t:ExtendedProperty><t:ExtendedProperty><t:ExtendedFieldURI PropertyTag="0x42" PropertyType="String"/><t:Value>Sridhar Iyer</t:Value></t:ExtendedProperty><t:ExtendedProperty><t:ExtendedFieldURI DistinguishedPropertySetId="PublicStrings" PropertyName="ConversationXml.{CA2F170A-A22B-4f0a-B899-93439DEC3FBC}" PropertyType="String"/><t:Value>&lt;conversations                 xmlns="http://schemas.microsoft.com/2008/10/sip/convItems"                                 minSupportedClientVersion="3.0.0.0"&gt;&lt;conversationXml&gt;&lt;imReceived xmlns="http://schemas.microsoft.com/2008/10/sip/convItems" ts="2017-08-07T17:56:26Z" from="sip:siyer@win.cccis.com" displayName="Sridhar Iyer" firstMessage="true" type="text/html"&gt;
+&lt;messageInfo type="text/html" msgid="" sequenceid="1"&gt;&amp;lt;p style=&amp;quot;margin: 0.0px 0.0px 0.0px 0.0px; line-height: 15.0px&amp;quot;&amp;gt;&amp;lt;font face=&amp;quot;Lucida Grande&amp;quot; size=&amp;quot;3&amp;quot; color=&amp;quot;#000000&amp;quot; style=&amp;quot;font: 12.0px &amp;apos;Lucida Grande&amp;apos;; font-kerning: none; color: #000000; -webkit-text-stroke: 0px #000000&amp;quot;&amp;gt;Sir James!&amp;lt;/font&amp;gt;&amp;lt;/p&amp;gt;
+&lt;/messageInfo&gt;
+&lt;/imReceived&gt;
+&lt;imReceived xmlns="http://schemas.microsoft.com/2008/10/sip/convItems" ts="2017-08-07T17:56:37Z" from="sip:siyer@win.cccis.com" displayName="Sridhar Iyer" type="text/html"&gt;
+&lt;messageInfo type="text/html" msgid="" sequenceid="2"&gt;&amp;lt;p style=&amp;quot;margin: 0.0px 0.0px 0.0px 0.0px; line-height: 15.0px&amp;quot;&amp;gt;&amp;lt;font face=&amp;quot;Lucida Grande&amp;quot; size=&amp;quot;3&amp;quot; color=&amp;quot;#000000&amp;quot; style=&amp;quot;font: 12.0px &amp;apos;Lucida Grande&amp;apos;; font-kerning: none; color: #000000; -webkit-text-stroke: 0px #000000&amp;quot;&amp;gt;Quick check on my S02 :-)&amp;lt;/font&amp;gt;&amp;lt;/p&amp;gt;
+&lt;/messageInfo&gt;
+&lt;/imReceived&gt;
+&lt;imReceived xmlns="http://schemas.microsoft.com/2008/10/sip/convItems" ts="2017-08-07T18:31:14Z" from="sip:jmcguire@win.cccis.com" displayName="James McGuire" firstMessage="true" type="text/rtf"&gt;
+&lt;messageInfo type="text/rtf" msgid="{F2BBE9AF-2F50-4D8E-A4AA-DF886082EF16}" sequenceid="0"&gt;{\rtf1\fbidis\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Segoe UI;}{\f1\fnil Segoe UI;}}
+{\colortbl ;\red0\green0\blue0;}
+{\*\generator Riched20 15.0.4811}{\*\mmathPr\mwrapIndent1440 }\viewkind4\uc1 
+\pard\cf1\f0\fs20 Hello Sri.\f1\par
+{\*\lyncflags&amp;lt;rtf=1&amp;gt;}}
+&lt;/messageInfo&gt;
+&lt;/imReceived&gt;
+&lt;imReceived xmlns="http://schemas.microsoft.com/2008/10/sip/convItems" ts="2017-08-07T18:31:22Z" from="sip:jmcguire@win.cccis.com" displayName="James McGuire" type="text/rtf"&gt;
+&lt;messageInfo type="text/rtf" msgid="{583BF654-DDEF-4500-889C-F2A6CE67B08A}" sequenceid="0"&gt;{\rtf1\fbidis\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Segoe UI;}{\f1\fnil Segoe UI;}}
+{\colortbl ;\red0\green0\blue0;}
+{\*\generator Riched20 15.0.4811}{\*\mmathPr\mwrapIndent1440 }\viewkind4\uc1 
+\pard\cf1\f0\fs20 Sorry I have a lot going on.\f1\par
+{\*\lyncflags&amp;lt;rtf=1&amp;gt;}}
+&lt;/messageInfo&gt;
+&lt;/imReceived&gt;
+&lt;imReceived xmlns="http://schemas.microsoft.com/2008/10/sip/convItems" ts="2017-08-07T18:31:29Z" from="sip:jmcguire@win.cccis.com" displayName="James McGuire" type="text/rtf"&gt;
+&lt;messageInfo type="text/rtf" msgid="{19B7BA34-9155-46E3-87E8-350CF4EF8CA5}" sequenceid="0"&gt;{\rtf1\fbidis\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Segoe UI;}{\f1\fnil Segoe UI;}}
+{\colortbl ;\red0\green0\blue0;}
+{\*\generator Riched20 15.0.4811}{\*\mmathPr\mwrapIndent1440 }\viewkind4\uc1 
+\pard\cf1\f0\fs20 I created claim ID.\f1\par
+{\*\lyncflags&amp;lt;rtf=1&amp;gt;}}
+&lt;/messageInfo&gt;
+&lt;/imReceived&gt;
+&lt;imReceived xmlns="http://schemas.microsoft.com/2008/10/sip/convItems" ts="2017-08-07T18:31:30Z" from="sip:jmcguire@win.cccis.com" displayName="James McGuire" type="text/rtf"&gt;
+&lt;messageInfo type="text/rtf" msgid="{962DBF56-B8C9-4E57-A97A-F1FD4CFD3F53}" sequenceid="0"&gt;{\rtf1\fbidis\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil Segoe UI;}{\f1\fnil\fcharset0 Segoe UI;}}
+{\colortbl ;\red0\green0\blue0;}
+{\*\generator Riched20 15.0.4811}{\*\mmathPr\mwrapIndent1440 }\viewkind4\uc1 
+\pard\cf1\outl\f0\fs20 JamesTest08-07-17A\outl0\f1  \f0\par
+{\*\lyncflags&amp;lt;rtf=1&amp;gt;}}
+&lt;/messageInfo&gt;
+&lt;/imReceived&gt;
+&lt;imReceived xmlns="http://schemas.microsoft.com/2008/10/sip/convItems" ts="2017-08-07T18:31:39Z" from="sip:jmcguire@win.cccis.com" displayName="James McGuire" type="text/rtf"&gt;
+&lt;messageInfo type="text/rtf" msgid="{12E23BEE-5228-4929-A1EC-B57795D1F1D0}" sequenceid="0"&gt;{\rtf1\fbidis\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Segoe UI;}{\f1\fnil Segoe UI;}}
+{\colortbl ;\red0\green0\blue0;}
+{\*\generator Riched20 15.0.4811}{\*\mmathPr\mwrapIndent1440 }\viewkind4\uc1 
+\pard\cf1\f0\fs20 For APM1\f1\par
+{\*\lyncflags&amp;lt;rtf=1&amp;gt;}}
+&lt;/messageInfo&gt;
+&lt;/imReceived&gt;
+&lt;imReceived xmlns="http://schemas.microsoft.com/2008/10/sip/convItems" ts="2017-08-07T18:31:49Z" from="sip:jmcguire@win.cccis.com" displayName="James McGuire" type="text/rtf"&gt;
+&lt;messageInfo type="text/rtf" msgid="{B70D1C70-C43B-4B37-9479-005813D79F1F}" sequenceid="0"&gt;{\rtf1\fbidis\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Segoe UI;}{\f1\fnil Segoe UI;}}
+{\colortbl ;\red0\green0\blue0;}
+{\*\generator Riched20 15.0.4811}{\*\mmathPr\mwrapIndent1440 }\viewkind4\uc1 
+\pard\cf1\f0\fs20 I just uploaded an E01.\f1\par
+{\*\lyncflags&amp;lt;rtf=1&amp;gt;}}
+&lt;/messageInfo&gt;
+&lt;/imReceived&gt;
+&lt;imReceived xmlns="http://schemas.microsoft.com/2008/10/sip/convItems" ts="2017-08-07T18:31:54Z" from="sip:jmcguire@win.cccis.com" displayName="James McGuire" type="text/rtf"&gt;
+&lt;messageInfo type="text/rtf" msgid="{178EA1CB-2B29-4405-9A1F-42E59B7C2B0B}" sequenceid="0"&gt;{\rtf1\fbidis\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Segoe UI;}{\f1\fnil Segoe UI;}}
+{\colortbl ;\red0\green0\blue0;}
+{\*\generator Riched20 15.0.4811}{\*\mmathPr\mwrapIndent1440 }\viewkind4\uc1 
+\pard\cf1\f0\fs20 About to do the S01\f1\par
+{\*\lyncflags&amp;lt;rtf=1&amp;gt;}}
+&lt;/messageInfo&gt;
+&lt;/imReceived&gt;
+&lt;/conversationXml&gt;&lt;/conversations&gt;</t:Value></t:ExtendedProperty><t:ExtendedProperty><t:ExtendedFieldURI DistinguishedPropertySetId="PublicStrings" PropertyName="HistoryInfo.{553F3F08-FC28-41db-859E-63457407F806}" PropertyType="String"/><t:Value>sip:siyer@win.cccis.com</t:Value></t:ExtendedProperty><t:ExtendedProperty><t:ExtendedFieldURI DistinguishedPropertySetId="PublicStrings" PropertyName="RemotePartyDeviceUri.{12AC5838-268F-4015-BFA9-B651F9ACECDC}" PropertyType="String"/><t:Value>sip:siyer@win.cccis.com</t:Value></t:ExtendedProperty><t:ExtendedProperty><t:ExtendedFieldURI DistinguishedPropertySetId="PublicStrings" PropertyName="PreviewMessage.{55324EE5-74F0-4727-876D-20ED1469CA65}" PropertyType="String"/><t:Value>Sir James!&#xD;
+&#xD;
+ Quick check on my S02 :-)&#xD;
+&#xD;
+ / Hello Sri.&#xD;
+&#xD;
+ Sorry I have a lot going on.&#xD;
+&#xD;
+ I created claim ID.&#xD;
+&#xD;
+ JamesTest08-07-17A &#xD;
+&#xD;
+</t:Value></t:ExtendedProperty><t:ExtendedProperty><t:ExtendedFieldURI PropertyTag="0xfff" PropertyType="Binary"/><t:Value>AAAAAE4kM39zPhJCqGyxNS8Q1AYHANnx4+4JkXpKtuENXqWiIX8AAADm9Z0AAEaG3Wo01ftFpnoEP7F4oPYAA+rdmcMAAA==</t:Value></t:ExtendedProperty><t:ToRecipients><t:Mailbox><t:Name>Sridhar Iyer</t:Name><t:EmailAddress>siyer@cccis.com</t:EmailAddress><t:RoutingType>SMTP</t:RoutingType><t:MailboxType>Mailbox</t:MailboxType></t:Mailbox><t:Mailbox><t:Name>James McGuire</t:Name><t:EmailAddress>jmcguire@cccis.com</t:EmailAddress><t:RoutingType>SMTP</t:RoutingType><t:MailboxType>Mailbox</t:MailboxType></t:Mailbox></t:ToRecipients><t:ConversationIndex>AdMPpn92JwihYC9r6E+d7WZzKgDm0wABNprw</t:ConversationIndex><t:ConversationTopic>Conversation with Sridhar Iyer</t:ConversationTopic><t:From><t:Mailbox><t:Name>Sridhar Iyer</t:Name><t:EmailAddress>siyer@cccis.com</t:EmailAddress><t:RoutingType>SMTP</t:RoutingType><t:MailboxType>Mailbox</t:MailboxType></t:Mailbox></t:From><t:IsRead>true</t:IsRead></t:Message></m:Items></m:GetItemResponseMessage></m:ResponseMessages></m:GetItemResponse>
+16
+</s:Body></s:Envelope>
+0
+

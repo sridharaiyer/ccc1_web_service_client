@@ -8,6 +8,8 @@ import json
 from xmlutils import XMLUtils
 from externalassignmentws import ExternalAssignmentWS
 from zipfileutils import ZipFileUtils
+import logging
+from log_util import Logger
 
 
 parser = argparse.ArgumentParser(
@@ -59,8 +61,22 @@ parser.add_argument('--fname',
                     default=names.get_first_name(),
                     help='Owner first name')
 
+parser.add_argument('--log',
+                    dest='loglevel',
+                    action='store',
+                    type=str,
+                    choices=['INFO', 'DEBUG'],
+                    default='INFO',
+                    help='print logs')
 
 args = parser.parse_args()
+
+# ------------------------ LOGGING ------------------------------
+numeric_level = getattr(logging, args.loglevel.upper(), None)
+logger = Logger(numeric_level)
+# ------------------------ LOGGING ------------------------------
+
+logger.debug('Args = \n{}'.format(json.dumps(vars(args), indent=4)))
 
 files = FiddlerSession(args.filename)
 estimate_dict = files.estdict
@@ -69,7 +85,8 @@ old_ref_dict = files.oldrefdict
 e01_file = estimate_dict['E01']['Workfile']
 
 if args.show:
-    print(json.dumps(estimate_dict, indent=4))
+    logger.info(json.dumps(estimate_dict, indent=4))
+    pdb.set_trace()
     exit(1)
 
 # Removing the 'show' keyword from the dict as this is not required for

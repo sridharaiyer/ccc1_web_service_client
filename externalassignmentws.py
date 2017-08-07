@@ -10,6 +10,9 @@ from savefile import Save
 from timeutils import Time
 from httpclient import HttpClient
 from properties import Properties
+import logging
+
+logger = logging.getLogger()
 
 # SQL to get a random ADJ code from a list of
 # valid ADJ codes for a Company - Claim Office combination
@@ -53,7 +56,7 @@ class ExternalAssignmentWS(object):
         return bytes(self.xml)
 
     def edit_xml(self):
-        print('Preparing the {} {} XML file'.format(
+        logger.INFO('Preparing the {} {} XML file'.format(
             self.env, 'Assignment'))
 
         # Getting Adjustercode from database from office and company
@@ -64,7 +67,7 @@ class ExternalAssignmentWS(object):
         adjustercode = self.db.claimfolder.execute(newsql)[0][0]
         self.params['AdjusterCode'] = adjustercode
 
-        print('The assignment params: \n{}'.format(
+        logger.INFO('The assignment params: \n{}'.format(
             json.dumps(self.params, indent=4)))
 
         self.xml.edit_tag(multiple=True, **self.params)
@@ -106,7 +109,7 @@ class ExternalAssignmentWS(object):
         self.savefile.save_response(str(response_xml))
 
     def verify_db(self):
-        print('Start assignment creation DB verification:')
+        logger.INFO('Start assignment creation DB verification:')
         sql = """SELECT * FROM SERVICE_ORDER WHERE
                 CUST_CLM_REF_ID = '{}' AND
                 ASGN_MAINT_TYP_CD = 'A'""".format(self.claimid)

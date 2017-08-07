@@ -10,6 +10,9 @@ from timeutils import Time
 from zipfileutils import ZipFileUtils
 from header import Header
 import pdb
+import logging
+
+logger = logging.getLogger()
 
 
 class XMLBase(ABC):
@@ -48,7 +51,7 @@ class XMLBase(ABC):
 
     @abstractmethod
     def edit_xml(self):
-        print('Preparing the {} {} XML file located in {} in the fiddler session'.format(
+        logger.INFO('Preparing the {} {} XML file located in {} in the fiddler session'.format(
             self.est, self._type, self.path))
 
         for elem in self.xml.root.iterfind('.//{*}TransformationHeader'):
@@ -67,10 +70,10 @@ class XMLBase(ABC):
 
     def send_xml(self):
         self.savefile.save_input(bytes(self))
-        print('Posting XML to web service: {}'.format(self.header.get_url))
+        logger.INFO('Posting XML to web service: {}'.format(self.header.get_url))
         HttpClient.set_default_header(**self.header.header_dict)
         self.response = HttpClient().post(self.header.get_url, bytes(self))
-        print('Response for {} {} - {}'.format(self.env, self.est, self.response))
+        logger.INFO('Response for {} {} - {}'.format(self.env, self.est, self.response))
         response_xml = XMLUtils(self.response.text)
 
         self.savefile.save_response(str(response_xml))
@@ -79,11 +82,11 @@ class XMLBase(ABC):
             self.verify_db()
 
     def verify_db(self):
-        print('Start DB verification after posting StatusChange successfully')
+        logger.INFO('Start DB verification after posting StatusChange successfully')
         match_file_type = {
             'Workfile': '2',
             'DigitalImage': '3',
-            'EstimatePrintImage': '4',
+            'Estimatelogger.INFOImage': '4',
             'RelatedPriorDamagereport': '52',
             'UnrelatedPriorDamage': '6',
         }
@@ -97,8 +100,8 @@ class XMLBase(ABC):
 
         for ftype, value in match_file_type.items():
             for sql in sqls:
-                print('Executing query:')
-                print(sql.format(self.claimid, value, self.est))
+                logger.INFO('Executing query:')
+                logger.INFO(sql.format(self.claimid, value, self.est))
                 pdb.set_trace()
                 self.db.claimfolder.wait_until_exists(
                     sql.format(self.claimid, value, self.est))

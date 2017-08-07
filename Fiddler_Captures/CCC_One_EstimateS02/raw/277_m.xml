@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Session SID="277" BitFlags="9">
+  <SessionTimers ClientConnected="2017-08-07T13:41:09.0028895-05:00" ClientBeginRequest="2017-08-07T13:41:29.1018992-05:00" GotRequestHeaders="2017-08-07T13:41:29.1018992-05:00" ClientDoneRequest="2017-08-07T13:41:29.1018992-05:00" GatewayTime="0" DNSTime="0" TCPConnectTime="27" HTTPSHandshakeTime="31" ServerConnected="2017-08-07T13:41:29.1479038-05:00" FiddlerBeginRequest="2017-08-07T13:41:29.179907-05:00" ServerGotRequest="2017-08-07T13:41:29.1809071-05:00" ServerBeginResponse="2017-08-07T13:41:29.1028993-05:00" GotResponseHeaders="2017-08-07T13:41:30.3610251-05:00" ServerDoneResponse="2017-08-07T13:41:30.3960286-05:00" ClientBeginResponse="2017-08-07T13:41:30.3960286-05:00" ClientDoneResponse="2017-08-07T13:41:30.3960286-05:00" />
+  <PipeInfo CltReuse="true" />
+  <SessionFlags>
+    <SessionFlag N="x-responsebodytransferlength" V="9,927" />
+    <SessionFlag N="x-serversocket" V="REUSE ServerPipe#249REUSE ServerPipe#250REUSE ServerPipe#251REUSE ServerPipe#246REUSE ServerPipe#239REUSE ServerPipe#232REUSE ServerPipe#225REUSE ServerPipe#219REUSE ServerPipe#209REUSE ServerPipe#203REUSE ServerPipe#197REUSE ServerPipe#191REUSE ServerPipe#177*NEW*" />
+    <SessionFlag N="x-clientip" V="::ffff:127.0.0.1" />
+    <SessionFlag N="x-retryonfailedreceive" V="*************" />
+    <SessionFlag N="x-clientport" V="55191" />
+    <SessionFlag N="x-processinfo" V="iexplore:9224" />
+    <SessionFlag N="x-egressport" V="55212" />
+    <SessionFlag N="x-hostip" V="10.16.0.63" />
+  </SessionFlags>
+</Session>

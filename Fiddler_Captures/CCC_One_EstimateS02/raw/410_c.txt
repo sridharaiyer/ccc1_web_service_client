@@ -1,0 +1,17 @@
+POST https://autodiscover-s.outlook.com/autodiscover/autodiscover.xml HTTP/1.1
+Cache-Control: no-cache
+Connection: Keep-Alive
+Pragma: no-cache
+Content-Type: text/xml
+Cookie: OutlookSession="{37A56878-4F37-4754-9A69-DA8793052D1E}"
+User-Agent: Microsoft Office/15.0 (Windows NT 6.1; Microsoft Outlook 15.0.4937; Pro)
+Client-Request-Id: {7A9D2630-1B76-4642-A41D-31DF5180A197}
+X-MapiHttpCapability: 1
+Depth: 0
+X-AnchorMailbox: jmcguire@cccis.com
+X-User-Identity: jmcguire@cccis.com
+Content-Length: 351
+Host: autodiscover-s.outlook.com
+Authorization: Basic Sk1jZ3VpcmVAd2luLmNjY2lzLmNvbTpDaGFtaWVsPzA=
+
+<?xml version="1.0" encoding="utf-8"?><Autodiscover xmlns="http://schemas.microsoft.com/exchange/autodiscover/outlook/requestschema/2006"><Request><EMailAddress>jmcguire@cccis.com</EMailAddress><AcceptableResponseSchema>http://schemas.microsoft.com/exchange/autodiscover/outlook/responseschema/2006a</AcceptableResponseSchema></Request></Autodiscover>

@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Session SID="8" BitFlags="2100">
+  <SessionTimers ClientConnected="2017-08-07T13:35:28.9818908-05:00" ClientBeginRequest="2017-08-07T13:35:28.9828909-05:00" GotRequestHeaders="2017-08-07T13:35:28.9828909-05:00" ClientDoneRequest="2017-08-07T13:35:28.9828909-05:00" GatewayTime="0" DNSTime="2" TCPConnectTime="16" HTTPSHandshakeTime="48" ServerConnected="2017-08-07T13:35:29.0018928-05:00" FiddlerBeginRequest="2017-08-07T13:35:29.0018928-05:00" ServerGotRequest="2017-08-07T13:35:29.0018928-05:00" ServerBeginResponse="0001-01-01T00:00:00" GotResponseHeaders="0001-01-01T00:00:00" ServerDoneResponse="0001-01-01T00:00:00" ClientBeginResponse="2017-08-07T13:35:29.0018928-05:00" ClientDoneResponse="2017-08-07T13:35:29.0018928-05:00" />
+  <PipeInfo />
+  <TunnelInfo BytesEgress="0" BytesIngress="0" />
+  <SessionFlags>
+    <SessionFlag N="https-server-cipher" V="Aes128 128bits" />
+    <SessionFlag N="x-responsebodytransferlength" V="0" />
+    <SessionFlag N="https-server-version" V="Tls" />
+    <SessionFlag N="https-client-snihostname" V="www.google-analytics.com" />
+    <SessionFlag N="x-clientip" V="::ffff:127.0.0.1" />
+    <SessionFlag N="x-clientport" V="54948" />
+    <SessionFlag N="https-client-sessionid" V="16 7C 2F F3 F0 D7 76 43 E1 2E C2 36 A1 A5 59 7A 83 AB B9 E3 D0 EF DB A3 7E 13 28 87 91 48 E1 3B" />
+    <SessionFlag N="x-processinfo" V="iexplore:9224" />
+    <SessionFlag N="https-client-version" V="Tls" />
+    <SessionFlag N="x-egressport" V="54949" />
+    <SessionFlag N="x-hostip" V="172.217.8.174" />
+  </SessionFlags>
+</Session>

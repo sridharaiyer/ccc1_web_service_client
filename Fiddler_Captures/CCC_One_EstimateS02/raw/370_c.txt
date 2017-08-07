@@ -1,0 +1,5 @@
+GET https://odc.officeapps.live.com/odc/emailhrd/getfederationprovider?domain=win.cccis.com HTTP/1.1
+Connection: Keep-Alive
+User-Agent: Microsoft Office/15.0 (Windows NT 6.1; Microsoft Outlook 15.0.4937; Pro)
+Host: odc.officeapps.live.com
+

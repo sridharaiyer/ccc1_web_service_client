@@ -1,0 +1,5 @@
+GET https://servicesqa.mycccportal.com/basic/services/NtmgtSvc/v1/getdocuments?licensenumber=302919 HTTP/1.1
+Authorization: Basic amFtZXMxOTA3OlBhc3N3b3JkMQ==
+Host: servicesqa.mycccportal.com
+Connection: Keep-Alive
+

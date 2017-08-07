@@ -1,0 +1,12 @@
+HTTP/1.1 200 OK
+Date: Mon, 07 Aug 2017 18:46:36 GMT
+Server: Oracle-HTTP-Server-11g
+Content-Length: 1977
+X-ORACLE-DMS-ECID: 005LYt4CVvYFw00Fzzx0g00004gl000Zvx
+X-ORACLE-DMS-RID: 0:1
+Keep-Alive: timeout=5, max=98
+Connection: Keep-Alive
+Content-Type: text/xml; charset=UTF-8
+Content-Language: en
+
+<S:Envelope xmlns:env="http://schemas.xmlsoap.org/soap/envelope/" xmlns:S="http://schemas.xmlsoap.org/soap/envelope/"><env:Header/><S:Body><ns3:PutPendingEventResponse xmlns:ns4="http://services.mycccportal.com/SOA/fault/v1" xmlns:ns3="http://services.mycccportal.com/SOA/EventService" xmlns:ns2="http://services.mycccportal.com/SOA/commontypes" xmlns="http://services.mycccportal.com/SOA/normalizedmessage/v1"><NormalizedMessage><BaseDescriptor><MsgID>8fbd4b25-3eb7-4f69-955d-86903d8a6343</MsgID><MsgType>Events</MsgType><MsgMode>Request</MsgMode><SourceTimeStamp>2017-08-07T13:46:11.4101272-05:00</SourceTimeStamp><SourceApplicationID>PTHWY</SourceApplicationID><SourceUserID>james1907</SourceUserID><SequenceTimeStamp>2017-08-07T18:46:39Z</SequenceTimeStamp></BaseDescriptor><RoutingDescriptor><ns2:RoutingInfo><ns2:ApplicationName>PTHWY</ns2:ApplicationName><ns2:ApplicationVersion>4.50</ns2:ApplicationVersion><ns2:PublishTimeStamp>2017-08-07T13:46:11.4101272-05:00</ns2:PublishTimeStamp></ns2:RoutingInfo><ns2:RoutingInfo><ns2:ApplicationName>SOAComms</ns2:ApplicationName><ns2:ApplicationCode>SOACM</ns2:ApplicationCode><ns2:ApplicationVersion>1.0</ns2:ApplicationVersion><ns2:PublishTimeStamp>2017-08-07T18:46:39Z</ns2:PublishTimeStamp><ns2:Status>true</ns2:Status><ns2:StatusDescription>True</ns2:StatusDescription></ns2:RoutingInfo></RoutingDescriptor><ClaimDescriptor><ClaimReferenceID>JamesTest08-07-17B</ClaimReferenceID><ClaimTypeCode>VE</ClaimTypeCode><InsuranceCompany><VantiveCode>APM1</VantiveCode></InsuranceCompany><ClaimOffice><Code>APMC</Code></ClaimOffice><AssigneeDescriptor><Appraiser><AppraiserType>DRP</AppraiserType><AppraiserSSN>james1</AppraiserSSN><AppraiserMailboxID/></Appraiser></AssigneeDescriptor></ClaimDescriptor><Payload><Reference>http://services.mycccportal.com/Events/d5998850-4f18-4149-afee-a529631d9937/c703c40e-7506-4cbf-88a4-c2a3c4655140</Reference></Payload></NormalizedMessage></ns3:PutPendingEventResponse></S:Body></S:Envelope>

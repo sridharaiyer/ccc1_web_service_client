@@ -1,0 +1,35 @@
+CONNECT d.dropbox.com:443 HTTP/1.1
+Host: d.dropbox.com
+Connection: keep-alive
+
+A SSLv3-compatible ClientHello handshake was found. Fiddler extracted the parameters below.
+
+Version: 3.3 (TLS/1.2)
+Random: 18 C8 4D E1 5F 89 AB 66 53 C0 6B B9 FC BE 09 A7 99 E0 FB BE C4 77 5C CB 2A A7 F8 86 FB B6 A3 D1
+"Time": 10/12/2089 10:58:16 AM
+SessionID: empty
+Extensions: 
+	server_name	d.dropbox.com
+	ec_point_formats	uncompressed [0x0], ansiX962_compressed_prime [0x1], ansiX962_compressed_char2  [0x2]
+	elliptic_curves	secp256r1 [0x17], secp521r1 [0x19], unknown [0x1C), unknown [0x1B), secp384r1 [0x18], unknown [0x1A), secp256k1 [0x16], sect571r1 [0xE], sect571k1 [0xD], sect409k1 [0xB], sect409r1 [0xC], sect283k1 [0x9], sect283r1 [0xA]
+	SessionTicket	empty
+	signature_algs	sha512_rsa, sha512_dsa, sha512_ecdsa, sha384_rsa, sha384_dsa, sha384_ecdsa, sha256_rsa, sha256_dsa, sha256_ecdsa, sha224_rsa, sha224_dsa, sha224_ecdsa, sha1_rsa, sha1_dsa, sha1_ecdsa
+Ciphers: 
+	[C030]	TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384
+	[C028]	TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384
+	[C014]	TLS1_CK_ECDHE_RSA_WITH_AES_256_CBC_SHA
+	[C02F]	TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
+	[C027]	TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256
+	[C013]	TLS1_CK_ECDHE_RSA_WITH_AES_128_CBC_SHA
+	[009F]	TLS_DHE_RSA_WITH_AES_256_GCM_SHA384
+	[006B]	TLS_DHE_RSA_WITH_AES_256_CBC_SHA256
+	[0039]	TLS_DHE_RSA_WITH_AES_256_SHA
+	[009E]	TLS_DHE_RSA_WITH_AES_128_GCM_SHA256
+	[0067]	TLS_DHE_RSA_WITH_AES_128_CBC_SHA256
+	[0033]	TLS_DHE_RSA_WITH_AES_128_SHA
+	[00FF]	TLS_EMPTY_RENEGOTIATION_INFO_SCSV
+
+Compression: 
+	[00]	NO_COMPRESSION
+
+
