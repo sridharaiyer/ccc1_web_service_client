@@ -1,0 +1,31 @@
+HTTP/1.0 200 Connection Established
+FiddlerGateway: Direct
+StartTime: 15:12:25.555
+Connection: close
+
+Encrypted HTTPS traffic flows through this CONNECT tunnel. HTTPS Decryption is enabled in Fiddler, so decrypted sessions running in this tunnel will be shown in the Web Sessions list.
+
+Secure Protocol: 3072
+Cipher: Aes256 256bits
+Hash Algorithm: Sha384 384bits
+Key Exchange: ECDHE_RSA (0xae06) 384bits
+
+== Server Certificate ==========
+[Subject]
+  CN=smartscreen.microsoft.com
+
+[Issuer]
+  CN=Microsoft IT SSL SHA2, OU=Microsoft IT, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
+
+[Serial Number]
+  5A00038C3348CC0D40FA5F0936000100038C33
+
+[Not Before]
+  06/06/2016 2:56:27 PM
+
+[Not After]
+  03/06/2018 1:56:27 PM
+
+[Thumbprint]
+  3581F712CB463F0D92036F27AD5AAD3CEE8A4259
+

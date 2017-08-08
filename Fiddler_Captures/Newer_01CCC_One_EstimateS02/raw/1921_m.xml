@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Session SID="1921" BitFlags="2100">
+  <SessionTimers ClientConnected="2017-08-07T15:10:55.2146909-05:00" ClientBeginRequest="2017-08-07T15:10:55.2156921-05:00" GotRequestHeaders="2017-08-07T15:10:55.2156921-05:00" ClientDoneRequest="2017-08-07T15:10:55.2156921-05:00" GatewayTime="0" DNSTime="0" TCPConnectTime="434" HTTPSHandshakeTime="269" ServerConnected="2017-08-07T15:10:55.6502129-05:00" FiddlerBeginRequest="2017-08-07T15:10:55.6502129-05:00" ServerGotRequest="2017-08-07T15:10:55.6502129-05:00" ServerBeginResponse="0001-01-01T00:00:00" GotResponseHeaders="0001-01-01T00:00:00" ServerDoneResponse="0001-01-01T00:00:00" ClientBeginResponse="2017-08-07T15:10:55.6502129-05:00" ClientDoneResponse="2017-08-07T15:10:55.6502129-05:00" />
+  <PipeInfo />
+  <TunnelInfo BytesEgress="0" BytesIngress="0" />
+  <SessionFlags>
+    <SessionFlag N="https-server-cipher" V="Aes256 256bits" />
+    <SessionFlag N="x-responsebodytransferlength" V="0" />
+    <SessionFlag N="https-server-version" V="Tls" />
+    <SessionFlag N="https-client-snihostname" V="watson.microsoft.com" />
+    <SessionFlag N="x-clientip" V="::ffff:127.0.0.1" />
+    <SessionFlag N="x-clientport" V="64349" />
+    <SessionFlag N="https-client-sessionid" V="empty" />
+    <SessionFlag N="x-processinfo" V="svchost:1044" />
+    <SessionFlag N="https-client-version" V="Tls" />
+    <SessionFlag N="x-egressport" V="64350" />
+    <SessionFlag N="x-hostip" V="65.55.252.71" />
+  </SessionFlags>
+</Session>

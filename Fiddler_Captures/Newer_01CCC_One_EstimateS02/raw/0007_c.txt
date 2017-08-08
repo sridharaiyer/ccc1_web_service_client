@@ -1,0 +1,4 @@
+GET https://servicesqa.aws.mycccportal.com/gateway/services/Login HTTP/1.1
+Host: servicesqa.aws.mycccportal.com
+Connection: Keep-Alive
+

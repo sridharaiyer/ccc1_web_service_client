@@ -1,0 +1,7 @@
+HEAD http://redirector.gvt1.com/edgedl/release2/AICu7Lg4Pieu_1231/471_all_sthset.crx2 HTTP/1.1
+Accept: */*
+Accept-Encoding: identity
+User-Agent: Microsoft BITS/7.5
+Connection: Keep-Alive
+Host: redirector.gvt1.com
+

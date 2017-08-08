@@ -1,0 +1,16 @@
+HTTP/1.1 302 Found
+P3P: policyref="https://googleads.g.doubleclick.net/pagead/gcn_p3p_.xml", CP="CURa ADMa DEVa TAIo PSAo PSDo OUR IND UNI PUR INT DEM STA PRE COM NAV OTC NOI DSP COR"
+Timing-Allow-Origin: *
+Date: Mon, 07 Aug 2017 20:05:50 GMT
+Pragma: no-cache
+Expires: Fri, 01 Jan 1990 00:00:00 GMT
+Cache-Control: no-cache, must-revalidate
+Follow-Only-When-Prerender-Shown: 1
+Location: https://ad.doubleclick.net/activity;dc_pre=CKuTuvz1xdUCFUGbaQodguYI2w;src=3135983;type=autot826;cat=searc192;ord=8387127603
+Content-Type: text/html; charset=UTF-8
+X-Content-Type-Options: nosniff
+Server: cafe
+Content-Length: 0
+X-XSS-Protection: 1; mode=block
+Alt-Svc: quic=":443"; ma=2592000; v="39,38,37,36,35"
+

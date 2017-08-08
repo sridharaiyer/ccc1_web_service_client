@@ -1,0 +1,12 @@
+HTTP/1.1 204 No Content
+Cache-Control: private, no-cache, no-store
+Content-Length: 0
+Content-Type: image/gif
+Date: Mon, 07 Aug 2017 20:05:51 GMT
+P3P: policyref="https://cdn.krxd.net/kruxcontent/p3p.xml", CP="NON DSP COR NID OUR DEL SAM OTR UNR COM NAV INT DEM CNT STA PRE LOC OTC"
+Server: Apache
+Set-Cookie: _kuid_=DNT; path=/; expires=Fri, 01-Jan-38 00:00:00 GMT; domain=.krxd.net
+X-Request-Time: D=213 t=1502136351358913
+X-Served-By: beacon-a253.krxd.net
+Connection: keep-alive
+

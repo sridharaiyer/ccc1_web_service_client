@@ -1,0 +1,13 @@
+GET https://3003809.fls.doubleclick.net/activityi;dc_pre=COTlmv_1xdUCFU0agQodZFoPjA;src=3003809;type=globa034;cat=unive623;ord=2530206303609.9365 HTTP/1.1
+Host: 3003809.fls.doubleclick.net
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36
+X-Client-Data: CIm2yQEIpLbJAQjBtskBCO2XygEI+pzKAQipncoB
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8
+DNT: 1
+Referer: https://www.autotrader.com/cars-for-sale/vehicledetails.xhtml?listingId=421482755&zip=60652&referrer=%2Fcars-for-sale%2Fsearchresults.xhtml%3Fzip%3D60652%26startYear%3D1981%26sortBy%3DderivedpriceDESC%26incremental%3Dall%26firstRecord%3D0%26endYear%3D2016%26modelCodeList%3DVOLT%26makeCodeList%3DCHEV%26searchRadius%3D0&startYear=1981&numRecords=25&firstRecord=0&endYear=2016&modelCodeList=VOLT&makeCodeList=CHEV&searchRadius=0&makeCode1=CHEV&modelCode1=VOLT
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.8
+Cookie: id=22b34e65360d00a6||t=1480458270|et=730|cs=002213fd485afe177673958a88; __gads=ID=3370d3d5328207d9:T=1481752497:S=ALNI_Mbt1G5FVGtNGLrLq5APnGDWmgiBzg; IDE=AHWqTUn8VNea70iycoL66B7NLYGuE6nvEmzx2HARZFKouJfsElqkeWSODQ; DSID=ADyxukvbcpLxxSZpU156HnttmXKBlAfEuZkciu3xWzf90EEXKEtmjD6i3r_DRyZxzfHstkdcUmOfDiQ0aNHXNZqfcpn0rsSZVIDhoIgaL1DzOebhQXymQVQ
+

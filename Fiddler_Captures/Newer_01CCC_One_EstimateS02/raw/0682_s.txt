@@ -1,0 +1,10 @@
+HTTP/1.1 200 OK
+Content-Length: 0
+Server: nginx/1.10.2
+X-Trace-Token: ip-172-31-3-50-34653219
+Expires: Mon, 07 Aug 2017 20:05:34 GMT
+Cache-Control: max-age=0, no-cache, no-store
+Pragma: no-cache
+Date: Mon, 07 Aug 2017 20:05:34 GMT
+Connection: keep-alive
+

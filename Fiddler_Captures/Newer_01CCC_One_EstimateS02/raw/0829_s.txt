@@ -1,0 +1,31 @@
+HTTP/1.1 200 Connection Established
+FiddlerGateway: Direct
+StartTime: 15:05:37.616
+Connection: close
+
+Encrypted HTTPS traffic flows through this CONNECT tunnel. HTTPS Decryption is enabled in Fiddler, so decrypted sessions running in this tunnel will be shown in the Web Sessions list.
+
+Secure Protocol: 3072
+Cipher: Aes256 256bits
+Hash Algorithm: Sha1 160bits
+Key Exchange: RsaKeyX 2048bits
+
+== Server Certificate ==========
+[Subject]
+  CN=bs.serving-sys.com, OU=Web, O=Sizmek Technologies Inc., L=New York, S=New York, C=US
+
+[Issuer]
+  CN=thawte SSL CA - G2, O="thawte, Inc.", C=US
+
+[Serial Number]
+  06077E1317D63EB031B9C0D19E36A569
+
+[Not Before]
+  08/01/2017 7:00:00 PM
+
+[Not After]
+  05/06/2018 6:59:59 PM
+
+[Thumbprint]
+  64BDD164D5756C29CE51C26A7E352C197B42BFF7
+

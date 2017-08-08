@@ -1,0 +1,12 @@
+HTTP/1.1 302 Found
+Date: Mon, 07 Aug 2017 20:05:59 GMT
+P3P: policyref="https://policies.yahoo.com/w3c/p3p.xml", CP="CAO DSP COR CUR ADM DEV TAI PSA PSD IVAi IVDi CONi TELo OTPi OUR DELi SAMi OTRi UNRi PUBi IND PHY ONL UNI PUR FIN COM NAV INT DEM CNT STA POL HEA PRE LOC GOV"
+Location: https://px.owneriq.net/ermcm?xid=gWbp1WY7sVMw_UnLBFCSgumg&t=2&id=1722475&piggyback=http://ads.yahoo.com/cms/v1?esig=1~1d05283fd37fe3ca8c3fbe8814c9bf54208864b5&amp;nwid=10000482661&amp;sigv=1
+Cache-Control: private
+Content-Length: 0
+Content-Type: text/plain; charset=utf-8
+Age: 0
+Connection: keep-alive
+Strict-Transport-Security: max-age=0
+Server: ATS
+

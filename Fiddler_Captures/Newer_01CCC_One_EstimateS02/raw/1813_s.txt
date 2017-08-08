@@ -1,0 +1,31 @@
+HTTP/1.1 200 Connection Established
+FiddlerGateway: Direct
+StartTime: 15:08:16.946
+Connection: close
+
+Encrypted HTTPS traffic flows through this CONNECT tunnel. HTTPS Decryption is enabled in Fiddler, so decrypted sessions running in this tunnel will be shown in the Web Sessions list.
+
+Secure Protocol: Tls
+Cipher: Aes128 128bits
+Hash Algorithm: Sha1 160bits
+Key Exchange: ECDHE_RSA (0xae06) 256bits
+
+== Server Certificate ==========
+[Subject]
+  CN=*.oeconnection.com, OU=Domain Control Validated
+
+[Issuer]
+  CN=Go Daddy Secure Certificate Authority - G2, OU=http://certs.godaddy.com/repository/, O="GoDaddy.com, Inc.", L=Scottsdale, S=Arizona, C=US
+
+[Serial Number]
+  4CD3EB73D2FCF974
+
+[Not Before]
+  04/03/2017 3:22:01 PM
+
+[Not After]
+  07/01/2020 7:50:51 AM
+
+[Thumbprint]
+  AC85954F49C699A357F385E088ED326932C22A4E
+

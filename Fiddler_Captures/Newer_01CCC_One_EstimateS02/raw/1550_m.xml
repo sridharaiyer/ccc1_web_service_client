@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Session SID="1550" BitFlags="2100">
+  <SessionTimers ClientConnected="2017-08-07T15:05:56.2292117-05:00" ClientBeginRequest="2017-08-07T15:05:56.2372365-05:00" GotRequestHeaders="2017-08-07T15:05:56.2372365-05:00" ClientDoneRequest="2017-08-07T15:05:56.2372365-05:00" GatewayTime="0" DNSTime="0" TCPConnectTime="138" HTTPSHandshakeTime="166" ServerConnected="2017-08-07T15:05:56.3766674-05:00" FiddlerBeginRequest="2017-08-07T15:05:56.3766674-05:00" ServerGotRequest="2017-08-07T15:05:56.3766674-05:00" ServerBeginResponse="0001-01-01T00:00:00" GotResponseHeaders="0001-01-01T00:00:00" ServerDoneResponse="0001-01-01T00:00:00" ClientBeginResponse="2017-08-07T15:05:56.3766674-05:00" ClientDoneResponse="2017-08-07T15:05:56.3766674-05:00" />
+  <PipeInfo />
+  <TunnelInfo BytesEgress="0" BytesIngress="0" />
+  <SessionFlags>
+    <SessionFlag N="https-server-cipher" V="Aes128 128bits" />
+    <SessionFlag N="x-responsebodytransferlength" V="0" />
+    <SessionFlag N="https-server-version" V="3072" />
+    <SessionFlag N="https-client-snihostname" V="sync.adaptv.advertising.com" />
+    <SessionFlag N="x-clientip" V="::ffff:127.0.0.1" />
+    <SessionFlag N="x-clientport" V="63994" />
+    <SessionFlag N="https-client-sessionid" V="50 10 00 00 B2 E5 16 62 34 C5 5A 3A 66 76 62 4F 43 F5 AF 13 1D B4 06 05 3A 8F 93 4F FD 1B 7C 16" />
+    <SessionFlag N="x-processinfo" V="chrome:8036" />
+    <SessionFlag N="https-client-version" V="3072" />
+    <SessionFlag N="x-egressport" V="63996" />
+    <SessionFlag N="x-hostip" V="52.71.180.249" />
+  </SessionFlags>
+</Session>

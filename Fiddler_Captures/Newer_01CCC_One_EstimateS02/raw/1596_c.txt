@@ -1,0 +1,11 @@
+GET https://ad.amgdgt.com/ads/?t=ap&px=59548&rnd=[cachebuster] HTTP/1.1
+Host: ad.amgdgt.com
+Connection: keep-alive
+User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36
+Accept: image/webp,image/apng,image/*,*/*;q=0.8
+DNT: 1
+Referer: https://3003809.fls.doubleclick.net/activityi;dc_pre=CODgmv_1xdUCFQMLgQodcpMPMA;src=3003809;type=fycdi558;cat=vdpzz092;u2=60652;u4=421482755;u5=HATCH;u6=CHEV;u7=VOLT;u8=2016;u9=;u10=NEW;u11=Iridescent%20Pearl%20Hatchback;u12=40845;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;ord=3596438992629.03
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.8
+Cookie: ID=AAAAAQAUciLXRN7OUml6x.j8gB30lVpAuS0GAAoHGLnYx_6EKxIkMGNkZjgwOGQtMGU5MC00ODhjLThhNjAtY2U3ZGQxYzg3YmUzGJHZ9u_bKyCR2fbv2ysqADIAOOStm6i7K0AASNXb8pjcK1juiaSQ1Cs-; LO=AAAAAQAUDXZIrY7lefACseihp.vRkQy8wyUGABIdEg0yMDcuMTQwLjYwLjY3GgozMjA4NzkwMjQ2IAAaZRIDdXNhGgJpbCIHY2hpY2FnbyoJYnJvYWRiYW5kMgM2MDI6BzQxLjg3ODJCCC04Ny42MjU0SgE2UgMzMTJaBC01MDBiAXlqBTYwNjU0chFhdHQgc2VydmljZXMgaW5jLnoAggEA; UA=AAAAAQAUB3cs7tvHFj1D6Quvz9l10qjnl7AGA3gB4.IUYFO41Hnp_W1tKX2Fu1sENHo_8hkwWCkLMEgwKEw.KKWx.LeakagQy9Gdq5mlGBmVuP7DACNQw4pjAhpXmvjhGl7ekdJY0asO0rB41wZsGnYDNXxH2PD6hJTG_.kqYBv2YdigJCHEsugrh4EUE9BmjtnTfzCCTNVi4mbWYgAAz4pGsA--
+

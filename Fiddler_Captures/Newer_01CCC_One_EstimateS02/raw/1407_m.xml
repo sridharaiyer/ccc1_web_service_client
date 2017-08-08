@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Session SID="1407" BitFlags="2100">
+  <SessionTimers ClientConnected="2017-08-07T15:05:51.2809194-05:00" ClientBeginRequest="2017-08-07T15:05:51.2839287-05:00" GotRequestHeaders="2017-08-07T15:05:51.2839287-05:00" ClientDoneRequest="2017-08-07T15:05:51.286938-05:00" GatewayTime="0" DNSTime="0" TCPConnectTime="97" HTTPSHandshakeTime="312" ServerConnected="2017-08-07T15:05:51.3892542-05:00" FiddlerBeginRequest="2017-08-07T15:05:51.3892542-05:00" ServerGotRequest="2017-08-07T15:05:51.3892542-05:00" ServerBeginResponse="0001-01-01T00:00:00" GotResponseHeaders="0001-01-01T00:00:00" ServerDoneResponse="0001-01-01T00:00:00" ClientBeginResponse="2017-08-07T15:05:51.3892542-05:00" ClientDoneResponse="2017-08-07T15:05:51.3892542-05:00" />
+  <PipeInfo />
+  <TunnelInfo BytesEgress="0" BytesIngress="0" />
+  <SessionFlags>
+    <SessionFlag N="https-server-cipher" V="Aes128 128bits" />
+    <SessionFlag N="x-responsebodytransferlength" V="0" />
+    <SessionFlag N="https-server-version" V="3072" />
+    <SessionFlag N="https-client-snihostname" V="cdn.speedshiftmedia.com" />
+    <SessionFlag N="x-clientip" V="::ffff:127.0.0.1" />
+    <SessionFlag N="x-clientport" V="63852" />
+    <SessionFlag N="https-client-sessionid" V="4D 12 00 00 37 A2 54 F0 E2 AB 39 2B CA 24 DE DE D4 C3 57 7A 00 1B B8 82 86 C9 65 3D 04 73 09 98" />
+    <SessionFlag N="x-processinfo" V="chrome:8036" />
+    <SessionFlag N="https-client-version" V="3072" />
+    <SessionFlag N="x-egressport" V="63856" />
+    <SessionFlag N="x-hostip" V="52.84.76.83" />
+  </SessionFlags>
+</Session>

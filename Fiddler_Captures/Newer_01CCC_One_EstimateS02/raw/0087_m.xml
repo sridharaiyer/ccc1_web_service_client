@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Session SID="87" BitFlags="2100">
+  <SessionTimers ClientConnected="2017-08-07T15:04:25.2674138-05:00" ClientBeginRequest="2017-08-07T15:04:25.2674138-05:00" GotRequestHeaders="2017-08-07T15:04:25.2674138-05:00" ClientDoneRequest="2017-08-07T15:04:25.2674138-05:00" GatewayTime="0" DNSTime="0" TCPConnectTime="223" HTTPSHandshakeTime="463" ServerConnected="2017-08-07T15:04:25.48649-05:00" FiddlerBeginRequest="2017-08-07T15:04:25.48649-05:00" ServerGotRequest="2017-08-07T15:04:25.48649-05:00" ServerBeginResponse="0001-01-01T00:00:00" GotResponseHeaders="0001-01-01T00:00:00" ServerDoneResponse="0001-01-01T00:00:00" ClientBeginResponse="2017-08-07T15:04:25.48649-05:00" ClientDoneResponse="2017-08-07T15:04:25.48649-05:00" />
+  <PipeInfo />
+  <TunnelInfo BytesEgress="0" BytesIngress="0" />
+  <SessionFlags>
+    <SessionFlag N="https-server-cipher" V="Aes256 256bits" />
+    <SessionFlag N="x-responsebodytransferlength" V="0" />
+    <SessionFlag N="https-server-version" V="3072" />
+    <SessionFlag N="https-client-snihostname" V="urs.microsoft.com" />
+    <SessionFlag N="x-clientip" V="::ffff:127.0.0.1" />
+    <SessionFlag N="x-clientport" V="62662" />
+    <SessionFlag N="https-client-sessionid" V="61 32 00 00 20 4B 7D 2B A0 6B 09 84 AB FB 3E A0 7A 0F 66 BD 98 37 6B 89 E4 F2 28 D5 D4 E0 1B 1A" />
+    <SessionFlag N="x-processinfo" V="iexplore:8772" />
+    <SessionFlag N="https-client-version" V="3072" />
+    <SessionFlag N="x-egressport" V="62663" />
+    <SessionFlag N="x-hostip" V="65.52.235.123" />
+  </SessionFlags>
+</Session>

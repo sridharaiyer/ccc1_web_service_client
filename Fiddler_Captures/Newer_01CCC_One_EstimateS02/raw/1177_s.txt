@@ -1,0 +1,10 @@
+HTTP/1.1 200 OK
+Content-Type: application/json
+Date: Mon, 07 Aug 2017 20:05:45 GMT
+Server: Apache
+X-APBench: 0.0074629783630371
+X-APCache-hit: 1
+Content-Length: 1331
+Connection: keep-alive
+
+AP_AT_getResponder({"BackupGraphicPath":"","IntroCreativePath":"","BackupGraphicUrl":"","BackupGraphicID":"","IntroCreativeID":"","IntroCreativeURL":"","IntroDelay":"0","ProxyDomain":"","ClickThruAppend":null,"ThirdPartyTrackingURL":null,"AdID":"0A9F2DDF0f0ae2042AGXFE480C7C","AdvertiserID":"@201406164379493348203045486","PublisherID":"C0A801C3141eb18B7CnOy3BADDFC","Status":"Active","CookieTagging":"0","PixelTracking":"none","EscapeClickURL":"1","AdTypeID":"CE7419990c99d24F28JOG12411A4","ShortName":"srp","FlashVersionRequired":"10","Width":"160","Height":"600","CDNSubdomain":"cdn","CDNPath":"","SSLCDNPath":null,"AnimationDelay":"15","ClickWindow":"_blank","UseGFU":"1","UTMOverride":null,"GFUDelay":null,"HTMLBackupType":"srp","HTMLBackupStatus":"Active","HTMLDeployType":"JS","HTMLWidth":"728","HTMLHeight":"90","fileName":"\/library\/templates\/srp_160x600.swf","subdomain":"adserving","adTagID":"GF2017011817370270d701aba35c","trackingID":"20170807010545ec2999c9972911","AP_Guid":"1502136344014155209031096687","jsonp":"jsonp1502136344016189923385392811","AP_Params":null,"ip":"207.140.60.67","ap_div_id":"","id_unique_rand":"","ap_script_id":"script_apGF2017011817370270d701aba35c_56671100790510","country_code":"US","region":"IL","city":"Chicago","latitude":41.9224,"longitude":-87.6524,"UserGuid":"","do_not_track":1})

@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Session SID="1721" BitFlags="2100">
+  <SessionTimers ClientConnected="2017-08-07T15:06:28.9041911-05:00" ClientBeginRequest="2017-08-07T15:06:28.9072004-05:00" GotRequestHeaders="2017-08-07T15:06:28.9072004-05:00" ClientDoneRequest="2017-08-07T15:06:28.9072004-05:00" GatewayTime="0" DNSTime="0" TCPConnectTime="168" HTTPSHandshakeTime="329" ServerConnected="2017-08-07T15:06:29.0767243-05:00" FiddlerBeginRequest="2017-08-07T15:06:29.0767243-05:00" ServerGotRequest="2017-08-07T15:06:29.0767243-05:00" ServerBeginResponse="0001-01-01T00:00:00" GotResponseHeaders="0001-01-01T00:00:00" ServerDoneResponse="0001-01-01T00:00:00" ClientBeginResponse="2017-08-07T15:06:29.0767243-05:00" ClientDoneResponse="2017-08-07T15:06:29.0767243-05:00" />
+  <PipeInfo />
+  <TunnelInfo BytesEgress="0" BytesIngress="0" />
+  <SessionFlags>
+    <SessionFlag N="https-server-cipher" V="Aes256 256bits" />
+    <SessionFlag N="x-responsebodytransferlength" V="0" />
+    <SessionFlag N="https-server-version" V="Tls" />
+    <SessionFlag N="https-client-snihostname" V="webpoolblu0b09.infra.lync.com" />
+    <SessionFlag N="x-clientip" V="::ffff:127.0.0.1" />
+    <SessionFlag N="x-clientport" V="64125" />
+    <SessionFlag N="https-client-sessionid" V="9F 49 00 00 03 9A B7 30 8D 7D 02 F0 D8 77 F8 53 C1 F2 55 28 3E F9 36 62 0C B8 74 10 7B 27 45 42" />
+    <SessionFlag N="x-processinfo" V="lync:5400" />
+    <SessionFlag N="https-client-version" V="Tls" />
+    <SessionFlag N="x-egressport" V="64126" />
+    <SessionFlag N="x-hostip" V="52.112.64.161" />
+  </SessionFlags>
+</Session>

@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Session SID="1634" BitFlags="2100">
+  <SessionTimers ClientConnected="2017-08-07T15:05:59.3287907-05:00" ClientBeginRequest="2017-08-07T15:05:59.3348093-05:00" GotRequestHeaders="2017-08-07T15:05:59.3348093-05:00" ClientDoneRequest="2017-08-07T15:05:59.3358124-05:00" GatewayTime="0" DNSTime="0" TCPConnectTime="12" HTTPSHandshakeTime="168" ServerConnected="2017-08-07T15:05:59.3488527-05:00" FiddlerBeginRequest="2017-08-07T15:05:59.3488527-05:00" ServerGotRequest="2017-08-07T15:05:59.3488527-05:00" ServerBeginResponse="0001-01-01T00:00:00" GotResponseHeaders="0001-01-01T00:00:00" ServerDoneResponse="0001-01-01T00:00:00" ClientBeginResponse="2017-08-07T15:05:59.3488527-05:00" ClientDoneResponse="2017-08-07T15:05:59.3488527-05:00" />
+  <PipeInfo />
+  <TunnelInfo BytesEgress="0" BytesIngress="0" />
+  <SessionFlags>
+    <SessionFlag N="https-server-cipher" V="Aes256 256bits" />
+    <SessionFlag N="x-responsebodytransferlength" V="0" />
+    <SessionFlag N="https-server-version" V="3072" />
+    <SessionFlag N="https-client-snihostname" V="images.autotrader.com" />
+    <SessionFlag N="x-clientip" V="::ffff:127.0.0.1" />
+    <SessionFlag N="x-clientport" V="64059" />
+    <SessionFlag N="https-client-sessionid" V="68 28 00 00 A9 A7 33 07 A2 12 E0 DA 8F D2 85 72 D2 C0 32 9F 63 F0 E2 31 B8 89 A0 28 53 79 B5 21" />
+    <SessionFlag N="x-processinfo" V="chrome:8036" />
+    <SessionFlag N="https-client-version" V="3072" />
+    <SessionFlag N="x-egressport" V="64063" />
+    <SessionFlag N="x-hostip" V="23.202.232.207" />
+  </SessionFlags>
+</Session>

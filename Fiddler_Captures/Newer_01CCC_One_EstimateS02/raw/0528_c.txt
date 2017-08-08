@@ -1,0 +1,13 @@
+GET https://pagead2.googlesyndication.com/activeview?avi=BAUcF9ceIWZWmCIPcBozumvgGAAAAABABOAHIAQnAAgLgAgDgBAGgBhbSCAUIgCEQAQ&cid=CAASEuRoAXzvux9yUz6HTZVZBgxslg&id=osdtos&ti=1&r=u&adk=4138657112&tt=9960&bs=1583,770&mtos=12793,12793,12793,12793,12793&tos=12793,0,0,0,0&p=158,303,408,1273&rs=3&ht=0&tfs=83&tls=12876&mc=1&lte=1&bas=0&bac=0&la=1&bos=1600,860&ps=1583,2982&ss=1600,900&pt=2916&deb=1-3-3-76-109-4&tvt=12853&avms=geo&uc=208&tgt=DIV&cl=1&cec=5&clc=1&cac=0&cd=970x250 HTTP/1.1
+Host: pagead2.googlesyndication.com
+Connection: keep-alive
+Cache-Control: max-age=0
+User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36
+X-Client-Data: CIm2yQEIpLbJAQjBtskBCO2XygEI+pzKAQipncoB
+Accept: */*
+DNT: 1
+Referer: https://www.autotrader.com/?zip=60652&makeCodeList=CHEV&modelCodeList=VOLT
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.8
+Cookie: __gads=ID=954b866e438ab23d:T=1481055403:S=ALNI_MYMj4sS6z6jWEGMXe9huNdrqgIr_g; __qca=P0-417283369-1484686818872
+

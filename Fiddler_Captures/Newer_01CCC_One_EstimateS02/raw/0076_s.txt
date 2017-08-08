@@ -1,0 +1,10 @@
+HTTP/1.1 200 OK
+Cache-Control: private
+Content-Length: 720
+Content-Type: text/xml; charset=utf-8
+X-MS-Server-Fqdn: BLU0B09FES04.infra.lync.com
+X-MS-Correlation-Id: aa297abd-75aa-48ee-8bd2-936bb45e9464
+x-ms-client-request-id: AAB78D8C-1FE1-4DC8-89B5-C180C163FA7D
+Date: Mon, 07 Aug 2017 20:04:18 GMT
+
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/" xmlns:a="http://www.w3.org/2005/08/addressing"><s:Header><a:Action s:mustUnderstand="1">DistributionListExpander/IAddressBook/SearchAbEntryResponse</a:Action><a:RelatesTo>urn:uuid:eb8bc4fc-f95d-446d-ad54-a4280ec72af8</a:RelatesTo></s:Header><s:Body><SearchAbEntryResponse xmlns="DistributionListExpander"><SearchAbEntryResult xmlns:i="http://www.w3.org/2001/XMLSchema-instance"><Items><AbEntry><Attributes/><EntryId>5b744083-aade-432b-a220-a6553a6d174b</EntryId><Position>0</Position></AbEntry></Items><Metadata><MessageText i:nil="true"/><ResponseCode>Succeeded</ResponseCode></Metadata></SearchAbEntryResult></SearchAbEntryResponse></s:Body></s:Envelope>

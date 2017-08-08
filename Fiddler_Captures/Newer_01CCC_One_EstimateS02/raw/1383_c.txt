@@ -1,0 +1,12 @@
+GET https://googleads.g.doubleclick.net/pagead/viewthroughconversion/1048456240/?random=1502136349534&cv=8&fst=1502136349534&num=1&fmt=3&guid=ON&u_h=900&u_w=1600&u_ah=860&u_aw=1600&u_cd=24&u_his=1&u_tz=-300&u_java=false&u_nplug=5&u_nmime=7&frm=0&url=https%3A%2F%2Fwww.autotrader.com%2Fcars-for-sale%2Fvehicledetails.xhtml%3FlistingId%3D421482755%26zip%3D60652%26referrer%3D%252Fcars-for-sale%252Fsearchresults.xhtml%253Fzip%253D60652%2526startYear%253D1981%2526sortBy%253DderivedpriceDESC%2526incremental%253Dall%2526firstRecord%253D0%2526endYear%253D2016%2526modelCodeList%253DVOLT%2526makeCodeList%253DCHEV%2526searchRadius%253D0%26startYear%3D1981%26numRecords%3D25%26firstRecord%3D0%26endYear%3D2016%26modelCodeList%3DVOLT%26makeCodeList%3DCHEV%26searchRadius%3D0%26makeCode1%3DCHEV%26modelCode1%3DVOLT&ref=https%3A%2F%2Fwww.autotrader.com%2Fcars-for-sale%2FChevrolet%2FVolt%2FChicago%2BIL-60652%3Fzip%3D60652%26showcaseOwnerId%3D100003458%26startYear%3D1981%26numRecords%3D25%26sortBy%3DderivedpriceDESC%26firstRecord%3D0%26endYear%3D2016%26modelCodeList%3DVOLT%26makeCodeList%3DCHEV%26searchRadius%3D0&tiba=Cars%20for%20Sale%3A%20New%202016%20Chevrolet%20Volt%20Premier%20for%20sale%20in%20Lake%20George%2C%20NY%2012845%3A%20Hatchback%20Details%20-%20421482755%20-%20Autotrader&async=1 HTTP/1.1
+Host: googleads.g.doubleclick.net
+Connection: keep-alive
+User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36
+X-Client-Data: CIm2yQEIpLbJAQjBtskBCO2XygEI+pzKAQipncoB
+Accept: image/webp,image/apng,image/*,*/*;q=0.8
+DNT: 1
+Referer: https://www.autotrader.com/cars-for-sale/vehicledetails.xhtml?listingId=421482755&zip=60652&referrer=%2Fcars-for-sale%2Fsearchresults.xhtml%3Fzip%3D60652%26startYear%3D1981%26sortBy%3DderivedpriceDESC%26incremental%3Dall%26firstRecord%3D0%26endYear%3D2016%26modelCodeList%3DVOLT%26makeCodeList%3DCHEV%26searchRadius%3D0&startYear=1981&numRecords=25&firstRecord=0&endYear=2016&modelCodeList=VOLT&makeCodeList=CHEV&searchRadius=0&makeCode1=CHEV&modelCode1=VOLT
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.8
+Cookie: id=22b34e65360d00a6||t=1480458270|et=730|cs=002213fd485afe177673958a88; __gads=ID=3370d3d5328207d9:T=1481752497:S=ALNI_Mbt1G5FVGtNGLrLq5APnGDWmgiBzg; IDE=AHWqTUn8VNea70iycoL66B7NLYGuE6nvEmzx2HARZFKouJfsElqkeWSODQ; DSID=ADyxukvbcpLxxSZpU156HnttmXKBlAfEuZkciu3xWzf90EEXKEtmjD6i3r_DRyZxzfHstkdcUmOfDiQ0aNHXNZqfcpn0rsSZVIDhoIgaL1DzOebhQXymQVQ
+

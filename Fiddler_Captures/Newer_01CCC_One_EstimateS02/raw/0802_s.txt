@@ -1,0 +1,26 @@
+HTTP/1.1 200 OK
+Server: Apache
+Last-Modified: Wed, 12 Jul 2017 15:56:32 GMT
+Accept-Ranges: bytes
+Content-Length: 474
+Content-Type: application/x-javascript
+X-Pad: avoid browser bug
+Date: Mon, 07 Aug 2017 20:05:37 GMT
+Connection: keep-alive
+Vary: User-Agent
+
+//7/11/2017
+
+window.onload = function(){
+     var dd = new Date();
+	 var m = dd.getMonth();
+	 var d = dd.getDate();
+	 var y = dd.getFullYear();
+	 var h = dd.getHours();
+     var jsLib = document.createElement("script");
+     jsLib.src = "//content.autotrader.com/content/dam/dmd/Chevy-OEM-MNG/Chevy-OEM-MNG-AdTag.js?v="+m+d+y+h+"";
+     jsLib.type = "text/javascript"; 
+     jsLib.async = true;
+     jsLib.defer = true;
+     document.body.appendChild(jsLib);
+}

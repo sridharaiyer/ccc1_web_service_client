@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Session SID="2032" BitFlags="2100">
+  <SessionTimers ClientConnected="2017-08-07T15:13:58.9445041-05:00" ClientBeginRequest="2017-08-07T15:13:58.9445041-05:00" GotRequestHeaders="2017-08-07T15:13:58.9445041-05:00" ClientDoneRequest="2017-08-07T15:13:58.9445041-05:00" GatewayTime="0" DNSTime="0" TCPConnectTime="27" HTTPSHandshakeTime="33" ServerConnected="2017-08-07T15:13:58.9715149-05:00" FiddlerBeginRequest="2017-08-07T15:13:58.9715149-05:00" ServerGotRequest="2017-08-07T15:13:58.9715149-05:00" ServerBeginResponse="0001-01-01T00:00:00" GotResponseHeaders="0001-01-01T00:00:00" ServerDoneResponse="0001-01-01T00:00:00" ClientBeginResponse="2017-08-07T15:13:58.9715149-05:00" ClientDoneResponse="2017-08-07T15:13:58.9715149-05:00" />
+  <PipeInfo />
+  <TunnelInfo BytesEgress="0" BytesIngress="0" />
+  <SessionFlags>
+    <SessionFlag N="https-server-cipher" V="TripleDes 168bits" />
+    <SessionFlag N="x-responsebodytransferlength" V="0" />
+    <SessionFlag N="https-server-version" V="Tls" />
+    <SessionFlag N="https-client-snihostname" V="servicesqa.aws.mycccportal.com" />
+    <SessionFlag N="x-clientip" V="::ffff:127.0.0.1" />
+    <SessionFlag N="x-clientport" V="64470" />
+    <SessionFlag N="https-client-sessionid" V="9D 49 00 00 69 83 EA 52 A6 3B EB D5 42 24 37 FB 2E C8 D1 24 0D 00 8F 4A D8 07 34 F4 A9 30 87 83" />
+    <SessionFlag N="x-processinfo" V="cccone:9060" />
+    <SessionFlag N="https-client-version" V="Tls" />
+    <SessionFlag N="x-egressport" V="64471" />
+    <SessionFlag N="x-hostip" V="10.16.0.60" />
+  </SessionFlags>
+</Session>

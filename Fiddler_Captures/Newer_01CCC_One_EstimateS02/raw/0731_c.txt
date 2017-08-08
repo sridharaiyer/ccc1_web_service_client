@@ -1,0 +1,11 @@
+GET https://s0.2mdn.net/3876771/1-2017_Volt_none_ISO_INM_none_UNIQUE_AutotraderSpotlight_Static_US_ENG_v1_360x166.jpg HTTP/1.1
+Host: s0.2mdn.net
+Connection: keep-alive
+User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36
+Accept: image/webp,image/apng,image/*,*/*;q=0.8
+DNT: 1
+Referer: https://www.autotrader.com/cars-for-sale/Chevrolet/Volt/Chicago+IL-60652?makeCodeList=CHEV&modelCodeList=VOLT&showcaseOwnerId=100003458&Log=0
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.8
+Cookie: _ga=GA1.2.656184585.1485811391
+

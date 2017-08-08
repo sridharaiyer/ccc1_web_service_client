@@ -1,0 +1,13 @@
+OPTIONS https://sts.amazonaws.com/?Action=AssumeRoleWithWebIdentity&RoleArn=arn%3Aaws%3Aiam%3A%3A413858550723%3Arole%2FCognito_LeTigreUnauth_DefaultRole&RoleSessionName=web-identity&Version=2011-06-15&WebIdentityToken=eyJraWQiOiJ1cy1lYXN0LTExIiwidHlwIjoiSldTIiwiYWxnIjoiUlM1MTIifQ.eyJzdWIiOiJ1cy1lYXN0LTE6N2U0NzBhNTEtN2RhMi00YWI5LWIwY2MtZWU0Njc1NDIyZmJhIiwiYXVkIjoidXMtZWFzdC0xOjJkMTk3OWY1LWZkZGUtNDVjMi1hODY3LWUyODVkNWYwNmVmNSIsImFtciI6WyJ1bmF1dGhlbnRpY2F0ZWQiXSwiaXNzIjoiaHR0cHM6Ly9jb2duaXRvLWlkZW50aXR5LmFtYXpvbmF3cy5jb20iLCJleHAiOjE1MDIxMzY5NjIsImlhdCI6MTUwMjEzNjM2Mn0.O1vWS_-d3oPYNll8uI5IgKTO_OK2kNqtWioBMlXBPy4yjmiaT-gV6yKMdQLk03ff-7Mt5s-WsiZrAH7VtuCuMk_Npn7VCx2HwaETIKtYgh-iNJdtNsGyAfWWRR6a1EJBfgdcEkpFwUE6C5i8RuAZ1q1-OOMSbiR8xWgYwLQARmLGH7jtfVonOseWx0pfqOq16Q_JnNMQNzdIkYu4bA5bo60y7ZJ8wdh31AgezLLTx7p8V15vi1YGPWQsoPR0sFvDd_xbFQk_HOHcJl_dqnlPPOtkz63kNSOcOruXwgeORZG1mdRahAdo6alu3DEcoODuKwNkuRNK0bGZgh-zkb5KrQ HTTP/1.1
+Host: sts.amazonaws.com
+Connection: keep-alive
+Access-Control-Request-Method: GET
+Origin: https://www.autotrader.com
+User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36
+Access-Control-Request-Headers: x-amz-content-sha256,x-amz-user-agent
+Accept: */*
+DNT: 1
+Referer: https://www.autotrader.com/cars-for-sale/vehicledetails.xhtml?listingId=421482755&zip=60652&referrer=%2Fcars-for-sale%2Fsearchresults.xhtml%3Fzip%3D60652%26startYear%3D1981%26sortBy%3DderivedpriceDESC%26incremental%3Dall%26firstRecord%3D0%26endYear%3D2016%26modelCodeList%3DVOLT%26makeCodeList%3DCHEV%26searchRadius%3D0&startYear=1981&numRecords=25&firstRecord=0&endYear=2016&modelCodeList=VOLT&makeCodeList=CHEV&searchRadius=0&makeCode1=CHEV&modelCode1=VOLT
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.8
+

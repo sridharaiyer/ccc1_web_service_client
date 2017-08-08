@@ -1,0 +1,31 @@
+HTTP/1.1 200 Connection Established
+FiddlerGateway: Direct
+StartTime: 15:05:43.704
+Connection: close
+
+Encrypted HTTPS traffic flows through this CONNECT tunnel. HTTPS Decryption is enabled in Fiddler, so decrypted sessions running in this tunnel will be shown in the Web Sessions list.
+
+Secure Protocol: 3072
+Cipher: Aes256 256bits
+Hash Algorithm: Sha384 0bits
+Key Exchange: RsaKeyX 2048bits
+
+== Server Certificate ==========
+[Subject]
+  CN=*.dvtps.com, OU=Domain Control Validated
+
+[Issuer]
+  CN=Go Daddy Secure Certificate Authority - G2, OU=http://certs.godaddy.com/repository/, O="GoDaddy.com, Inc.", L=Scottsdale, S=Arizona, C=US
+
+[Serial Number]
+  00DDBC151CF94D9928
+
+[Not Before]
+  07/07/2017 7:30:03 AM
+
+[Not After]
+  08/22/2019 3:26:02 PM
+
+[Thumbprint]
+  0BCF21431952C8805DDC93F888A60BEF9830493C
+

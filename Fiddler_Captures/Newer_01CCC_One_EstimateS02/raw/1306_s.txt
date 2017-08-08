@@ -1,0 +1,210 @@
+HTTP/1.1 200 OK
+Content-Type: application/x-javascript
+Content-Length: 6545
+Connection: keep-alive
+Date: Mon, 12 Jun 2017 16:11:57 GMT
+Last-Modified: Mon, 12 Jun 2017 16:11:39 GMT
+ETag: "8b605328369ed1c21a2822e1cdb4cb85"
+Cache-Control: max-age=86400
+Accept-Ranges: bytes
+Server: AmazonS3
+Age: 45648
+X-Cache: Hit from cloudfront
+Via: 1.1 fb5794831ad522a7a9b0d102a91d1696.cloudfront.net (CloudFront)
+X-Amz-Cf-Id: fRJeVlH_-RigNZgUv0s_8k8QQ8_IiuO0blbkbBnnS-Izsw05ESJafQ==
+
+/*
+* @author                  Dmitri Dzioura
+* @date
+* @version                 1.0
+
+* @modify_by               Paul Bourque
+* @modify_date             June 9, 2017
+
+* Updated Dec 17, 2013 by Chris  - Set up functionality for stopping animations when/if the animationDelay expires.
+* Updated May 30, 2014 by Chris - Added event handling so that an event will fire once the animationDuration timer expires.
+* Updated June 9, 2017 by Paul Bourque - Removed call to tempLogScript.php, that function is no longer needed.
+*/
+
+
+// Set up handlers used for animationDelay event.
+this.handlers = {};
+
+// Check if animation delay is set or indefinite and starts timer if necessary.
+var mainAnimationDelay = SSM_ad_obj['AnimationDelay'];
+checkAnimationDelayTimer();
+SSM_ad_obj.libPath = SSM_ad_obj.libPath.substring(0, SSM_ad_obj.libPath.length-1) + '/';
+
+//loads in the common basic files including the template
+//require([base, util, selectors, intro, template]);
+//
+require([selectors], function() {
+    require([util], function() {
+        require([base, cell, intro], function() {
+            require([template]);
+        });
+    });
+});
+
+//a function that is called by all the templates which will parse the version needed by the template and the files
+function needs(needsObject, callback) {
+    //stores the version of the template
+    var version = needsObject.version;
+
+    //creates a blank Array which will be populate with the filess to be loaded
+    var REQUIRE = [];
+
+    //checks to see which version is needed by the template and it will load the apropreat files for the specific version
+    if(version == 'v1') {
+        REQUIRE.push(dom);
+    } else {
+        REQUIRE.push(cell);
+        REQUIRE.push(jsonItem);
+        REQUIRE.push(stage);
+        REQUIRE.push(logo);
+    }
+
+    //loops through the special fiels object and loads in the specified version of the file it will load the library version if the version was not
+    //specified
+    for(var s in needsObject.specialFiles) {
+        if(s in versionedSpecialFiles) {
+            var tempVersion = (needsObject.specialFiles[s]) ? (needsObject.specialFiles[s]) : (version);
+            REQUIRE.push(SSM_ad_obj.libPath + tempVersion + '/' + versionedSpecialFiles[s] + '_' + tempVersion + '.js');
+        }
+    }
+
+    //loops through the versioned files object which is used incase a mixed version files are needed. "S14 is an example of it where it uses v1 library
+    //but it needs version 2 of tracking"
+    for(var e in versionedFiles) {
+        if((needsObject.exception) && (e in needsObject.exception)) {
+            var tempVersion = needsObject.exception[e];
+            REQUIRE.push(SSM_ad_obj.libPath + tempVersion + '/' + versionedFiles[e] + '_' + tempVersion + '.js');
+        } else {
+            REQUIRE.push(SSM_ad_obj.libPath + version + '/' + versionedFiles[e] + '_' + version + '.js');
+        }
+
+    }
+
+    for(var n in needsObject.templateFiles) {
+        REQUIRE.push(templateFiles.path+needsObject.templateFiles[n]);
+    }
+
+    //loads in the required library files for the template
+    require(REQUIRE, callback);
+
+}
+
+
+//An object that stores the path to the specific files in the library
+var versionedSpecialFiles = {
+    basicArrow:    'components/arrows/basicArrow',
+    doubleArrow:   'components/arrows/doubleArrow',
+    doubleHoverBackgroundArrow: 'components/arrows/doubleHoverBackgroundArrow',
+    plainArrow:    'components/arrows/plainArrow',
+    roundArrow:    'components/arrows/roundArrow',
+    superArrow:    'components/arrows/superArrow',
+    button:        'components/buttons/button',
+    basicCell:     'components/cells/basicCell',
+    bostonCell:    'components/cells/bostonCell',
+    showcaseCell:  'components/cells/showcaseCell',
+    shuffleCell:   'components/cells/shuffleCell',
+    subtleCell:    'components/cells/subtleCell',
+    arrowTextLink: 'components/misc/arrowTextLink',
+    background:    'components/misc/background',
+    linksPanel:    'components/misc/linksPanel',
+    slider:        'components/slider/slider',
+    gradients:     'styling/gradients',
+    multiSlider:   'components/slider/multiSlider',
+    indexer:       'components/slider/indexer',
+    simpleButton:  'components/button/simpleButton',
+    gliderSlider:  'components/slider/gliderSlider'
+}
+
+//An object that keeps thep path to animate and tracking (these are the files that are used by all templates)
+var versionedFiles = {
+    animation:  'animation/animation',
+    tracking:   'tracking/tracking'
+}
+
+var templateFiles = {
+    path: SSM_ad_obj.libPath.replace('lib', 'app')
+}
+
+
+/**
+ * This function will check to see whether the animation timer should start or not.
+ */
+function checkAnimationDelayTimer() {
+
+    if (isNaN(mainAnimationDelay)) {
+        mainAnimationDelay  = (SSM_ad_obj['isDev']) ? (15) : 0; // Animate indefinitely or for 15 seconds if Dev.
+    } else if (mainAnimationDelay < 0) {
+        mainAnimationDelay  = -1; // Don't animate at all.
+    }
+
+    if (mainAnimationDelay > 0) {
+        startAnimationDelayTimer(); // Only start timer if value greater than 0.
+    }
+}
+
+
+/**
+ * This function will start the animation timer.
+ */
+function startAnimationDelayTimer() {
+    animationDelayStartTime = new Date().getTime();
+
+    var animateDelayTimer = window.setTimeout(animDelayTerminate, mainAnimationDelay * 1000);
+}
+
+
+/**
+ * This function will start the animation timer.
+ */
+function remainingAnimationDelayTimer() {
+    var currentAnimationTime = new Date().getTime();
+
+    var animationDelayRemaining = (SSM_ad_obj['AnimationDelay'] * 1000) - (currentAnimationTime - animationDelayStartTime);
+
+    return animationDelayRemaining;
+}
+
+
+/**
+ * This function will update the mainAnimationDelay variable so we know the timer has ended.
+ */
+function animDelayTerminate() {
+    // Fire event once animation duration timer finishes.
+    this.fire({type: 'ANIMATION_DURATION_COMPLETE'});
+
+    mainAnimationDelay  = -1; // Don't animate any more.
+}
+
+
+/**
+ * This function is used to add event handling.
+ */
+function addHandler(type, handler) {
+    if (typeof this.handlers[type] == 'undefined') {
+        this.handlers[type] = [];
+    }
+
+    this.handlers[type].push(handler);
+}
+
+/**
+ * This function is used to fire new events.
+*/
+function fire(event) {
+    if (!event.target) {
+        event.target = this;
+    }
+
+    if (this.handlers[event.type] instanceof Array) {
+        var handlers = this.handlers[event.type];
+
+        for (var i = 0, len = handlers.length; i < len; i++) {
+            handlers[i](event);
+        }
+    }
+}

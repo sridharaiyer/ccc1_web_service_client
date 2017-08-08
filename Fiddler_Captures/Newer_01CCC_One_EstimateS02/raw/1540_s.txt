@@ -1,0 +1,11 @@
+HTTP/1.1 304 Not Modified
+Connection: keep-alive
+Date: Mon, 07 Aug 2017 20:05:56 GMT
+ETag: "77fa2b24c522d016af5c051007dce921"
+Cache-Control: max-age=1800
+Server: AmazonS3
+Age: 1044
+X-Cache: Hit from cloudfront
+Via: 1.1 b4e8d615cf68a3410b230605c5912c88.cloudfront.net (CloudFront)
+X-Amz-Cf-Id: -rkTxnBU3RWzkcnw39Ndzu1U3Nf8DARprQuizZl4zszpx-2X-3ixUg==
+

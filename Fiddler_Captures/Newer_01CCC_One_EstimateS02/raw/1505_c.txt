@@ -1,0 +1,12 @@
+GET https://securepubads.g.doubleclick.net/pcs/view?xai=AKAOjsvmjuzHaasZlL7t3P3Nz32_B99IkyooTJRWpQLwgEDamxF9mCjC5pZ7l2L_P89XuZAeGhaaY90H9KhKJmerutoOkMjsLPOTTsLhjPEMgj6GtRC3jewXXRfr8SW51y7DK62flyXZCUfPvHTkV7oIxQfo03RU1zwbYRftFi9Azt3GaQ_8lgnmRVN09azG7O7XcNzNgkQYaPS2-8AtHy8IuBlCyPhtMw_SmikmF6Olg4sIC2yX2aSlrn7yYY4&sig=Cg0ArKJSzI7KCDPJ955kEAE&urlfix=1&xci=ChMIkI_0_vXF1QIVCKZpCh3RTgv1GAI&adurl= HTTP/1.1
+Host: securepubads.g.doubleclick.net
+Connection: keep-alive
+User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36
+X-Client-Data: CIm2yQEIpLbJAQjBtskBCO2XygEI+pzKAQipncoB
+Accept: image/webp,image/apng,image/*,*/*;q=0.8
+DNT: 1
+Referer: https://tpc.googlesyndication.com/safeframe/1-0-9/html/container.html
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.8
+Cookie: id=22b34e65360d00a6||t=1480458270|et=730|cs=002213fd485afe177673958a88; __gads=ID=3370d3d5328207d9:T=1481752497:S=ALNI_Mbt1G5FVGtNGLrLq5APnGDWmgiBzg; IDE=AHWqTUn8VNea70iycoL66B7NLYGuE6nvEmzx2HARZFKouJfsElqkeWSODQ; DSID=ADyxukvbcpLxxSZpU156HnttmXKBlAfEuZkciu3xWzf90EEXKEtmjD6i3r_DRyZxzfHstkdcUmOfDiQ0aNHXNZqfcpn0rsSZVIDhoIgaL1DzOebhQXymQVQ
+

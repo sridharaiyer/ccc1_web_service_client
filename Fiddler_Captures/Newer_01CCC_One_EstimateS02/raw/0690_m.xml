@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Session SID="690" BitFlags="2100">
+  <SessionTimers ClientConnected="2017-08-07T15:05:34.073742-05:00" ClientBeginRequest="2017-08-07T15:05:34.0767513-05:00" GotRequestHeaders="2017-08-07T15:05:34.0767513-05:00" ClientDoneRequest="2017-08-07T15:05:34.0777544-05:00" GatewayTime="0" DNSTime="0" TCPConnectTime="140" HTTPSHandshakeTime="309" ServerConnected="2017-08-07T15:05:34.2191915-05:00" FiddlerBeginRequest="2017-08-07T15:05:34.2191915-05:00" ServerGotRequest="2017-08-07T15:05:34.2191915-05:00" ServerBeginResponse="0001-01-01T00:00:00" GotResponseHeaders="0001-01-01T00:00:00" ServerDoneResponse="0001-01-01T00:00:00" ClientBeginResponse="2017-08-07T15:05:34.2191915-05:00" ClientDoneResponse="2017-08-07T15:05:34.2191915-05:00" />
+  <PipeInfo />
+  <TunnelInfo BytesEgress="0" BytesIngress="0" />
+  <SessionFlags>
+    <SessionFlag N="https-server-cipher" V="Aes128 128bits" />
+    <SessionFlag N="x-responsebodytransferlength" V="0" />
+    <SessionFlag N="https-server-version" V="3072" />
+    <SessionFlag N="https-client-snihostname" V="sp.analytics.yahoo.com" />
+    <SessionFlag N="x-clientip" V="::ffff:127.0.0.1" />
+    <SessionFlag N="x-clientport" V="63172" />
+    <SessionFlag N="https-client-sessionid" V="A3 15 00 00 B1 31 6E 62 3D DB A5 D2 D3 9F 40 E8 D4 A4 AF 4E 0B CB AA FD 85 A0 84 95 65 D0 B0 10" />
+    <SessionFlag N="x-processinfo" V="chrome:8036" />
+    <SessionFlag N="https-client-version" V="3072" />
+    <SessionFlag N="x-egressport" V="63173" />
+    <SessionFlag N="x-hostip" V="98.139.225.35" />
+  </SessionFlags>
+</Session>

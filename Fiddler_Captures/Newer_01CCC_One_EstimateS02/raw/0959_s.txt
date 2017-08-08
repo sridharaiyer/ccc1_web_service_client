@@ -1,0 +1,112 @@
+HTTP/1.1 200 OK
+Server: Apache
+Last-Modified: Thu, 21 Jul 2016 23:26:18 GMT
+Accept-Ranges: bytes
+Content-Length: 14087
+Content-Type: application/x-javascript
+Cache-Control: max-age=172800
+Date: Mon, 07 Aug 2017 20:05:40 GMT
+Connection: keep-alive
+X-N: S
+
+
+(function(compId){var _=null,y=true,n=false,x9='break-word',x69='LB_2016_rio',x51='KIA_34',x35='BKG',x29='rgb(0, 0, 0)',x22='136px',x30='45px',x38='rgba(238,243,244,1.00)',b='block',x40='rgba(195,212,221,1.00)',e39='${BKG}',x46='rgba(0,0,0,0.83)',x24='rgba(255,255,255,1.00)',x41='DealerInfo',x37='rgba(221,214,115,1.00)',x36='rgba(192,192,192,1)',x79='-6px',x3='6.0.0.400',x26='Rectangle2',x89='-79px',lf='left',x80='352px',x34='90px',x77='86px',e98='${Sportage_Disclaimer}',x50='50px',x84='10px',e31='${Rectangle}',x23='auto',x92='11px',x95='Sportage_Disclaimer',x81='Soul_Text',x16='rgba(255,255,255,1)',x33='728px',e93='${Soul_Disclaimer}',x45='16',x25='-13',xc='rgba(0,0,0,1)',x18='0.4',d='display',x1='6.0.0',x10='nowrap',x90='Soul_Disclaimer',x2='5.0.0',x11='rgba(0,0,0,0)',x88='-204px',x17='Rectangle',x74='222px',x8='italic',x85='336px',x97='53px',e32='${Rectangle2}',x43='298px',x21='5px',e68='${Rio}',x48='20px',x='text',x61='Rio',x82='0.96',x53='140px',m='rect',x28='0px',x76='94px',x75='1px',x64='Sportage',x86='Sportage_Text',x71='180px',x59='327',x70='16px',e67='${Sportage}',e66='${Soul}',p='px',o='opacity',x65='327px',x27='14px',x73='Rio_Text',x63='Soul',x62='Optima',x47='54px',x44='rgba(200,26,21,1.00)',x49='62px',x6='Arial, Helvetica, sans-serif',x56='48px',l='normal',x42='13px',x19='43px',x60='90',x58='0',x57='324px',x55='2px',x54='21px',x15='14',g='image',x94='-261px',x5='8',i='none',x20='-1px',x7='100';var g52='KIA_3.png',g12='divider.png',g96='Sportage_Disclaimer.png',g13='warranty.png',g91='Soul_Disclaimer.png',g78='Rio_Text.png',g87='Sportage_Text.png',g72='LB_2016_rio.png',g83='Soul_Text.png';var s14="<p style=\"margin: 0px;\">​Thomas Kia</p><p style=\"margin: 0px;\">of Highland</p><p style=\"margin: 0px;\"></p><p style=\"margin: 0px;\"></p>",s4="<p style=\"margin: 0px;\">​*Warranty is a limited powertrain warranty. For details, see retailer or go to kia.com</p>";var im='images/',aud='media/',vid='media/',js='js/',fonts={},opts={'gAudioPreloadPreference':'auto','gVideoPreloadPreference':'auto'},resources=[],scripts=["//ads.autotrader.com/DE/html5_include_ad_1_0.js"],symbols={"stage":{v:x1,mv:x2,b:x3,stf:i,cg:i,rI:n,cn:{dom:[{id:'coloredBKG',symbolName:'coloredBKG',t:m,r:['0px','0','728','90','auto','auto']},{id:'wipes',symbolName:'Wipes',t:m,r:['368px','-23','45','136','auto','auto'],o:'1'},{id:'Cars',symbolName:'Cars',t:m,r:['298','0','327','90','auto','auto']},{id:'OEM_Logo',symbolName:'OEM_Logo',t:m,r:['-25','0','324','90','auto','auto']},{id:'Text',t:x,r:['10px','79px','auto','auto','auto','auto'],text:s4,align:"left",n:[x6,[x5,p],xc,x7,i,x8,x9,x10],ts:["","","","",i]},{id:'divider',t:g,r:['640px','0px','14px','90px','auto','auto'],f:[x11,im+g12,'0px','0px']},{id:'warranty',t:g,r:['655px','12px','65px','64px','auto','auto'],f:[x11,im+g13,'0px','0px']},{id:'Dealer_Name',t:x,r:['131px','30px','auto','auto','auto','auto'],text:s14,n:[x6,[x15,p],"rgba(255,255,255,1.00)",l,i,"",x9,x10]},{id:'disclaimer1',symbolName:'disclaimer1',t:m,r:['498','79','45','11','auto','auto']},{id:'disclaimer2',symbolName:'disclaimer2',t:m,r:['572','79','53','11','auto','auto']}],style:{'${Stage}':{isStage:true,r:['null','null','728px','90px','auto','auto'],overflow:'hidden',f:[x16]}}},tt:{d:3600,a:y,data:[["eid120","tr",0,function(e,d){this.eSA(e,d);},['stop','${disclaimer2}',[]]],["eid121","tr",0,function(e,d){this.eSA(e,d);},['stop','${disclaimer1}',[]]]]}},"Wipes":{v:x1,mv:x2,b:x3,stf:i,cg:i,rI:n,cn:{dom:[{t:m,id:x17,o:x18,r:[x19,x20,x21,x22,x23,x23],fi:[0,0,1,1,0,0,0,0,x24,0,0,10],filter:[0,0,1,1,0,0,0,0,x24,0,0,10],tf:[[],[x25],[0,0,0],[1,1,1]],s:[0,xc,i],f:[x24]},{t:m,id:x26,o:x18,r:[x27,x28,x27,x22,x23,x23],fi:[0,0,1,1,0,0,0,0,x24,0,0,10],filter:[0,0,1,1,0,0,0,0,x24,0,0,10],tf:[[],[x25],[0,0,0],[1,1,1]],s:[0,x29,i],f:[x24]}],style:{'${symbolSelector}':{r:[_,_,x30,x22]}}},tt:{d:3600,a:y,data:[["eid97",lf,0,1100,"linear",e31,'43px','85px'],["eid102",lf,1100,1900,"linear",e31,'85px','-7px'],["eid99",lf,3000,600,"linear",e31,'-7px','43px'],["eid94",lf,0,2100,"linear",e32,'15px','145px'],["eid96",lf,2100,1500,"linear",e32,'145px','14px']]}},"coloredBKG":{v:x1,mv:x2,b:x3,stf:i,cg:i,rI:n,cn:{dom:[{r:[x28,x28,x33,x34,x23,x23],filter:[0.05,0,1,1,0,0,0,0,x11,0,0,0],fi:[0.05,0,1,1,0,0,0,0,x11,0,0,0],id:x35,s:[0,x29,i],t:m,f:[x36,[270,[[x37,0],[x38,100]]]]}],style:{'${symbolSelector}':{r:[_,_,x33,x34]}}},tt:{d:2500,a:y,data:[["eid103","background-image",0,500,"linear",e39,[270,[['rgba(221,214,115,1.00)',0],['rgba(238,243,244,1.00)',100]]],[270,[['rgba(221,214,115,1.00)',0],['rgba(242,246,239,1.00)',100]]]],["eid110","background-image",500,300,"linear",e39,[270,[['rgba(221,214,115,1.00)',0],['rgba(242,246,239,1.00)',100]]],[270,[['rgba(106,170,215,1.00)',0],['rgba(246,247,235,1.00)',100]]]],["eid105","background-image",800,500,"linear",e39,[270,[['rgba(106,170,215,1.00)',0],['rgba(246,247,235,1.00)',100]]],[270,[['rgba(106,170,215,1.00)',0],['rgba(246,247,235,0.95)',100]]]],["eid106","background-image",1300,300,"linear",e39,[270,[['rgba(106,170,215,1.00)',0],['rgba(246,247,235,0.95)',100]]],[270,[['rgba(156,156,156,1.00)',0],['rgba(229,232,235,1.00)',100]]]],["eid107","background-image",1600,500,"linear",e39,[270,[['rgba(156,156,156,1.00)',0],['rgba(229,232,235,1.00)',100]]],[270,[['rgba(156,156,156,1.00)',0],['rgba(230,232,235,0.95)',100]]]],["eid108","background-image",2100,400,"linear",e39,[270,[['rgba(156,156,156,1.00)',0],['rgba(230,232,235,0.95)',100]]],[270,[['rgba(221,214,115,1.00)',0],['rgba(237,242,244,1.00)',100]]]],["eid109","background-image",2500,0,"linear",e39,[270,[['rgba(221,214,115,1.00)',0],['rgba(237,242,244,1.00)',100]]],[270,[['rgba(195,212,221,1.00)',0],['rgba(237,242,244,1.00)',100]]]]]}},"activeColoredBKG":{v:x1,mv:x2,b:x3,stf:i,cg:i,rI:n,cn:{dom:[{r:[x28,x28,x33,x34,x23,x23],filter:[0.05,0,1,1,0,0,0,0,x11,0,0,0],id:x35,s:[0,x29,i],t:m,f:[x36,[270,[[x40,0],[x38,100]]]]}],style:{'${symbolSelector}':{r:[_,_,x33,x34]}}},tt:{d:2500,a:y,data:[["eid3","background-image",0,500,"linear",e39,[270,[['rgba(195,212,221,1.00)',0],['rgba(238,243,244,1.00)',100]]],[270,[['rgba(198,214,222,0.96)',0],['rgba(238,243,244,0.96)',100]]]],["eid4","background-image",500,300,"linear",e39,[270,[['rgba(198,214,222,0.96)',0],['rgba(238,243,244,0.96)',100]]],[270,[['rgba(219,222,99,1.00)',0],['rgba(246,248,235,1.00)',100]]]],["eid5","background-image",800,500,"linear",e39,[270,[['rgba(219,222,99,1.00)',0],['rgba(246,248,235,1.00)',100]]],[270,[['rgba(221,224,106,0.95)',0],['rgba(246,248,235,0.95)',100]]]],["eid6","background-image",1300,300,"linear",e39,[270,[['rgba(221,224,106,0.95)',0],['rgba(246,248,235,0.95)',100]]],[270,[['rgba(131,137,157,1.00)',0],['rgba(229,232,235,1.00)',100]]]],["eid7","background-image",1600,500,"linear",e39,[270,[['rgba(131,137,157,1.00)',0],['rgba(229,232,235,1.00)',100]]],[270,[['rgba(137,143,162,0.95)',0],['rgba(230,233,235,0.95)',100]]]],["eid8","background-image",2100,400,"linear",e39,[270,[['rgba(137,143,162,0.95)',0],['rgba(230,233,235,0.95)',100]]],[270,[['rgba(195,212,221,1.00)',0],['rgba(237,242,244,1.00)',100]]]],["eid9","background-image",2500,0,"linear",e39,[270,[['rgba(195,212,221,1.00)',0],['rgba(237,242,244,1.00)',100]]],[270,[['rgba(195,212,221,1.00)',0],['rgba(237,242,244,1.00)',100]]]]]}},"OEM_Logo":{v:x1,mv:x2,b:x3,stf:i,cg:i,rI:n,cn:{dom:[{t:m,br:[x28,x28,x28,x28],id:x41,s:[0,x29,i],r:[x42,x28,x43,x34,x23,x23],f:[x44],tf:[[],[],[x45],[1,1,1]],boxShadow:['',3,3,18,2,x46]},{r:[x47,x48,x49,x50,x23,x23],id:x51,t:g,f:[x11,im+g52,x28,x28]},{t:m,id:x26,s:[0,x29,i],r:[x53,x54,x55,x56,x23,x23],f:[x24]}],style:{'${symbolSelector}':{r:[_,_,x57,x34]}}},tt:{d:0,a:y,data:[]}},"Cars":{v:x1,mv:x2,b:x3,stf:i,cg:i,rI:n,cn:{dom:[{r:[x58,x58,x59,x60,x23,x23],id:x61,sN:x62,t:m,o:x58},{r:[x28,x28,_,_,x23,x23],id:x63,sN:x63,t:m,o:x58},{r:[x28,x28,_,_,x23,x23],id:x64,sN:x64,t:m,o:x58}],style:{'${symbolSelector}':{r:[_,_,x65,x34]}}},tt:{d:2500,a:y,data:[["eid76",o,800,300,"linear",e66,'0','1'],["eid78",o,1300,300,"linear",e66,'1','0'],["eid86",o,1600,300,"linear",e67,'0','1'],["eid88",o,2100,400,"linear",e67,'1','0'],["eid66",o,0,300,"linear",e68,'0','1'],["eid64",o,500,300,"linear",e68,'1','0']]}},"Optima":{v:x1,mv:x2,b:x3,stf:i,cg:i,rI:n,cn:{dom:[{t:g,id:x69,r:[x70,x20,x71,x34,x23,x23],f:[x11,im+g72,x28,x28]},{t:g,id:x73,r:[x74,x75,x76,x77,x23,x23],f:[x11,im+g78,x28,x28]}],style:{'${symbolSelector}':{r:[_,_,x65,x34]}}},tt:{d:0,a:y,data:[]}},"Soul":{v:x1,mv:x2,b:x3,stf:i,cg:i,rI:n,cn:{dom:[{r:[x79,x75,x80,x34,x23,x23],id:x81,tf:[[],[],[],[x82,x82]],t:g,f:[x11,im+g83,x28,x28]}],style:{'${symbolSelector}':{r:[_,_,x65,x34]}}},tt:{d:0,a:y,data:[]}},"Sportage":{v:x1,mv:x2,b:x3,stf:i,cg:i,rI:n,cn:{dom:[{r:[x84,x28,x85,x34,x23,x23],id:x86,tf:[[],[],[],[x82,x82]],t:g,f:[x11,im+g87,x28,x28]}],style:{'${symbolSelector}':{r:[_,_,x65,x34]}}},tt:{d:0,a:y,data:[]}},"disclaimer1":{v:x1,mv:x2,b:x3,stf:i,cg:i,rI:n,cn:{dom:[{t:g,v:i,r:[x88,x89,x80,x34,x23,x23],id:x90,f:[x11,im+g91,x28,x28]},{r:[x28,x28,x30,x92,x23,x23],o:x58,id:x17,s:[0,xc,i],t:m,f:[x36]}],style:{'${symbolSelector}':{r:[_,_,x30,x92]}}},tt:{d:467,a:n,l:{"off1":0,"on1":467},data:[["eid114",d,0,0,"linear",e93,i,i],["eid115",d,467,0,"linear",e93,i,b]]}},"disclaimer2":{v:x1,mv:x2,b:x3,stf:i,cg:i,rI:n,cn:{dom:[{t:g,v:i,r:[x94,x89,x85,x34,x23,x23],id:x95,f:[x11,im+g96,x28,x28]},{r:[x28,x28,x97,x92,x23,x23],o:x58,id:x26,s:[0,x29,i],t:m,f:[x36]}],style:{'${symbolSelector}':{r:[_,_,x97,x92]}}},tt:{d:467,a:y,l:{"off2":0,"on2":467},data:[["eid119",d,0,0,"linear",e98,i,i],["eid118",d,467,0,"linear",e98,i,b]]}}};AdobeEdge.registerCompositionDefn(compId,symbols,fonts,scripts,resources,opts);})("EDGE-104346698");
+(function($,Edge,compId){var Composition=Edge.Composition,Symbol=Edge.Symbol;Edge.registerEventBinding(compId,function($){
+//Edge symbol: 'stage'
+(function(symbolName){Symbol.bindElementAction(compId,symbolName,"${Stage}","click",function(sym,e){javascript:click1()});
+//Edge binding end
+})("stage");
+//Edge symbol end:'stage'
+
+//=========================================================
+
+//Edge symbol: 'largeWipe'
+(function(symbolName){Symbol.bindTimelineAction(compId,symbolName,"Default Timeline","complete",function(sym,e){});
+//Edge binding end
+Symbol.bindTriggerAction(compId,symbolName,"Default Timeline",3600,function(sym,e){sym.play();});
+//Edge binding end
+})("Wipes");
+//Edge symbol end:'Wipes'
+
+//=========================================================
+
+//Edge symbol: 'coloredBKG'
+(function(symbolName){Symbol.bindTimelineAction(compId,symbolName,"Default Timeline","complete",function(sym,e){});
+//Edge binding end
+Symbol.bindTriggerAction(compId,symbolName,"Default Timeline",400,function(sym,e){sym.stop();clearTimeout(eventTimer);var eventTimer=window.setTimeout(function(){sym.play();},3000);});
+//Edge binding end
+Symbol.bindTriggerAction(compId,symbolName,"Default Timeline",2500,function(sym,e){sym.play();});
+//Edge binding end
+Symbol.bindTriggerAction(compId,symbolName,"Default Timeline",1200,function(sym,e){sym.stop();clearTimeout(eventTimer);var eventTimer=window.setTimeout(function(){sym.play();},3000);});
+//Edge binding end
+Symbol.bindTriggerAction(compId,symbolName,"Default Timeline",2000,function(sym,e){sym.stop();clearTimeout(eventTimer);var eventTimer=window.setTimeout(function(){sym.play();},3000);});
+//Edge binding end
+})("coloredBKG");
+//Edge symbol end:'coloredBKG'
+
+//=========================================================
+
+//Edge symbol: 'activeColoredBKG'
+(function(symbolName){Symbol.bindTriggerAction(compId,symbolName,"Default Timeline",0,function(sym,e){});
+//Edge binding end
+})("activeColoredBKG");
+//Edge symbol end:'activeColoredBKG'
+
+//=========================================================
+
+//Edge symbol: 'OEM_Logo'
+(function(symbolName){})("OEM_Logo");
+//Edge symbol end:'OEM_Logo'
+
+//=========================================================
+
+//Edge symbol: 'Cars'
+(function(symbolName){Symbol.bindTriggerAction(compId,symbolName,"Default Timeline",400,function(sym,e){sym.stop();clearTimeout(eventTimer);var eventTimer=window.setTimeout(function(){sym.play();},3000);});
+//Edge binding end
+Symbol.bindTriggerAction(compId,symbolName,"Default Timeline",1200,function(sym,e){sym.stop();clearTimeout(eventTimer);var eventTimer=window.setTimeout(function(){sym.play();},3000);});
+//Edge binding end
+Symbol.bindTriggerAction(compId,symbolName,"Default Timeline",2000,function(sym,e){sym.stop();clearTimeout(eventTimer);var eventTimer=window.setTimeout(function(){sym.play();},3000);});
+//Edge binding end
+Symbol.bindTriggerAction(compId,symbolName,"Default Timeline",2500,function(sym,e){sym.play();});
+//Edge binding end
+})("Cars");
+//Edge symbol end:'Cars'
+
+//=========================================================
+
+//Edge symbol: 'Optima'
+(function(symbolName){})("Optima");
+//Edge symbol end:'Optima'
+
+//=========================================================
+
+//Edge symbol: 'Optima_1'
+(function(symbolName){})("Soul");
+//Edge symbol end:'Soul'
+
+//=========================================================
+
+//Edge symbol: 'Soul_1'
+(function(symbolName){})("Sportage");
+//Edge symbol end:'Sportage'
+
+//=========================================================
+
+//Edge symbol: 'disclaimer1'
+(function(symbolName){Symbol.bindElementAction(compId,symbolName,"${Rectangle}","mouseout",function(sym,e){sym.stop("off1");});
+//Edge binding end
+Symbol.bindElementAction(compId,symbolName,"${Rectangle}","mouseover",function(sym,e){sym.stop("on1");});
+//Edge binding end
+})("disclaimer1");
+//Edge symbol end:'disclaimer1'
+
+//=========================================================
+
+//Edge symbol: 'disclaimer2'
+(function(symbolName){Symbol.bindElementAction(compId,symbolName,"${Rectangle2}","mouseout",function(sym,e){sym.stop("off2");});
+//Edge binding end
+Symbol.bindElementAction(compId,symbolName,"${Rectangle2}","mouseover",function(sym,e){sym.stop("on2");});
+//Edge binding end
+})("disclaimer2");
+//Edge symbol end:'disclaimer2'
+})})(AdobeEdge.$,AdobeEdge,"EDGE-104346698");

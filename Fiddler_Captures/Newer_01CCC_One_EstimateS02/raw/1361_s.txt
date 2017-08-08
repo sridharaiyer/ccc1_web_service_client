@@ -1,0 +1,31 @@
+HTTP/1.1 200 Connection Established
+FiddlerGateway: Direct
+StartTime: 15:05:49.852
+Connection: close
+
+Encrypted HTTPS traffic flows through this CONNECT tunnel. HTTPS Decryption is enabled in Fiddler, so decrypted sessions running in this tunnel will be shown in the Web Sessions list.
+
+Secure Protocol: 3072
+Cipher: Aes128 128bits
+Hash Algorithm: Sha256 256bits
+Key Exchange: ECDHE_RSA (0xae06) 256bits
+
+== Server Certificate ==========
+[Subject]
+  CN=*.c.ssl.fastly.net, O="Fastly, Inc.", L=San Francisco, S=California, C=US
+
+[Issuer]
+  CN=GlobalSign CloudSSL CA - SHA256 - G3, O=GlobalSign nv-sa, C=BE
+
+[Serial Number]
+  70180CA7C7E95236592F7667
+
+[Not Before]
+  04/13/2017 5:44:05 PM
+
+[Not After]
+  10/12/2017 3:26:39 PM
+
+[Thumbprint]
+  C45E6FC37F896C3D137D60C949440F658AD1E47E
+

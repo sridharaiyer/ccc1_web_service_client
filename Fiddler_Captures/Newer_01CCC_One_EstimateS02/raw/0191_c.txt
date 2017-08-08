@@ -1,0 +1,6 @@
+GET https://ssl.gstatic.com/safebrowsing/csd/client_model_v5_ext_variation_0.pb HTTP/1.1
+Host: ssl.gstatic.com
+Connection: keep-alive
+User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+

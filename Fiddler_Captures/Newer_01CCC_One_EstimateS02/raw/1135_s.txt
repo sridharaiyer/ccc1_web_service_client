@@ -1,0 +1,50 @@
+HTTP/1.1 200 OK
+Server: Apache
+Last-Modified: Wed, 12 Jul 2017 20:11:06 GMT
+Accept-Ranges: bytes
+Content-Length: 3916
+Content-Type: application/x-javascript
+X-Pad: avoid browser bug
+Cache-Control: max-age=172800
+Date: Mon, 07 Aug 2017 20:05:44 GMT
+Connection: keep-alive
+
+
+(function(compId){var _=null,y=true,n=false,x1='6.0.0',x23='nowrap',x5='rgba(255,255,255,0.00)',x2='5.0.0',x14='rgba(0,0,0,0)',x21='700',g='image',x4='both',b='block',x25='TextCopy',x17='true',x10='0',x='text',e33='${Shimmer_01}',x6='solid',m='rect',x16='0px',x30='258px',i='none',x3='6.0.0.400',p='px',o='opacity',lf='left',x12='90px',x31='269px',x20='Arial, Helvetica, sans-serif',x29='Shimmer_01',e28='${TextCopy}',d='display',x13='auto',x27='16px',x26='72px',x18='Text',x24='rgba(255,255,255,1.00)',x7='rgba(255,255,255,1)',zy='scaleY',x22='break-word',x9='southchicagododgead',zx='scaleX',xc='rgba(0,0,0,1)',e8='${bg2}',x11='728px';var g32='Shimmer_01.png',g15='southchicagododgead.jpg';var s19="<p style=\"margin: 0px;\">​Click Here</p>";var im='images/',aud='media/',vid='media/',js='js/',fonts={},opts={'gAudioPreloadPreference':'auto','gVideoPreloadPreference':'auto'},resources=[],scripts=["//ads.autotrader.com/DE/html5_include_ad_1_0.js"],symbols={"stage":{v:x1,mv:x2,b:x3,stf:i,cg:x4,rI:n,cn:{dom:[{id:'bg2',symbolName:'bg',t:m,r:['0','0','728','90','auto','auto'],o:'0',tf:[[],[],[],['1.2','1.2']]},{id:'Shimmer',symbolName:'Shimmer',t:m,r:['-269','-90','258','269','auto','auto']},{id:'Border',t:m,r:['0px','0px','726px','88px','auto','auto'],f:[x5],s:[1,xc,x6]}],style:{'${Stage}':{isStage:true,r:['null','null','728px','90px','auto','auto'],overflow:'hidden',f:[x7]}}},tt:{d:7500,a:y,data:[["eid3",zx,0,500,"easeOutBounce",e8,'1.2','1'],["eid13",o,0,500,"easeOutBounce",e8,'0','1'],["eid5",zy,0,500,"easeOutBounce",e8,'1.2','1'],["eid8","tr",0,function(e,d){this.eSA(e,d);},['stop','${Shimmer}',[]]],["eid11","tr",1000,function(e,d){this.eSA(e,d);},['play','${Shimmer}',[]]]]}},"bg":{v:x1,mv:x2,b:x3,stf:i,cg:i,rI:n,cn:{dom:[{id:x9,t:g,r:[x10,x10,x11,x12,x13,x13],f:[x14,im+g15,x16,x16]}],style:{'${symbolSelector}':{isStage:x17,r:[undefined,undefined,x11,x12]}}},tt:{d:0,a:y,data:[]}},"Cta":{v:x1,mv:x2,b:x3,stf:i,cg:i,rI:n,cn:{dom:[{r:[x16,x16,x13,x13,x13,x13],id:x18,text:s19,n:[x20,[14,p],xc,x21,i,'',x22,x23],t:x},{r:[x16,x16,x13,x13,x13,x13],n:[x20,[14,p],x24,x21,i,'',x22,x23],id:x25,text:s19,v:b,t:x}],style:{'${symbolSelector}':{r:[_,_,x26,x27]}}},tt:{d:1300,a:y,data:[["eid1",d,600,0,"linear",e28,b,i]]}},"Shimmer":{v:x1,mv:x2,b:x3,stf:i,cg:i,rI:n,cn:{dom:[{t:g,id:x29,r:[x16,x16,x30,x31,x13,x13],f:[x14,im+g32,x16,x16]}],style:{'${symbolSelector}':{r:[_,_,x30,x31]}}},tt:{d:2500,a:y,data:[["eid7",lf,0,1500,"linear",e33,'0px','1040px']]}}};AdobeEdge.registerCompositionDefn(compId,symbols,fonts,scripts,resources,opts);})("EDGE-5254439");
+(function($,Edge,compId){var Composition=Edge.Composition,Symbol=Edge.Symbol;Edge.registerEventBinding(compId,function($){
+//Edge symbol: 'stage'
+(function(symbolName){Symbol.bindElementAction(compId,symbolName,"${Stage}","click",function(sym,e){javascript:click1()});
+//Edge binding end
+Symbol.bindTriggerAction(compId,symbolName,"Default Timeline",7500,function(sym,e){sym.play();});
+//Edge binding end
+})("stage");
+//Edge symbol end:'stage'
+
+//=========================================================
+
+//Edge symbol: 'Preloader'
+(function(symbolName){})("Preloader");
+//Edge symbol end:'Preloader'
+
+//=========================================================
+
+//Edge symbol: 'bg'
+(function(symbolName){})("bg");
+//Edge symbol end:'bg'
+
+//=========================================================
+
+//Edge symbol: 'Cta'
+(function(symbolName){Symbol.bindTriggerAction(compId,symbolName,"Default Timeline",1300,function(sym,e){sym.play();});
+//Edge binding end
+})("Cta");
+//Edge symbol end:'Cta'
+
+//=========================================================
+
+//Edge symbol: 'Shimmer'
+(function(symbolName){Symbol.bindTriggerAction(compId,symbolName,"Default Timeline",2500,function(sym,e){sym.play();});
+//Edge binding end
+})("Shimmer");
+//Edge symbol end:'Shimmer'
+})})(AdobeEdge.$,AdobeEdge,"EDGE-5254439");

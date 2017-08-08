@@ -1,0 +1,13 @@
+HTTP/1.1 200 OK
+Access-Control-Allow-Origin: *
+Cache-Control: no-cache
+Content-Type: text/javascript; charset=utf8
+Date: Mon, 07 Aug 2017 20:05:59 GMT
+Pragma: no-cache
+Server: Apache/2.2.22 (Ubuntu)
+X-Gf-Time-Total: 0.00085783004760742
+X-Powered-By: PHP/5.3.10-1ubuntu3.26
+Content-Length: 290
+Connection: keep-alive
+
+window.SSMGF.u.fn.cb_co({"data":{"SSM_GFU":"eyJ2ZXJzaW9uIjoyLCJndWlkIjoiNTg0NmVjZDY0ZmVjZTk1OTA4OGI0NTZiIiwic2lkIjoiUzIwMTcwODA3MjAwNTU4M0p0RXBNcnNDdzJ2ciIsImxhc3Rfc2VlbiI6MTUwMjEzNjM0N30=","SSM_UTC":"Z3VpZDo6NTg0NmVjZDY0ZmVjZTk1OTA4OGI0NTZifHx8c291cmNlOjpnZnU=","SSM_OPT_OUT":"","o":"g"}})

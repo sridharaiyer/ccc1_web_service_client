@@ -1,0 +1,43 @@
+HTTP/1.1 200 OK
+Cache-Control: private
+Content-Length: 4661
+Content-Type: text/xml; charset=utf-8
+X-MS-Server-Fqdn: BLU0B09FES08.infra.lync.com
+X-MS-Correlation-Id: caa76ea3-181b-4353-98e1-c004ce1d1b24
+x-ms-client-request-id: 9BAD94CB-4831-48EB-AD5E-FE8959FB16D9
+Date: Mon, 07 Aug 2017 20:06:30 GMT
+
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/" xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:u="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd"><s:Header><a:Action s:mustUnderstand="1">http://schemas.microsoft.com/OCS/AuthWebServices/GetAndPublishCertResponse</a:Action><a:RelatesTo>urn:uuid:d25dc423-5206-4bc6-b9f1-55bbb512b57f</a:RelatesTo><o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"><u:Timestamp u:Id="_0"><u:Created>2017-08-07T20:06:30.362Z</u:Created><u:Expires>2017-08-07T20:11:30.362Z</u:Expires></u:Timestamp></o:Security></s:Header><s:Body xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><GetAndPublishCertResponse ResponseClass="Success" DeviceId="BE32546E-702E-57A0-8CB8-A8BA0F2D2E5D" Entity="jmcguire@win.cccis.com" xmlns="http://schemas.microsoft.com/OCS/AuthWebServices/"><RequestSecurityTokenResponse xmlns="http://docs.oasis-open.org/ws-sx/ws-trust/200512/"><TokenType>http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-x509-token-profile-1.0#X509v3</TokenType><DispositionMessage xml:lang="en-US" xmlns="http://schemas.microsoft.com/windows/pki/2009/01/enrollment">Issued</DispositionMessage><BinarySecurityToken u:Id="17FF6920-141A-4FF5-8A6A-8E996AD0A102" EncodingType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd#Base64Binary" ValueType="http://schemas.microsoft.com/OCS/AuthWebServices.xsd#PKCS10" xmlns="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd">MIIC4TCCAckCAQAwLDEqMCgGA1UEAwwh5rWq5p2j5qW15pWy552A5rmp5oyu5o2j542p5oyu5rWv&#xD;
+MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAipwh47aOSY1hDJPPko1CQw9RjXJ9bqJ5&#xD;
+PginkFswjuIht+fU31RbPZcb9tkfJCDKfFDsj1S2ZdcvY3zaoJxi20YsvY6BJvW+aliFM/Kwcv/a&#xD;
+eKANdEsZOqzjWFPJNWb7Go9gYqn3/RcE04eXdAWN7bbw51LUl3imXpA5YaofATNT2KcuvH3PeQP3&#xD;
+3mECOD6KCXAMYj1Ly2XAv0turkKhr64gGy+GeCWfaa7eCmOjLLf9DFu5pQABgj2GuyH1FTDfSX7r&#xD;
+Pb5Lj5aZ+XkaDFAMZtzUywV+FHX+f/voffzy7kzipo8t1CHyv5+A27cV3qBPVNmOkKButIxdwy/g&#xD;
+P8wAwQIDAQABoHAwbgYKKwYBBAGCNw0CATFgMCoeHABWAGEAbABpAGQAaQB0AHkAUABlAHIAaQBv&#xD;
+AGQeCgBIAG8AdQByAHMwMh4mAFYAYQBsAGkAZABpAHQAeQBQAGUAcgBpAG8AZABVAG4AaQB0AHMe&#xD;
+CAA0ADMAMgAwMA0GCSqGSIb3DQEBCwUAA4IBAQBZwS82Cy8mJ5ojWNJdNExiKa4Bq9maRlwThs1k&#xD;
+7BuV6+BVCagyAZRNH+RxXplDVRnYgICVhc0E4bfWPig+K+92hOEEPUvo0uX1zMNd0wjiUacSJxdI&#xD;
+ljQPDXtzMpEvoxcysq/8v1jwRQMyU/0nslXFOn9QW5tqdAvgAmFIBw0Os6FOVKJaIs94IpuSYNW6&#xD;
+EbXVIKkr/rYTsdJMk69Yk2or1IBK0Q4xoFpbmbtSr0Q2Q82r/raeAxAnIBhVr1EHD+rafDF4TqU6&#xD;
+ccOqoe4xjmkOWUGtbqcCSTYYXX95D+XE/IbcVHVHUibgh1bEs/I7XigaGqBxDkyKYIp6HwF+vBNE&#xD;
+</BinarySecurityToken><RequestedSecurityToken><BinarySecurityToken EncodingType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd#base64binary" ValueType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-x509-token-profile-1.0#X509v3" xmlns="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd">MIIDnzCCAoegAwIBAgIKZPFRVKX9kTErOTANBgkqhkiG9w0BAQsFADAgMR4wHAYD&#xD;
+VQQDExVDb21tdW5pY2F0aW9ucyBTZXJ2ZXIwHhcNMTcwODA3MTk1MTMwWhcNMTcw&#xD;
+ODA4MDM1MTMwWjAhMR8wHQYDVQQDExZqbWNndWlyZUB3aW4uY2NjaXMuY29tMIIB&#xD;
+IjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAipwh47aOSY1hDJPPko1CQw9R&#xD;
+jXJ9bqJ5PginkFswjuIht+fU31RbPZcb9tkfJCDKfFDsj1S2ZdcvY3zaoJxi20Ys&#xD;
+vY6BJvW+aliFM/Kwcv/aeKANdEsZOqzjWFPJNWb7Go9gYqn3/RcE04eXdAWN7bbw&#xD;
+51LUl3imXpA5YaofATNT2KcuvH3PeQP33mECOD6KCXAMYj1Ly2XAv0turkKhr64g&#xD;
+Gy+GeCWfaa7eCmOjLLf9DFu5pQABgj2GuyH1FTDfSX7rPb5Lj5aZ+XkaDFAMZtzU&#xD;
+ywV+FHX+f/voffzy7kzipo8t1CHyv5+A27cV3qBPVNmOkKButIxdwy/gP8wAwQID&#xD;
+AQABo4HZMIHWMBMGA1UdJQQMMAoGCCsGAQUFBwMCMC0GA1UdDgQmBCRCRTMyNTQ2&#xD;
+RS03MDJFLTU3QTAtOENCOC1BOEJBMEYyRDJFNUQwRQYDVR0jBD4wPIAbQkxVMEIw&#xD;
+OWZlczA4LmluZnJhLmx5bmMuY29toR2CG0JMVTBCMDlmZXMwOC5pbmZyYS5seW5j&#xD;
+LmNvbTAmBgNVHRIEHzAdghtCTFUwQjA5ZmVzMDguaW5mcmEubHluYy5jb20wIQYD&#xD;
+VR0RBBowGIEWam1jZ3VpcmVAd2luLmNjY2lzLmNvbTANBgkqhkiG9w0BAQsFAAOC&#xD;
+AQEAPiTIUDo1rA/sQjd/AaP3ohacdQC8/kK/QZZGntOV60UL1gX8D7hCkhgBcqXa&#xD;
+vRRvbnbFpX8LSKl30Pzqc9SmzYZrVQ1bFt/QassL5kdPLAVeAMhLj5VYbbjrNgdZ&#xD;
+1IDo5gbH2RDwF7d4R4w6O5ghpAP6upyabJX9u6blqE0lWpntEqtubO/DSqIJukVx&#xD;
+PuaHROIQWxbKiwRMxmNZn/YStAo0t3bXqA6Fd1tyNZlpQ3I0FSFOdtqDD+fk3vsf&#xD;
+mvjDfj6vcRg8N37Yh9Oarg3EwSr4aFueGIssOf0U9WR8moW39rLEQUxoclrfPJPU&#xD;
+FZZd/KBP4sMP/RGqNn8i6i3Ojw==&#xD;
+</BinarySecurityToken></RequestedSecurityToken><RequestID xsi:nil="true" xmlns="http://schemas.microsoft.com/windows/pki/2009/01/enrollment"/></RequestSecurityTokenResponse></GetAndPublishCertResponse></s:Body></s:Envelope>

@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Session SID="1059" BitFlags="2100">
+  <SessionTimers ClientConnected="2017-08-07T15:05:41.5237657-05:00" ClientBeginRequest="2017-08-07T15:05:41.5287812-05:00" GotRequestHeaders="2017-08-07T15:05:41.5287812-05:00" ClientDoneRequest="2017-08-07T15:05:41.5297843-05:00" GatewayTime="0" DNSTime="0" TCPConnectTime="218" HTTPSHandshakeTime="202" ServerConnected="2017-08-07T15:05:41.7504663-05:00" FiddlerBeginRequest="2017-08-07T15:05:41.7504663-05:00" ServerGotRequest="2017-08-07T15:05:41.7504663-05:00" ServerBeginResponse="0001-01-01T00:00:00" GotResponseHeaders="0001-01-01T00:00:00" ServerDoneResponse="0001-01-01T00:00:00" ClientBeginResponse="2017-08-07T15:05:41.7504663-05:00" ClientDoneResponse="2017-08-07T15:05:41.7504663-05:00" />
+  <PipeInfo />
+  <TunnelInfo BytesEgress="0" BytesIngress="0" />
+  <SessionFlags>
+    <SessionFlag N="https-server-cipher" V="Aes256 256bits" />
+    <SessionFlag N="x-responsebodytransferlength" V="0" />
+    <SessionFlag N="https-server-version" V="3072" />
+    <SessionFlag N="https-client-snihostname" V="gizmo-s.serving-sys.com" />
+    <SessionFlag N="x-clientip" V="::ffff:127.0.0.1" />
+    <SessionFlag N="x-clientport" V="63517" />
+    <SessionFlag N="https-client-sessionid" V="A2 17 00 00 8B B9 AE 1B C8 B2 12 16 9B 14 64 FA 08 88 15 67 43 16 00 D3 CD 8A 01 D5 10 D4 AF 81" />
+    <SessionFlag N="x-processinfo" V="chrome:8036" />
+    <SessionFlag N="https-client-version" V="3072" />
+    <SessionFlag N="x-egressport" V="63524" />
+    <SessionFlag N="x-hostip" V="23.199.76.130" />
+  </SessionFlags>
+</Session>

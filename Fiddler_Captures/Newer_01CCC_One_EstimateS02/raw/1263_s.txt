@@ -1,0 +1,11 @@
+HTTP/1.1 204 No Content
+Content-Type: text/html; charset=UTF-8
+X-Content-Type-Options: nosniff
+Date: Mon, 07 Aug 2017 20:05:47 GMT
+Server: jumble_frontend_server
+Content-Length: 0
+X-XSS-Protection: 1; mode=block
+X-Frame-Options: SAMEORIGIN
+Set-Cookie: SIDCC=AA248beUjXFXDdWjD-rXWy-g5Az_rZySSPKYSXlWD11JC-sjF1liS73pp15pUInhw5xINqyTV7CKlv5CYVy9fQ; expires=Sun, 05-Nov-2017 20:05:47 GMT; path=/; domain=.google.com; priority=high
+Alt-Svc: quic=":443"; ma=2592000; v="39,38,37,36,35"
+

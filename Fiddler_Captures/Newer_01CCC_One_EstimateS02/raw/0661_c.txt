@@ -1,0 +1,45 @@
+CONNECT gateway.foresee.com:443 HTTP/1.1
+Host: gateway.foresee.com:443
+Connection: keep-alive
+User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36
+
+A SSLv3-compatible ClientHello handshake was found. Fiddler extracted the parameters below.
+
+Version: 3.3 (TLS/1.2)
+Random: 41 6D F7 54 6E B8 15 48 A8 65 50 FF 30 D3 C8 1A 4A 60 21 96 DB 5F E3 48 53 50 6F D5 01 22 52 A5
+"Time": 03/04/2015 2:38:25 PM
+SessionID: C9 26 00 00 A4 C6 54 FB A0 C6 9A 32 6B 71 FB 7F A3 DD B3 58 53 85 92 20 79 35 4C AD 92 83 34 87
+Extensions: 
+	0xfafa		empty
+	renegotiation_info	00
+	server_name	gateway.foresee.com
+	extended_master_secret	empty
+	SessionTicket	empty
+	signature_algs	sha256_ecdsa, Unknown[0x8]_Unknown[0x4], sha256_rsa, sha384_ecdsa, Unknown[0x8]_Unknown[0x5], sha384_rsa, Unknown[0x8]_Unknown[0x6], sha512_rsa, sha1_rsa
+	status_request	OCSP - Implicit Responder
+	SignedCertTimestamp (RFC6962)	empty
+	ALPN		h2, http/1.1
+	channel_id(GoogleDraft)	empty
+	ec_point_formats	uncompressed [0x0]
+	elliptic_curves	unknown [0x6A6A), unknown [0x1D), secp256r1 [0x17], secp384r1 [0x18]
+	0x5a5a		00
+Ciphers: 
+	[4A4A]	Unrecognized cipher - See http://www.iana.org/assignments/tls-parameters/
+	[C02B]	TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256
+	[C02F]	TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
+	[C02C]	TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384
+	[C030]	TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384
+	[CCA9]	Unrecognized cipher - See http://www.iana.org/assignments/tls-parameters/
+	[CCA8]	Unrecognized cipher - See http://www.iana.org/assignments/tls-parameters/
+	[C013]	TLS1_CK_ECDHE_RSA_WITH_AES_128_CBC_SHA
+	[C014]	TLS1_CK_ECDHE_RSA_WITH_AES_256_CBC_SHA
+	[009C]	TLS_RSA_WITH_AES_128_GCM_SHA256
+	[009D]	TLS_RSA_WITH_AES_256_GCM_SHA384
+	[002F]	TLS_RSA_AES_128_SHA
+	[0035]	TLS_RSA_AES_256_SHA
+	[000A]	SSL_RSA_WITH_3DES_EDE_SHA
+
+Compression: 
+	[00]	NO_COMPRESSION
+
+

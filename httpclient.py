@@ -1,6 +1,7 @@
 import requests
 from io import BytesIO
 from requests.packages.urllib3.exceptions import InsecureRequestWarning
+from xmlutils import XMLUtils
 
 requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
 
@@ -20,3 +21,15 @@ class HttpClient(object):
     def post(url, xml, soapaction=None, headers=default_header):
         xml_byte_data = BytesIO(xml).read()
         return requests.post(url=url, headers=headers, data=xml_byte_data, verify=False)
+
+
+if __name__ == '__main__':
+    # client = HttpClient()
+    headers = {'Content-Type': 'application/xml'}
+    # client.set_default_header(headers)
+    url = 'https://interfacesqa.aws.mycccportal.com/gateway/services/ExternalAssignmentWS'
+    xml = 'temp_Assignment_input.xml'
+    response = requests.post(url=url, headers=headers, data=xml, verify=False)
+    print('Response code: {}'.format(response))
+    response_xml = XMLUtils(response.text)
+    print('Response XML: \n{}'.format(str(response_xml)))

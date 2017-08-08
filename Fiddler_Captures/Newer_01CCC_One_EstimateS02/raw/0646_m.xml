@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Session SID="646" BitFlags="2100">
+  <SessionTimers ClientConnected="2017-08-07T15:05:29.3521503-05:00" ClientBeginRequest="2017-08-07T15:05:29.3541565-05:00" GotRequestHeaders="2017-08-07T15:05:29.3541565-05:00" ClientDoneRequest="2017-08-07T15:05:29.3541565-05:00" GatewayTime="0" DNSTime="0" TCPConnectTime="4355" HTTPSHandshakeTime="132" ServerConnected="2017-08-07T15:05:33.7236601-05:00" FiddlerBeginRequest="2017-08-07T15:05:33.7236601-05:00" ServerGotRequest="2017-08-07T15:05:33.7236601-05:00" ServerBeginResponse="0001-01-01T00:00:00" GotResponseHeaders="0001-01-01T00:00:00" ServerDoneResponse="0001-01-01T00:00:00" ClientBeginResponse="2017-08-07T15:05:33.7236601-05:00" ClientDoneResponse="2017-08-07T15:05:33.7236601-05:00" />
+  <PipeInfo />
+  <TunnelInfo BytesEgress="0" BytesIngress="0" />
+  <SessionFlags>
+    <SessionFlag N="https-server-cipher" V="Aes256 256bits" />
+    <SessionFlag N="x-responsebodytransferlength" V="0" />
+    <SessionFlag N="https-server-version" V="3072" />
+    <SessionFlag N="https-client-snihostname" V="pixall.esm1.net" />
+    <SessionFlag N="x-clientip" V="::ffff:127.0.0.1" />
+    <SessionFlag N="x-clientport" V="63141" />
+    <SessionFlag N="https-client-sessionid" V="89 07 00 00 F2 88 6D 1C B0 CD C3 80 24 43 56 57 60 FA 81 7C FF 7A DB 77 D5 7F 37 BB F2 CE 53 9E" />
+    <SessionFlag N="x-processinfo" V="chrome:8036" />
+    <SessionFlag N="https-client-version" V="3072" />
+    <SessionFlag N="x-egressport" V="63148" />
+    <SessionFlag N="x-hostip" V="104.89.84.89" />
+  </SessionFlags>
+</Session>

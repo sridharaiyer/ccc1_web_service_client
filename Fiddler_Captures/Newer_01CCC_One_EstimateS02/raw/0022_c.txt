@@ -1,0 +1,10 @@
+GET https://www.google-analytics.com/analytics.js HTTP/1.1
+Accept: application/javascript, */*;q=0.8
+Referer: https://qa00.aws.mycccportal.com/e/ApplicationServlet?sessionId=rVG-Suaak_ggZOcltYTjy97HeTn1el5kO6ky0asGyciyVukBHpMe!-215580757!150213616604284&appServerName=qa00.aws.mycccportal.com/e&appLocation=mainController.do?pageId=adminAssignment
+Accept-Language: en-US
+User-Agent: Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; WOW64; Trident/6.0)
+Accept-Encoding: gzip, deflate
+Host: www.google-analytics.com
+DNT: 1
+Connection: Keep-Alive
+

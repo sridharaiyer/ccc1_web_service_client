@@ -1,0 +1,243 @@
+HTTP/1.1 200 OK
+Content-Type: application/javascript
+Content-Length: 10845
+Connection: keep-alive
+Date: Fri, 21 Oct 2016 09:55:10 GMT
+Last-Modified: Tue, 16 Dec 2014 21:56:59 GMT
+ETag: "d59a7aae08f4c389fc852f1f839bf163"
+Accept-Ranges: bytes
+Server: AmazonS3
+Age: 34230
+X-Cache: Hit from cloudfront
+Via: 1.1 0459f84cfc86cb6f46c44cb1d0a8bdc0.cloudfront.net (CloudFront)
+X-Amz-Cf-Id: VJSxFbDR63sdVJF_UZ87cBlALXw1rpgo8gmDag8bXq0wPzP0-9kb2w==
+
+/*
+*------------------------------------------------------------------------------------------------------------------------------------------------------
+* This function acts similar to XML item in flash it will store the needed information for later use it also generates the HTML for required element. *
+*======================================================================================================================================================
+* type          (@string) = Type of json item it is. Ex. text, photos, graphic.                                                                       *
+* name          (@string) = The name of the item inside the json will also become the id of the element.                                              *
+* group         (@string) = Group name of the json item if it applies. Ex. item or offer.                                                             *
+* position      (@number) = Position of a group element within its' group. Ex 1 2 3 4 5                                                               *
+* photoPosition (@number) = Position of the photo to be used. Ex. 1 2 3 4.                                                                            *
+* photoSize     (@string) = The desired photo size to be used. Ex. 60x45 80x60 107x80 142x107 189x142 232x174 600x450.                                *
+*******************************************************<== NOTES ==>***********************************************************************************
+*
+* @author                  Dmitri Dzioura
+* @date
+* @version                 1.0
+
+* @modify_by               Chris Brenner
+* @modify_date             Feb 2, 2014
+
+* Updated Dec 2, 2013 by Chris and Dmitri - Added imageLoaded, imageFailed, and placeHolderLoaded functions to handle image loading events better.
+                                            Updated photos case with events and variables necessary for new image loading.
+* Updated Dec 2, 2013 by Chris - Duplicated changes from photos case to graphics case for image loading/error functionality.
+* Updated March 2, 2014 by Chris - Added events onto cloned items as they were not being added before.
+*------------------------------------------------------------------------------------------------------------------------------------------------------
+*/
+var jsonItem = function(type, name, group, position, photoPosition, photoSize) {
+
+    /*******************************************************************************************************
+    * This is needed for cloning.                                                                          *
+    *******************************************************************************************************/
+    this.args = [type, name, group, position, photoPosition, photoSize];
+
+    // Checks to see if we are working on dev or live.
+    if(SSM_ad_obj['ApCdnDomain'].indexOf('dev') != '-1') {
+        var iPath = "http://dev.cdn.speedshiftmedia.com";
+    } else {
+        var iPath = SSM_ad_obj['ApCdnDomain'];
+    }
+
+    // Gets a copy of the json.
+    var json = SSM_BASE.GlobalJson.get;
+
+    // Saves the name and the group.
+    this.group = group;
+    this.name = name;
+
+    // Creates a little shortcut for the json path to be used to extract the element.
+    var helper;
+    if(group) {
+        helper = json[group+'s']['group'][0][group][position];
+    } else {
+        helper = json;
+    }
+
+    // Switches on the type of the element.
+    switch(type) {
+
+
+
+        case 'text':
+            // Extracts and saves value, url, advertiserId and creates and saves the html for text elements.
+            if(helper[name]) {
+                this.value              = helper[name].value;
+                this.url                = helper[name].url;
+                this.path               = helper;
+            }
+            this.advertiserid       = (group) ? (helper['advertiserid']) : (json['ownerid']); // Get advertiserID.
+            var temp                = document.createElement('div'); // Create text parent div.
+            temp.appendChild(span   = document.createElement('span')); // Create text span.
+            span.innerHTML          = (this.value)?(this.value):(''); // Populate text.
+            this.value              = (this.value) ? (this.value) : '';
+			if (group)
+			{
+                try {
+                    // if this fails, something requires html escaping with innerText so UTF8.decode won't barf
+                    var test_string = decodeURIComponent(escape(this.value));
+                    span.innerHTML = UTF8.decode(this.value);
+                }
+                catch (e) {
+                    span.innerHTML = UTF8.decode(span.innerText || span.textContent);
+                }
+			}
+            temp.setAttribute('id', name); // Set image idi.
+            this.html               = temp;
+            break;
+        case 'photos':
+
+
+
+            // Extracts and saves value, url, advertiserId and creates and saves the html for photo elements.
+            var path                = (helper[name])?((helper[name]['photo'][photoPosition]['path'])):(''); // Path to image.
+            this.value              = iPath + (path ? (path.substr(0, path.length-4)+((photoSize == 'X')?(''):('.'+photoSize))+'.jpg') : ('/library/template_assets/generic/no_image_placeholder_84x34.png')); // Image or placeholder path.
+            this.url                = (helper[name])?((helper[name]['photo'][photoPosition]['url'])):(''); // Clickthrough URL
+            this.path               = helper; // True = path has value, False = path has no value.
+            this.advertiserid       = (group) ? (helper['advertiserid']) : (json['ownerid']); // Get advertiserID.
+            this.loaded             = false; // Image not loaded yet.
+
+            var self = this;
+
+            var temp                = document.createElement('div'); // Create image parent div.
+            var img                 = document.createElement('img'); // Create img tag.
+            temp.appendChild(img);
+
+
+
+            // Add events before src added.
+            addEvent(img, 'load', loadEvent = function(){self.imageLoaded(path, img)});
+            addEvent(img, 'error', function(){self.imageFailed(img, iPath)});
+
+            self.loadEvent = loadEvent; // Remember event so we can remove later.
+            img.setAttribute('src', this.value); // Set src to initiate image load.
+            temp.setAttribute('id', name); // Set image id.
+            this.html               = temp;
+            break;
+        case 'graphic':
+            // Extracts and saves value, url, advertiserId and creates and saves the html for graphic elements.
+            var path                = ((helper[name]) ? (helper[name].value) : (''));// Path to image.
+            this.value              = iPath + ((helper[name] && helper[name].value) ? path : ('/library/template_assets/generic/no_image_placeholder_84x34.png')); // Image path.
+            this.url                = ((helper[name]) ? (helper[name].url) : ('')); // Clickthrough URL.
+            this.path               = helper; // True = path has value, False = path has no value.
+            this.advertiserid       = (group) ? (helper['advertiserid']) : (json['ownerid']); // Get advertiserID.
+            this.loaded             = false; // Graphic not loaded yet.
+
+            var self = this;
+
+            var temp                = document.createElement('div'); // Create image parent div.
+            var img                 = document.createElement('img'); // Create img tag.
+            temp.appendChild(img);
+
+            // Add events before src added.
+            addEvent(img, 'load', loadEvent = function(){self.imageLoaded(path, img)});
+            addEvent(img, 'error', function(){self.imageFailed(img, iPath)});
+
+            self.loadEvent = loadEvent; // Remember event so we can remove later.
+            img.setAttribute('src', this.value); //Set src to initiate image load.
+            temp.setAttribute('id', name); // Set image id.
+            this.html               = temp;
+            break;
+    }
+}
+
+
+/**
+ * This function is called if an image was loaded. The loaded variable is updated
+ * and there is a call for a background color change if the placeholder was loaded in.
+ *
+ * @param path              The path of the loaded image.
+ * @param  img              The image that was loaded.
+ *
+ */
+jsonItem.prototype.imageLoaded = function(path, img) {
+    var self = this;
+
+    if(path) {
+        // Image is real.
+        self.loaded = true;
+    } else {
+        // Change background color.
+        self.placeHolderLoaded(img);
+    }
+}
+
+/**
+ * This function is called if an image failed to load. The loaded variable is updated,
+ * the placeholder image is loaded, and a background color change is called.
+ *
+ * @param  img              The image that failed to load.
+ * @param iPath             The path to the placeholder image.
+ *
+ */
+jsonItem.prototype.imageFailed = function(img, iPath) {
+    var self = this;
+
+    // Remove initial event listening for image load.
+    removeEvent(img, 'load', self.loadEvent);
+
+    // Change background color after load.
+    addEvent(img, 'load', function(){self.placeHolderLoaded(img)});
+
+    // Load placeholder.
+    img.setAttribute('src', iPath + '/library/template_assets/generic/no_image_placeholder_84x34.png');
+}
+
+/**
+ * This function will change the background color of the parent element of any
+ * placeholder image that is loaded.
+ *
+ * @param  img              The placeholder image.
+ *
+ */
+jsonItem.prototype.placeHolderLoaded = function(img){
+    var self = this;
+
+    // Image is placeholder.
+    self.loaded = 'error';
+
+    // Change parents background color.
+    parent(img).style.background = '#565656';
+}
+
+// A function that will add tracking to the jsonItem.
+jsonItem.prototype.addTracking = function(type, url, needValue, openMethod) {
+    // Will check to see if there was a url passed in. If there wasn't it will try using the url from the json.
+    this.url = (url) ? (url) : (this.url);
+    // Creates the tracking.
+    new tracking.jsonTracking(this, type, needValue, openMethod);
+    // Adds an event listener for the click to track.
+    addEvent(this.html, 'click', clickTracking, false);
+}
+
+
+// The function that will return the clone of the jsonItem.
+jsonItem.prototype.clone = function() {
+
+    if((this.html.getAttribute('trackid'))){
+        var temp = new jsonItem(this.args[0], this.args[1], this.args[2], this.args[3], this.args[4], this.args[5]);
+        temp.html.setAttribute('trackid', this.html.getAttribute('trackid'))
+
+        addEvent(temp.html, 'click', clickTracking, false);
+
+        return temp;
+    } else {
+        return new jsonItem(this.args[0], this.args[1], this.args[2], this.args[3], this.args[4], this.args[5]);
+    }
+}
+
+
+
+

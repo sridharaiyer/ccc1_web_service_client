@@ -1,0 +1,11 @@
+HTTP/1.1 204 No Content
+Content-Length: 0
+Content-Security-Policy-Report-Only: default-src https: data: about: gsa: 'unsafe-inline' 'unsafe-eval'; font-src https: data: ; report-uri /cspreport/log; img-src https: data: ;
+Content-Type: text/plain
+P3P: CP="NOI DSP COR DEVa TAIa OUR BUS UNI"
+Server: nginx/1.10.2
+Date: Mon, 07 Aug 2017 20:05:39 GMT
+Connection: keep-alive
+Vary: User-Agent
+Set-Cookie: bm_sv=AAB0B93BD0148C48DE5536A1E54C1576~IZ1HFmU8cq1WFPe2jEkeDAUne3LHMYs0ytc5hC+167XGaJXCUqEee95cQHs1iOJH5LwpmdzMcNpOqM9fQXeUr/l798PXL+L/O02sl8X1aWZaPJow9O1VcdbagJFJ6ZPjGlonCV2hlrw0NJf+Ww4sv7dTpb6h2yV6rnaumbFtg+o=; Domain=.autotrader.com; Path=/; Max-Age=1301; HttpOnly
+

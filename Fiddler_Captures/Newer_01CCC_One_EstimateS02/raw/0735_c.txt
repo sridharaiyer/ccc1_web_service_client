@@ -1,0 +1,12 @@
+GET https://securepubads.g.doubleclick.net/pcs/view?xai=AKAOjsvTGbo9n84sOKhy_gSr4HkQ5Fq-3mtrAKQCEg4F7d77yAm-2UrYsq9Pn4Gu4yUVG28Sow3Z4G6dPAuO4kB6j48yHsKoBdf11Rg_NQnmmqnkSXR_pRBb3IjMIm3ZLujzyqW4RGUvsWBNF_5POlBVvg5fAojcR3e7zqopq2pIf7YILj7_0cq55NHCydG2tyhdHtebn0q7OvbVt0M-6FlLumAXkWF1lR0mmZQ38fOHjCSib3NiuyfdmdPtZUeOshgcd5o&sig=Cg0ArKJSzGXBYlU3uIFzEAE&urlfix=1&adurl= HTTP/1.1
+Host: securepubads.g.doubleclick.net
+Connection: keep-alive
+User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36
+X-Client-Data: CIm2yQEIpLbJAQjBtskBCO2XygEI+pzKAQipncoB
+Accept: image/webp,image/apng,image/*,*/*;q=0.8
+DNT: 1
+Referer: https://www.autotrader.com/cars-for-sale/Chevrolet/Volt/Chicago+IL-60652?makeCodeList=CHEV&modelCodeList=VOLT&showcaseOwnerId=100003458&Log=0
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.8
+Cookie: id=22b34e65360d00a6||t=1480458270|et=730|cs=002213fd485afe177673958a88; __gads=ID=3370d3d5328207d9:T=1481752497:S=ALNI_Mbt1G5FVGtNGLrLq5APnGDWmgiBzg; IDE=AHWqTUn8VNea70iycoL66B7NLYGuE6nvEmzx2HARZFKouJfsElqkeWSODQ; DSID=ADyxukvbcpLxxSZpU156HnttmXKBlAfEuZkciu3xWzf90EEXKEtmjD6i3r_DRyZxzfHstkdcUmOfDiQ0aNHXNZqfcpn0rsSZVIDhoIgaL1DzOebhQXymQVQ
+

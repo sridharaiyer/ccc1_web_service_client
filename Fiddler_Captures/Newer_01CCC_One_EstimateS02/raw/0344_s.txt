@@ -1,0 +1,31 @@
+HTTP/1.1 200 Connection Established
+FiddlerGateway: Direct
+StartTime: 15:05:09.505
+Connection: close
+
+Encrypted HTTPS traffic flows through this CONNECT tunnel. HTTPS Decryption is enabled in Fiddler, so decrypted sessions running in this tunnel will be shown in the Web Sessions list.
+
+Secure Protocol: 3072
+Cipher: Aes256 256bits
+Hash Algorithm: Sha384 384bits
+Key Exchange: ECDHE_RSA (0xae06) 256bits
+
+== Server Certificate ==========
+[Subject]
+  CN=autotrader.com, O=Autotrader.com, L=Atlanta, S=Georgia, C=US
+
+[Issuer]
+  CN=GeoTrust SSL CA - G3, O=GeoTrust Inc., C=US
+
+[Serial Number]
+  092AF74A6B62E0118C103F80205DB693
+
+[Not Before]
+  03/29/2017 7:00:00 PM
+
+[Not After]
+  12/16/2017 5:59:59 PM
+
+[Thumbprint]
+  818105E16AE0DC26E0F64EE02F13B03862F50345
+

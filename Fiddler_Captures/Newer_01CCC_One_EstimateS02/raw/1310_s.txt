@@ -1,0 +1,93 @@
+HTTP/1.1 200 OK
+Content-Type: application/x-javascript
+Content-Length: 2746
+Connection: keep-alive
+Date: Sun, 20 Nov 2016 13:05:58 GMT
+Last-Modified: Tue, 26 Nov 2013 18:58:12 GMT
+ETag: "6204023af4f76f850274a4d6ecc2a149"
+Accept-Ranges: bytes
+Server: AmazonS3
+Age: 72641
+X-Cache: Hit from cloudfront
+Via: 1.1 fb5794831ad522a7a9b0d102a91d1696.cloudfront.net (CloudFront)
+X-Amz-Cf-Id: 3WXOgoE98Vnf4Rxf8gUxD4MPLfwNY4Punc6ASCWNoK8VGl6UT2VgnQ==
+
+//-----------------------------------------------------------------------------------------
+//returns an array of elements coresponding to the classname
+//========================================================================================
+// classname          = classname of element(s)
+//-----------------------------------------------------------------------------------------
+function byClass(classname) {
+    var a = [];
+    var temp = document.getElementById('ssm_ad_container');
+    var els = temp.children;
+    for(var i in els) {
+        if(els[i].innerHTML) {
+            if(els[i].getAttribute('class') == classname) {
+                        a.push(els[i]);        
+            }
+            else {
+                for(var c in els[i].children) {
+                    if(els[i].children[c].innerHTML) {
+                        if(els[i].children[c].getAttribute('class')) {
+                            if(els[i].children[c].getAttribute('class') == classname) {
+                                a.push(els[i].children[c]);        
+                            }
+                        }
+                    }    
+                }
+            }
+            
+            
+        }
+    }
+
+    return a;
+}
+
+//-----------------------------------------------------------------------------------------
+//returns an element caresponding to its id
+//========================================================================================
+// name          = id
+//-----------------------------------------------------------------------------------------
+function id(name) {
+    return document.getElementById(name);
+}
+
+function tag(name, elem) {
+    // If the context element is not provided, search the whole document
+    return (elem || document).getElementsByTagName(name);
+}
+
+// A function for finding the Parent of an Element
+// num is used to navigate up multiple parents at a time
+// for example, parent(elem, 2) is equivalent to parent(parent(elem))
+function parent( elem, num ) {
+    num = num || 1;
+    for ( var i = 0; i < num; i++ ) {
+        if ( elem != null ) elem = elem.parentNode;
+    }
+    return elem;
+}
+
+// A function for finding the previous sibling element in relation to an element
+function prev( elem ) {
+    do {
+        elem = elem.previousSibling;
+    } while ( elem && elem.nodeType != 1 );
+    return elem;
+}
+
+// A function for finding the previous sibling element in relation to an element
+function next( elem ) {
+    do {
+        elem = elem.nextSibling;
+    } while ( elem && elem.nodeType != 1 );
+    return elem;
+}
+
+// A function for finding the first child element of an element
+function first( elem ) {
+    elem = elem.firstChild;
+    return elem && elem.nodeType != 1 ? ssm_base.next( elem ) : elem;
+}

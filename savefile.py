@@ -1,4 +1,7 @@
 import os.path
+import logging
+
+logger = logging.getLogger()
 
 
 class Save(object):
@@ -12,13 +15,13 @@ class Save(object):
 
     def save_input(self, data):
         path = self._create_path('input')
-        print('Saving input file - {}'.format(path))
+        logger.debug('Saving input file - {}'.format(path))
         with open(path, 'wb') as f:
             f.write(data)
 
     def save_response(self, data):
         path = self._create_path('response')
-        print('Saving response - {}'.format(path))
+        logger.debug('Saving response - {}'.format(path))
         with open(path, 'w') as f:
             f.write(data)
 

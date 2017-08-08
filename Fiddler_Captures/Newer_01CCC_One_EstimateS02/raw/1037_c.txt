@@ -1,0 +1,12 @@
+GET https://securepubads.g.doubleclick.net/pcs/view?xai=AKAOjsvwIsp8VxdBhT6bp0uTzBcOUFPIg6Xb69LmU5qaJXDDvH-8pfn1AE546GdnJJwT1PRc50BjXjApHw6RF5l4ssQ7GOaPa8gBYNYyfT6V33V9rROIEgXJ-5lTlqrSKW3vU3ijn4RefUMIfs7yGFdvySfInKLiP7-HSq3E1hXuD5re97WbuGKQl9MH6-t1KcgWeFDkO_cl7xP96brvKoFRvH3EABCjLFMFqpmszN-Y-1djjmcbvR7zcKkw0bmxe9oyqA&sig=Cg0ArKJSzFim2K2Zm8P_EAE&urlfix=1&adurl=https://googleads4.g.doubleclick.net/pcs/view%3Fxai%3DAKAOjsu4BdKs8ALp_mJcLQi5WHo_c9htuXwJgZd8LaLUtXr1emdt4aneu2u5SpyQ3MyxlYMrvi0iq735anSpi2G_k15clWuBcUDdzrdDYGBHm10%26sig%3DCg0ArKJSzMZnxKkBgQ6XEAE%26urlfix%3D1%26adurl%3D HTTP/1.1
+Host: securepubads.g.doubleclick.net
+Connection: keep-alive
+User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36
+X-Client-Data: CIm2yQEIpLbJAQjBtskBCO2XygEI+pzKAQipncoB
+Accept: image/webp,image/apng,image/*,*/*;q=0.8
+DNT: 1
+Referer: https://www.autotrader.com/cars-for-sale/Chevrolet/Volt/Chicago+IL-60652?zip=60652&showcaseOwnerId=100003458&startYear=1981&numRecords=25&sortBy=derivedpriceDESC&firstRecord=0&endYear=2016&modelCodeList=VOLT&makeCodeList=CHEV&searchRadius=0
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.8
+Cookie: id=22b34e65360d00a6||t=1480458270|et=730|cs=002213fd485afe177673958a88; __gads=ID=3370d3d5328207d9:T=1481752497:S=ALNI_Mbt1G5FVGtNGLrLq5APnGDWmgiBzg; IDE=AHWqTUn8VNea70iycoL66B7NLYGuE6nvEmzx2HARZFKouJfsElqkeWSODQ; DSID=ADyxukvbcpLxxSZpU156HnttmXKBlAfEuZkciu3xWzf90EEXKEtmjD6i3r_DRyZxzfHstkdcUmOfDiQ0aNHXNZqfcpn0rsSZVIDhoIgaL1DzOebhQXymQVQ
+

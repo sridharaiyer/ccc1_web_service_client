@@ -42,6 +42,7 @@ class ExternalAssignmentWS(object):
         self.lname = params.pop('lname')
         self.fname = params.pop('fname')
         self.params = params
+        self.params['AssignmentRecipientID'] = 'P' + self.params['AssignmentRecipientID']
         self.path = 'xmltemplates/sample_create_assignment.xml'
         self.xml = XMLUtils(self.path)
         self.time = Time()
@@ -56,7 +57,7 @@ class ExternalAssignmentWS(object):
         return bytes(self.xml)
 
     def edit_xml(self):
-        logger.INFO('Preparing the {} {} XML file'.format(
+        logger.info('Preparing the {} {} XML file'.format(
             self.env, 'Assignment'))
 
         # Getting Adjustercode from database from office and company
@@ -67,7 +68,7 @@ class ExternalAssignmentWS(object):
         adjustercode = self.db.claimfolder.execute(newsql)[0][0]
         self.params['AdjusterCode'] = adjustercode
 
-        logger.INFO('The assignment params: \n{}'.format(
+        logger.info('The assignment params: \n{}'.format(
             json.dumps(self.params, indent=4)))
 
         self.xml.edit_tag(multiple=True, **self.params)
@@ -109,7 +110,7 @@ class ExternalAssignmentWS(object):
         self.savefile.save_response(str(response_xml))
 
     def verify_db(self):
-        logger.INFO('Start assignment creation DB verification:')
+        logger.info('Start assignment creation DB verification:')
         sql = """SELECT * FROM SERVICE_ORDER WHERE
                 CUST_CLM_REF_ID = '{}' AND
                 ASGN_MAINT_TYP_CD = 'A'""".format(self.claimid)

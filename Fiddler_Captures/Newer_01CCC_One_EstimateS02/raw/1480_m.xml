@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Session SID="1480" BitFlags="2100">
+  <SessionTimers ClientConnected="2017-08-07T15:05:53.6061052-05:00" ClientBeginRequest="2017-08-07T15:05:53.6101176-05:00" GotRequestHeaders="2017-08-07T15:05:53.6101176-05:00" ClientDoneRequest="2017-08-07T15:05:53.6101176-05:00" GatewayTime="0" DNSTime="0" TCPConnectTime="265" HTTPSHandshakeTime="288" ServerConnected="2017-08-07T15:05:53.8769422-05:00" FiddlerBeginRequest="2017-08-07T15:05:53.8769422-05:00" ServerGotRequest="2017-08-07T15:05:53.8769422-05:00" ServerBeginResponse="0001-01-01T00:00:00" GotResponseHeaders="0001-01-01T00:00:00" ServerDoneResponse="0001-01-01T00:00:00" ClientBeginResponse="2017-08-07T15:05:53.8960011-05:00" ClientDoneResponse="2017-08-07T15:05:53.8960011-05:00" />
+  <PipeInfo />
+  <TunnelInfo BytesEgress="0" BytesIngress="0" />
+  <SessionFlags>
+    <SessionFlag N="https-server-cipher" V="Aes128 128bits" />
+    <SessionFlag N="x-responsebodytransferlength" V="0" />
+    <SessionFlag N="https-server-version" V="3072" />
+    <SessionFlag N="https-client-snihostname" V="pagead2.googlesyndication.com" />
+    <SessionFlag N="x-clientip" V="::ffff:127.0.0.1" />
+    <SessionFlag N="x-clientport" V="63915" />
+    <SessionFlag N="https-client-sessionid" V="AB 2F 00 00 2A 7C 2F D3 ED 5F 6E E8 CE 3B 15 A2 45 0E D9 21 23 98 56 60 2F C5 AE 56 82 EC CB 33" />
+    <SessionFlag N="x-processinfo" V="chrome:8036" />
+    <SessionFlag N="https-client-version" V="3072" />
+    <SessionFlag N="x-egressport" V="63926" />
+    <SessionFlag N="x-hostip" V="172.217.9.66" />
+  </SessionFlags>
+</Session>

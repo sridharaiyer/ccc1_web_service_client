@@ -1,0 +1,12 @@
+HTTP/1.0 200 OK
+Server: BigIP
+Connection: Keep-Alive
+Content-Length: 237
+
+
+			<html>
+             <head> <title> Get Response from Services Host</title> </head>
+               <body> 
+                 <p>The HTTP GET method to WSDL resource is restricted to access</p>
+                </body>
+           </html>

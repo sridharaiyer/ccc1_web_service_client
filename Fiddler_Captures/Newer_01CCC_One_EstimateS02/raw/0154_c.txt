@@ -1,0 +1,12 @@
+GET https://accounts.google.com/ServiceLogin?service=doritos&passive=true&go=true&continue=https://googleads.g.doubleclick.net/pagead/drt/si%3Fogt%3D1 HTTP/1.1
+Host: accounts.google.com
+Connection: keep-alive
+User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36
+X-Client-Data: CIm2yQEIpLbJAQjBtskBCO2XygEI+pzKAQipncoB
+Accept: image/webp,image/apng,image/*,*/*;q=0.8
+DNT: 1
+Referer: https://clients5.google.com/pagead/drt/dn/
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.8
+Cookie: RMME=false; ACCOUNT_CHOOSER=AFx_qI6CKS7Hub0LF6UvXWDKKq9brdrq0kmfE4gtjC6hAc00IJ2fvKVvb4t3fWVLDDYDGrp7l7uGHZ4nciJbNl6ChWAA62f46dIxWEmY0Unh__7wAHNiCnWmpyk-xrgUuFb85DyAYG8NqzNPvZYzfEMWeu5ZIKTk1t9E9tk5SPjMF1T98AP0WeVEB5FEIPLN7N_XC-quGFVbEQz_PoRvzJk2oqModlMlGJoFwG0re5t_IoHT6f2biLUHLhroWduaq4SzUna_v-TS; SID=ywSCtsf15eBy3rPIuxlWlO_K9LymwriXSfcrQtqA9FH2SKjOQF2ocjyZpysQA-aLjppORQ.; HSID=AZzpKOJW-ZVzWvzT9; SSID=AjnslOuX1C68xP0ff; APISID=Aa3CDMHobxddLW8q/Am-7KKUol-c3HG0v5; SAPISID=7yTYiajm9AvceiEK/AoGKgLk5lLKqud2Vv; LSID=doritos|o.notifications.google.com|s.blogger|s.youtube|wise:ywSCtjXXwsjikPAAL1LfP1ZZb9syQ1kp4B7a1wdmXA9hj7mBTVW-YqQWltOiDYrcGbbJlA.; OGPC=732465152-7:193170432-9:699960320-16:448059392-5:93408256-9:961419264-2:111951872-2:1049715712-2:811773952-7:531737600-14:89860096-2:604273664-8:807236608-2:177517568-19:928362496-8:520420352-3:355367936-8:19002874-1:; NID=109=isc4Lmx6Z9Idkwdxh0bUAdJmbtur3ggD1FH2w9NgC3QhaweFjECNA7Ei6tTXwTpCGXBUsGqATUSWewX1Dy0OkvPMj_fZfo_glNJ4NolfLq5njnIvMrsDHRZBjpeTED_xewivJ_IkSG8rPK-gY7XnWGlYwRxVypDt2dr4bAjqO2STiN7vROzbchBmpy89Kt_jRG3o5TzejPRN7qMCeOXb_4I6802U2oMIONi8BVfK6sVIJaGqR1hAbILZTQ3fDlib8iRn; GAPS=1:juFLfIGLrQPmwLzg40orNqPkr6JyCw:itmL4dAuJHNQXfs5; SIDCC=AA248bfT9pOHJgMcS8zz_VsQVAsy972KUVASHWqrOZZJ41xsZ8qbcp0SNieqrLkX2cENyWfta1odkEXkwtLOxQ
+

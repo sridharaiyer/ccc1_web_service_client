@@ -1,0 +1,31 @@
+HTTP/1.1 200 Connection Established
+FiddlerGateway: Direct
+StartTime: 15:05:36.313
+Connection: close
+
+Encrypted HTTPS traffic flows through this CONNECT tunnel. HTTPS Decryption is enabled in Fiddler, so decrypted sessions running in this tunnel will be shown in the Web Sessions list.
+
+Secure Protocol: 3072
+Cipher: Aes128 128bits
+Hash Algorithm: Sha256 256bits
+Key Exchange: ECDHE_RSA (0xae06) 256bits
+
+== Server Certificate ==========
+[Subject]
+  CN=*.agkn.com, OU=Domain Control Validated - RapidSSL(R), OU=See www.rapidssl.com/resources/cps (c)15, OU=GT59684396
+
+[Issuer]
+  CN=RapidSSL SHA256 CA - G3, O=GeoTrust Inc., C=US
+
+[Serial Number]
+  067B62
+
+[Not Before]
+  08/23/2015 11:52:56 AM
+
+[Not After]
+  08/24/2017 5:01:35 PM
+
+[Thumbprint]
+  F244234D29D4BF5C10C8BAEDDBD13DCB33A731E5
+

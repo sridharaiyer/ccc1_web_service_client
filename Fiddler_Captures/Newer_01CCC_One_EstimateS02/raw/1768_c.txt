@@ -1,0 +1,10 @@
+GET https://ssl.google-analytics.com/__utm.gif?utmwv=5.6.7&utms=8&utmn=910996985&utmhn=qa00.aws.mycccportal.com&utmcs=iso-8859-1&utmsr=1600x900&utmvp=1583x783&utmsc=24-bit&utmul=en-us&utmje=1&utmfl=14.0%20r0&utmdt=Portal%20-%20Search&utmhid=1830891744&utmr=0&utmp=%2Fb%2FSessionMgrApplicationServlet%3FsessionID%3DrVG-Suaak_ggZOcltYTjy97HeTn1el5kO6ky0asGyciyVukBHpMe!-215580757!1502136166042%26paramID%3DAssignment%26cacheAT%3Dsm2&utmht=1502136439482&utmac=UA-31118127-1&utmcc=__utma%3D105796099.89142262.1502129944.1502136192.1502136192.1%3B%2B__utmz%3D105796099.1502136192.1.1.utmcsr%3D(direct)%7Cutmccn%3D(direct)%7Cutmcmd%3D(none)%3B&utmjid=&utmu=qBAAAAAAAAAAAAAAAAAAAAAE~ HTTP/1.1
+Accept: image/png, image/svg+xml, image/*;q=0.8, */*;q=0.5
+Referer: https://qa00.aws.mycccportal.com/b/SessionMgrApplicationServlet?sessionID=rVG-Suaak_ggZOcltYTjy97HeTn1el5kO6ky0asGyciyVukBHpMe!-215580757!1502136166042&paramID=Assignment&cacheAT=sm2
+Accept-Language: en-US
+User-Agent: Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; WOW64; Trident/6.0)
+Accept-Encoding: gzip, deflate
+Host: ssl.google-analytics.com
+DNT: 1
+Connection: Keep-Alive
+

@@ -1,0 +1,31 @@
+HTTP/1.1 200 Connection Established
+FiddlerGateway: Direct
+StartTime: 15:05:51.532
+Connection: close
+
+Encrypted HTTPS traffic flows through this CONNECT tunnel. HTTPS Decryption is enabled in Fiddler, so decrypted sessions running in this tunnel will be shown in the Web Sessions list.
+
+Secure Protocol: 3072
+Cipher: Aes256 256bits
+Hash Algorithm: Sha384 384bits
+Key Exchange: ECDHE_RSA (0xae06) 256bits
+
+== Server Certificate ==========
+[Subject]
+  CN=*.smartadserver.com, OU=Smartadserver S.A.S, O=Smartadserver S.A.S, L=Paris, S=Paris, C=FR
+
+[Issuer]
+  CN=thawte SHA256 SSL CA, O="thawte, Inc.", C=US
+
+[Serial Number]
+  3DDF33D7656462246978669653E36203
+
+[Not Before]
+  01/30/2017 6:00:00 PM
+
+[Not After]
+  02/17/2020 5:59:59 PM
+
+[Thumbprint]
+  F3B15469E9BEEA25D8919507F05557B7E40AD141
+

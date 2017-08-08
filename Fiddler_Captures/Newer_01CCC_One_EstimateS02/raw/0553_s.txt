@@ -1,0 +1,12 @@
+HTTP/1.1 302 Moved Temporarily
+Date: Mon, 07 Aug 2017 20:05:25 GMT
+Content-Type: image/gif
+Content-Length: 0
+Connection: keep-alive
+Keep-Alive: timeout=360
+Cache-Control: no-cache
+location: https://ib.adnxs.com/setuid?entity=8&code=9952583e-002b-4000-bad7-cf025b3b6d3c
+P3P: CP="NOI DSP COR NID CURa ADMa DEVa PSAa PSDa OUR BUS COM INT OTC PUR STA"
+Server: MT3 1.15.11.0 033507e RELEASE ewr-pixel-x15
+Expires: Mon, 07 Aug 2017 20:05:24 GMT
+

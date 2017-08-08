@@ -71,29 +71,37 @@ parser.add_argument('--log',
 
 args = parser.parse_args()
 
-# ------------------------ LOGGING ------------------------------
+# ------------------------ Initialize LOGGING ------------------------------
 numeric_level = getattr(logging, args.loglevel.upper(), None)
 logger = Logger(numeric_level)
-# ------------------------ LOGGING ------------------------------
+# ------------------------ Initialize LOGGING ------------------------------
 
 logger.debug('Args = \n{}'.format(json.dumps(vars(args), indent=4)))
 
+# ---------------- Get estimate & supplement file paths --------------------
 files = FiddlerSession(args.filename)
 estimate_dict = files.estdict
 old_ref_dict = files.oldrefdict
+# ---------------- Get estimate & supplement file paths --------------------
 
+# Get the location of the E01 Workfile
 e01_file = estimate_dict['E01']['Workfile']
 
+logger.debug(json.dumps(estimate_dict, indent=4))
+
 if args.show:
-    logger.info(json.dumps(estimate_dict, indent=4))
-    pdb.set_trace()
+    logger.info('Location of the estimate and supplement files in the fiddler session: \n{}'.format(json.dumps(estimate_dict, indent=4)))
     exit(1)
 
 # Removing the 'show' keyword from the dict as this is not required for
 # further webservice processing.
 vars(args).pop('show')
 
+# ------------------ Get E01 XML to fetch assignment info ---------------------
 e01_xml = XMLUtils(ZipFileUtils(args.filename).filexml(e01_file))
+ins_company_code = e01_xml.gettext('VantiveCode')
+claim_office_code = e01_xml.gettext('Code')
+recepient_code = e01_xml.gettext('AppraiserMailboxID')
 
 assignment_params = {
     'env': args.env,
@@ -104,11 +112,16 @@ assignment_params = {
     'ClaimOffice': e01_xml.gettext('Code'),
     'AssignmentRecipientID': e01_xml.gettext('AppraiserMailboxID')
 }
+# ------------------ Get E01 XML to fetch assignment info ---------------------
 
+# ----------------------------- Process assignment ----------------------------
 assignment = ExternalAssignmentWS(**assignment_params)
 assignment.edit_xml()
 assignment.send_xml()
 assignment.verify_db()
+# ----------------------------- Process assignment ----------------------------
 
+# ------------- Process estimate and supplement web services ------------------
 wsengine = WebServiceEngine(estimate_dict, old_ref_dict, **vars(args))
 wsengine.run()
+# ------------- Process estimate and supplement web services ------------------

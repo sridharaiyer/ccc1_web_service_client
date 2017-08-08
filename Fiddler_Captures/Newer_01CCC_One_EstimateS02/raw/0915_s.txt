@@ -1,0 +1,31 @@
+HTTP/1.1 200 Connection Established
+FiddlerGateway: Direct
+StartTime: 15:05:38.518
+Connection: close
+
+Encrypted HTTPS traffic flows through this CONNECT tunnel. HTTPS Decryption is enabled in Fiddler, so decrypted sessions running in this tunnel will be shown in the Web Sessions list.
+
+Secure Protocol: 3072
+Cipher: Aes256 256bits
+Hash Algorithm: Sha384 384bits
+Key Exchange: ECDHE_RSA (0xae06) 256bits
+
+== Server Certificate ==========
+[Subject]
+  CN=bko.dynadmic.com, O=DynAdmic, OU=IT, L=Mougins, S=Alpes Maritimes, C=FR
+
+[Issuer]
+  CN=GlobalSign Organization Validation CA - SHA256 - G2, O=GlobalSign nv-sa, C=BE
+
+[Serial Number]
+  357469E8ABFF84385D940DED
+
+[Not Before]
+  05/16/2017 8:57:01 AM
+
+[Not After]
+  07/23/2018 6:59:59 PM
+
+[Thumbprint]
+  22654D3AB933BCDAE605E3E894B83DEC091FF04D
+

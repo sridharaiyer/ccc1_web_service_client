@@ -1,0 +1,340 @@
+HTTP/1.1 200 OK
+Content-Type: application/x-javascript
+Content-Length: 13998
+Connection: keep-alive
+Date: Sun, 18 Dec 2016 06:57:55 GMT
+Last-Modified: Tue, 08 Apr 2014 19:21:04 GMT
+ETag: "2254fffdeee08bbde53e22af9d168411"
+Accept-Ranges: bytes
+Server: AmazonS3
+Age: 24880
+X-Cache: Hit from cloudfront
+Via: 1.1 fcf0d94b636f4a7413a7e4453e44a7ec.cloudfront.net (CloudFront)
+X-Amz-Cf-Id: ot93Uq1PIElUEQByuNLQF2FKpSLanKDr6nMy8eWKXF7gMf1fBnNhUQ==
+
+/*
+*---------------------------------------------------------------------------------------------------------------------------------------------*
+* Function that will animate and element                                                                                                      *
+*=============================================================================================================================================*
+* element     (@HTMLELEMENT)    = element to be animated                                                                                      *
+* obj         (@Object)         = objects with properties to be animated ex. {left: '100px', top: '+200', opacity: .7, EASING: **SEE NOTES**} *
+* time        (@Number)         = Time that the animation should take in mili secound                                                         *
+* callback    (@function)       = function to run after fade                                                                                  *
+**************************************************************<== NOTES ==>********************************************************************
+* Different types of easing     = 'LINEAR', 'EASE_IN_QUAD', EASE_IN_CUBIC', 'EASE_OUT_CUBIC'                                                  *
+*                                 'EASE_INOUT_CUBIC', 'EASE_IN_EXPO', 'EASE_OUT_BOUNCE'                                                       *
+*                                                                                                                                             *
+* If EASING is not defined than it will default to LINEAR                                                                                     *
+***********************************************************************************************************************************************
+* @author                  Dmitri Dzioura
+* @date
+* @version                 1.0
+
+* @modify_by               Chris Brenner
+* @modify_date             March 2, 2014
+*
+*
+* Updated Nov 18 2013 by Chris - Added animateColor function to animate between different colours.
+* Updated March 2, 2014 by Chris - Set element 'Name' attribute to the animation name so we can manually kill animations.
+*-------------------------------------------------------------------------------------------------------------------------------
+*/
+function timeAnimation(element, obj, time, callback, callbackTime, timedCallback) {
+    this.ani = new archie();
+
+    for(var i in obj) {
+        if(i != 'EASING') {
+            var easing   = (obj.hasOwnProperty('EASING')) ? (obj['EASING']) : ('LINEAR');
+            if(i == 'opacity') {
+                var newOpacity  = parseFloat(obj[i]);
+                var oldOpacity  = parseFloat(element.style.opacity);
+                var distance    = newOpacity - oldOpacity;
+                new aniObject.Run(element, i, newOpacity, distance, time, easing, callback, callbackTime, this, timedCallback);
+            } else if (i == 'zIndex') {
+                element.style[i] = obj[i];
+            } else {
+                var currentPosition = parseInt(element.style[i]);
+                var attribute       = obj[i];
+                var attributeType   = typeof attribute;
+                var endPoint;
+
+                // Determines intention of the attribute.
+                if (attributeType === 'string') {
+                    if (/[\-]?\d+(.\d+)?(px)$/.test(attribute)) {
+                        endPoint    = parseInt(attribute);
+                    } else if (/^[\-\+]\d+(.\d+)?/.test(attribute)) {
+                        endPoint    = parseInt(attribute) + currentPosition;
+                    }
+                } else if (attributeType === 'number') {
+                    endPoint        = attribute;
+                }
+                distance        = endPoint - currentPosition;
+                var easing      = (obj.hasOwnProperty('EASING')) ? (obj['EASING']) : ('LINEAR');
+                new aniObject.Run(element, i, endPoint, distance, time, easing, callback, callbackTime, this, timedCallback);
+            }
+        }
+    }
+}
+
+// An object that is used by the timeAnimation funciton that will preform actual animation and call on another object to store the refrence to the animation
+var aniObject = {
+    ID: 0,
+    Run: function(element, _style, endPoint, distance, time, easing, callback, callbackTime, trying, timedCallback) {
+
+        this.Name       = Math.random();//assign a random number for refrence
+        var Name        = this.Name;//save it as local variable so it can refrence it inside the Interval to end the Interval
+
+        // Set 'Name' attribute of element to this.Name so we can access it's name to kill animations manually.
+        element.setAttribute('Name', this.Name);
+
+        element.Name = Name;
+
+        var start       = parseFloat(element.style[_style]);
+        var timeCheck   = new Date().getTime();
+
+        var self        = trying;
+
+        //start the Interval and save the refrence ID;
+        this.ID         = setInterval(function() {
+
+            //check how much time has passed since the start of the Interval
+            timeElapsed     = new Date().getTime() - timeCheck;
+
+            //get the current position we get the float and round to the hundreth because of opacity
+            var current     = Math.round(parseFloat(element.style[_style])*100)/100;
+
+            //calculate the next position in time depends on the easing that is used
+            var step        = (_style == 'opacity') ? (Math.round(parseFloat(EASING[easing](timeElapsed, start, distance, time))*100)/100) : (Math.round(EASING[easing](timeElapsed, start, distance, time)));
+
+            //checks if it will be finished with this iteration its finished than it will go to else
+            if( ( (distance < 0) && (step >= endPoint) ) || ( (distance > 0) && (step <= endPoint) ) ) {
+                if(_style == 'opacity') {
+                    element.style[_style] = step;
+                    if(ie) {
+                        var found = false;
+                        try { var nf = element.filters.item('alpha'); found = true; } catch(e) {}
+                        if(found) {
+                            element.filters.item('alpha').opacity = parseInt(step*100);
+                        }
+                    }
+                } else if (hasClass(element, 'tinker')) {
+                    // If it's a tinker text...
+                    if (element.tinker == 'reset') {
+                        // Stop the animation.
+                        self.ani.stopInterval(Name);
+
+                        // Reset the tinkerText to closest starting point.
+                        resetTinker(element);
+                    }
+                    else if (element.tinker == 'ready' || element.tinker == 'resetting') {
+                        element.style[_style] = step + 'px'; // take next step
+                    }
+                } else {
+                    element.style[_style] = step + 'px';
+                }
+            } else {
+                if(_style == 'opacity') {
+                    element.style[_style] = endPoint;
+                    if(ie) {
+                        var found2 = false;
+                        try { var nf = element.filters.item('alpha'); found2 = true; } catch(e) {}
+                        if(found2) {
+                            element.filters.item('alpha').opacity = parseInt(endPoint*100);
+                        }
+                    }
+                } else {
+                    element.style[_style] = endPoint + 'px';
+                }
+
+                //use the local name to stop the interval and delete it from refrence
+                self.ani.stopInterval(Name);
+                //if this is the last interval to be cleared than check to see if there a callback that needs to be called.
+                if(!self.ani.length) {
+                    if(callback) {
+                        callback();
+                    }
+                }
+            }
+        }, 1);
+
+        //calls a function at a specific time
+
+        if(callbackTime) {
+            if(timedCallback) {
+                setTimeout(function(){timedCallback();},callbackTime);
+            }
+        }
+
+        //adds the information about the interval in to an archive
+        self.ani.addAni(this.Name, this.ID);
+    }
+}
+
+
+//object that will be in charge in storing the running intervals of animation each element will have a different archie
+var archie = function() {
+    this.addAni = function(name, id) {
+        this.name = name;
+
+        if(name) {
+            this[name] = id;
+            this.length++;
+            killer.add(name, id)
+        }
+    }
+    this.stopInterval = function(name) {
+        clearInterval(this[name]);
+        delete this[name];
+        this.length--;
+        killer.killed(name);
+    }
+    this.length = 0;
+}
+
+var killer = {
+    add: function(name, id) {
+        if(name) {
+            this[name] = id;
+            this.length++;
+        }
+    },
+
+    kill: function(name) {
+        clearInterval(this[name]);
+        this.killed(name);
+    },
+
+    killed: function(name) {
+        delete this[name];
+    }
+}
+
+//-----------------------------------------------------------------------------------------
+// A function that will take an element and animate it's color between two points.
+// Note: Must use RGB color (hex -> rbg function in util.js).
+
+// @author              Chris Brenner (Taken and edited from p11y on StackOverflow)
+// @modified date       Sept 13, 2013
+//=========================================================================================
+// element  = The element that you want to animate.
+// property = The property you want to animate (color, background-color).
+// start    = The starting color of the element.
+// end      = The ending color of the element.
+// duration = The duration of the animation (milliseconds).
+//-----------------------------------------------------------------------------------------
+function animateColor(element, property, start, end, duration) {
+    var interval = 10;
+    var steps = duration/interval;
+    var step_u = 1.0/steps;
+    var u = 0.0;
+    var theInterval = setInterval(function(){
+    if (u >= 1.0){ clearInterval(theInterval) }
+        var r = parseInt(transitionPace(start.r, end.r, u));
+        var g = parseInt(transitionPace(start.g, end.g, u));
+        var b = parseInt(transitionPace(start.b, end.b, u));
+        var colorname = 'rgb(' + r + ',' + g + ',' + b + ')';
+        if (ie >= 5) {
+            element.style.setAttribute(property, colorname);
+        }
+        else {
+            element.style.setProperty(property, colorname);
+        }
+        u += step_u;
+    }, interval);
+};
+
+//Controls pace of transition.
+transitionPace = function(startColor, endColor, range) {
+    return (1 - range) * startColor + range * endColor;
+};
+
+/* ============================================================
+* jQuery Easing v1.3 - http://gsgd.co.uk/sandbox/jquery/easing/
+*
+* Open source under the BSD License.
+*
+* Copyright © 2008 George McGinley Smith
+* All rights reserved.
+* https://raw.github.com/danro/jquery-easing/master/LICENSE
+* ========================================================
+* t = current time
+* b = beggining value
+* c = change in value
+* d = duration
+*/
+var EASING = {
+
+    LINEAR: function (t, b, c, d) {
+        return c*t/d + b;
+    },
+
+    EASE_IN_QUAD: function (t, b, c, d) {
+        t /= d;
+        return c*t*t + b;
+    },
+
+    EASE_IN_CUBIC: function (t, b, c, d) {
+        t /= d;
+        return c*t*t*t + b;
+    },
+
+    EASE_OUT_CUBIC: function (t, b, c, d) {
+        t /= d;
+        t--;
+        return c*(t*t*t + 1) + b;
+    },
+
+    EASE_INOUT_CUBIC: function (t, b, c, d) {
+        t /= d/2;
+        if (t < 1) return c/2*t*t*t + b;
+        t -= 2;
+        return c/2*(t*t*t + 2) + b;
+    },
+
+    EASE_IN_EXPO: function (t, b, c, d) {
+        return c * Math.pow( 2, 10 * (t/d - 1) ) + b;
+    },
+
+    EASE_OUT_BOUNCE: function (t, b, c, d) {
+        if ((t/=d) < (1/2.75)) {
+            return c*(7.5625*t*t) + b;
+        } else if (t < (2/2.75)) {
+            return c*(7.5625*(t-=(1.5/2.75))*t + .75) + b;
+        } else if (t < (2.5/2.75)) {
+            return c*(7.5625*(t-=(2.25/2.75))*t + .9375) + b;
+        } else {
+            return c*(7.5625*(t-=(2.625/2.75))*t + .984375) + b;
+        }
+    }
+}
+/*
+*
+* TERMS OF USE - EASING EQUATIONS
+*
+* Open source under the BSD License.
+*
+* Copyright © 2001 Robert Penner
+* All rights reserved.
+*
+* Redistribution and use in source and binary forms, with or without modification,
+* are permitted provided that the following conditions are met:
+*
+* Redistributions of source code must retain the above copyright notice, this list of
+* conditions and the following disclaimer.
+* Redistributions in binary form must reproduce the above copyright notice, this list
+* of conditions and the following disclaimer in the documentation and/or other materials
+* provided with the distribution.
+*
+* Neither the name of the author nor the names of contributors may be used to endorse
+* or promote products derived from this software without specific prior written permission.
+*
+* THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY
+* EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+* MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE
+*  COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+*  EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE
+*  GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED
+* AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
+*  NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED
+* OF THE POSSIBILITY OF SUCH DAMAGE.
+*
+*/

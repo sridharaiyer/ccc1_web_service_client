@@ -1,0 +1,74 @@
+HTTP/1.1 200 OK
+Content-Type: application/x-javascript
+Content-Length: 2372
+Connection: keep-alive
+Date: Fri, 23 Sep 2016 12:02:03 GMT
+Last-Modified: Wed, 11 Dec 2013 00:32:53 GMT
+ETag: "8bc4994daf7cf15248f88c9c4f0f97d2"
+Accept-Ranges: bytes
+Server: AmazonS3
+Age: 24982
+X-Cache: Hit from cloudfront
+Via: 1.1 f1cf3563de01cde311a4d38499a2701d.cloudfront.net (CloudFront)
+X-Amz-Cf-Id: vl9SyJE-g0rmvCsW1UJfHd7KC2JQDk7FZqcj5Cr_UDBgSxpVDLih4Q==
+
+//cell function that acts like a loose interface for cell like the elements (Right now used by cells and arrows)
+var baseCell = function() {
+
+    //basic functions that should be used and over written by the person writting the new cell
+    //if not over written the event triggering these functions will alert you did not override this
+    this.focusState = function() {
+        alert('YOU DID NOT OVERRIDE CELL FOCUS STATE');
+    };
+    this.unFocusState = function() {
+        alert('YOU DID NOT OVERRIDE CELL UNFOCUS STATE');
+    };
+    this.hover = function() {
+        alert('YOU DID NOT OVERRIDE CELL HOVER');
+    };
+    this.unHover = function() {
+        alert('YOU DID NOT OVERRIDE CELL UNHOVER');
+    };
+    this.animateIn = function() {
+        alert('YOU DID NOT OVERRIDE CELL ANIMATE IN');
+    };
+    this.animateOut = function() {
+        alert('YOU DID NOT OVERRIDE CELL ANIMATE OUT');
+    };
+}
+
+//adds event listeners for hover unhover focus and unfocus
+baseCell.prototype.addMouseListeners = function() {
+    if(this.dom) {
+
+        var self = this;
+
+        this.hoverFunction 		= function(event){self.hover(event)};
+        this.unHoverFunction 	= function(event){self.unHover(event)};
+        this.focusFunction 		= function(event){self.focusState(event)};
+        this.unFocusFunction 	= function(event){self.unFocusState(event)};
+
+        addEvent(this.dom, 'mousedown'	, this.focusFunction,	 false);
+        addEvent(this.dom, 'mouseup'	, this.unFocusFunction,  false);
+        addEvent(this.dom, 'mouseenter'	, this.hoverFunction,	 false);
+        addEvent(this.dom, 'mouseleave'	, this.unHoverFunction,	 false);
+    }
+
+};
+
+//removes event listeners for hover unhover focus and unfocus
+baseCell.prototype.removeMouseListeners = function() {
+    if(this.dom) {
+        var self = this;
+        removeEvent(this.dom, 'mousedown'	, this.focusFunction,		 false);
+        removeEvent(this.dom, 'mouseup'		, this.unFocusFunction,		 false);
+        removeEvent(this.dom, 'mouseenter'	, this.hoverFunction,		 false);
+        removeEvent(this.dom, 'mouseleave'	, this.unHoverFunction,		 false);
+    }
+};
+
+//The function that is used by the slider to move the cell
+baseCell.prototype.move = function(obj, time, callback, callbackTime, timedCallback) {
+    var self = this;
+    new timeAnimation(self.dom, obj, time, callback, callbackTime, timedCallback);
+}

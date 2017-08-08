@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Session SID="1861" BitFlags="19">
+  <SessionTimers ClientConnected="2017-08-07T15:10:18.0681685-05:00" ClientBeginRequest="2017-08-07T15:10:18.1132225-05:00" GotRequestHeaders="2017-08-07T15:10:18.1132225-05:00" ClientDoneRequest="2017-08-07T15:10:18.4646437-05:00" GatewayTime="0" DNSTime="0" TCPConnectTime="0" HTTPSHandshakeTime="0" ServerConnected="2017-08-07T15:10:18.0811841-05:00" FiddlerBeginRequest="2017-08-07T15:10:18.4646437-05:00" ServerGotRequest="2017-08-07T15:10:18.5877913-05:00" ServerBeginResponse="2017-08-07T15:10:18.5877913-05:00" GotResponseHeaders="2017-08-07T15:10:18.9532293-05:00" ServerDoneResponse="2017-08-07T15:10:19.0323241-05:00" ClientBeginResponse="2017-08-07T15:10:19.0323241-05:00" ClientDoneResponse="2017-08-07T15:10:19.0333253-05:00" />
+  <PipeInfo CltReuse="true" Reused="true" />
+  <SessionFlags>
+    <SessionFlag N="x-responsebodytransferlength" V="31,701" />
+    <SessionFlag N="x-serversocket" V="REUSE ServerPipe#1860" />
+    <SessionFlag N="x-clientip" V="::ffff:127.0.0.1" />
+    <SessionFlag N="x-clientport" V="64256" />
+    <SessionFlag N="x-processinfo" V="cccone:9060" />
+    <SessionFlag N="x-fiddler-stream1xx" V="Returned a HTTP/100 message from the server." />
+    <SessionFlag N="x-egressport" V="64257" />
+    <SessionFlag N="x-hostip" V="198.204.14.50" />
+  </SessionFlags>
+</Session>

@@ -1,0 +1,12 @@
+GET https://fonts.gstatic.com/s/roboto/v16/Hgo13k-tfSpn0qi1SFdUfVtXRa8TVwTICgirnJhmVJw.woff2 HTTP/1.1
+Host: fonts.gstatic.com
+Connection: keep-alive
+User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36
+Origin: https://www.autotrader.com
+X-Client-Data: CIm2yQEIpLbJAQjBtskBCO2XygEI+pzKAQipncoB
+Accept: */*
+DNT: 1
+Referer: https://fonts.googleapis.com/css?family=Roboto:400,300,700,500|Roboto+Condensed:500,400,300
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.8
+

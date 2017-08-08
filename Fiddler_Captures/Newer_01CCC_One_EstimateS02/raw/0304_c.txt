@@ -1,0 +1,11 @@
+GET https://sp.analytics.yahoo.com/spp.pl?a=10000&.yp=10023111 HTTP/1.1
+Host: sp.analytics.yahoo.com
+Connection: keep-alive
+User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36
+Accept: image/webp,image/apng,image/*,*/*;q=0.8
+DNT: 1
+Referer: https://www.autotrader.com/
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.8
+Cookie: AO=u=1; YLS=v=1&p=1&n=1; PH=fn=JJheyBjho767dDXjf5g-&i=us; F=d=RHLSCRI9vH6Kib_QfnZynLNEhZ2nkkwevJe6gSE-; ucs=lnct=1480458282&spt=1501624784&fs=1&eup=1&bnpt=1501620545; B=6gc48v1c7g276&b=4&d=6UBtoUdpYEI6LZatlD_mf5akTzXzZ8Q2MNQbKg--&s=h3&i=.RenNIsPzprcuS9ydM7i
+

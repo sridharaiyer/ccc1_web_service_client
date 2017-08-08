@@ -1,0 +1,11 @@
+GET https://pixel-geo.prfct.co/seg/?add=7488389&source=js_tag&a_id=68842 HTTP/1.1
+Host: pixel-geo.prfct.co
+Connection: keep-alive
+User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36
+Accept: image/webp,image/apng,image/*,*/*;q=0.8
+DNT: 1
+Referer: https://www.autotrader.com/cars-for-sale/showcase.xhtml?zip=60652&makeCodeList=CHEV&modelCodeList=VOLT
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.8
+Cookie: AWSELB=B91D518304C41D26F2E262C1B04B163CFB753805FF6E7DB033878BD2120D94348D18A6089728BF3A60A6CAC207E8DAF37BF8CB978BB0D22A2FCC1F280E86D7ECFAEB147181; pa_uid=pa_zwfOK7Op8gZIvtWWy
+

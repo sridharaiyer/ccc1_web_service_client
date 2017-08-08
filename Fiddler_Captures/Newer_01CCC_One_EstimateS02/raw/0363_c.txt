@@ -1,0 +1,10 @@
+GET https://pixel.adsafeprotected.com/rfw/st/70686/12055526/skeleton.js?adsafe_url=https%3A%2F%2Fwww.autotrader.com%2F&adsafe_type=abedfq&adsafe_jsinfo=,id:5e51deb8-181f-dac0-3578-9bb3a37811c3,c:kC7lKU,sl:outOfView,em:true,fr:true,mn:app31,pt:1-5-15,wc:0.0.1600.770,ac:964.1070.300.250,am:i,cc:0.0.300.0,piv:0,obst:0,th:0,reas:l,cmps:1,br:c,fv:0,bv:na,dm:na,abv:na,an:n,fm:qrEeRYQ+11|12|13|14|15|16|17|18|19|1a|1b|1c*.70686-12055526|1d|1e|1f,idMap:1c*,pl:RIzA.VEBo.0YtC.CV8L,rt:1,cb:0,th:0,es:0,sa:1,sc:0,ha:1,gm:0,fif:0,uf:0,tt:rjss,et:155,oid:b6f89e1b-7bab-11e7-90f3-382c4ac73097,v:17.4.1,sp:0,ct:1424,dtm:i,gtpl:0,wr:1600.770,sr:1600.900,mf:222833803,ov:0 HTTP/1.1
+Host: pixel.adsafeprotected.com
+Connection: keep-alive
+User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36
+Accept: */*
+DNT: 1
+Referer: https://www.autotrader.com/
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.8
+

@@ -1,0 +1,7 @@
+HEAD http://r2---sn-vgqs7ns7.gvt1.com/edgedl/release2/AICu7Lg4Pieu_1231/471_all_sthset.crx2?cms_redirect=yes&expire=1502151066&ip=207.140.60.67&ipbits=0&mm=28&mn=sn-vgqs7ns7&ms=nvh&mt=1502136562&mv=m&pl=22&shardbypass=yes&sparams=expire,ip,ipbits,mm,mn,ms,mv,pl,shardbypass&signature=0BFF69DC461898DE2840D708508E7E56EBAB64ED.51D35C8B7EEB8E5A58CEE26822B89B148887BEA0&key=cms1 HTTP/1.1
+Accept: */*
+Accept-Encoding: identity
+User-Agent: Microsoft BITS/7.5
+Connection: Keep-Alive
+Host: r2---sn-vgqs7ns7.gvt1.com
+

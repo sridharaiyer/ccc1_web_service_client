@@ -1,0 +1,11 @@
+GET https://services.serving-sys.com/HostingServices/Creative/Volkswagen/FONTS/VWHeadWeb-Bold.woff HTTP/1.1
+Host: services.serving-sys.com
+Connection: keep-alive
+User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36
+Origin: https://secure-ds.serving-sys.com
+Accept: */*
+DNT: 1
+Referer: https://services.serving-sys.com/HostingServices/Creative/Volkswagen/FONTS/VW-head_VW-text.css
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.8
+

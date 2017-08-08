@@ -1,0 +1,12 @@
+GET https://pagead2.googlesyndication.com/activeview?avi=BGuOL9ceIWZamCIPcBozumvgGAAAAABABOAHIAQnAAgLgAgDgBAGgBiDSCAUIgCEQAQ&cid=CAASEuRot3rB2AiTCcGeMzlsCgAaGQ&id=osdim&ti=1&r=u&adk=3483110180&tt=346&bs=1583,770&mtos=0,0,0,0,0&tos=0,0,0,0,0&p=0,0,0,0&rs=3&ht=0&mc=0&lte=-1&bas=0&bac=0&bos=1600,860&ps=1583,2982&ss=1600,900&pt=-1&deb=1-0-3-7-3--1&tvt=323&avms=geo&uc=1&tgt=BODY&cl=1&cec=8&clc=0&cac=0&cd=0x0 HTTP/1.1
+Host: pagead2.googlesyndication.com
+Connection: keep-alive
+User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36
+X-Client-Data: CIm2yQEIpLbJAQjBtskBCO2XygEI+pzKAQipncoB
+Accept: image/webp,image/apng,image/*,*/*;q=0.8
+DNT: 1
+Referer: https://www.autotrader.com/
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.8
+Cookie: __gads=ID=954b866e438ab23d:T=1481055403:S=ALNI_MYMj4sS6z6jWEGMXe9huNdrqgIr_g; __qca=P0-417283369-1484686818872
+

@@ -1,0 +1,31 @@
+HTTP/1.1 200 Connection Established
+FiddlerGateway: Direct
+StartTime: 15:05:45.932
+Connection: close
+
+Encrypted HTTPS traffic flows through this CONNECT tunnel. HTTPS Decryption is enabled in Fiddler, so decrypted sessions running in this tunnel will be shown in the Web Sessions list.
+
+Secure Protocol: 3072
+Cipher: Aes256 256bits
+Hash Algorithm: Sha384 384bits
+Key Exchange: ECDHE_RSA (0xae06) 256bits
+
+== Server Certificate ==========
+[Subject]
+  CN=gizmo.sizmek.com, OU=Web, O=Sizmek Technologies Inc., L=New York, S=New York, C=US
+
+[Issuer]
+  CN=Symantec Class 3 Secure Server CA - G4, OU=Symantec Trust Network, O=Symantec Corporation, C=US
+
+[Serial Number]
+  06EBE98F0540C9D685C0E5B7490CFCC3
+
+[Not Before]
+  07/11/2017 7:00:00 PM
+
+[Not After]
+  08/22/2018 6:59:59 PM
+
+[Thumbprint]
+  007C39311EF3EE634434F47AC980C6ED7B586222
+

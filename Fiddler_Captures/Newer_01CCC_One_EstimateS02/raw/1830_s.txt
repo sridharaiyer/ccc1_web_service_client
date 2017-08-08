@@ -1,0 +1,23 @@
+HTTP/1.1 200 OK
+Cache-Control: private
+Transfer-Encoding: chunked
+Content-Type: text/xml; charset=utf-8
+Server: Microsoft-IIS/8.5
+request-id: 4e452054-57ee-4aa3-b765-f490a88d69db
+X-CalculatedBETarget: cy1pr0601mb1504.namprd06.prod.outlook.com
+X-DiagInfo: CY1PR0601MB1504
+X-BEServer: CY1PR0601MB1504
+X-AspNet-Version: 4.0.30319
+Set-Cookie: exchangecookie=b6f4825f229848bd8ee59a7b5cba77df; expires=Tue, 07-Aug-2018 20:08:52 GMT; path=/; HttpOnly
+Set-Cookie: X-BackEndCookie2=jmcguire@cccis.com=u56Lnp2ejJqBmsebyc/LxprSyZuantLLnZ2e0sfOz8bSzcrHzcbKnMmdzp7HgZycnJaM0ZyQkoHNz87I0s/G0s/Jq83Pxc/HxcrNgZGeko+Nm8/J0Y+NkJvRkIqLk5CQlNGckJKBzw==; expires=Wed, 06-Sep-2017 20:08:52 GMT; path=/EWS; secure; HttpOnly
+Set-Cookie: X-BackEndCookie=jmcguire@cccis.com=u56Lnp2ejJqBmsebyc/LxprSyZuantLLnZ2e0sfOz8bSzcrHzcbKnMmdzp7HgZycnJaM0ZyQkoHNz87I0s/G0s/Jq83Pxc/HxcrNgZGeko+Nm8/J0Y+NkJvRkIqLk5CQlNGckJKBzw==; expires=Wed, 06-Sep-2017 20:08:52 GMT; path=/EWS; secure; HttpOnly
+X-Powered-By: ASP.NET
+X-FEServer: DM5PR1101CA0016
+Date: Mon, 07 Aug 2017 20:08:51 GMT
+
+733
+<?xml version="1.0" encoding="utf-8"?><s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/"><s:Header><h:ServerVersionInfo MajorVersion="15" MinorVersion="1" MajorBuildNumber="1320" MinorBuildNumber="18" Version="V2017_07_11" xmlns:h="http://schemas.microsoft.com/exchange/services/2006/types" xmlns="http://schemas.microsoft.com/exchange/services/2006/types" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/></s:Header><s:Body xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><m:SyncFolderItemsResponse xmlns:m="http://schemas.microsoft.com/exchange/services/2006/messages" xmlns:t="http://schemas.microsoft.com/exchange/services/2006/types"><m:ResponseMessages><m:SyncFolderItemsResponseMessage ResponseClass="Success"><m:ResponseCode>NoError</m:ResponseCode><m:SyncState>H4sIAAAAAAAEAGNgYGcAAotqE0tHE2NTA0ddZ3NHC10TR2djXSdnJ2ddNyMnC2cnczdLU1OD2vBgveDKvOTgksSSVOfEvMSiSgYr0nW65eekpBZ5pjBYkq43LLWoODM/j8GaaK3+QMuKS4JSk1Mzy1JTQjJzU0nwrU9icYlnXnFJYl5yqncqKb71zS9K9SxJzS32zwtOLSpLLSLByXDfhgNxUW5iUTYklrgYGISA0tDwAxkOUskgCJQyAGI9kBo/FeP6YjshpxU5G031Ba6wMTK4td3NMrn623VZFYv9xooF30CqJF4wMDAz8AExEHAztHCW8VfdvOTBIMTAyMALxEDrdBgZGHwdAzx9Hf1AihjcTN3CwMrRwA4glkPiXwNiLyzq0AG6s4LAoowMzK/XF/BiyDIysDDKRO5zOs/hdJMngJGJuXbyDKfNNwOC7n1m6gPiaQGMzEESiaV3gPgui8PGn7tYXnjpWQcE4LWHj4r2yLIyNAAABq6Tak4DAAA=</m:SyncState><m:IncludesLastItemInRange>true</m:IncludesLastItemInRange><m:Changes><t:Update><t:Contact><t:ItemId Id="AAMkAGQxZTZjZTUzLTI2ODMtNDI0YS1hNjI2LWZhMzU5YTUyMjc2ZABGAAAAAABOJDN/cz4SQqhssTUvENQGBwBGht1qNNX7RaZ6BD+xeKD2AAAAABjoAABGht1qNNX7RaZ6BD+xeKD2AAPoSi47AAA=" ChangeKey="EQAAABYAAABGht1qNNX7RaZ6BD+xeKD2AAPrr3AO"/></t:Contact></t:Update></m:Changes></m:SyncFolderItemsResponseMessage></m:ResponseMessages></m:SyncFolderItemsResponse>
+16
+</s:Body></s:Envelope>
+0
+

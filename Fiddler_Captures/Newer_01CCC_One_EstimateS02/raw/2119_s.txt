@@ -1,0 +1,40 @@
+HTTP/1.1 200 OK
+Cache-Control: private
+Transfer-Encoding: chunked
+Content-Type: text/xml; charset=utf-8
+Server: Microsoft-IIS/8.5
+request-id: 104545c3-4ade-4b29-8407-5c375671ecc5
+X-CalculatedBETarget: cy1pr0601mb1504.namprd06.prod.outlook.com
+X-DiagInfo: CY1PR0601MB1504
+X-BEServer: CY1PR0601MB1504
+X-AspNet-Version: 4.0.30319
+Set-Cookie: exchangecookie=0b441e98de624033875ff887a0a2e870; expires=Tue, 07-Aug-2018 20:15:27 GMT; path=/; HttpOnly
+Set-Cookie: X-BackEndCookie2=jmcguire@cccis.com=u56Lnp2ejJqBmsebyc/LxprSyZuantLLnZ2e0sfOz8bSzcrHzcbKnMmdzp7HgZycnJaM0ZyQkoHNz87I0s/G0s/Jq83Pxc7Kxc3GgZGeko+Nm8/J0Y+NkJvRkIqLk5CQlNGckJKBzw==; expires=Wed, 06-Sep-2017 20:15:29 GMT; path=/EWS; secure; HttpOnly
+Set-Cookie: X-BackEndCookie=jmcguire@cccis.com=u56Lnp2ejJqBmsebyc/LxprSyZuantLLnZ2e0sfOz8bSzcrHzcbKnMmdzp7HgZycnJaM0ZyQkoHNz87I0s/G0s/Jq83Pxc7Kxc3GgZGeko+Nm8/J0Y+NkJvRkIqLk5CQlNGckJKBzw==; expires=Wed, 06-Sep-2017 20:15:29 GMT; path=/EWS; secure; HttpOnly
+X-Powered-By: ASP.NET
+X-FEServer: DM5PR15CA0029
+Date: Mon, 07 Aug 2017 20:15:28 GMT
+
+b4e
+<?xml version="1.0" encoding="utf-8"?><s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/"><s:Header><h:ServerVersionInfo MajorVersion="15" MinorVersion="1" MajorBuildNumber="1320" MinorBuildNumber="18" Version="V2017_07_11" xmlns:h="http://schemas.microsoft.com/exchange/services/2006/types" xmlns="http://schemas.microsoft.com/exchange/services/2006/types" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/></s:Header><s:Body xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><m:GetItemResponse xmlns:m="http://schemas.microsoft.com/exchange/services/2006/messages" xmlns:t="http://schemas.microsoft.com/exchange/services/2006/types"><m:ResponseMessages><m:GetItemResponseMessage ResponseClass="Success"><m:ResponseCode>NoError</m:ResponseCode><m:Items><t:CalendarItem><t:ItemId Id="AAMkAGQxZTZjZTUzLTI2ODMtNDI0YS1hNjI2LWZhMzU5YTUyMjc2ZABGAAAAAABOJDN/cz4SQqhssTUvENQGBwDZ8ePuCZF6SrbhDV6loiF/AAAA5kP8AABGht1qNNX7RaZ6BD+xeKD2AAMhoyHBAAA=" ChangeKey="DwAAABYAAABGht1qNNX7RaZ6BD+xeKD2AAPrr2RE"/><t:ItemClass>IPM.Appointment</t:ItemClass><t:Subject>Erie/CCC - Bi-Weekly Photo Analytics Working Team</t:Subject><t:Body BodyType="HTML" IsTruncated="false">&lt;html&gt;&#xD;
+&lt;head&gt;&#xD;
+&lt;meta http-equiv="Content-Type" content="text/html; charset=utf-8"&gt;&#xD;
+&lt;meta name="Generator" content="Microsoft Exchange Server"&gt;&#xD;
+&lt;!-- converted from rtf --&gt;&#xD;
+&lt;style&gt;&lt;!-- .EmailQuote { margin-left: 1pt; padding-left: 4pt; border-left: #800000 2px solid; } --&gt;&lt;/style&gt;&#xD;
+&lt;/head&gt;&#xD;
+&lt;body&gt;&#xD;
+&lt;font face="Calibri" size="2"&gt;&lt;span style="font-size:11pt;"&gt;&#xD;
+&lt;div&gt;Agenda:&lt;/div&gt;&#xD;
+&lt;ul style="margin:0;padding-left:36pt;"&gt;&#xD;
+&lt;li&gt;Current Phase Test Status&lt;/li&gt;&lt;li&gt;Future Phase Test Planning&lt;br&gt;&#xD;
+&#xD;
+&lt;/li&gt;&lt;li&gt; &lt;/li&gt;&lt;/ul&gt;&#xD;
+&lt;/span&gt;&lt;/font&gt;&#xD;
+&lt;/body&gt;&#xD;
+&lt;/html&gt;&#xD;
+</t:Body><t:DateTimeReceived>2017-02-10T21:12:24Z</t:DateTimeReceived><t:HasAttachments>false</t:HasAttachments><t:Start>2017-02-20T21:30:00Z</t:Start><t:End>2017-02-20T22:30:00Z</t:End><t:IsAllDayEvent>false</t:IsAllDayEvent><t:LegacyFreeBusyStatus>Busy</t:LegacyFreeBusyStatus><t:Location>Conf Rm: CHI Mercantile Exchange - 888-222-0406, 2688036#</t:Location><t:IsRecurring>true</t:IsRecurring><t:CalendarItemType>RecurringMaster</t:CalendarItemType><t:MyResponseType>Accept</t:MyResponseType><t:Organizer><t:Mailbox><t:Name>Andrew Writt</t:Name><t:EmailAddress>AWritt@cccis.com</t:EmailAddress><t:RoutingType>SMTP</t:RoutingType><t:MailboxType>Mailbox</t:MailboxType></t:Mailbox></t:Organizer><t:ConflictingMeetingCount>15</t:ConflictingMeetingCount></t:CalendarItem></m:Items></m:GetItemResponseMessage></m:ResponseMessages></m:GetItemResponse>
+16
+</s:Body></s:Envelope>
+0
+

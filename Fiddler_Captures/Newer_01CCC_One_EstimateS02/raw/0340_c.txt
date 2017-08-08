@@ -1,0 +1,45 @@
+CONNECT ads.autotrader.com:443 HTTP/1.1
+Host: ads.autotrader.com:443
+Connection: keep-alive
+User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36
+
+A SSLv3-compatible ClientHello handshake was found. Fiddler extracted the parameters below.
+
+Version: 3.3 (TLS/1.2)
+Random: 38 83 FD E6 CD 53 17 04 4C D1 19 B6 A5 09 45 AC 19 BB 03 0B E2 1A 63 27 19 76 51 58 9E F2 DE A3
+"Time": 10/20/2092 3:44:40 PM
+SessionID: 56 34 00 00 52 A6 10 4F 10 61 47 B0 5C A9 6D 31 B3 41 50 42 D7 7E 52 5F 7D 4A D9 DD DB 54 A3 31
+Extensions: 
+	0xfafa		empty
+	renegotiation_info	00
+	server_name	ads.autotrader.com
+	extended_master_secret	empty
+	SessionTicket	empty
+	signature_algs	sha256_ecdsa, Unknown[0x8]_Unknown[0x4], sha256_rsa, sha384_ecdsa, Unknown[0x8]_Unknown[0x5], sha384_rsa, Unknown[0x8]_Unknown[0x6], sha512_rsa, sha1_rsa
+	status_request	OCSP - Implicit Responder
+	SignedCertTimestamp (RFC6962)	empty
+	ALPN		h2, http/1.1
+	channel_id(GoogleDraft)	empty
+	ec_point_formats	uncompressed [0x0]
+	elliptic_curves	unknown [0x8A8A), unknown [0x1D), secp256r1 [0x17], secp384r1 [0x18]
+	0xeaea		00
+Ciphers: 
+	[3A3A]	Unrecognized cipher - See http://www.iana.org/assignments/tls-parameters/
+	[C02B]	TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256
+	[C02F]	TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
+	[C02C]	TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384
+	[C030]	TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384
+	[CCA9]	Unrecognized cipher - See http://www.iana.org/assignments/tls-parameters/
+	[CCA8]	Unrecognized cipher - See http://www.iana.org/assignments/tls-parameters/
+	[C013]	TLS1_CK_ECDHE_RSA_WITH_AES_128_CBC_SHA
+	[C014]	TLS1_CK_ECDHE_RSA_WITH_AES_256_CBC_SHA
+	[009C]	TLS_RSA_WITH_AES_128_GCM_SHA256
+	[009D]	TLS_RSA_WITH_AES_256_GCM_SHA384
+	[002F]	TLS_RSA_AES_128_SHA
+	[0035]	TLS_RSA_AES_256_SHA
+	[000A]	SSL_RSA_WITH_3DES_EDE_SHA
+
+Compression: 
+	[00]	NO_COMPRESSION
+
+

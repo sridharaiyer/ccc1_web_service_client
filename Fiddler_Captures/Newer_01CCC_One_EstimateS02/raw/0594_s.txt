@@ -1,0 +1,17 @@
+HTTP/1.1 302 Found
+Server: nginx/1.9.13
+Date: Mon, 07 Aug 2017 20:05:27 GMT
+Content-Type: text/html; charset=utf-8
+Content-Length: 0
+Connection: keep-alive
+Cache-Control: no-store, no-cache, private
+Pragma: no-cache
+Expires: Sat, 15 Nov 2008 16:00:00 GMT
+P3P: policyref="http://cdn.adnxs.com/w3c/policy/p3p.xml", CP="NOI DSP COR ADM PSAo PSDo OURo SAMo UNRo OTRo BUS COM NAV DEM STA PRE"
+X-XSS-Protection: 0
+Location: https://pixel.mediaiqdigital.com/pixel?u1=&u2=&u3=&u4=&u5=&u6=&u7=&u8=&u9=&u10=&u11=&u12=&u13=&u14=&u15=&u16=&u17=&u18=&u19=&u20=&u21=&u22=&pixel_id=863848&uid=717826881414687486
+AN-X-Request-Uuid: 9ea5b59c-0358-456f-809e-7bbff7977629
+Set-Cookie: sess=1; Path=/; Max-Age=86400; Expires=Tue, 08-Aug-2017 20:05:27 GMT; Domain=.adnxs.com; HttpOnly
+Set-Cookie: uuid2=717826881414687486; Path=/; Max-Age=7776000; Expires=Sun, 05-Nov-2017 20:05:27 GMT; Domain=.adnxs.com; HttpOnly
+X-Proxy-Origin: 207.140.60.67; 207.140.60.67; 168.bm-nginx-loadbalancer.mgmt.nym2; *.adnxs.com; 204.13.193.177:80
+

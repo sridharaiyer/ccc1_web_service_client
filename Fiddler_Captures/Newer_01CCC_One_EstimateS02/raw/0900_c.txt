@@ -1,0 +1,11 @@
+GET https://animate.adobe.com/runtime/6.0.0/edge.6.0.0.min.js HTTP/1.1
+Host: animate.adobe.com
+Connection: keep-alive
+User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36
+Accept: */*
+DNT: 1
+Referer: https://images.autotrader.com/images/direct/728x90/2016/07/21/581242/581242_1469143581795_728x90/publish/web/581242_Kia1nu_072116.html?clickurl1=https://adclick.g.doubleclick.net/pcs/click%253Fxai%253DAKAOjstgGH8rpCBM9wrHn-yHjMStiybxxoajFaqX_CWc0MStYW399Ga8mF_N2jr7EjV3KTDJctYN8IkoLeM9NxKvdZ7QqD28J5nb2P8F7yfqkPeZDRnTitLo8ZcxH6p6TR8accTu_3zmVJ8y4BSvRKJAmxBVrbmiBTaMXP-o-XKXjYvyfj-YLOIdrGPAuVVk18h_90sfDGNRKXQL4QvPdSIyhPprCOHsiIu4x7Z6oF6jK7b7OED1qa2ycg%2526sig%253DCg0ArKJSzO8sYibJLUzSEAE%2526urlfix%253D1%2526adurl%253Dhttp%3A//www.hotkiadeals.com&clickurl2=&clickurl3=&clickurl4=
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.8
+Cookie: s_vi=[CS]v1|2C5CD4F78507974E-40000103E00004C4[CE]; s_fid=0924FE0A89F88645-1CA26DA5ED943166
+

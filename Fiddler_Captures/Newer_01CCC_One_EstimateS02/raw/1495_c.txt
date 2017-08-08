@@ -1,0 +1,12 @@
+GET https://adx.g.doubleclick.net/pagead/adview?ai=CD92dIciIWce8M5HKBebsoLgHvI6S9EnuuNGMqAXso_rNsQoQASCrp4clYMmG_4fwo-wSoAH4gZPIA8gBCagDAaoE_wJP0AOH20cMqdLNW8kQLkBJ5e1RkyJdE4qnsQauJNe2zzBQNmFTWiM9FqSKSkQJLbs3DN4Oi_AoSs5e3doW3_Sz_V3XyOEOFVxyLPS5mfPyTrH4-x9a_G5FId5Zq5mSTeJ-VTp-aVjafy9e2yyVB5sHjmN3MraaPSejKzKtduBsDCZNN3mBHZveHzy8-WF-MtAVmjoNHBvPQAP4jebL0FHnBD1H1_r0vaPgzhTjXaLw4XO9iT4l7khJURGD8-N9tJk8AC2vevE7PAvX60-DyisWoWBfP3X2AgfGs0yzS_0zZwSGB1nN9vIVyKvF19NAalOManq_S3BC8PZXDEOWvURCT0Cdr4I9j-T-_9Qv7C4Y_RfYr4SqeM5dW7k07Vx1wRymPqATZwbAJ7owT4ClLArBfo3QIing1uxJ3DSyuq_HFWu8qaS_NGGx1W0TtNfBjo-gMiD-sYVsc-bXAlipx71O6a9IAjy_0Xr3zuDqMQBHcdoEbP0d6PT36QV6-JfTEcAE9Zf39aEB4AQDiAWVqtGaA5IFBggdEAQYAZIFBggdEAEYAZIFBggeEAEYAaAGTIAH8P3sN6gHr8obqAfdyhuoB6a-G9gHAPIHBxCguugEIAHSCAcIgCEQARgBsBOcoNcCyBORo_sB0BMA2BMD&sigh=BiowAZJGd64&vis=1&adurl=https://securepubads.g.doubleclick.net/pcs/view%3Fxai%3DAKAOjsvmjuzHaasZlL7t3P3Nz32_B99IkyooTJRWpQLwgEDamxF9mCjC5pZ7l2L_P89XuZAeGhaaY90H9KhKJmerutoOkMjsLPOTTsLhjPEMgj6GtRC3jewXXRfr8SW51y7DK62flyXZCUfPvHTkV7oIxQfo03RU1zwbYRftFi9Azt3GaQ_8lgnmRVN09azG7O7XcNzNgkQYaPS2-8AtHy8IuBlCyPhtMw_SmikmF6Olg4sIC2yX2aSlrn7yYY4%26sig%3DCg0ArKJSzI7KCDPJ955kEAE%26urlfix%3D1%26adurl%3D HTTP/1.1
+Host: adx.g.doubleclick.net
+Connection: keep-alive
+User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36
+X-Client-Data: CIm2yQEIpLbJAQjBtskBCO2XygEI+pzKAQipncoB
+Accept: image/webp,image/apng,image/*,*/*;q=0.8
+DNT: 1
+Referer: https://tpc.googlesyndication.com/safeframe/1-0-9/html/container.html
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.8
+Cookie: id=22b34e65360d00a6||t=1480458270|et=730|cs=002213fd485afe177673958a88; __gads=ID=3370d3d5328207d9:T=1481752497:S=ALNI_Mbt1G5FVGtNGLrLq5APnGDWmgiBzg; IDE=AHWqTUn8VNea70iycoL66B7NLYGuE6nvEmzx2HARZFKouJfsElqkeWSODQ; DSID=ADyxukvbcpLxxSZpU156HnttmXKBlAfEuZkciu3xWzf90EEXKEtmjD6i3r_DRyZxzfHstkdcUmOfDiQ0aNHXNZqfcpn0rsSZVIDhoIgaL1DzOebhQXymQVQ
+

@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Session SID="885" BitFlags="2100">
+  <SessionTimers ClientConnected="2017-08-07T15:05:38.2055109-05:00" ClientBeginRequest="2017-08-07T15:05:38.2075171-05:00" GotRequestHeaders="2017-08-07T15:05:38.2075171-05:00" ClientDoneRequest="2017-08-07T15:05:38.2075171-05:00" GatewayTime="0" DNSTime="0" TCPConnectTime="13" HTTPSHandshakeTime="19" ServerConnected="2017-08-07T15:05:38.2215605-05:00" FiddlerBeginRequest="2017-08-07T15:05:38.2215605-05:00" ServerGotRequest="2017-08-07T15:05:38.2215605-05:00" ServerBeginResponse="0001-01-01T00:00:00" GotResponseHeaders="0001-01-01T00:00:00" ServerDoneResponse="0001-01-01T00:00:00" ClientBeginResponse="2017-08-07T15:05:38.2215605-05:00" ClientDoneResponse="2017-08-07T15:05:38.2215605-05:00" />
+  <PipeInfo />
+  <TunnelInfo BytesEgress="0" BytesIngress="0" />
+  <SessionFlags>
+    <SessionFlag N="https-server-cipher" V="Aes256 256bits" />
+    <SessionFlag N="x-responsebodytransferlength" V="0" />
+    <SessionFlag N="https-server-version" V="3072" />
+    <SessionFlag N="https-client-snihostname" V="animate.adobe.com" />
+    <SessionFlag N="x-clientip" V="::ffff:127.0.0.1" />
+    <SessionFlag N="x-clientport" V="63330" />
+    <SessionFlag N="https-client-sessionid" V="EA 22 00 00 49 5F A0 C0 80 2B 7B B8 9D 43 CA 0C 7A 76 CC 38 69 CF 43 DA 3F E5 91 8D C9 D3 EF EA" />
+    <SessionFlag N="x-processinfo" V="chrome:8036" />
+    <SessionFlag N="https-client-version" V="3072" />
+    <SessionFlag N="x-egressport" V="63331" />
+    <SessionFlag N="x-hostip" V="23.208.216.247" />
+  </SessionFlags>
+</Session>

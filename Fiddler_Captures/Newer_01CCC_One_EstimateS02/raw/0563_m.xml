@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Session SID="563" BitFlags="2100">
+  <SessionTimers ClientConnected="2017-08-07T15:05:24.393827-05:00" ClientBeginRequest="2017-08-07T15:05:24.3948301-05:00" GotRequestHeaders="2017-08-07T15:05:24.3948301-05:00" ClientDoneRequest="2017-08-07T15:05:24.3948301-05:00" GatewayTime="0" DNSTime="0" TCPConnectTime="25" HTTPSHandshakeTime="49" ServerConnected="2017-08-07T15:05:24.4209107-05:00" FiddlerBeginRequest="2017-08-07T15:05:24.4209107-05:00" ServerGotRequest="2017-08-07T15:05:24.4209107-05:00" ServerBeginResponse="0001-01-01T00:00:00" GotResponseHeaders="0001-01-01T00:00:00" ServerDoneResponse="0001-01-01T00:00:00" ClientBeginResponse="2017-08-07T15:05:24.4209107-05:00" ClientDoneResponse="2017-08-07T15:05:24.4209107-05:00" />
+  <PipeInfo />
+  <TunnelInfo BytesEgress="0" BytesIngress="0" />
+  <SessionFlags>
+    <SessionFlag N="https-server-cipher" V="Aes128 128bits" />
+    <SessionFlag N="x-responsebodytransferlength" V="0" />
+    <SessionFlag N="https-server-version" V="3072" />
+    <SessionFlag N="https-client-snihostname" V="cam.demdex.net" />
+    <SessionFlag N="x-clientip" V="::ffff:127.0.0.1" />
+    <SessionFlag N="x-clientport" V="63087" />
+    <SessionFlag N="https-client-sessionid" V="81 3A 00 00 4F 1D C0 99 79 E1 62 82 86 E2 AB 49 81 3A FE 6B BE 82 74 B4 B3 6B 48 A1 77 C9 A0 D3" />
+    <SessionFlag N="x-processinfo" V="chrome:8036" />
+    <SessionFlag N="https-client-version" V="3072" />
+    <SessionFlag N="x-egressport" V="63088" />
+    <SessionFlag N="x-hostip" V="52.23.3.197" />
+  </SessionFlags>
+</Session>

@@ -1,0 +1,12 @@
+GET https://pagead2.googlesyndication.com/activeview?avi=BCCeHDsiIWbr7O5POBa63v4AHAAAAABABOAHIAQnAAgLgAgDgBAGgBh7SCAUIgCEQAQ,Ba_HrD8iIWdWSJ9TZBazipqgJAAAAABABOAHgBAKIBcfJjAWgBj4&cid=CAASEuRo7YQP-fAb1I7etP6B_rvt2g&id=osdtos&ti=1&tt=3407&bs=1583,770&r=u&adk=3319415517&mtos=2927,2927,2927,2927,2927&tos=2927,0,0,0,0&p=993,923,1159,1283&rs=3&ht=0&tfs=479&tls=3406&mc=1&lte=1&bas=0&bac=0&adf=0&bos=1600,860&ps=1583,8317&ss=1600,900&pt=-1&deb=1-0-9-30-9--1&tvt=3085&avms=geo&uc=9&tgt=BODY&cl=1&cec=9&clc=0&cac=0&cd=360x170 HTTP/1.1
+Host: pagead2.googlesyndication.com
+Connection: keep-alive
+User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36
+X-Client-Data: CIm2yQEIpLbJAQjBtskBCO2XygEI+pzKAQipncoB
+Accept: image/webp,image/apng,image/*,*/*;q=0.8
+DNT: 1
+Referer: https://www.autotrader.com/cars-for-sale/Chevrolet/Volt/Chicago+IL-60652?zip=60652&showcaseOwnerId=100003458&startYear=1981&numRecords=25&sortBy=derivedpriceDESC&firstRecord=0&endYear=2016&modelCodeList=VOLT&makeCodeList=CHEV&searchRadius=0
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.8
+Cookie: __gads=ID=954b866e438ab23d:T=1481055403:S=ALNI_MYMj4sS6z6jWEGMXe9huNdrqgIr_g; __qca=P0-417283369-1484686818872
+

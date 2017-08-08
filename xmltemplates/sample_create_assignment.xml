@@ -29,7 +29,7 @@
                </v1:AssignmentAdministration>
                <v1:AssignmentRecipient>
                   <v1:AssignmentRecipientID>DUMMY</v1:AssignmentRecipientID>	
-                  <v1:AssignmentRecipientType code="STAP"/>
+                  <v1:AssignmentRecipientType code="DRP"/>
                   <v1:DateAssigned>2017-06-21T10:51:49.082</v1:DateAssigned>
                   <v1:InspectionMethod code="DRP"/>
                   <v1:InstructionsToEstimator>InstructionsToEstimator</v1:InstructionsToEstimator>

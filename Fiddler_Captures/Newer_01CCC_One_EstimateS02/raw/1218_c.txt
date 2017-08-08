@@ -1,0 +1,45 @@
+CONNECT sb.scorecardresearch.com:443 HTTP/1.1
+Host: sb.scorecardresearch.com:443
+Connection: keep-alive
+User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36
+
+A SSLv3-compatible ClientHello handshake was found. Fiddler extracted the parameters below.
+
+Version: 3.3 (TLS/1.2)
+Random: 7E FD 13 CB 06 25 69 BE FF E1 98 7F F4 2B 36 58 8D A7 89 8C A6 93 0E 95 F9 E4 80 A3 00 53 21 3C
+"Time": 12/18/2077 2:28:46 PM
+SessionID: E6 00 00 00 52 40 5D B0 8F 1C C6 8C CB 23 B5 FF BC 49 D6 1B 6D E0 E7 38 03 81 8D 27 9A 7A 1F 28
+Extensions: 
+	0x1a1a		empty
+	renegotiation_info	00
+	server_name	sb.scorecardresearch.com
+	extended_master_secret	empty
+	SessionTicket	empty
+	signature_algs	sha256_ecdsa, Unknown[0x8]_Unknown[0x4], sha256_rsa, sha384_ecdsa, Unknown[0x8]_Unknown[0x5], sha384_rsa, Unknown[0x8]_Unknown[0x6], sha512_rsa, sha1_rsa
+	status_request	OCSP - Implicit Responder
+	SignedCertTimestamp (RFC6962)	empty
+	ALPN		h2, http/1.1
+	channel_id(GoogleDraft)	empty
+	ec_point_formats	uncompressed [0x0]
+	elliptic_curves	unknown [0xFAFA), unknown [0x1D), secp256r1 [0x17], secp384r1 [0x18]
+	0xcaca		00
+Ciphers: 
+	[7A7A]	Unrecognized cipher - See http://www.iana.org/assignments/tls-parameters/
+	[C02B]	TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256
+	[C02F]	TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
+	[C02C]	TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384
+	[C030]	TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384
+	[CCA9]	Unrecognized cipher - See http://www.iana.org/assignments/tls-parameters/
+	[CCA8]	Unrecognized cipher - See http://www.iana.org/assignments/tls-parameters/
+	[C013]	TLS1_CK_ECDHE_RSA_WITH_AES_128_CBC_SHA
+	[C014]	TLS1_CK_ECDHE_RSA_WITH_AES_256_CBC_SHA
+	[009C]	TLS_RSA_WITH_AES_128_GCM_SHA256
+	[009D]	TLS_RSA_WITH_AES_256_GCM_SHA384
+	[002F]	TLS_RSA_AES_128_SHA
+	[0035]	TLS_RSA_AES_256_SHA
+	[000A]	SSL_RSA_WITH_3DES_EDE_SHA
+
+Compression: 
+	[00]	NO_COMPRESSION
+
+

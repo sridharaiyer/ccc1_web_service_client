@@ -1,0 +1,39 @@
+HTTP/1.1 200 OK
+Server: Apache
+Last-Modified: Mon, 21 Nov 2016 20:39:08 GMT
+Accept-Ranges: bytes
+Content-Length: 832
+Content-Type: text/html
+Cache-Control: max-age=172800
+Date: Mon, 07 Aug 2017 20:05:57 GMT
+Connection: keep-alive
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+	<title>Untitled</title>
+<!--Adobe Edge Runtime-->
+    <script type="text/javascript" charset="utf-8" src="//animate.adobe.com/runtime/6.0.0/edge.6.0.0.min.js"></script>
+    <style>
+        .edgeLoad-EDGE-215245021 { visibility:hidden; }
+    </style>
+<script>
+   AdobeEdge.loadComposition('63448113_Chevrolet1nua_112116', 'EDGE-215245021', {
+    scaleToFit: "none",
+    centerStage: "none",
+    minW: "0px",
+    maxW: "undefined",
+    width: "728px",
+    height: "90px"
+}, {"dom":{}}, {"dom":{}});
+</script>
+<!--Adobe Edge Runtime End-->
+
+</head>
+<body style="margin:0;padding:0;">
+	<div id="Stage" class="EDGE-215245021">
+	</div>
+</body>
+</html>

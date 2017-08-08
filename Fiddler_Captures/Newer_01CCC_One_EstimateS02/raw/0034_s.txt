@@ -1,0 +1,23 @@
+HTTP/1.1 201 Created
+Cache-Control: no-cache
+Pragma: no-cache
+Expires: -1
+Server: Microsoft-IIS/8.5
+X-MS-Upload-Bucket-Duration: 3600
+X-MS-Upload-Limit: 1048576
+X-MS-Medium-Cost-Upload-Bucket-Duration: 86400
+X-MS-Medium-Cost-Upload-Limit: 2048
+X-MS-Disk-Limit: 26214400
+X-MS-Spike-Duration: 300
+X-MS-Spike-Factor: 5
+X-MS-LogQueue-Limit: 5120
+X-AspNet-Version: 4.0.30319
+X-Powered-By: ASP.NET
+X-Content-Type-Options: nosniff
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Headers: Content-Type
+Access-Control-Allow-Methods: POST, OPTIONS
+Access-Control-Max-Age: 300
+Date: Mon, 07 Aug 2017 20:04:09 GMT
+Content-Length: 0
+

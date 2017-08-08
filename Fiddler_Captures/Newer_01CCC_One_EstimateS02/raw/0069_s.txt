@@ -1,0 +1,10 @@
+HTTP/1.1 200 OK
+Cache-Control: private
+Content-Type: text/xml; charset=utf-8
+Server: Microsoft-IIS/10.0
+X-CorrelationId: da4c2e8b-d574-4ecb-b1fb-b845e7267e36
+X-Powered-By: ASP.NET
+Date: Mon, 07 Aug 2017 20:04:16 GMT
+Content-Length: 712
+
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/"><s:Body><ReadSettingsResponse xmlns="http://schemas.microsoft.com/office/roamingservice"><Generation>2</Generation><ListSettings xmlns:a="http://schemas.datacontract.org/2004/07/Microsoft.Office.Web.Roaming.SoapObjects" xmlns:i="http://www.w3.org/2001/XMLSchema-instance"/><ReadSettingErrors i:nil="true" xmlns:a="http://schemas.datacontract.org/2004/07/Microsoft.Office.Web.Roaming.SoapObjects" xmlns:i="http://www.w3.org/2001/XMLSchema-instance"/><Settings xmlns:a="http://schemas.datacontract.org/2004/07/Microsoft.Office.Web.Roaming.SoapObjects" xmlns:i="http://www.w3.org/2001/XMLSchema-instance"/></ReadSettingsResponse></s:Body></s:Envelope>

@@ -1,0 +1,31 @@
+HTTP/1.1 200 Connection Established
+FiddlerGateway: Direct
+StartTime: 15:06:00.292
+Connection: close
+
+Encrypted HTTPS traffic flows through this CONNECT tunnel. HTTPS Decryption is enabled in Fiddler, so decrypted sessions running in this tunnel will be shown in the Web Sessions list.
+
+Secure Protocol: 3072
+Cipher: Aes128 128bits
+Hash Algorithm: Sha256 256bits
+Key Exchange: ECDHE_RSA (0xae06) 256bits
+
+== Server Certificate ==========
+[Subject]
+  CN=*.speedshiftmedia.com
+
+[Issuer]
+  CN=Amazon, OU=Server CA 1B, O=Amazon, C=US
+
+[Serial Number]
+  0476EB04116E8E5960C4E3DA722D5F36
+
+[Not Before]
+  03/01/2017 6:00:00 PM
+
+[Not After]
+  04/02/2018 7:00:00 AM
+
+[Thumbprint]
+  81DD97771D7455EDC11A8A289390C363A16B42F0
+

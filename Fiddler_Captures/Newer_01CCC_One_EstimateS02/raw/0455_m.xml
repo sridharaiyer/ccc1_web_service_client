@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Session SID="455" BitFlags="2100">
+  <SessionTimers ClientConnected="2017-08-07T15:05:12.5103036-05:00" ClientBeginRequest="2017-08-07T15:05:12.5103036-05:00" GotRequestHeaders="2017-08-07T15:05:12.5113067-05:00" ClientDoneRequest="2017-08-07T15:05:12.5113067-05:00" GatewayTime="0" DNSTime="0" TCPConnectTime="140" HTTPSHandshakeTime="100" ServerConnected="2017-08-07T15:05:12.6517407-05:00" FiddlerBeginRequest="2017-08-07T15:05:12.6517407-05:00" ServerGotRequest="2017-08-07T15:05:12.6517407-05:00" ServerBeginResponse="0001-01-01T00:00:00" GotResponseHeaders="0001-01-01T00:00:00" ServerDoneResponse="0001-01-01T00:00:00" ClientBeginResponse="2017-08-07T15:05:12.6517407-05:00" ClientDoneResponse="2017-08-07T15:05:12.6517407-05:00" />
+  <PipeInfo />
+  <TunnelInfo BytesEgress="0" BytesIngress="0" />
+  <SessionFlags>
+    <SessionFlag N="https-server-cipher" V="Aes256 256bits" />
+    <SessionFlag N="x-responsebodytransferlength" V="0" />
+    <SessionFlag N="https-server-version" V="3072" />
+    <SessionFlag N="https-client-snihostname" V="ds-aksb-a.akamaihd.net" />
+    <SessionFlag N="x-clientip" V="::ffff:127.0.0.1" />
+    <SessionFlag N="x-clientport" V="62995" />
+    <SessionFlag N="https-client-sessionid" V="50 49 00 00 CC 50 FF 9A 11 7F FA 42 7B 1C C7 3B 50 ED 49 26 D8 DA 57 18 C3 21 63 D7 DB 9F 32 8B" />
+    <SessionFlag N="x-processinfo" V="chrome:8036" />
+    <SessionFlag N="https-client-version" V="3072" />
+    <SessionFlag N="x-egressport" V="62996" />
+    <SessionFlag N="x-hostip" V="23.215.105.74" />
+  </SessionFlags>
+</Session>

@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Session SID="257" BitFlags="2100">
+  <SessionTimers ClientConnected="2017-08-07T15:05:06.8518165-05:00" ClientBeginRequest="2017-08-07T15:05:06.8528196-05:00" GotRequestHeaders="2017-08-07T15:05:06.8528196-05:00" ClientDoneRequest="2017-08-07T15:05:06.8528196-05:00" GatewayTime="0" DNSTime="0" TCPConnectTime="56" HTTPSHandshakeTime="199" ServerConnected="2017-08-07T15:05:06.9099963-05:00" FiddlerBeginRequest="2017-08-07T15:05:06.9099963-05:00" ServerGotRequest="2017-08-07T15:05:06.9099963-05:00" ServerBeginResponse="0001-01-01T00:00:00" GotResponseHeaders="0001-01-01T00:00:00" ServerDoneResponse="0001-01-01T00:00:00" ClientBeginResponse="2017-08-07T15:05:06.9099963-05:00" ClientDoneResponse="2017-08-07T15:05:06.9099963-05:00" />
+  <PipeInfo />
+  <TunnelInfo BytesEgress="0" BytesIngress="0" />
+  <SessionFlags>
+    <SessionFlag N="https-server-cipher" V="Aes128 128bits" />
+    <SessionFlag N="x-responsebodytransferlength" V="0" />
+    <SessionFlag N="https-server-version" V="3072" />
+    <SessionFlag N="https-client-snihostname" V="gateway.foresee.com" />
+    <SessionFlag N="x-clientip" V="::ffff:127.0.0.1" />
+    <SessionFlag N="x-clientport" V="62818" />
+    <SessionFlag N="https-client-sessionid" V="A5 3C 00 00 E0 1D 1C 3E 5F 4D 52 8C 55 E6 D8 54 3B 7D 45 88 01 59 A0 2A 10 FB 6C 4A E0 74 C4 7B" />
+    <SessionFlag N="x-processinfo" V="chrome:8036" />
+    <SessionFlag N="https-client-version" V="3072" />
+    <SessionFlag N="x-egressport" V="62819" />
+    <SessionFlag N="x-hostip" V="52.84.76.17" />
+  </SessionFlags>
+</Session>

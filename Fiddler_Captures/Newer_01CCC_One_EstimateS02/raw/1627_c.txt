@@ -1,0 +1,11 @@
+GET https://cdn.speedshiftmedia.com/products/dynamicwebads/adserving/includes/javascript/cookietagging/cookietag.js HTTP/1.1
+Host: cdn.speedshiftmedia.com
+Connection: keep-alive
+User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36
+Accept: */*
+DNT: 1
+Referer: https://www.autotrader.com/cars-for-sale/vehicledetails.xhtml?listingId=421482755&zip=60652&referrer=%2Fcars-for-sale%2Fsearchresults.xhtml%3Fzip%3D60652%26startYear%3D1981%26sortBy%3DderivedpriceDESC%26incremental%3Dall%26firstRecord%3D0%26endYear%3D2016%26modelCodeList%3DVOLT%26makeCodeList%3DCHEV%26searchRadius%3D0&startYear=1981&numRecords=25&firstRecord=0&endYear=2016&modelCodeList=VOLT&makeCodeList=CHEV&searchRadius=0&makeCode1=CHEV&modelCode1=VOLT
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.8
+Cookie: SSM_GFU=eyJ2ZXJzaW9uIjoyLCJndWlkIjoiNTg0NmVjZDY0ZmVjZTk1OTA4OGI0NTZiIiwic2lkIjoiUzIwMTcwODA3MjAwNTU4M0p0RXBNcnNDdzJ2ciIsImxhc3Rfc2VlbiI6MTUwMjEzNjM1Nn0%3D; SSM_UTC=Z3VpZDo6NTg0NmVjZDY0ZmVjZTk1OTA4OGI0NTZifHx8c291cmNlOjpnZnU%3D
+

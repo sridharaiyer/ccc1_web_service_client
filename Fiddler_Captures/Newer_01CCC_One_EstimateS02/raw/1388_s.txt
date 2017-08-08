@@ -1,0 +1,99 @@
+HTTP/1.1 200 OK
+Content-Type: application/x-javascript
+Content-Length: 2922
+Connection: keep-alive
+Date: Fri, 21 Oct 2016 11:07:42 GMT
+Last-Modified: Fri, 12 Jun 2015 22:13:26 GMT
+ETag: "4bfd3dad63b5f609f7e4468b76d02096"
+Accept-Ranges: bytes
+Server: AmazonS3
+Age: 25086
+X-Cache: Hit from cloudfront
+Via: 1.1 ad75de90472243324ece0502a7c0229f.cloudfront.net (CloudFront)
+X-Amz-Cf-Id: 1Q4E7z6NRTYg0PWcLJbDh-Oci01oV7-GyQkAcQxWhhqwwJH-QuONCw==
+
+//-----------------------------------------------------------------------------------------
+// Intro class that will check if the intro is available and will run it. It will also 
+// handle tracking and events of the intro. Intro will be removed after required time.
+//***********************************<---NOTES--->*****************************************
+// Only none swf intros will be loaded, so at the moment it will be static jpg
+//=========================================================================================
+// json      = json file needed for tracking
+// callback  = a function that should be called after intro finishes (if no intro is needed
+//             callback will be called)
+// version   = version of the library you are using if nothing is passed in it will default 
+//             to v1
+//-----------------------------------------------------------------------------------------
+var IntroLoader = function(json, callback, version) {
+    var ver;
+    var start = function() {
+        ver = (version) ? (version) : ('v1')
+        id('ssm_ad_container').appendChild(intro = document.createElement('div'));
+        intro.appendChild(document.createElement('img'));
+        intro.children[0].setAttribute('src', iPath+path);
+        intro.setAttribute('id','intro');
+        if(ver == 'v1') {
+            addTracking(json, SSM_ad_obj, 'INTROCLICK', intro, url);
+            addEvent(intro, 'click', clicking, false);
+        } else if(ver == 'v2') {
+            new tracking.createNew(intro, 'INTROCLICK', url);
+        } else {
+
+        }
+
+
+        betterStyle(intro, 'position: absolute;\
+                            opacity: 1;\
+                            z-index: 999;');
+        setTimeout(end, parseInt(delay)*1000);
+    }
+
+    var end = function() {
+        if(ver == 'v1') {
+            homeMadeFade(id('intro'), 1, 0, function() {
+                id('ssm_ad_container').removeChild(id('intro'));
+                if(callback) {
+                    callback();
+                }
+
+            }, 1);
+        } else {
+
+            new timeAnimation(id('intro'), {opacity: 0}, 500, function() {
+
+               id('ssm_ad_container').removeChild(id('intro'));
+
+                if(callback) {
+                    callback();
+                }
+            })
+        }
+    }
+
+    if(SSM_ad_obj['ApCdnDomain'].indexOf('dev') != '-1') {
+        var iPath = "http://dev.cdn.speedshiftmedia.com";
+    } else {
+        var iPath = SSM_ad_obj['ApCdnDomain'];
+    }
+
+    var path  = SSM_ad_obj.IntroCreativePath;
+    var delay = SSM_ad_obj.IntroCreativeDelay;
+    var url   = SSM_ad_obj.IntroCreativeURL;
+
+    if(path) {
+        var type = path.substr(path.length-3);
+        if(type != 'swf') {
+            start();
+        } else {
+            if(callback) {
+                callback();
+            }
+        }
+    }
+    else {
+        if (callback) {
+            callback();
+        }
+    }
+}
+

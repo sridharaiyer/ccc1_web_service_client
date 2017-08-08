@@ -1,0 +1,11 @@
+GET https://cdn.krxd.net/userdata/get?pub=578683ab-bb0c-4407-994d-56172faff888&technographics=1&callback=Krux.ns._default.kxjsonp_userdata HTTP/1.1
+Host: cdn.krxd.net
+Connection: keep-alive
+User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36
+Accept: */*
+DNT: 1
+Referer: https://www.autotrader.com/cars-for-sale/Chevrolet/Volt/Chicago+IL-60652?zip=60652&showcaseOwnerId=100003458&startYear=1981&numRecords=25&sortBy=derivedpriceDESC&firstRecord=0&endYear=2016&modelCodeList=VOLT&makeCodeList=CHEV&searchRadius=0
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.8
+Cookie: ServedBy=beacon-a107; _kuid_=DNT
+

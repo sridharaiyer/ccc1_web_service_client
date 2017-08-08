@@ -1,0 +1,15 @@
+HTTP/1.1 200 OK
+Accept-Ranges: bytes
+Content-Length: 14428
+Content-Type: application/octet-stream
+Etag: "15c718"
+Server: downloads
+Vary: *
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+X-Xss-Protection: 1; mode=block
+Date: Mon, 07 Aug 2017 10:21:57 GMT
+Alt-Svc: quic=":443"; ma=2592000; v="39,38,37,36,35"
+Last-Modified: Mon, 07 Aug 2017 10:18:13 GMT
+Connection: keep-alive
+

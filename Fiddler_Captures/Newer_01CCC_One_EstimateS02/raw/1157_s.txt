@@ -1,0 +1,31 @@
+HTTP/1.1 200 Connection Established
+FiddlerGateway: Direct
+StartTime: 15:05:44.457
+Connection: close
+
+Encrypted HTTPS traffic flows through this CONNECT tunnel. HTTPS Decryption is enabled in Fiddler, so decrypted sessions running in this tunnel will be shown in the Web Sessions list.
+
+Secure Protocol: 3072
+Cipher: Aes256 256bits
+Hash Algorithm: Sha384 0bits
+Key Exchange: RsaKeyX 2048bits
+
+== Server Certificate ==========
+[Subject]
+  CN=*.doubleverify.com, OU=TechOps, O=DoubleVerify Inc, L=New York, S=New York, C=US
+
+[Issuer]
+  CN=Symantec Class 3 Secure Server CA - G4, OU=Symantec Trust Network, O=Symantec Corporation, C=US
+
+[Serial Number]
+  3C0D535B4B7448221F19D7B2E36D2365
+
+[Not Before]
+  10/12/2014 7:00:00 PM
+
+[Not After]
+  01/20/2018 5:59:59 PM
+
+[Thumbprint]
+  9342C101E9C1C83E9E86A6276A999312D49F41F8
+

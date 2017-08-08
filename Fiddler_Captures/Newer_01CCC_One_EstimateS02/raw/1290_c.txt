@@ -1,0 +1,11 @@
+GET https://adserving.speedshiftmedia.com/products/dynamicwebads/adserving/beacon.gif?adTagID=GF2017011817370270d701aba35c&trackingID=20170807010545ec2999c9972911&adID=0A9F2DDF0f0ae2042AGXFE480C7C&served=1&r=0.5428455985980531&ap_guid=1502136344014155209031096687&ap_sourcetag=jsincludetb&ap_ad_type=html_backup&UserGuid=5846ecd64fece959088b456b&AdTypeID=CE7419990c99d24F28JOG12411A4&ClientTrackingID=%%SSM_CLIENT_TRACKING_ID%%&user_device=computer&country_code=US&region=IL&city=Chicago&latitude=41.9224&longitude=-87.6524&ap_url=https://www.autotrader.com/cars-for-sale/Chevrolet/Volt/Chicago+IL-60652?zip=60652&showcaseOwnerId=100003458&startYear=1981&numRecords=25&sortBy=derivedpriceDESC&firstRecord=0&endYear=2016&modelCodeList=VOLT&makeCodeList=CHEV&searchRadius=0 HTTP/1.1
+Host: adserving.speedshiftmedia.com
+Connection: keep-alive
+User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36
+Accept: image/webp,image/apng,image/*,*/*;q=0.8
+DNT: 1
+Referer: https://www.autotrader.com/cars-for-sale/Chevrolet/Volt/Chicago+IL-60652?zip=60652&showcaseOwnerId=100003458&startYear=1981&numRecords=25&sortBy=derivedpriceDESC&firstRecord=0&endYear=2016&modelCodeList=VOLT&makeCodeList=CHEV&searchRadius=0
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.8
+Cookie: SSM_GFU=eyJ2ZXJzaW9uIjoyLCJndWlkIjoiNTg0NmVjZDY0ZmVjZTk1OTA4OGI0NTZiIiwic2lkIjoiUzIwMTcwODA3MTgyODA5MjQ1cU1MdXh0NHd6TCIsImxhc3Rfc2VlbiI6MTUwMjEzMDUwMH0%3D; SSM_UTC=Z3VpZDo6NTg0NmVjZDY0ZmVjZTk1OTA4OGI0NTZifHx8c291cmNlOjpnZnU%3D
+

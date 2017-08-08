@@ -1,0 +1,12 @@
+GET https://pagead2.googlesyndication.com/pagead/gen_204?id=sodar&v=14&t=2&bgai=BUuuXE8iIWaeGL4af_AHNxKCABgAAAAA4AeAEAg&bg=!zc6lztZEXfMSFS5vZ04CAAAAj1IAAABTmQFGhfSSFStf2B8WqjTurWTiq4JIPX-aG0wEwadW6ZKJ8IHYrW_EF8aaSGDAsdlhXE11ZBgxtDXQuqsc8O1mytbiIfcqvuMtq8F90bRJnECJ1ZIOHqYLxPO5nQtMb6B4DApUB2YEwrrYcJtju3ggmda0PGMUhjZYmHjDViNshgYanw7jlU0AjJ2D0TvS2Su1r0Gm847hnXo1W770uQZ_heJjIo2nFxtNul4UnrYgnzl_msCigCgVHxSKzDbyoLcdS9uk2pBSItuABtyw4FNIGihBM3gct-DCsPlMFOJ9NlqWqJY8KPAyagd8OeBQnbwqC9379dwTxEAtqq9g9RginPSF6T7iIur63_u3Dd2wClubknAI5hCvR2jmqfqLLxI-tCidogPKsESqus9dZQ7xn_WDi7XRRud7EOouyuQeoC8wiqVODA7vDZY HTTP/1.1
+Host: pagead2.googlesyndication.com
+Connection: keep-alive
+User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36
+X-Client-Data: CIm2yQEIpLbJAQjBtskBCO2XygEI+pzKAQipncoB
+Accept: image/webp,image/apng,image/*,*/*;q=0.8
+DNT: 1
+Referer: https://tpc.googlesyndication.com/sodar/9im3l02I.html
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.8
+Cookie: __gads=ID=954b866e438ab23d:T=1481055403:S=ALNI_MYMj4sS6z6jWEGMXe9huNdrqgIr_g; __qca=P0-417283369-1484686818872
+

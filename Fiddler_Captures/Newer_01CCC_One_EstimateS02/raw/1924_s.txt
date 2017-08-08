@@ -1,0 +1,18 @@
+HTTP/1.1 302 Found
+Date: Mon, 07 Aug 2017 20:10:56 GMT
+Pragma: no-cache
+Expires: Fri, 01 Jan 1990 00:00:00 GMT
+Cache-Control: no-cache, must-revalidate
+Location: http://r6---sn-vgqs7nes.gvt1.com/edgedl/release2/JmGHqSdEBXQ_13/3899_all_crl-set-17952917104576191792.data.crx2?cms_redirect=yes&expire=1502151056&ip=207.140.60.67&ipbits=0&mm=28&mn=sn-vgqs7nes&ms=nvh&mt=1502136562&mv=m&pl=22&shardbypass=yes&sparams=expire,ip,ipbits,mm,mn,ms,mv,pl,shardbypass&signature=12A4D7DD278C23FA5882CDB2FBBA416E34C9623E.5FB3850DD26E0C0F5CDB46C387BBAE2507923F2A&key=cms1
+Content-Type: text/html; charset=UTF-8
+Server: ClientMapServer
+Content-Length: 643
+X-XSS-Protection: 1; mode=block
+X-Frame-Options: SAMEORIGIN
+
+<HTML><HEAD><meta http-equiv="content-type" content="text/html;charset=utf-8">
+<TITLE>302 Moved</TITLE></HEAD><BODY>
+<H1>302 Moved</H1>
+The document has moved
+<A HREF="http://r6---sn-vgqs7nes.gvt1.com/edgedl/release2/JmGHqSdEBXQ_13/3899_all_crl-set-17952917104576191792.data.crx2?cms_redirect=yes&amp;expire=1502151056&amp;ip=207.140.60.67&amp;ipbits=0&amp;mm=28&amp;mn=sn-vgqs7nes&amp;ms=nvh&amp;mt=1502136562&amp;mv=m&amp;pl=22&amp;shardbypass=yes&amp;sparams=expire,ip,ipbits,mm,mn,ms,mv,pl,shardbypass&amp;signature=12A4D7DD278C23FA5882CDB2FBBA416E34C9623E.5FB3850DD26E0C0F5CDB46C387BBAE2507923F2A&amp;key=cms1">here</A>.
+</BODY></HTML>

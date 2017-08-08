@@ -1,0 +1,12 @@
+GET https://securepubads.g.doubleclick.net/pcs/view?xai=AKAOjsukT37c4p39gLackdiTZnsyACDNObrshOvscnZxngHCM_MHtMGcd66PEHxn-QI-XZsUYyZCs2kOnB63IpqTXInRYQQ_Elns6iEXDHG50LVzVEg7O8YSgaPCIx2r_3n3qASgHDOCKDVcJlmpQ7TsNSRo6yruzNHU9kaQt4YO-y9s9vKzmpE7UoqMpuF8415t7eyAyJaKhisDWu43SigI3IFVBxZrMqr-lxFNhPUGGDR8YePinYl23cOA9yKMcRa11g&sig=Cg0ArKJSzMo6jIUgL7e2EAE&urlfix=1&adurl=https://googleads4.g.doubleclick.net/pcs/view%3Fxai%3DAKAOjssu-reZMmCaMBui8AqzbexHaeGI7WbyXQitZfHkZPrsZ3Qr212z4362JQzfhNsliI26C_JejLtMS-DCNrOmvBS98woxaUBa5eORdMDwaDI%26sig%3DCg0ArKJSzMKIMSX84LYQEAE%26urlfix%3D1%26adurl%3D HTTP/1.1
+Host: securepubads.g.doubleclick.net
+Connection: keep-alive
+User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36
+X-Client-Data: CIm2yQEIpLbJAQjBtskBCO2XygEI+pzKAQipncoB
+Accept: image/webp,image/apng,image/*,*/*;q=0.8
+DNT: 1
+Referer: https://www.autotrader.com/cars-for-sale/Chevrolet/Volt/Chicago+IL-60652?makeCodeList=CHEV&modelCodeList=VOLT&showcaseOwnerId=100003458&Log=0
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.8
+Cookie: id=22b34e65360d00a6||t=1480458270|et=730|cs=002213fd485afe177673958a88; __gads=ID=3370d3d5328207d9:T=1481752497:S=ALNI_Mbt1G5FVGtNGLrLq5APnGDWmgiBzg; IDE=AHWqTUn8VNea70iycoL66B7NLYGuE6nvEmzx2HARZFKouJfsElqkeWSODQ; DSID=ADyxukvbcpLxxSZpU156HnttmXKBlAfEuZkciu3xWzf90EEXKEtmjD6i3r_DRyZxzfHstkdcUmOfDiQ0aNHXNZqfcpn0rsSZVIDhoIgaL1DzOebhQXymQVQ
+

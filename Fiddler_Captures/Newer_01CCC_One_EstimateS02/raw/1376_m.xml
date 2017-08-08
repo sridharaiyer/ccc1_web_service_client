@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Session SID="1376" BitFlags="2100">
+  <SessionTimers ClientConnected="2017-08-07T15:05:49.9548212-05:00" ClientBeginRequest="2017-08-07T15:05:49.9568274-05:00" GotRequestHeaders="2017-08-07T15:05:49.9568274-05:00" ClientDoneRequest="2017-08-07T15:05:49.9568274-05:00" GatewayTime="0" DNSTime="0" TCPConnectTime="106" HTTPSHandshakeTime="174" ServerConnected="2017-08-07T15:05:50.0641591-05:00" FiddlerBeginRequest="2017-08-07T15:05:50.0641591-05:00" ServerGotRequest="2017-08-07T15:05:50.0641591-05:00" ServerBeginResponse="0001-01-01T00:00:00" GotResponseHeaders="0001-01-01T00:00:00" ServerDoneResponse="0001-01-01T00:00:00" ClientBeginResponse="2017-08-07T15:05:50.0641591-05:00" ClientDoneResponse="2017-08-07T15:05:50.0641591-05:00" />
+  <PipeInfo />
+  <TunnelInfo BytesEgress="0" BytesIngress="0" />
+  <SessionFlags>
+    <SessionFlag N="https-server-cipher" V="Aes128 128bits" />
+    <SessionFlag N="x-responsebodytransferlength" V="0" />
+    <SessionFlag N="https-server-version" V="3072" />
+    <SessionFlag N="https-client-snihostname" V="segments.adap.tv" />
+    <SessionFlag N="x-clientip" V="::ffff:127.0.0.1" />
+    <SessionFlag N="x-clientport" V="63832" />
+    <SessionFlag N="https-client-sessionid" V="19 29 00 00 76 8A 69 16 90 B8 10 BB 02 B7 1C 18 08 84 6A 1E BC C8 50 79 A2 96 E3 BB 11 C9 88 98" />
+    <SessionFlag N="x-processinfo" V="chrome:8036" />
+    <SessionFlag N="https-client-version" V="3072" />
+    <SessionFlag N="x-egressport" V="63833" />
+    <SessionFlag N="x-hostip" V="52.5.125.80" />
+  </SessionFlags>
+</Session>

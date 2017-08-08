@@ -1,0 +1,11 @@
+GET https://gateway.foresee.com/code/19.3.3-v.2/fs.frame.html?d=www.autotrader.com&_cv_=19.3.3-v.2&_vt_=ll3i16u&uid=73906161092121c33cc50cd6be809caf HTTP/1.1
+Host: gateway.foresee.com
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8
+DNT: 1
+Referer: https://www.autotrader.com/
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.8
+

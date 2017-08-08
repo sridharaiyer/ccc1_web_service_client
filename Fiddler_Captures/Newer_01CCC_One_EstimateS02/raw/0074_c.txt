@@ -1,0 +1,9 @@
+GET http://www.microsoft.com/pki/crl/products/WinPCA.crl HTTP/1.1
+Cache-Control: max-age = 629
+Accept: */*
+If-Modified-Since: Wed, 02 Dec 2015 18:30:06 GMT
+If-None-Match: "0cb60772f2dd11:0"
+User-Agent: Microsoft-CryptoAPI/6.1
+Connection: Keep-Alive
+Host: www.microsoft.com
+

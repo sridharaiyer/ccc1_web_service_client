@@ -1,0 +1,164 @@
+HTTP/1.1 200 OK
+Content-Type: application/x-javascript
+Content-Length: 7108
+Connection: keep-alive
+Date: Mon, 12 Dec 2016 07:00:33 GMT
+Last-Modified: Mon, 16 Jun 2014 16:46:34 GMT
+ETag: "1ce95d08115bf880ab0d77335dd2d091"
+Accept-Ranges: bytes
+Server: AmazonS3
+Age: 25410
+X-Cache: Hit from cloudfront
+Via: 1.1 ad75de90472243324ece0502a7c0229f.cloudfront.net (CloudFront)
+X-Amz-Cf-Id: JqdSvV8kGXCbJInkYu9kfawKum-KeUUrM5zWQratCvIv0ElSyAi-iw==
+
+//-----------------------------------------------------------------------------------------
+//creates a gradient inside an element based on a colour and alpha values
+//========================================================================================
+// el           = element
+// dir          = direction (at the moment only vertical need to specify with a 'V')
+// color        = desired colour of the gradient in a rgb string 'r,g,b'
+// from         = starting alpha
+// to           = ending alpha
+//-----------------------------------------------------------------------------------------
+function alphaGradient(id, dir, color, from, to) {
+    var startPos = 0;
+    var temp = document.createElement('div');
+    temp.setAttribute('id','alphaGradient');
+    document.getElementById(id).appendChild(temp);
+    if(dir == 'V') {
+        var temp = from;
+        var size = document.getElementById(id).offsetHeight;
+        var step = (Math.abs(from - to)/size);
+        for(var i = 0;i<size;i++) {
+            if(from < to) {
+                temp+=step;
+            }
+            else {
+                temp-=step;
+            }
+            document.getElementById(id).children['alphaGradient'].appendChild(aDiv = document.createElement('div'));
+            aDiv.style.height = '1px';
+            aDiv.style.top = i+'px';
+            aDiv.style.width = '100%';
+            aDiv.style.zIndex = '-1';
+            if(ie<9) {
+               aDiv.style.backgroundColor = 'rgb('+color+')';
+               aDiv.style.filter = 'alpha(opacity ='+(temp*100)+')';
+            }
+            else {
+                aDiv.style.backgroundColor = 'rgba('+color+','+temp+')';
+            }
+        }
+    }
+}
+//-----------------------------------------------------------------------------------------
+//creates a gradient inside an element based on two colour values
+//========================================================================================
+// direction    = direction (set to 'V' for vertical and anyother value for horizontal)
+// args         = an array of arguments in the format [[r,g,b],[r,g,b],height of each
+//                colour band, number of bands]
+// element      = id
+// name         = To avoid two gradient objects having the same id, we can pass in different
+//                names for id
+//-----------------------------------------------------------------------------------------
+function createGradient(direction, args, element, startingDirection, name) {
+    var bandSets = args.length / 4;
+    var startPos = 0;
+    var _name = ((name)?(name):('gradient'));
+    var temp = document.createElement('div');
+    temp.setAttribute("id", _name);
+    if(document.getElementById(element)) {
+        document.getElementById(element).appendChild(temp);
+    }
+    else {
+
+        element.appendChild(temp);
+    }
+    for (var bandSetLoop=0; bandSetLoop<bandSets; bandSetLoop++) {
+        fadeFromColour = args[bandSetLoop * 4];
+        fadeToColour = args[bandSetLoop * 4 + 1];
+        bandSize = args[bandSetLoop * 4 + 2];
+        fadeSteps = args[bandSetLoop * 4 + 3];
+        // calculate stepped colour values for each band
+        var colourSteps = [fadeFromColour.concat()];// ensure first colour is the start colour
+        for (var bandLoop=1; bandLoop<fadeSteps; bandLoop++) {
+            colourSteps[bandLoop] = [];
+            for (var rgbLoop=0; rgbLoop<3; rgbLoop++) {
+                colourSteps[bandLoop][rgbLoop] = Math.round(colourSteps[bandLoop-1][rgbLoop] + ((fadeToColour[rgbLoop] - colourSteps[bandLoop-1][rgbLoop]) / (fadeSteps - bandLoop)));
+            }
+        }
+
+        // now draw each band
+        if (direction == 'V') {
+
+            for (var bandLoop=0; bandLoop<fadeSteps; bandLoop++) {
+                    if(document.getElementById(element)) {
+                        document.getElementById(element).children[_name].appendChild(aDiv = document.createElement('div'));
+                    }
+                    else {
+                        element.children[_name].appendChild(aDiv = document.createElement('div'));
+                    }
+
+                    aDiv.style.height = bandSize + 'px';
+                    aDiv.style.width = '100%';
+                    aDiv.style.position = 'absolute';
+
+                    if ( startingDirection == 'up' || startingDirection == null ) {
+                        aDiv.style.top = startPos + (bandSize * bandLoop) + 'px';
+                    } else {
+                        aDiv.style.bottom = startPos + (bandSize * bandLoop) + 'px';
+                    }
+
+                    aDiv.style.backgroundColor = 'rgb(' + colourSteps[bandLoop][0] + ',' + colourSteps[bandLoop][1] + ',' + colourSteps[bandLoop][2] + ')';
+                    aDiv.style.zIndex = '-1';
+
+            }
+        }
+        else {
+            for (var bandLoop=0; bandLoop<fadeSteps; bandLoop++) {
+                if(document.getElementById(element)) {
+                    document.getElementById(element).children[_name].appendChild(aDiv = document.createElement('div'));
+                }
+                else {
+                    element.children[_name].appendChild(aDiv = document.createElement('div'));
+                }
+                aDiv.style.width = bandSize + 'px';
+                aDiv.style.height = '100%';
+                aDiv.style.position = 'absolute';
+                aDiv.style.top = 0;
+
+                if ( startingDirection == 'left' || startingDirection == null ) {
+                    aDiv.style.left = startPos + (bandSize * bandLoop) + 'px';
+                } else {
+                    aDiv.style.right = startPos + (bandSize * bandLoop) + 'px';
+                }
+
+                aDiv.style.backgroundColor = 'rgb(' + colourSteps[bandLoop][0] + ',' + colourSteps[bandLoop][1] + ',' + colourSteps[bandLoop][2] + ')';
+                aDiv.style.zIndex = '-1';
+            }
+        }
+        startPos += fadeSteps * bandSize;
+    }
+     return (element.children[_name].innerHTML);
+}
+
+//-----------------------------------------------------------------------------------------
+// A function that will parse a hex color value into an array so it can be used with the
+// gradient function
+//=========================================================================================
+// color = hex color string
+//-----------------------------------------------------------------------------------------
+function gradientColor(color) {
+    return [parseInt(color.substr(1,2), 16), parseInt(color.substr(3,2), 16), parseInt(color.substr(5,2), 16)]
+}
+
+//-----------------------------------------------------------------------------------------
+// A function that will parse a hex color value into an array so it can be used with the
+// alphaGradient function
+//=========================================================================================
+// color = hex color string
+//-----------------------------------------------------------------------------------------
+function alphaColor(color) {
+    return parseInt(color.substr(1,2), 16) + ',' + parseInt(color.substr(3,2), 16) + ',' + parseInt(color.substr(5,2), 16)
+}

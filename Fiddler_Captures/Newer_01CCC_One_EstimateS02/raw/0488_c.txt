@@ -1,0 +1,11 @@
+GET https://cdn.krxd.net/controltag/IWjaNWdy.js HTTP/1.1
+Host: cdn.krxd.net
+Connection: keep-alive
+User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36
+Accept: */*
+DNT: 1
+Referer: https://cdn.krxd.net/partnerjs/xdi/proxy.3d2100fd7107262ecb55ce6847f01fa5.html
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.8
+Cookie: ServedBy=beacon-a107; _kuid_=DNT
+

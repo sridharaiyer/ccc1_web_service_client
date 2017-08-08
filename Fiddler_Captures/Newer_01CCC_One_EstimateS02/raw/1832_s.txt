@@ -1,0 +1,23 @@
+HTTP/1.1 200 OK
+Cache-Control: private
+Transfer-Encoding: chunked
+Content-Type: text/xml; charset=utf-8
+Server: Microsoft-IIS/8.5
+request-id: d793a9bc-2b3c-449a-98e0-b78115f0f8b7
+X-CalculatedBETarget: cy1pr0601mb1504.namprd06.prod.outlook.com
+X-DiagInfo: CY1PR0601MB1504
+X-BEServer: CY1PR0601MB1504
+X-AspNet-Version: 4.0.30319
+Set-Cookie: exchangecookie=b6f4825f229848bd8ee59a7b5cba77df; path=/
+Set-Cookie: X-BackEndCookie2=jmcguire@cccis.com=u56Lnp2ejJqBmsebyc/LxprSyZuantLLnZ2e0sfOz8bSzcrHzcbKnMmdzp7HgZycnJaM0ZyQkoHNz87I0s/G0s/Jq83Pxc/HxcrNgZGeko+Nm8/J0Y+NkJvRkIqLk5CQlNGckJKBzw==; expires=Wed, 06-Sep-2017 20:08:52 GMT; path=/EWS; secure; HttpOnly
+Set-Cookie: X-BackEndCookie=jmcguire@cccis.com=u56Lnp2ejJqBmsebyc/LxprSyZuantLLnZ2e0sfOz8bSzcrHzcbKnMmdzp7HgZycnJaM0ZyQkoHNz87I0s/G0s/Jq83Pxc/HxcrNgZGeko+Nm8/J0Y+NkJvRkIqLk5CQlNGckJKBzw==; expires=Wed, 06-Sep-2017 20:08:52 GMT; path=/EWS; secure; HttpOnly
+X-Powered-By: ASP.NET
+X-FEServer: DM5PR1101CA0016
+Date: Mon, 07 Aug 2017 20:08:51 GMT
+
+ba3
+<?xml version="1.0" encoding="utf-8"?><s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/"><s:Header><h:ServerVersionInfo MajorVersion="15" MinorVersion="1" MajorBuildNumber="1320" MinorBuildNumber="18" Version="V2017_07_11" xmlns:h="http://schemas.microsoft.com/exchange/services/2006/types" xmlns="http://schemas.microsoft.com/exchange/services/2006/types" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/></s:Header><s:Body xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><m:GetItemResponse xmlns:m="http://schemas.microsoft.com/exchange/services/2006/messages" xmlns:t="http://schemas.microsoft.com/exchange/services/2006/types"><m:ResponseMessages><m:GetItemResponseMessage ResponseClass="Success"><m:ResponseCode>NoError</m:ResponseCode><m:Items><t:Contact><t:ItemId Id="AAMkAGQxZTZjZTUzLTI2ODMtNDI0YS1hNjI2LWZhMzU5YTUyMjc2ZABGAAAAAABOJDN/cz4SQqhssTUvENQGBwBGht1qNNX7RaZ6BD+xeKD2AAAAABjoAABGht1qNNX7RaZ6BD+xeKD2AAPoSi47AAA=" ChangeKey="EQAAABYAAABGht1qNNX7RaZ6BD+xeKD2AAPrr3AO"/><t:ExtendedProperty><t:ExtendedFieldURI PropertyTag="0xfff" PropertyType="Binary"/><t:Value>AAAAAE4kM39zPhJCqGyxNS8Q1AYHAEaG3Wo01ftFpnoEP7F4oPYAAAAAGOgAAEaG3Wo01ftFpnoEP7F4oPYAA+hKLjsAAA==</t:Value></t:ExtendedProperty><t:ExtendedProperty><t:ExtendedFieldURI DistinguishedPropertySetId="Address" PropertyId="32900" PropertyType="String"/><t:Value>sleach@cccis.com</t:Value></t:ExtendedProperty><t:ExtendedProperty><t:ExtendedFieldURI DistinguishedPropertySetId="PublicStrings" PropertyName="LCSC_CId" PropertyType="CLSID"/><t:Value>c5bb4d25-cef0-4ee4-a27e-d4675cfcc7cd</t:Value></t:ExtendedProperty><t:ExtendedProperty><t:ExtendedFieldURI PropertyTag="0x71" PropertyType="Binary"/><t:Value>AQAAAAAArODMxr/KZkep0AtTZ2ToOQ==</t:Value></t:ExtendedProperty><t:ExtendedProperty><t:ExtendedFieldURI PropertyTag="0x1013" PropertyType="Binary"/><t:Value>DQoNCjA4LzA0LzIwMTcgVGhpcyBjb250YWN0IHdhcyBhZGRlZCBmcm9tIFNreXBlIGZvciBCdXNpbmVzcyAyMDE1ICgxNS4wLjQ5MzcuMTAwMCkNCg==</t:Value></t:ExtendedProperty><t:FileAs>Leach, Stanley</t:FileAs><t:DisplayName>Stanley Leach</t:DisplayName><t:GivenName>Stanley</t:GivenName><t:CompleteName><t:FirstName>Stanley</t:FirstName><t:LastName>Leach</t:LastName><t:FullName>Stanley Leach</t:FullName></t:CompleteName><t:CompanyName>CCCIS</t:CompanyName><t:EmailAddresses><t:Entry Key="EmailAddress1" Name="Stanley Leach" RoutingType="SMTP" MailboxType="Contact">sleach@cccis.com</t:Entry></t:EmailAddresses><t:PhoneNumbers><t:Entry Key="MobilePhone">+1 (773) 344-4351</t:Entry></t:PhoneNumbers><t:ImAddresses><t:Entry Key="ImAddress1">sleach@win.cccis.com</t:Entry></t:ImAddresses><t:OfficeLocation>Chicago</t:OfficeLocation><t:Surname>Leach</t:Surname><t:PersonalNotes>08/04/2017 This contact was added from Skype for Business 2015 (15.0.4937.1000)</t:PersonalNotes></t:Contact></m:Items></m:GetItemResponseMessage></m:ResponseMessages></m:GetItemResponse>
+16
+</s:Body></s:Envelope>
+0
+

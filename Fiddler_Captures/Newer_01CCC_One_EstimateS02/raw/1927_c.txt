@@ -1,0 +1,9 @@
+POST https://update.googleapis.com/service/update2 HTTP/1.1
+Host: update.googleapis.com
+Connection: keep-alive
+Content-Length: 800
+Content-Type: application/xml
+User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+
+<?xml version="1.0" encoding="UTF-8"?><request protocol="3.0" version="chrome-59.0.3071.115" prodversion="59.0.3071.115" requestid="{3481cb63-3041-48e5-b4c5-62c1e2fe3721}" lang="en-US" updaterchannel="" prodchannel="" os="win" arch="x64" nacl_arch="x86-64"><hw physmemory="8"/><os platform="Windows" arch="x86_64" version="6.1.7601.23846" sp="Service Pack 1"/><app appid="hfnkpimlhhgieaddgfemjhofmfblmnib" version="2594" nextversion="3899"><event eventtype="3" eventresult="1" nextfp="1.f87280c7693073a231df5b3495f1479b8693bd5cf07a0fa86e6c0bbbc08d7fd6"/><event eventtype="14" eventresult="1" downloader="direct" url="http://redirector.gvt1.com/edgedl/release2/JmGHqSdEBXQ_13/3899_all_crl-set-17952917104576191792.data.crx2" downloaded="170418" total="170418" download_time_ms="5220"/></app></request>

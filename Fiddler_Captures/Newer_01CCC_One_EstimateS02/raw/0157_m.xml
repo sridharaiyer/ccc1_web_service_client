@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Session SID="157" BitFlags="100">
+  <SessionTimers ClientConnected="2017-08-07T15:05:01.9607009-05:00" ClientBeginRequest="2017-08-07T15:05:01.9637102-05:00" GotRequestHeaders="2017-08-07T15:05:01.9637102-05:00" ClientDoneRequest="2017-08-07T15:05:01.9637102-05:00" GatewayTime="0" DNSTime="2581" TCPConnectTime="0" HTTPSHandshakeTime="0" ServerConnected="0001-01-01T00:00:00" FiddlerBeginRequest="0001-01-01T00:00:00" ServerGotRequest="0001-01-01T00:00:00" ServerBeginResponse="0001-01-01T00:00:00" GotResponseHeaders="0001-01-01T00:00:00" ServerDoneResponse="0001-01-01T00:00:00" ClientBeginResponse="2017-08-07T15:05:04.9629792-05:00" ClientDoneResponse="2017-08-07T15:05:04.9629792-05:00" />
+  <PipeInfo />
+  <SessionFlags>
+    <SessionFlag N="x-clientport" V="62716" />
+    <SessionFlag N="x-processinfo" V="chrome:8036" />
+    <SessionFlag N="x-failsession-when" V="SendingRequest" />
+    <SessionFlag N="x-clientip" V="::ffff:127.0.0.1" />
+    <SessionFlag N="x-aborted-when" V="SendingRequest" />
+  </SessionFlags>
+</Session>

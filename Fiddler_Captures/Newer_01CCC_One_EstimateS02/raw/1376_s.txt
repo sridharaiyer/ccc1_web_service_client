@@ -1,0 +1,31 @@
+HTTP/1.1 200 Connection Established
+FiddlerGateway: Direct
+StartTime: 15:05:50.064
+Connection: close
+
+Encrypted HTTPS traffic flows through this CONNECT tunnel. HTTPS Decryption is enabled in Fiddler, so decrypted sessions running in this tunnel will be shown in the Web Sessions list.
+
+Secure Protocol: 3072
+Cipher: Aes128 128bits
+Hash Algorithm: Sha256 256bits
+Key Exchange: ECDHE_RSA (0xae06) 256bits
+
+== Server Certificate ==========
+[Subject]
+  CN=*.adap.tv, OU=AOL Advertising, O=AOL Advertising Inc., L=Dulles, S=Virginia, C=US
+
+[Issuer]
+  CN=Entrust Certification Authority - L1K, OU="(c) 2012 Entrust, Inc. - for authorized use only", OU=See www.entrust.net/legal-terms, O="Entrust, Inc.", C=US
+
+[Serial Number]
+  18E7903DD19241CA0000000050D8A9C5
+
+[Not Before]
+  06/28/2016 7:39:08 AM
+
+[Not After]
+  09/28/2017 8:09:07 AM
+
+[Thumbprint]
+  F17626732DE6CC09DFC1107DEECEEDD20FFD91D3
+

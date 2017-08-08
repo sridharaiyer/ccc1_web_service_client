@@ -1,0 +1,11 @@
+HTTP/1.1 200 OK
+Access-Control-Allow-Headers: content-type,x-amz-content-sha256,x-amz-target,x-amz-user-agent
+Access-Control-Allow-Methods: POST
+Access-Control-Allow-Origin: *
+Access-Control-Expose-Headers: x-amzn-RequestId,x-amzn-ErrorType,x-amzn-ErrorMessage,Date
+Access-Control-Max-Age: 172800
+Date: Mon, 07 Aug 2017 20:06:01 GMT
+x-amzn-RequestId: d619d270-7bab-11e7-8402-4b9a41d5eccb
+Content-Length: 0
+Connection: keep-alive
+

@@ -1,0 +1,28 @@
+HTTP/1.1 200 OK
+x-amzn-RequestId: d663379a-7bab-11e7-a0a1-637e6a844074
+Access-Control-Allow-Origin: *
+Access-Control-Expose-Headers: x-amzn-RequestId,x-amzn-ErrorType,x-amzn-ErrorMessage,Date
+Content-Type: text/xml
+Content-Length: 1682
+Date: Mon, 07 Aug 2017 20:06:02 GMT
+
+<AssumeRoleWithWebIdentityResponse xmlns="https://sts.amazonaws.com/doc/2011-06-15/">
+  <AssumeRoleWithWebIdentityResult>
+    <Audience>us-east-1:2d1979f5-fdde-45c2-a867-e285d5f06ef5</Audience>
+    <AssumedRoleUser>
+      <Arn>arn:aws:sts::413858550723:assumed-role/Cognito_LeTigreUnauth_DefaultRole/web-identity</Arn>
+      <AssumedRoleId>AROAJZ4SBVIVALZHVT5IQ:web-identity</AssumedRoleId>
+    </AssumedRoleUser>
+    <Provider>cognito-identity.amazonaws.com</Provider>
+    <Credentials>
+      <AccessKeyId>ASIAI4U3KTTKKGVSFJ5Q</AccessKeyId>
+      <SecretAccessKey>kt72Me5vKrCsjcNuGzgqpLGyzojHzyFzczpAk/TR</SecretAccessKey>
+      <SessionToken>FQoDYXdzEGUaDIHCCMdAQzGxLE//KSLOA5geRpwRiqAdIiHm+jsqUaOkdwuR0iM1BH621PBF3CV3Z9+not8X/6dR9pFTF40U0MSXZos1wv8JRXS3m/lwb9inf3xN5q2aVlkGMqnakepLWh1fXtS3opchMKnL2TB/dFHIyBbHj8WHxDuy/36eIXKTUs1qdK1sYU+MJ3GQI0PDjzA0YkG3mURB3XOPpiP5hMtshXuAkN3/bnMGKPDjkee/oX3iaNLIE6j8gOeT4DV3VMR5KHRHNEEoF2GxiHBOyJXsXzeJY1/YJB/9++tiIDZySH1TWbIg/eAwaJJLsER2dyXIsjlvtWYdWDUeMqSOvvbGmZs9wJ/bJHN1fIk8vux/VH8sMlqeTgi2OiCQB0JfyGoYAD+sE5bvkLklq+io5VdJWwGnJA5zmUw0gxWl6BLpYXNY3Ul8d7swKwVPJR6osT4AoeZ06GF/PUQUPqBrWt1odLl7rKH7C0gxhmNTA1V/Xr3NHNgZx2I10ar9EDT3YsWdoBLb2FSMaHTCme+N7GYS2vkW7/6oRfOc7scdA8bvfmj4JeDlO8Qq6DdWM30YandFIRCFLW9rGdHEhC8+Sl5WdBQoJepf7QY2TXACpO1Sb4mLPy9n/uOG+CrV5SiqkKPMBQ==</SessionToken>
+      <Expiration>2017-08-07T21:06:02Z</Expiration>
+    </Credentials>
+    <SubjectFromWebIdentityToken>us-east-1:7e470a51-7da2-4ab9-b0cc-ee4675422fba</SubjectFromWebIdentityToken>
+  </AssumeRoleWithWebIdentityResult>
+  <ResponseMetadata>
+    <RequestId>d663379a-7bab-11e7-a0a1-637e6a844074</RequestId>
+  </ResponseMetadata>
+</AssumeRoleWithWebIdentityResponse>

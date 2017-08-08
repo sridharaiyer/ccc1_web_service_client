@@ -1,0 +1,18 @@
+HTTP/1.1 302 Found
+Server: nginx/1.9.13
+Date: Mon, 07 Aug 2017 20:05:54 GMT
+Content-Type: text/html; charset=utf-8
+Content-Length: 0
+Connection: keep-alive
+Cache-Control: no-store, no-cache, private
+Pragma: no-cache
+Expires: Sat, 15 Nov 2008 16:00:00 GMT
+P3P: policyref="http://cdn.adnxs.com/w3c/policy/p3p.xml", CP="NOI DSP COR ADM PSAo PSDo OURo SAMo UNRo OTRo BUS COM NAV DEM STA PRE"
+X-XSS-Protection: 0
+Location: https://secure.adnxs.com/getuid?https://pixel.mediaiqdigital.com/pixel?u1=&u2=&u3=&u4=&u5=&u6=&u7=&u8=&u9=&u10=&u11=&u12=&u13=&u14=&u15=&u16=&u17=&u18=&u19=&u20=&u21=&u22=&pixel_id=863848&uid=$UID
+AN-X-Request-Uuid: 4275c27b-a9ec-43b1-a838-7f7ad01befc2
+Set-Cookie: anj=dTM7k!M4/K@M<`fjN`:AK5r!?q/n24LJ81k/B)YTuQsOmKU9rRm1136/':k7%5PDCMCPFS#DA3UtX-$f[1PeT`%2qt:SJ-t-Tg=2*kB#q8k/h@f<p[#nL1/LnHsF1SDV]0KR3y)kuUiTMjW6jhP>]^pMvbBOfP5cWO3=cLX$3f4eQKeR[7FPw>jz4(ufZ5NTGokXClk7+bzZ8H9IC@I)AYB83L*CHwx4>wa/?_W'PiDMiud%4G+ba^9A>Nd1$e`cu[gEn(H<#49yURwox#q'a>cj]wlv0YN[M#Ivxtkug[PFvNSW=td)^Dudk/5WZr=jl`Br%0xi9I-F=NY6vPEMM.T)EHdF:XwWyp3sr2#HwP`qxpoH!8qmbtT/)i!7P*9bX'TLZ3dOJiM/c:<j1=u83)%:GATbRHRM74UM+WP/<%Ir10st#bs=BND.KKF0<sx.fg(tdVG9pPHip'fFo%M7)J]xgw:x1DYVd:i''TF0EuKHpGk[Oa%:DI:Vu8y]z8Qnq/1EpbhQR-]$ds'-fpFRGcCg9tU%EiK.JbU-s>_dp[6200HrnYTUUo`Pde[_g^gg?)S`Gi[Q^cJ-w'AyCPj'?z/iuiCy/lZg*R2mCzBQP^@=G`D2e1-2_MawPD)1FaNlGq)[1<D5)KQVN>RGfl0B)L>wKf^Qo`a7r_n:APRw0`+gr#HEUEGk.c5P9a@u1qO?%aC<NBCk(?tZGN)^BOhGGJqNpdj['<f@TAk@+sy?9ssmn#K_ALbqx#P5G5:0lTyY7BL><4^C'3-wK9X4Be)OnuH)Bt8FPN'U<XO_%<bbv__(XSOdH9dDKCz?ReqI>vVh(Ms7E[H0oH'i6JZgbl51bpA12TF.Rd>-wqHD?9k[TR/Y`iQv<F#z4N'1WX$tP=Tn)2>WCW5T//!tIeR^Sr-8yj/Irg(Qu*<:rEd+K3JExMmfH-j<rdsvWm/@EIAP1=@G'6`%S5)mO?9.DUPU)I*8=sJM.-hq2G!MQb7fAVPKs:d4(4kg@o[^E@'UWmEa@Ts:]1Kn:[2JLU73P)d9?9^ii<P=9aE0JMwZAA<jaJ8#0^og)MXvu*=WO_:`ozX<I]O025`C/113o[^eW9CJkw/RMlo)1=%f/y*a1![4Rj$K-4.M@S)Z(8(m1mT^!<1w5r1C:$.$Cf+082qn<M/wUz^Shi_:a*h%C>[Iu</$zVS(_Q.[`]vvl8au'f[zsG6v5wLKg$q409@HAY?Jj#wN%WWrVS+!4O(xne5P/V2W4gpsAOacY(uC@@t8KDm9GR46Cs30Bz^`'4>^xOJn-7EDW.NnO)4LiF#?<ze><9yK]@ZNm84T3FRX-lerZWbRY-X.UQCvQkCq%MH>#W0nU?PHj2:oNS7:]WVr8ujHkIsPuF.i4'QS_hLEo4TEYTosj7eDM%)M2m@n24AOAlo:vR4E8-O>%$dET4nOrAa6_9^]Ju/+K]+TbrETXlgf<Sffe69)>^X6LMuGfs>%9_7A'jdNdOB8UiYS!LQ8BuytcHUR'>A5V<sd3j(4c$@a53-D!LB^d>j)o<V@@Ne5B6gxREj5j5[m3sW*</Zrv9)^l]EVM^?s.-?Ot45g>YuAhopqs'$Mf'b0h^ZQ/^E0cNeFCpkij$rB]OeQa$WY1ZWs/d*.+tY/kra42^RlSga%TRx=cv4C$LOt*9jQ+UR>C8D^a68qDVUbE3QR29_v_qoZXcEvGHQ@N^<ET3$U$cc9f?jNc%+[$3q/OMl6ZQ>sC76#_gwV@sxXBmawa!@Ld_3*1qOizT':W2OTkOIS/T2'8P2=S!Pcb*vZ)bYtcqjNJF^:+>T%xqQ=hI@qoGH:ZlL/>6RCm*qCO4#JboLpx8QNxFOZQb!9/E!Kvpan:]6RiW<`*n@!dF@7dY[njTE)u1?gpqJdE?94eO?zSkmwn]E9Y*M+6bkqo29`>)]y$D+4^l<(sY'JEp#Nfvj5cSdH@M*.#Zo1YlKr@2:w0<mU9)(Q]6zMqVp2APcVw23gXW+F4RJ[<Q@ia/'a!>w9:U^yCRIq+t5LFjo4Y[zE!#VVGG_rj6M7vF)sAoaP)Q4uu>6]iTi)Zw7'xhb1TKL2R>9KXatZ`d<I=+lTKhHXwW*S.K.p3!lmZm([tw5TJrBJ3n=w0EuJ!$ciN-Ro+GY4v%I:_yFnGHL2YP$P@vauO88W<@NGsK>wG`:KvoU^X[]+bu+NvL)T<0or8O@^wTq(=Y$aN+:k/c?V!=_4`(!JFt^`=k:lQ:iJClh<t6?z[u$gI[O/z@4R%:ybRnFHg6nxS(PP#T5ZIX$`5q/qQGpFMAE9yrk-9PzXY@b.a>F)cjn)]7Sdi>)a$hewonqK='_R+FjqXbFZkynA0V3e>9VyQ)!yFf2rk6Ak; Path=/; Max-Age=7776000; Expires=Sun, 05-Nov-2017 20:05:54 GMT; Domain=.adnxs.com; HttpOnly
+Set-Cookie: sess=1; Path=/; Max-Age=86400; Expires=Tue, 08-Aug-2017 20:05:54 GMT; Domain=.adnxs.com; HttpOnly
+Set-Cookie: uuid2=717826881414687486; Path=/; Max-Age=7776000; Expires=Sun, 05-Nov-2017 20:05:54 GMT; Domain=.adnxs.com; HttpOnly
+X-Proxy-Origin: 207.140.60.67; 207.140.60.67; 168.bm-nginx-loadbalancer.mgmt.nym2; *.adnxs.com; 204.13.192.240:80
+

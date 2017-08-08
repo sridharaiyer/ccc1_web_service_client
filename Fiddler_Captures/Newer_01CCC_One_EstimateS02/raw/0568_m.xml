@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Session SID="568" BitFlags="2100">
+  <SessionTimers ClientConnected="2017-08-07T15:05:24.5553261-05:00" ClientBeginRequest="2017-08-07T15:05:24.5563292-05:00" GotRequestHeaders="2017-08-07T15:05:24.5563292-05:00" ClientDoneRequest="2017-08-07T15:05:24.5563292-05:00" GatewayTime="0" DNSTime="0" TCPConnectTime="24" HTTPSHandshakeTime="35" ServerConnected="2017-08-07T15:05:24.5814067-05:00" FiddlerBeginRequest="2017-08-07T15:05:24.5814067-05:00" ServerGotRequest="2017-08-07T15:05:24.5814067-05:00" ServerBeginResponse="0001-01-01T00:00:00" GotResponseHeaders="0001-01-01T00:00:00" ServerDoneResponse="0001-01-01T00:00:00" ClientBeginResponse="2017-08-07T15:05:24.5814067-05:00" ClientDoneResponse="2017-08-07T15:05:24.5814067-05:00" />
+  <PipeInfo />
+  <TunnelInfo BytesEgress="0" BytesIngress="0" />
+  <SessionFlags>
+    <SessionFlag N="https-server-cipher" V="Aes128 128bits" />
+    <SessionFlag N="x-responsebodytransferlength" V="0" />
+    <SessionFlag N="https-server-version" V="3072" />
+    <SessionFlag N="https-client-snihostname" V="cdn.krxd.net" />
+    <SessionFlag N="x-clientip" V="::ffff:127.0.0.1" />
+    <SessionFlag N="x-clientport" V="63090" />
+    <SessionFlag N="https-client-sessionid" V="0A 07 00 00 44 52 EB 37 9A 69 41 76 A7 B1 2E 09 DA F4 C5 21 20 63 75 6B DC DF 4F B4 46 0A EC 22" />
+    <SessionFlag N="x-processinfo" V="chrome:8036" />
+    <SessionFlag N="https-client-version" V="3072" />
+    <SessionFlag N="x-egressport" V="63091" />
+    <SessionFlag N="x-hostip" V="151.101.44.175" />
+  </SessionFlags>
+</Session>
