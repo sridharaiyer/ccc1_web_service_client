@@ -95,18 +95,19 @@ class XMLBase(ABC):
             'RelatedPriorDamagereport': '52',
             'UnrelatedPriorDamage': '6',
         }
-        sqls = (
-            """SELECT * FROM CLAIM_FOLDER_DETAIL WHERE DL_CLM_FOLDER_ID IN (SELECT DL_CLM_FOLDER_ID FROM CLAIM_FOLDER WHERE CUST_CLM_REF_ID='{}') AND CLM_FOLDER_MATCH_FILE_TYP = '{}' AND EST_LINE_IND = '{}'""",
-            """SELECT * FROM BILLING_MESSAGE BILLING
-                    INNER JOIN CLAIM_FOLDER_DETAIL CFD ON CFD.DL_CLM_FOLDER_MATCH_ID = BILLING.CLM_FOLDER_MATCH_FILE_ID
-                    WHERE CFD.DL_CLM_FOLDER_ID IN (SELECT DL_CLM_FOLDER_ID FROM CLAIM_FOLDER WHERE CUST_CLM_REF_ID='{}')
-                    AND CFD.CLM_FOLDER_MATCH_FILE_TYP={} AND CFD.EST_LINE_IND= '{}'"""
-        )
+        for ws_type, v in self.estimate_dict[self.est].items():
+            if ws_type != 'StatusChange':
+                sqls = (
+                    """SELECT * FROM CLAIM_FOLDER_DETAIL WHERE DL_CLM_FOLDER_ID IN (SELECT DL_CLM_FOLDER_ID FROM CLAIM_FOLDER WHERE CUST_CLM_REF_ID='{}') AND CLM_FOLDER_MATCH_FILE_TYP = '{}' AND EST_LINE_IND = '{}'""",
+                    """SELECT * FROM BILLING_MESSAGE BILLING
+                            INNER JOIN CLAIM_FOLDER_DETAIL CFD ON CFD.DL_CLM_FOLDER_MATCH_ID = BILLING.CLM_FOLDER_MATCH_FILE_ID
+                            WHERE CFD.DL_CLM_FOLDER_ID IN (SELECT DL_CLM_FOLDER_ID FROM CLAIM_FOLDER WHERE CUST_CLM_REF_ID='{}')
+                            AND CFD.CLM_FOLDER_MATCH_FILE_TYP={} AND CFD.EST_LINE_IND= '{}'"""
+                )
 
-        for ftype, value in match_file_type.items():
-            for sql in sqls:
-                logger.info('Executing query:')
-                logger.info(sql.format(self.claimid, value, self.est))
-                pdb.set_trace()
-                self.db.claimfolder.wait_until_exists(
-                    sql.format(self.claimid, value, self.est))
+                for sql in sqls:
+                    mftype_code = match_file_type[ws_type]
+                    formatted_sql = sql.format(self.claimid, mftype_code, self.est)
+                    logger.info('Executing query:\n{}'.format(formatted_sql))
+                    self.db.claimfolder.wait_until_exists(
+                        sql.format(self.claimid, mftype_code, self.est))

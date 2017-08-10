@@ -76,7 +76,7 @@ numeric_level = getattr(logging, args.loglevel.upper(), None)
 logger = Logger(numeric_level)
 # ------------------------ Initialize LOGGING ------------------------------
 
-logger.debug('Args = \n{}'.format(json.dumps(vars(args), indent=4)))
+logger.info('Args = \n{}'.format(json.dumps(vars(args), indent=4)))
 
 # ---------------- Get estimate & supplement file paths --------------------
 files = FiddlerSession(args.filename)

@@ -40,6 +40,7 @@ class WebServiceEngine(object):
         for est, files in self.estimate_dict.items():
             for classname, path in files.items():
                 new_params = {
+                    'estimate_dict': self._estimate_dict,
                     'est': est,
                     'path': path,
                     'ref_dict': self.ref_dict,
