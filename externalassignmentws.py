@@ -33,6 +33,22 @@ ORDER BY DBMS_RANDOM.VALUE
 WHERE ROWNUM = 1
 """
 
+mailbox_sql = """
+SELECT FROM_CUST_ALIAS FROM CUSTOMER_RELATIONSHIP WHERE FROM_DL_CUST_ID =
+(
+SELECT DL_CUST_ID FROM CUSTOMER
+WHERE CUST_OFCE_ID = '{}'
+AND CUST_OFCE_TYP = 'HO'
+)
+AND
+TO_DL_CUST_ID =
+(SELECT DL_CUST_ID FROM CUSTOMER WHERE DL_CUST_ID IN
+(
+SELECT TO_DL_CUST_ID FROM CUSTOMER_RELATIONSHIP WHERE FROM_CUST_ALIAS='{}'
+)
+)
+"""
+
 
 class ExternalAssignmentWS(object):
 
@@ -42,7 +58,6 @@ class ExternalAssignmentWS(object):
         self.lname = params.pop('lname')
         self.fname = params.pop('fname')
         self.params = params
-        self.params['AssignmentRecipientID'] = 'P' + self.params['AssignmentRecipientID']
         self.path = 'xmltemplates/sample_create_assignment.xml'
         self.xml = XMLUtils(self.path)
         self.time = Time()
@@ -68,8 +83,14 @@ class ExternalAssignmentWS(object):
         adjustercode = self.db.claimfolder.execute(newsql)[0][0]
         self.params['AdjusterCode'] = adjustercode
 
+        recp_id = self.params['AssignmentRecipientID']
+        new_mailbox_sql = mailbox_sql.format(insID, recp_id)
+        self.params['AssignmentRecipientID'] = self.db.claimfolder.execute(new_mailbox_sql)[0][0]
+
         logger.info('The assignment params: \n{}'.format(
             json.dumps(self.params, indent=4)))
+
+        pdb.set_trace()
 
         self.xml.edit_tag(multiple=True, **self.params)
         self.xml.edit_tag(Password='Password1')
