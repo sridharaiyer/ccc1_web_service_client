@@ -90,8 +90,6 @@ class ExternalAssignmentWS(object):
         logger.info('The assignment params: \n{}'.format(
             json.dumps(self.params, indent=4)))
 
-        pdb.set_trace()
-
         self.xml.edit_tag(multiple=True, **self.params)
         self.xml.edit_tag(Password='Password1')
         self.xml.edit_tag(UniqueTransactionID=self.claimid)

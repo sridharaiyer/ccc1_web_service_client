@@ -40,7 +40,7 @@ class FiddlerSession(object):
             value = row.a.get('href').replace("\\\\", "/")
             self._files[key].append(value)
 
-        logger.debug('Files before removing ignore list: \n{}'.format(json.dumps(self._files, indent=4)))
+        logger.debug('Raw Files before removing ignore list: \n{}'.format(json.dumps(self._files, indent=4)))
 
         ignore_list = [
             'GatewayService.asmx',
@@ -60,6 +60,8 @@ class FiddlerSession(object):
                 del self._files[s]
 
         self._del_statuschange_dups()
+
+        logger.debug('Raw Files after removing ignore list: \n{}'.format(json.dumps(self._files, indent=4)))
 
         return json.dumps(self._files, indent=4)
 
