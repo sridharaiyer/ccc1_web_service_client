@@ -1,7 +1,0 @@
-GET https://safebrowsing-cache.google.com/safebrowsing/rd/ChRnb29nLXVud2FudGVkLXNoYXZhcjgBQAJKDAgBENqyBRjcsgUgAUoMCAAQg9AFGITQBSAB HTTP/1.1
-Host: safebrowsing-cache.google.com
-Connection: keep-alive
-User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.133 Safari/537.36
-Accept-Encoding: gzip, deflate, br
-Cookie: NID=91=gmm0BIa6bFLrs2Hg8p6OB2VrDeTM04ugG8DsfOTXvB6QfulWU_3n94UnrwosVM75DruSpRQ2mww4cZwCAJT7XLwgARqG8EbI5Dmh0v6oZu8MztQgGRKFD3nvhF0Q7GgG
-

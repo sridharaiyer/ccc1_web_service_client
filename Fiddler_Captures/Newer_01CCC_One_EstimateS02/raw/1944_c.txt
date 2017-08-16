@@ -1,9 +1,0 @@
-GET http://redirector.gvt1.com/edgedl/release2/AICu7Lg4Pieu_1231/471_all_sthset.crx2 HTTP/1.1
-Accept: */*
-Accept-Encoding: identity
-If-Unmodified-Since: Mon, 07 Aug 2017 10:18:13 GMT
-Range: bytes=0-4669
-User-Agent: Microsoft BITS/7.5
-Connection: Keep-Alive
-Host: redirector.gvt1.com
-

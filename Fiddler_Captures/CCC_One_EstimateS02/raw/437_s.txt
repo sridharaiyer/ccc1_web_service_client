@@ -1,5 +1,0 @@
-HTTP/1.1 200 Connection Established
-FiddlerGateway: Direct
-StartTime: 13:45:42.899
-Connection: close
-

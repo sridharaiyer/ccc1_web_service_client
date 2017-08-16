@@ -1,8 +1,0 @@
-POST https://ssl.google-analytics.com/collect HTTP/1.1
-Content-Type: application/x-www-form-urlencoded
-Host: ssl.google-analytics.com
-Content-Length: 214
-Expect: 100-continue
-Connection: Keep-Alive
-
-v=1&tid=UA-48842737-3&an=CCC+ONE+Desktop&av=4.8.00.01310&cid=896f2b1e-17ce-2928-bd39-fd1a0ea194b9&uid=2105&cd1=1854794&cd2=Repairer&t=timing&utc=OEC&utv=AccessToken&utt=605&utl=https%3a%2f%2fapi.oeconnection.com%2f

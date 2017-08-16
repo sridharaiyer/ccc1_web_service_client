@@ -1,5 +1,0 @@
-GET https://truepartswsqa.mycccportal.com/procapi/v1/oerecall?vehVin=1G1RD6S59GU108717&vehMake=CHEV&insCo=APM1&clmNum=JamesTest08-07-17C&licNum=302919&cccRefId=AEGY HTTP/1.1
-Content-Type: application/json
-Authorization: Bearer 856a1aa7-003c-460f-8331-d0dfcb93e316
-Host: truepartswsqa.mycccportal.com
-

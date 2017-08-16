@@ -1,6 +1,0 @@
-GET http://r6---sn-vgqs7nes.gvt1.com/edgedl/release2/JmGHqSdEBXQ_13/3899_all_crl-set-17952917104576191792.data.crx2?cms_redirect=yes&expire=1502151056&ip=207.140.60.67&ipbits=0&mm=28&mn=sn-vgqs7nes&ms=nvh&mt=1502136562&mv=m&pl=22&shardbypass=yes&sparams=expire,ip,ipbits,mm,mn,ms,mv,pl,shardbypass&signature=12A4D7DD278C23FA5882CDB2FBBA416E34C9623E.5FB3850DD26E0C0F5CDB46C387BBAE2507923F2A&key=cms1 HTTP/1.1
-Host: r6---sn-vgqs7nes.gvt1.com
-Connection: keep-alive
-User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36
-Accept-Encoding: gzip, deflate
-

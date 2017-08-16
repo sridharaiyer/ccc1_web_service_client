@@ -1,6 +1,0 @@
-GET http://messagecenterplus.lenovo.com/Prod/TOC.cab HTTP/1.1
-If-Modified-Since: Fri, 12 Sep 2014 20:21:13 GMT
-User-Agent: Message Center Plus 3.1.0004.00
-Host: messagecenterplus.lenovo.com
-Connection: Keep-Alive
-

@@ -1,9 +1,0 @@
-GET http://r2---sn-vgqs7ns7.gvt1.com/edgedl/release2/AICu7Lg4Pieu_1231/471_all_sthset.crx2?cms_redirect=yes&expire=1502151076&ip=207.140.60.67&ipbits=0&mm=28&mn=sn-vgqs7ns7&ms=nvh&mt=1502136562&mv=m&pl=22&shardbypass=yes&sparams=expire,ip,ipbits,mm,mn,ms,mv,pl,shardbypass&signature=556F575E065466D1ECC4667E3D6D653019739016.2A51A8DABAAA91CD9AD9D03F90FAD266E174403A&key=cms1 HTTP/1.1
-Accept: */*
-Accept-Encoding: identity
-If-Unmodified-Since: Mon, 07 Aug 2017 10:18:13 GMT
-Range: bytes=12181-14427
-User-Agent: Microsoft BITS/7.5
-Connection: Keep-Alive
-Host: r2---sn-vgqs7ns7.gvt1.com
-

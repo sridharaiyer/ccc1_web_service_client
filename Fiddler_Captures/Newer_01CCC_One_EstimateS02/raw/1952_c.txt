@@ -1,9 +1,0 @@
-POST https://update.googleapis.com/service/update2 HTTP/1.1
-Host: update.googleapis.com
-Connection: keep-alive
-Content-Length: 850
-Content-Type: application/xml
-User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36
-Accept-Encoding: gzip, deflate, br
-
-<?xml version="1.0" encoding="UTF-8"?><request protocol="3.0" version="chrome-59.0.3071.115" prodversion="59.0.3071.115" requestid="{da059586-3377-49aa-ac33-aa32513d3c84}" lang="en-US" updaterchannel="" prodchannel="" os="win" arch="x64" nacl_arch="x86-64"><hw physmemory="8"/><os platform="Windows" arch="x86_64" version="6.1.7601.23846" sp="Service Pack 1"/><app appid="ojjgnpkioondelmggbekfhllhdaimnho" version="468" nextversion="471"><event eventtype="3" eventresult="1" previousfp="1.43a84abf60b8b8cd3353027be26de29a8b9251ae0bb8b96c110205befd132d88" nextfp="1.9bca5a21e422558111a89d005abf449e490d38dd0b8d613cb332af84e49d4153"/><event eventtype="14" eventresult="1" downloader="bits" url="http://redirector.gvt1.com/edgedl/release2/AICu7Lg4Pieu_1231/471_all_sthset.crx2" downloaded="14428" total="14428" download_time_ms="12032"/></app></request>

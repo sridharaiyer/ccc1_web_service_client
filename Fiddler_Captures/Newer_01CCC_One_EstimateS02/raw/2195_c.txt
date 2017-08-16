@@ -1,9 +1,0 @@
-POST https://truepartswsqa.mycccportal.com/procapi/v1/estimates/323915549950099456/quotes HTTP/1.1
-Content-Type: application/json
-Authorization: Bearer 856a1aa7-003c-460f-8331-d0dfcb93e316
-Host: truepartswsqa.mycccportal.com
-Content-Length: 1323
-Expect: 100-continue
-Connection: Keep-Alive
-
-{"insuranceCompany":{"insuranceCompanyName":"AUTOMATED PROCESS MANAGEMENT ONE","vantiveCode":"APM1"},"oecRequest":{"parts":[{"databaseListPrice":462.93,"partNumber":"23369765","price":462.93,"quantity":1,"uniqueSequenceNumber":2},{"databaseListPrice":59.55,"partNumber":"23142930","price":59.55,"quantity":1,"uniqueSequenceNumber":6},{"databaseListPrice":79.65,"partNumber":"84084598","price":79.65,"quantity":1,"uniqueSequenceNumber":7},{"databaseListPrice":204.28,"partNumber":"23208308","price":204.28,"quantity":1,"uniqueSequenceNumber":8},{"databaseListPrice":303.85,"partNumber":"23382104","price":303.85,"quantity":1,"uniqueSequenceNumber":9},{"databaseListPrice":303.85,"partNumber":"23289638","price":303.85,"quantity":1,"uniqueSequenceNumber":10},{"databaseListPrice":3.33,"partNumber":"11548270","price":3.33,"quantity":1,"uniqueSequenceNumber":11},{"databaseListPrice":489.5,"partNumber":"84127386","price":489.5,"quantity":1,"uniqueSequenceNumber":13},{"databaseListPrice":489.5,"partNumber":"84106557","price":489.5,"quantity":1,"uniqueSequenceNumber":15}]},"repairFacilityLocation":{"repairFacilityID":4436,"repairFacilityName":"QA-CCC1-RF-SHOP21"},"vehicleInfo":{"licensePlateNum":null,"licensePlateState":null,"make":"CHEV","model":"Volt Premier","odometerReading":0,"vin":"1G1RD6S59GU108717","year":2016}}

@@ -1,8 +1,0 @@
-HTTP/1.1 502 Fiddler - Connection Failed
-Date: Mon, 07 Aug 2017 20:06:14 GMT
-Content-Type: text/html; charset=UTF-8
-Connection: close
-Cache-Control: no-cache, must-revalidate
-Timestamp: 15:06:14.754
-
-[Fiddler] The connection to 'googleads.g.doubleclick.net' failed. <br />Error: TimedOut (0x274c). <br />System.Net.Sockets.SocketException A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 172.217.9.66:443                                                                                                                                                                              

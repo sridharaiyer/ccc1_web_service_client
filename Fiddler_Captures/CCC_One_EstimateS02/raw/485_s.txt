@@ -1,7 +1,0 @@
-HTTP/1.1 304 Not Modified
-Content-Type: text/plain
-Last-Modified: Fri, 12 Sep 2014 20:21:13 GMT
-ETag: "52d686387b205c4c1c25c072034c839c:1410553273"
-Date: Mon, 07 Aug 2017 18:46:50 GMT
-Connection: keep-alive
-

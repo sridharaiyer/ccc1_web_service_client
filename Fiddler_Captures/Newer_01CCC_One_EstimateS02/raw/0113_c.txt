@@ -1,9 +1,0 @@
-GET https://www.google-analytics.com/r/collect?v=1&_v=j48&aip=1&a=1322901677&t=pageview&_s=1&dl=chrome-extension%3A%2F%2Fjlhmfgmfgeifomenelglieieghnjghma%2F_generated_background_page.html&ul=en-us&de=UTF-8&sd=24-bit&sr=1600x900&vp=&je=0&_u=QACAAEABI~&jid=659667159&cid=1932636385.1490641453&tid=UA-90923124-1&_r=1&z=2113542418 HTTP/1.1
-Host: www.google-analytics.com
-Connection: keep-alive
-User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36
-Accept: image/webp,image/apng,image/*,*/*;q=0.8
-DNT: 1
-Accept-Encoding: gzip, deflate, br
-Accept-Language: en-US,en;q=0.8
-

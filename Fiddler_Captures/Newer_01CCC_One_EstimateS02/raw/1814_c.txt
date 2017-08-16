@@ -1,9 +1,0 @@
-POST https://api.oeconnection.com/oauth2/token HTTP/1.1
-Content-Type: application/x-www-form-urlencoded
-Authorization: Basic Z2lxc2p6Y1hnUExkdzE4aXVYYXozSmkxcUdib2U0QUw6RzI0dEhTR2F5cDFVc2dybg==
-Host: api.oeconnection.com
-Content-Length: 49
-Expect: 100-continue
-Connection: Keep-Alive
-
-grant_type=client_credentials&scope=ces-estimates

@@ -1,8 +1,0 @@
-HTTP/1.1 502 Fiddler - DNS Lookup Failed
-Date: Mon, 07 Aug 2017 20:05:04 GMT
-Content-Type: text/html; charset=UTF-8
-Connection: close
-Cache-Control: no-cache, must-revalidate
-Timestamp: 15:05:04.966
-
-[Fiddler] DNS Lookup for "qbttpaebvknw" failed. System.Net.Sockets.SocketException No such host is known                                                                                                                                                                                                                                                                                                                                                                                                                        

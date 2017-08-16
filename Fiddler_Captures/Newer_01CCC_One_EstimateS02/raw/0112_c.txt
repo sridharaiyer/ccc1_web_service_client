@@ -1,8 +1,0 @@
-GET https://clientservices.googleapis.com/chrome-variations/seed?osname=win HTTP/1.1
-Host: clientservices.googleapis.com
-Connection: keep-alive
-If-None-Match: f99ee25d116ae84ab28af4332bd4b6c7e6c8979e
-A-IM: x-bm,gzip
-User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36
-Accept-Encoding: gzip, deflate, br
-

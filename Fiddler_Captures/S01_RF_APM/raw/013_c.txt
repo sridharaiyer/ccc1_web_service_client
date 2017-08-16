@@ -1,0 +1,6 @@
+GET http://ocsp.usertrust.com/MFEwTzBNMEswSTAJBgUrDgMCGgUABBTNMNJMNDqCqx8FcBWK16EHdimS6QQUU3m%2FWqorSs9UgOHYm8Cd8rIDZssCEAXk3DuUOKs7hZfLpqGYUOM%3D HTTP/1.1
+Accept: */*
+User-Agent: Microsoft-CryptoAPI/6.1
+Connection: Keep-Alive
+Host: ocsp.usertrust.com
+
