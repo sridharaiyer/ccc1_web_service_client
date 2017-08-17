@@ -1,0 +1,15 @@
+HTTP/1.1 200 OK
+Date: Wed, 16 Aug 2017 17:01:46 GMT
+Server: Oracle-HTTP-Server-11g
+Content-Length: 2833
+X-ORACLE-DMS-ECID: 005Li7Prq6ZFw00Fzzx0g00004gl001KnE
+X-ORACLE-DMS-RID: 0:1
+Keep-Alive: timeout=5, max=97
+Connection: Keep-Alive
+Content-Type: text/xml; charset=UTF-8
+Content-Language: en
+
+<S:Envelope xmlns:env="http://schemas.xmlsoap.org/soap/envelope/" xmlns:S="http://schemas.xmlsoap.org/soap/envelope/"><env:Header/><S:Body><ns4:PutPendingPrintImageResponse xmlns:ns4="http://services.mycccportal.com/SOA/PrintImageService" xmlns:ns3="http://services.mycccportal.com/SOA/normalizedmessage/v1" xmlns:ns2="http://services.mycccportal.com/SOA/fault/v1" xmlns="http://services.mycccportal.com/SOA/commontypes"><ns3:NormalizedMessage><ns3:BaseDescriptor><ns3:MsgID>4c4ef181-554c-4491-93ba-12694a26d7b0</ns3:MsgID><ns3:MsgType>Unrelated Prior Damage</ns3:MsgType><ns3:MsgMode>Request</ns3:MsgMode><ns3:SourceTimeStamp>2017-08-16T12:00:18.7965238-05:00</ns3:SourceTimeStamp><ns3:SourceApplicationID>PTHWY</ns3:SourceApplicationID><ns3:SourceUserID>estim0031</ns3:SourceUserID><ns3:SequenceTimeStamp>2017-08-16T17:01:49Z</ns3:SequenceTimeStamp></ns3:BaseDescriptor><ns3:RoutingDescriptor><RoutingInfo><ApplicationName>PTHWY</ApplicationName><ApplicationVersion>4.50</ApplicationVersion><PublishTimeStamp>2017-08-16T12:00:18.7965238-05:00</PublishTimeStamp></RoutingInfo><RoutingInfo><ApplicationName>SOAComms</ApplicationName><ApplicationCode>SOACM</ApplicationCode><ApplicationVersion>1.0</ApplicationVersion><PublishTimeStamp>2017-08-16T17:01:49Z</PublishTimeStamp><Status>true</Status><StatusDescription>True</StatusDescription></RoutingInfo></ns3:RoutingDescriptor><ns3:ClaimDescriptor><ns3:ClaimReferenceID>201718161148</ns3:ClaimReferenceID><ns3:ClaimTypeCode>VE</ns3:ClaimTypeCode><ns3:InsuranceCompany><ns3:VantiveCode>APM1</ns3:VantiveCode></ns3:InsuranceCompany><ns3:ClaimOffice><ns3:Code>APMC</ns3:Code></ns3:ClaimOffice><ns3:AssigneeDescriptor><ns3:Appraiser><ns3:AppraiserType>DRP</ns3:AppraiserType><ns3:AppraiserLOID>62759</ns3:AppraiserLOID><ns3:AppraiserSSN>estim0</ns3:AppraiserSSN><ns3:AppraiserMailboxID>62759</ns3:AppraiserMailboxID></ns3:Appraiser></ns3:AssigneeDescriptor></ns3:ClaimDescriptor><ns3:EstimateDescriptor><ns3:TransformationHeader>&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;PrintImagePutData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://services.mycccportal.com/SOA/PrintImageService/PutData"&gt;
+  &lt;ClaimOfficeMailboxID&gt;048689&lt;/ClaimOfficeMailboxID&gt;
+&lt;/PrintImagePutData&gt;</ns3:TransformationHeader></ns3:EstimateDescriptor><ns3:DocumentDescriptor><ns3:DocumentName>PrintImage</ns3:DocumentName><ns3:DocumentExt>S02</ns3:DocumentExt><ns3:DocumentFormat>GZIP-PDF</ns3:DocumentFormat><ns3:DocumentNum>0</ns3:DocumentNum></ns3:DocumentDescriptor><ns3:Payload><ns3:Reference>http://services.mycccportal.com/PrintImage/07eb40d9-3dae-471f-984f-19ab3ab0e909/e41a0a33-4dcd-441c-9776-f7f6be7abcdd</ns3:Reference></ns3:Payload></ns3:NormalizedMessage></ns4:PutPendingPrintImageResponse></S:Body></S:Envelope>
