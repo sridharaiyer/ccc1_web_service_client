@@ -63,7 +63,7 @@ class FiddlerSession(object):
 
         logger.debug('Raw Files after removing ignore list: \n{}'.format(json.dumps(self._files, indent=4)))
 
-        return json.dumps(self._files, indent=4)
+        return self._files
 
     def _del_statuschange_dups(self):
         '''Removes duplicate files and the xml which does not contain a worfile
@@ -144,6 +144,6 @@ class FiddlerSession(object):
 
 
 if __name__ == '__main__':
-    f = FiddlerSession('Fiddler_Captures/RF-TESTRFS02APR17-S02.saz')
-    print(f.files)
-    print(f.estdict)
+    f = FiddlerSession('Fiddler_Captures/S01_RF_APM.saz')
+    print(json.dumps(f.files, indent=4))
+    print(json.dumps(f.estdict, indent=4))
