@@ -1,9 +1,0 @@
-</soap:Envelope>
-<?xml version="1.0" encoding="utf-8"?>
-<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-    <soap:Body>
-        <GetQuoteResponse xmlns="http://www.webserviceX.NET/">
-            <GetQuoteResult>&lt;StockQuotes&gt;&lt;Stock&gt;&lt;Symbol&gt;MSFT&lt;/Symbol&gt;&lt;Last&gt;68.26&lt;/Last&gt;&lt;Date&gt;5/11/2017&lt;/Date&gt;&lt;Time&gt;12:27pm&lt;/Time&gt;&lt;Change&gt;-1.05&lt;/Change&gt;&lt;Open&gt;68.35&lt;/Open&gt;&lt;High&gt;68.73&lt;/High&gt;&lt;Low&gt;68.12&lt;/Low&gt;&lt;Volume&gt;4015150&lt;/Volume&gt;&lt;MktCap&gt;527.00B&lt;/MktCap&gt;&lt;PreviousClose&gt;69.31&lt;/PreviousClose&gt;&lt;PercentageChange&gt;-1.51%&lt;/PercentageChange&gt;&lt;AnnRange&gt;48.03 - 69.71&lt;/AnnRange&gt;&lt;Earns&gt;2.27&lt;/Earns&gt;&lt;P-E&gt;30.12&lt;/P-E&gt;&lt;Name&gt;Microsoft Corporation&lt;/Name&gt;&lt;/Stock&gt;&lt;/StockQuotes&gt;</GetQuoteResult>
-        </GetQuoteResponse>
-    </soap:Body>
-</soap:Envelope>

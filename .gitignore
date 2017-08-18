@@ -1,3 +1,6 @@
+# Visual Studio Redistribution Installer
+.vs/
+
 # eqa folders
 eqa*/
 input/
