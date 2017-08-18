@@ -43,14 +43,23 @@ Hence the concept of *Virtual Environment*
 For further reading visit https://docs.python.org/3/library/venv.html
 
 1. To create a virtual environment, for Python 3, simply go to the project home directory and type:
+
 ...`python -m venv venv`
+
 ...The second **venv** is the name of the directory which will be created under ccc1_web_service_client, which will eventaually contain al the packages needed for the project downloaded and installed.
+
 1. To use this environment, the term used in Python is **activate**. So in Windows, to activate the virtual environment, run this at the command prompt:
+
 ...venv\Scripts\activate.bat
+
 1. You should see your DOS command prompt change, where you will see the name of the virtual environment pre-fixed next to the directory prompt.
+
 ...`(venv)C:\Users\ABC\Documents\projects\ccc1_web_service_client`
+
 1. All the packages needed for the project are listed out in the file `requirements.txt` in the project home directory.
 1. Before installing packages from the *requirements.txt* file, make sure the Python library `pip`, which is the native Python Package Installer comes out-of-the box with Python is up-to-date using the command:
+
 ...`python -m install pip -U`
+
 1 Install all the packages from the *requirements.txt* file using:
-...``
+...`pip install -r requirements.txt`
