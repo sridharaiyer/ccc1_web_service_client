@@ -1,1 +1,1 @@
-# ccc1_web_service_client
+Alt-Documentation for ccc1_web_service_client
