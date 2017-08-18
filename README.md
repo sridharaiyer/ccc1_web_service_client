@@ -51,14 +51,43 @@ For further reading visit https://docs.python.org/3/library/venv.html
 
    `venv\Scripts\activate.bat`
 1. You should see your DOS command prompt change, where you will see the name of the virtual environment pre-fixed next to the directory prompt.
+
    `(venv)C:\Users\ABC\Documents\projects\ccc1_web_service_client`
+   
    **Remember: the (venv) prefix in your command prompt has to be present all the time when using the project to assure that you are using the packages installed in the virtual environment. For any reason, such as you exit and re-enter your command prompt and forgot to activate your virtual environment, then while running any program you will see a `package does not exist error`**
 1. All the packages needed for the project are listed out in the file `requirements.txt` in the project home directory.
 1. Before installing packages from the *requirements.txt* file, make sure the Python library `pip`, which is the native Python Package Installer comes out-of-the box with Python is up-to-date using the command:
+   
    `python -m install pip -U`
 1 Install all the packages from the *requirements.txt* file using:
+   
    `pip install -r requirements.txt`
-1. This is a one-time activity when you aresetting up your project. The only other time you need to install new or upgrade old package is when some developer uses or upgrades a new one and commits the project. When anyone updates/adds any package, they need to run this command, so that the requirements.txt file gets updated with the new package information:
+1. The installation of packages is a one-time activity when you are setting up your project. The only other time you need to install new or upgrade old package is when some developer uses or upgrades a new one and commits the project. When anyone updates/adds any package, they need to run this command, so that the requirements.txt file gets updated with the new package information:
+   
    `pip freeze > requirements.txt`
+   
+   Then you can repeat the previous step of installing the new or updated packages
+
+### Fiddler capture
+1. The tool currently supports only a RF capture.
+1. Any number of supplements are supported.
+1. Only 1 unique digital file per estimate or supplement is supported.
+1. No events are suported currently.
+1. Wait until the **StatusChange** traffic appears on the fiddler session, before proceeding with locking the next supplement. Otherwise, you will get StatusChange files with E01 and S01 etc mixed up in the same file.
 
 
+## Usage
+
+1. While you are in the virtual environment, run:
+   
+   `python ccc1_client.py -i Fiddler_Captures/S0208182017.saz -a=rf`
+   
+   This will run the sample S02 file present in the Fiddler_Captures directory of this project.
+
+1. If you just need to inspect the file, run:
+
+   `python ccc1_client.py -i Fiddler_Captures/S0208182017.saz -a=rf --show`
+
+1. For detailed debug level messages, use:
+
+   `python ccc1_client.py -i Fiddler_Captures/S0208182017.saz -a=rf --show --log=DEBUG`
