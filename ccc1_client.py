@@ -76,7 +76,6 @@ numeric_level = getattr(logging, args.loglevel.upper(), None)
 logger = Logger(numeric_level)
 # ------------------------ Initialize LOGGING ------------------------------
 
-logger.info('Args = \n{}'.format(json.dumps(vars(args), indent=4)))
 
 # ---------------- Get estimate & supplement file paths --------------------
 files = FiddlerSession(args.filename)
@@ -92,6 +91,8 @@ logger.debug(json.dumps(estimate_dict, indent=4))
 if args.show:
     logger.info('Location of the estimate and supplement files in the fiddler session: \n{}'.format(json.dumps(estimate_dict, indent=4)))
     exit(1)
+
+logger.info('Args = \n{}'.format(json.dumps(vars(args), indent=4)))
 
 # Removing the 'show' keyword from the dict as this is not required for
 # further webservice processing.

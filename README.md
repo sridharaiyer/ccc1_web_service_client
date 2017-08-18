@@ -10,7 +10,7 @@ The actual python package for connecting to Oracle Databases is the `cx_Oracle`.
 
 1. Copy the client folder **instantclient_12_2_32bit** which is under /drivers/oracle.
 1. Paste it in a location such as C:\Program Files\Oracle Client.
-1. Add the location to the Environment PATH, (Right click My Computer -> Properties -> Environment Properties -> System => Append to the end of the PATH variable value. For example, add **;C:\Program Files\Oracle Client\instantclient_12_2_32bit ** to the end of the PATH variable value)
+1. Add the location to the Environment PATH, (Right click My Computer -> Properties -> Environment Properties -> System => Append to the end of the PATH variable value. For example, add **;C:\Program Files\Oracle Client\instantclient_12_2_32bit** to the end of the PATH variable value)
 
 ### Visual C++ 2013 Re-distributable
 #### Background:
@@ -22,7 +22,7 @@ In order for the `cx_Oracle` package to connect to the Oracle client files, it n
 
 ### Python
 1. Download the latest version of Python 3.6 from the Python website
-1. **Remember to select the checkbox which says *Add Python to PATH* in the first screen during installation**
+1. **Remember to select the check-box which says *Add Python to PATH* in the first screen during installation**
 1. Continue installation with the default options
 
 ### Git
@@ -34,7 +34,7 @@ In order for the `cx_Oracle` package to connect to the Oracle client files, it n
 ### Python Virtual Environment
 #### Background:
 
-Python's package management and usage is a big departure from the maven methodology follwed for a JAVA project. In maven, the version controlling of the different dependencies (which is the equivalent of packages in Python) happens in the POM file of the project, and all the different depenedencies including their different versions are stored in the .m2 directory in the HOME directory of your computer.
+Python's package management and usage is a big departure from the maven methodology followed for a JAVA project. In maven, the version controlling of the different dependencies (which is the equivalent of packages in Python) happens in the POM file of the project, and all the different dependencies including their different versions are stored in the .m2 directory in the HOME directory of your computer.
 
 Whereas the philosophy followed in Python package management is - **'Have all the packages needed for the project in the project directory'**
 
@@ -46,7 +46,7 @@ For further reading visit https://docs.python.org/3/library/venv.html
    
    `python -m venv venv`
    
-   The second **venv** is the name of the directory which will be created under ccc1_web_service_client, which will eventaually contain al the packages needed for the project downloaded and installed.
+   The second **venv** is the name of the directory which will be created under ccc1_web_service_client, which will eventually contain all the packages needed for the project downloaded and installed.
 1. To use this environment, the term used in Python is **activate**. So in Windows, to activate the virtual environment, run this at the command prompt:
 
    `venv\Scripts\activate.bat`
@@ -75,7 +75,7 @@ For further reading visit https://docs.python.org/3/library/venv.html
 1. The tool currently supports only a RF capture.
 1. Any number of supplements are supported.
 1. Only 1 unique digital file per estimate or supplement is supported.
-1. No events are suported currently.
+1. No events are supported currently.
 1. Wait until the **StatusChange** traffic appears on the fiddler session, before proceeding with locking the next supplement. Otherwise, you will get StatusChange files with E01 and S01 etc mixed up in the same file.
 
 
@@ -99,4 +99,5 @@ For further reading visit https://docs.python.org/3/library/venv.html
 
 1. Support all appraiser types.
 1. Support multiple digital images per estimate/supplement
+1. Support Audit
 1. Support events.

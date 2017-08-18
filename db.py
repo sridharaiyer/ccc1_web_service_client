@@ -2,6 +2,9 @@ import cx_Oracle
 from properties import Properties
 import pdb
 import time
+import logging
+
+logger = logging.getLogger()
 
 
 rec_exists = """SELECT CASE WHEN EXISTS ({})
@@ -106,11 +109,11 @@ class DB(metaclass=Singleton):
                 raise AttributeError(
                     'Database {} is not registered in the property file'.format(dbname))
             elif dbexisting is None:
-                print(
+                logger.info(
                     'Establishing DB connection to ({}) - {} DB'.format(self._env, dbname))
                 dbobject = _DB(**dbparams)
                 self._map[dbname]['existing'] = dbobject
-                print('Connection to ({}) - {} DB successful'.format(self._env, dbname))
+                logger.info('Connection to ({}) - {} DB successful'.format(self._env, dbname))
                 return dbobject
 
 

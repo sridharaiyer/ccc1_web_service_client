@@ -144,6 +144,6 @@ class FiddlerSession(object):
 
 
 if __name__ == '__main__':
-    f = FiddlerSession('Fiddler_Captures/S01_RF_APM.saz')
+    f = FiddlerSession('Fiddler_Captures/S0208182017.saz')
     print(json.dumps(f.files, indent=4))
     print(json.dumps(f.estdict, indent=4))

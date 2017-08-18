@@ -129,10 +129,10 @@ class ExternalAssignmentWS(object):
         self.savefile.save_response(str(response_xml))
 
     def verify_db(self):
-        logger.info('Start assignment creation DB verification:')
         sql = """SELECT * FROM SERVICE_ORDER WHERE
                 CUST_CLM_REF_ID = '{}' AND
                 ASGN_MAINT_TYP_CD = 'A'""".format(self.claimid)
+        logger.info('Start assignment creation DB verification:\n{}'.format(sql))
         self.db.claimfolder.wait_until_exists(sql)
 
 

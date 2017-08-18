@@ -2,6 +2,10 @@ import pdb
 from xmlfactory import XMLFactory
 from collections import defaultdict
 import uuid
+import json
+import logging
+
+logger = logging.getLogger()
 
 
 class NoEstimateDictError(Exception):
@@ -35,6 +39,7 @@ class WebServiceEngine(object):
 
     @property
     def generate(self):
+        logger.info('Reference IDs: \n{}'.format(json.dumps(self.ref_dict, indent=4)))
         if self._estimate_dict is None:
             raise NoEstimateDictError
         for est, files in self.estimate_dict.items():

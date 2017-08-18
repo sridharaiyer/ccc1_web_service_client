@@ -36,6 +36,21 @@ class Workfile(XMLBase):
         for elem in payload_xml.root.iterfind('.//{*}ImageReference'):
             elem.text = re.sub(
                 '[^/]*$', self.ref_dict[self.est]['DigitalImage'], elem.text)
+        # --------------------------------------------------------------------
+        # Modifying the ref of previous images for S01 Workfile and above
+        est_id = None
+        if self.est != 'E01':
+            for elem in payload_xml.root.iterfind('.//{*}Image'):
+                for estid_elem in elem.iterfind('.//{*}EstID'):
+                    est_id = estid_elem.text
+                for r_elem in elem.iterfind('.//{*}ImageReference'):
+                    if int(est_id) == 51:
+                        est = 'E01'
+                    else:
+                        est = 'S' + str(est_id)[-2:]
+                    dig_img_ref = self.ref_dict[est]['DigitalImage']
+                    r_elem.text = re.sub('[^/]*$', dig_img_ref, r_elem.text)
+        # --------------------------------------------------------------------
 
         tempsavefile = Save(claimid=self.claimid, est=self.est, filetype='WorkfilePayload', env=self.env)
         tempsavefile.save_input(bytes(payload_xml))
