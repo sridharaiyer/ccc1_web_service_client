@@ -39,7 +39,7 @@ class WebServiceEngine(object):
 
     @property
     def generate(self):
-        logger.info('Reference IDs: \n{}'.format(json.dumps(self.ref_dict, indent=4)))
+        logger.debug('Reference IDs: \n{}'.format(json.dumps(self.ref_dict, indent=4)))
         if self._estimate_dict is None:
             raise NoEstimateDictError
         for est, files in self.estimate_dict.items():

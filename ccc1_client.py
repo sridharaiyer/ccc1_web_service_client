@@ -88,8 +88,9 @@ e01_file = estimate_dict['E01']['Workfile']
 
 logger.debug(json.dumps(estimate_dict, indent=4))
 
+logger.info('Location of the estimate and supplement files in the fiddler session: \n{}'.format(json.dumps(estimate_dict, indent=4)))
+
 if args.show:
-    logger.info('Location of the estimate and supplement files in the fiddler session: \n{}'.format(json.dumps(estimate_dict, indent=4)))
     exit(1)
 
 logger.info('Args = \n{}'.format(json.dumps(vars(args), indent=4)))
