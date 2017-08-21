@@ -8,7 +8,7 @@ Follow the same order in installing the different software\tools.
 
 The actual python package for connecting to Oracle Databases is the `cx_Oracle`. However, in order for this to work, it needs an Oracle client files (downloaded from the Oracle website), which should match the bit type (32 or 64) of the `cx_Oracle` package. As of Aug-2017, the latest cx_oracle package version is 6.0, supporting python version 3.6+ and it is 32 bit. Hence, the correct Oracle client from the Oracle website has been downloaded and saved as part of this project.
 
-1. Copy the client folder **instantclient_12_2_32bit** which is under /drivers/oracle.
+1. Unzip and copy the client folder **instantclient_12_2_32bit.zip** which is under /drivers/oracle.
 1. Paste it in a location such as C:\Program Files\Oracle Client.
 1. Add the location to the Environment PATH, (Right click My Computer -> Properties -> Environment Properties -> System => Append to the end of the PATH variable value. For example, add **;C:\Program Files\Oracle Client\instantclient_12_2_32bit** to the end of the PATH variable value)
 
@@ -17,7 +17,7 @@ The actual python package for connecting to Oracle Databases is the `cx_Oracle`.
 
 In order for the `cx_Oracle` package to connect to the Oracle client files, it needs the Visual C++ Re-distributable software to be installed on your computer. Hence, the correct VC++ from the Microsoft website has been downloaded and saved as part of this project.
 
-1. Double click on the exe file located at /drivers/visual_c++/vcredist_x64.exe and install the software.
+1. Unzip and double click on the exe file located in the zip file at /drivers/visual_c++/vcredist_x64.zip and install the software.
 1. Your computer may or may not need to be restarted. Follow the instructions if any after the VC++ installation is successful.
 
 ### Python
@@ -94,6 +94,10 @@ For further reading visit https://docs.python.org/3/library/venv.html
 1. For detailed debug level messages, use:
 
    `python ccc1_client.py -i Fiddler_Captures/S0208182017.saz -a=rf --show --log=DEBUG`
+
+## Work-in-progress
+
+1. Browserless (also called as head-less) verification on Portal - Claim Folder.
 
 ## To-Do [future enhancements]
 
