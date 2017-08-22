@@ -8,6 +8,7 @@ import json
 from xmlutils import XMLUtils
 from externalassignmentws import ExternalAssignmentWS
 from zipfileutils import ZipFileUtils
+from payload import Payload
 import logging
 from log_util import Logger
 
@@ -82,6 +83,9 @@ files = FiddlerSession(args.filename)
 estimate_dict = files.estdict
 old_ref_dict = files.oldrefdict
 # ---------------- Get estimate & supplement file paths --------------------
+
+
+Payload(fiddler_file=args.filename, estimate_dict=estimate_dict).summary()
 
 # Get the location of the E01 Workfile
 e01_file = estimate_dict['E01']['Workfile']

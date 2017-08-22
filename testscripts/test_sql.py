@@ -1,3 +1,6 @@
+import sys
+sys.path.append('..')
+
 from db import DB
 
 sql = """
