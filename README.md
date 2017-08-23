@@ -97,7 +97,7 @@ For further reading visit https://docs.python.org/3/library/venv.html
 
 ## Output
 
-1. All input and response files will be saved in `target\\<claim_number>`.
+1. All input and response files will be saved in `target\<claim_number>`.
 1. The target folder is excluded from source control
 
 ## Work-in-progress
