@@ -205,6 +205,8 @@ if __name__ == '__main__':
     numeric_level = getattr(logging, args.loglevel.upper(), None)
     logger = Logger(numeric_level)
 
+    logger.info('Creating an assignment for the party - {}, {}'.format(args.lname, args.fname))
+
     assignment = ExternalAssignmentWS(**vars(args))
     assignment.edit_xml()
     assignment.send_xml()
