@@ -95,6 +95,11 @@ For further reading visit https://docs.python.org/3/library/venv.html
 
    `python ccc1_client.py -i Fiddler_Captures/S0208182017.saz -a=rf --show --log=DEBUG`
 
+## Output
+
+1. All input and response files will be saved in target\<claim_number>.
+1. The target folder is excluded from source control
+
 ## Work-in-progress
 
 1. Browserless (also called as head-less) verification on Portal - Claim Folder.
