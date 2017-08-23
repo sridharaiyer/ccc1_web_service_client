@@ -86,7 +86,7 @@ For further reading visit https://docs.python.org/3/library/venv.html
    `python ccc1_client.py -i <fiddler capture .saz file path>`
    
    Ex:
-   
+
    `python ccc1_client.py -i Fiddler_Captures/S0208182017.saz`
    
    This will run the sample S02 file present in the Fiddler_Captures directory of this project.
@@ -98,6 +98,10 @@ For further reading visit https://docs.python.org/3/library/venv.html
 1. For detailed debug level messages, use:
 
    `python ccc1_client.py -i Fiddler_Captures/S0208182017.saz --show --log=DEBUG`
+
+1. Assignment creation:
+
+   `python externalassignmentws.py --PrimaryInsuranceCompanyID=TIN4 --ClaimOffice=ILV4 --AssignmentRecipientID=TIN4R10`
 
 ## Output
 
