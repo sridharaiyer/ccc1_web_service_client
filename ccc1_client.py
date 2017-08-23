@@ -5,9 +5,7 @@ from uniqueid import UniqueID
 import names
 import pdb
 import json
-from xmlutils import XMLUtils
 from externalassignmentws import ExternalAssignmentWS
-from zipfileutils import ZipFileUtils
 from payload import Payload
 import logging
 from log_util import Logger
@@ -42,14 +40,6 @@ parser.add_argument('--claimid',
                     default=UniqueID.random_id(),
                     help='User provided claimid')
 
-parser.add_argument('-a',
-                    '--appraiser',
-                    dest='appr',
-                    action='store',
-                    required=True,
-                    choices=['rf', 'staff', 'ia', 'openshop'],
-                    help='Provide the type of appraiser')
-
 parser.add_argument('--lname',
                     dest='lname',
                     action='store',
@@ -75,22 +65,19 @@ args = parser.parse_args()
 # ------------------------ Initialize LOGGING ------------------------------
 numeric_level = getattr(logging, args.loglevel.upper(), None)
 logger = Logger(numeric_level)
-# ------------------------ Initialize LOGGING ------------------------------
 
 
 # ---------------- Get estimate & supplement file paths --------------------
 files = FiddlerSession(args.filename)
 estimate_dict = files.estdict
 old_ref_dict = files.oldrefdict
-# ---------------- Get estimate & supplement file paths --------------------
 
+# ---------------------- Obtain basic info from payload ---------------------
+payload = Payload(fiddler_file=args.filename, estimate_dict=estimate_dict)
+payload.summary()
 
-Payload(fiddler_file=args.filename, estimate_dict=estimate_dict).summary()
-
-# Get the location of the E01 Workfile
-e01_file = estimate_dict['E01']['Workfile']
-
-logger.debug(json.dumps(estimate_dict, indent=4))
+# ------------------------------ Placeholder ------------------------------
+# This place holder is for cleaning up the estimate dictionary to have the relevant files for the appraiser type. For example, have Worklist only for STAFF and IA and not have it for DRP types such as Repair Facility, Open Shop and Drive-In
 
 logger.info('Location of the estimate and supplement files in the fiddler session: \n{}'.format(json.dumps(estimate_dict, indent=4)))
 
@@ -103,22 +90,16 @@ logger.info('Args = \n{}'.format(json.dumps(vars(args), indent=4)))
 # further webservice processing.
 vars(args).pop('show')
 
-# ------------------ Get E01 XML to fetch assignment info ---------------------
-e01_xml = XMLUtils(ZipFileUtils(args.filename).filexml(e01_file))
-ins_company_code = e01_xml.gettext('VantiveCode')
-claim_office_code = e01_xml.gettext('Code')
-recepient_code = e01_xml.gettext('AppraiserMailboxID')
-
+# ---------------- Setting assignment creation parameters ----------------
 assignment_params = {
     'env': args.env,
     'claimid': args.claimid,
     'lname': args.lname,
     'fname': args.fname,
-    'PrimaryInsuranceCompanyID': e01_xml.gettext('VantiveCode'),
-    'ClaimOffice': e01_xml.gettext('Code'),
-    'AssignmentRecipientID': e01_xml.gettext('AppraiserMailboxID')
+    'PrimaryInsuranceCompanyID': payload.company_code,
+    'ClaimOffice': payload.office_id,
+    'AssignmentRecipientID': payload.mailboxid
 }
-# ------------------ Get E01 XML to fetch assignment info ---------------------
 
 # ----------------------------- Process assignment ----------------------------
 assignment = ExternalAssignmentWS(**assignment_params)
