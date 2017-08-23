@@ -82,6 +82,7 @@ For further reading visit https://docs.python.org/3/library/venv.html
 ## Usage
 
 1. While you are in the virtual environment, run:
+   
    `python ccc1_client.py -i <fiddler capture .saz file path>`
    Ex:
    `python ccc1_client.py -i Fiddler_Captures/S0208182017.saz`
@@ -89,6 +90,7 @@ For further reading visit https://docs.python.org/3/library/venv.html
    This will run the sample S02 file present in the Fiddler_Captures directory of this project.
 
 1. If you just need to inspect the file, run:
+   
    `python ccc1_client.py -i Fiddler_Captures/S0208182017.saz --show`
 
 1. For detailed debug level messages, use:
