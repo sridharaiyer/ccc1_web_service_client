@@ -1,2 +1,2 @@
 python ccc1_client.py -i Fiddler_Captures/S0208182017.saz
-python externalassignmentws.py --PrimaryInsuranceCompanyID=APM1 --ClaimOffice=APMC --AssignmentRecipientID=62759
+python externalassignmentws.py --PrimaryInsuranceCompanyID=TIN4 --ClaimOffice=ILV4 --AssignmentRecipientID=TIN4R10
