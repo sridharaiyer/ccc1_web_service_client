@@ -141,7 +141,6 @@ class ExternalAssignmentWS(object):
         logger.info('Start assignment creation DB verification:\n{}'.format(sql))
         self.db.claimfolder.wait_until_exists(sql)
         logger.info('The assignment was successfully created.')
-        pdb.set_trace()
 
 
 if __name__ == '__main__':
