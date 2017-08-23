@@ -11,6 +11,7 @@ from timeutils import Time
 from httpclient import HttpClient
 from properties import Properties
 import logging
+from log_util import Logger
 
 logger = logging.getLogger()
 
@@ -128,12 +129,18 @@ class ExternalAssignmentWS(object):
         response_xml = XMLUtils(self.response.text)
         self.savefile.save_response(str(response_xml))
 
+        if self.response.status_code != 200:
+            error_msg = response_xml.gettext('LogMessage')
+            logger.error('Error response: \{}'.format(error_msg))
+            exit(1)
+
     def verify_db(self):
         sql = """SELECT * FROM SERVICE_ORDER WHERE
                 CUST_CLM_REF_ID = '{}' AND
                 ASGN_MAINT_TYP_CD = 'A'""".format(self.claimid)
         logger.info('Start assignment creation DB verification:\n{}'.format(sql))
         self.db.claimfolder.wait_until_exists(sql)
+        logger.info('The assignment was successfully created.')
 
 
 if __name__ == '__main__':
@@ -184,11 +191,19 @@ if __name__ == '__main__':
                         default=names.get_first_name(),
                         help='Owner first name')
 
+    parser.add_argument('--log',
+                        dest='loglevel',
+                        action='store',
+                        type=str,
+                        choices=['INFO', 'DEBUG'],
+                        default='INFO',
+                        help='print logs')
+
     args = parser.parse_args()
 
-    # vars(args)['PrimaryInsuranceCompanyID'] = 'APM1'
-    # vars(args)['ClaimOffice'] = 'APMC'
-    # vars(args)['AssignmentRecipientID'] = '62668'
+    # -------------  Initialize LOGGING -------------------
+    numeric_level = getattr(logging, args.loglevel.upper(), None)
+    logger = Logger(numeric_level)
 
     assignment = ExternalAssignmentWS(**vars(args))
     assignment.edit_xml()

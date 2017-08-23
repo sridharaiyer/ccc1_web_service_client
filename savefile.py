@@ -15,13 +15,13 @@ class Save(object):
 
     def save_input(self, data):
         path = self._create_path('input')
-        logger.debug('Saving input file - {}'.format(path))
+        logger.info('Saving input file - {}'.format(path))
         with open(path, 'wb') as f:
             f.write(data)
 
     def save_response(self, data):
         path = self._create_path('response')
-        logger.debug('Saving response - {}'.format(path))
+        logger.info('Saving response - {}'.format(path))
         with open(path, 'w') as f:
             f.write(data)
 
